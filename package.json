@@ -1,0 +1,8 @@
+{
+  "name": "hexo",
+  "version": "2.3.0",
+  "private": true,
+  "dependencies": {
+    "hexo-renderer-less": "0.0.3"
+  }
+}
