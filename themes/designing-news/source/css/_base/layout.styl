@@ -1,0 +1,95 @@
+html {
+  box-sizing: border-box;
+  font-size: ($base-font-size/16) * 100%;
+}
+
+body {
+  background-color: $body-bg;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 400;
+  line-height: $base-line-height;
+  color: $text-color;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, blockquote {
+  margin-bottom: remRhythm(4);
+}
+
+h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-top: remRhythm(8);
+}
+
+h1, .h1 {
+  setType(54, 9);
+}
+
+h2, .h2 {
+  setType(22.783, 5);
+}
+
+h3, .h3 {
+  setType(20, 4);
+}
+
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  setType(18, 3);
+
+}
+
+p {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+  word-wrap: break-word;
+  max-width: 26rem;
+  setType(16, 4);
+}
+
+p+p {
+  margin-top: remRhythm(-4);
+  text-indent: 1.5rem;
+}
+
+
+small, .font-small {
+  setType(13, 3);
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+blockquote {
+  font-family: $mono-font;
+  font-weight: bold;
+  margin-top: remRhythm(4);
+
+  p {
+    text-align: left;
+  }
+}
+
+pre, code {
+  font-family: $mono-font;
+}
+
+time, .time {
+  font-family: $sans-serif-font;
+  text-transform: uppercase;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+}

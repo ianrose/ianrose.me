@@ -1,0 +1,46 @@
+date: 2014-01-01 21:01:28.381
+argv: node /usr/local/bin/hexo server
+os: Darwin 13.0.0 darwin x64
+version:
+  hexo: 2.4.2
+  http_parser: 1.0
+  node: 0.10.16
+  v8: 3.14.5.9
+  ares: 1.9.0-DEV
+  uv: 0.10.13
+  zlib: 1.2.3
+  modules: 11
+  openssl: 1.0.1e
+---
+
+[debug] 20:53:09.354 Configuration file load successfully
+[debug] 20:53:09.356 Version info checked successfully
+[debug] 20:53:09.378 Loading database.
+[debug] 20:53:09.424 Plugin loaded successfully: hexo-renderer-less
+[debug] 20:53:09.437 Theme layout loaded
+[debug] 20:53:09.448 Theme source loaded
+[debug] 20:53:09.453 Theme configuration loaded
+[debug] 20:53:09.457 Theme language files loaded
+[debug] 20:53:09.500 Processed: _posts/hello-world-2.md
+[debug] 20:53:09.500 Processed: _posts/hello-world-3.md
+[debug] 20:53:09.500 Processed: _posts/hello-world-4.md
+[debug] 20:53:09.506 Processed: _posts/hello-world-5.md
+[debug] 20:53:09.506 Processed: _posts/hello-world.md
+[debug] 20:53:09.511 Cache saved
+[info] 20:53:09.530 Hexo is running at localhost:4000/. Press Ctrl+C to stop.
+[debug] 20:53:09.871 Render post: 2013/12/27/hello-world/
+[debug] 20:55:17.523 Render post: 2013/12/27/hello-world/
+[delete] 21:01:28.272 Theme: source/css/main.less
+[create] 21:01:28.273 Theme: source/css/main.styl
+[error] 21:01:28.377 ReferenceError: route is not defined
+ReferenceError: route is not defined
+    at _watchSource (/usr/local/lib/node_modules/hexo/lib/core/theme.js:211:5)
+    at /usr/local/lib/node_modules/hexo/lib/core/theme.js:261:15
+    at /usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:108:13
+    at Array.forEach (native)
+    at _each (/usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:32:24)
+    at Object.async.each (/usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:107:9)
+    at async.series.generate.watch (/usr/local/lib/node_modules/hexo/lib/core/theme.js:250:17)
+    at /usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:548:21
+    at /usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:224:13
+    at iterate (/usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:131:13)
