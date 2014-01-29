@@ -1,19 +1,11 @@
-@function remCalc($target, $context: $base-font-size) {
-  @return ($target / $context) + 0rem;
-}
-
 @function emCalc($target, $context: $base-font-size) {
-  @return ($target / $context) + 0em;
-}
-
-@function unitlessRhythm($lines, $context) {
-  @return ($base-vertical-unit * $lines) / $context;
-}
-
-@function remRhythm($lines) {
-  @return (($base-vertical-unit * $lines) / $base-font-size) + 0rem;
+  @return stripUnits(($target / $context)) + 0em;
 }
 
 @function emRhythm($lines, $context: $base-font-size) {
-  @return (($base-vertical-unit * $lines) / $context) + 0em;
+  @return ((stripUnits($base-vertical-unit) * $lines) / stripUnits($context)) + 0em;
+}
+
+@function unitlessRhythm($lines, $context) {
+  @return (stripUnits($base-vertical-unit) * $lines) / stripUnits($context);
 }

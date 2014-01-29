@@ -5,7 +5,7 @@
 }
 
 html {
-  font-size: ($base-font-size/16) * 100%;
+  font-size: ($base-font-size / 16px) * 100%;
 }
 
 body {
@@ -18,4 +18,10 @@ body {
 a {
   color: $link-color;
   text-decoration: none;
+}
+
+nav {
+  ul {
+    list-style: none;
+  }
 }

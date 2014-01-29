@@ -4,30 +4,69 @@ h1, .h2, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   text-transform: uppercase;
 }
 
+// 1. Mobile first heading size based on the modular scale ratio.
+// 2. Sets a margin bottom that is 4 x of the base vertical unit. Set in EMs so the $font-size provides the context
+// 3. Type font size and line-height mixin. Takes the $h1-size and converts that from px to EM and then sets a unitless line-height that is 5 multiples of our $base-vertical-unit
 h1, .h1 {
-  $font-size: 54;
-  letter-spacing: -2px;
-  margin-bottom: emRhythm(4, $font-size);
-  @include setType($font-size, 9);
+  $font-size: $h1-size / ($type-ratio * $type-ratio); // [1]
+  margin-bottom: emRhythm(4, $font-size); // [2]
+  @include setType($font-size, 5); // [3]
+
+  @media (min-width: 43.75em) {
+    $font-size: $h1-size / $type-ratio;
+    margin-bottom: emRhythm(4, $font-size);
+    @include setType($font-size, 7);
+  }
+
+  @media (min-width: 56.25em) {
+    $font-size: $h1-size;
+    letter-spacing: -2px;
+    margin-bottom: emRhythm(4, $font-size);
+    @include setType($font-size, 9);
+  }
 }
 
 h2, .h2 {
-  $font-size: 22.783;
+  $font-size: $h2-size / ($type-ratio * $type-ratio);
+  margin-bottom: emRhythm(4, $font-size);
   @include setType($font-size, 5);
+
+  @media (min-width: 43.75em) {
+    $font-size: $h2-size / $type-ratio;
+    margin-bottom: emRhythm(4, $font-size);
+    @include setType($font-size, 5);
+  }
+
+  @media (min-width: 56.25em) {
+    $font-size: $h2-size;
+    margin-bottom: emRhythm(4, $font-size);
+    @include setType($font-size, 5);
+  }
 }
 
 h3, .h3 {
-  @include setType(20, 4);
+  $font-size: $h3-size / $type-ratio;
+  margin-bottom: emRhythm(4, $font-size);
+  @include setType($font-size, 5);
+
+  @media (min-width: 56.25em) {
+    $font-size: $h3-size;
+    margin-bottom: emRhythm(4, $font-size);
+    @include setType($font-size, 5);
+  }
 }
 
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  @include setType(18, 3);
+  $font-size: 18px;
+  margin-bottom: emRhythm(4, $font-size);
+  @include setType($font-size, 3);
 
 }
 
 p {
+  $font-size: 16px;
   text-align: justify;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -35,9 +74,9 @@ p {
   -o-hyphens: auto;
   hyphens: auto;
   word-wrap: break-word;
-  max-width: 26rem;
+  max-width: 36em;
   margin-bottom: emRhythm(4);
-  @include setType(16, 4);
+  @include setType($font-size, 4);
 }
 
 p + p {
@@ -46,7 +85,7 @@ p + p {
 }
 
 small, .font-small {
-  @include setType(13, 3);
+  @include setType(13px, 3);
 }
 
 em {
@@ -60,7 +99,9 @@ strong {
 blockquote {
   font-family: $font-mono;
   font-weight: bold;
-  margin-top: remRhythm(4);
+  margin-top: emRhythm(4);
+  margin-bottom: emRhythm(4);
+
 
   p {
     text-align: left;
@@ -81,6 +122,30 @@ pre, code {
 
 time, .time {
   text-transform: uppercase;
+}
+
+ul {
+  list-style: disc;
+
+  ul {
+    margin-bottom: 0;
+  }
+}
+
+ol {
+
+  ol {
+    margin-bottom: 0;
+  }
+}
+
+ol {
+  list-style: decimal;
+}
+
+ol, ul {
+  margin-bottom: emRhythm(4);
+  margin-left: emRhythm(4);
 }
 
 abbr {

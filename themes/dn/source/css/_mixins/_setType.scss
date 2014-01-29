@@ -7,3 +7,7 @@
   font-size: emCalc($font-size);
   line-height: (($base-vertical-unit * $lines) / $font-size);
 }
+
+@mixin setLeading($lines) {
+  line-height: (($base-vertical-unit * $lines) / $font-size);
+}
