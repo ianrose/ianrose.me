@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  font-size: ($base-font-size/16) * 100%;
+}
+
+body {
+  font-family: $font-serif;
+  font-weight: 400;
+  line-height: $base-line-height;
+  color: $text-color;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+}

@@ -1,0 +1,9 @@
+//@mixin setType($font-size, $lines) {
+//  font-size: remCalc($font-size);
+//  line-height: (($base-vertical-unit * $lines) / $font-size);
+//}
+
+@mixin setType($font-size, $lines, $context: $base-font-size) {
+  font-size: emCalc($font-size);
+  line-height: (($base-vertical-unit * $lines) / $font-size);
+}

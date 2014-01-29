@@ -34,13 +34,13 @@ Do not just seek happiness for yourself. Seek happiness for all. Through kindnes
 * Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 * Aliquam tincidunt mauris eu risus.
 
-```html title http://google.com google
+```html
 <html>
   <p>test</p> <!-- comment -->
 </html>
 ```
 
-```css title http://google.com google
+```css
 body {
   background: red;
 }

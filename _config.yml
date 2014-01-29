@@ -74,8 +74,11 @@ disqus_shortname:
 # Extensions
 ## Plugins: https://github.com/tommy351/hexo/wiki/Plugins
 ## Themes: https://github.com/tommy351/hexo/wiki/Themes
-theme: designing-news
+theme: dn
 exclude_generator:
+plugins:
+ - hexo-minifer
+ - hexo-renderer-sass
 
 # Deployment
 ## Docs: http://zespia.tw/hexo/docs/deploy.html

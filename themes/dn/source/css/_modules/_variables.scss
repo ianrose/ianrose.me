@@ -1,0 +1,48 @@
+// Colors
+$background-color: #d0cdc5;
+$color-meta: #999;
+$color-border: #ddd;
+$link-color: #000;
+$body-bg: #fff;
+$text-color: #000;
+
+// Typography
+$base-vertical-unit: 6; // pixels
+$base-font-size: 16; // pixels
+$base-line-height: ($base-vertical-unit * 4) / $base-font-size; // Creates a unitless line-height that is based on typographic ideals and maintains vertical rhythm
+
+// Fonts
+$font-sans: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-serif: 'Droid Serif', Georgia, "Times New Roman", serif;
+$font-mono: "Droid Sans Mono", Consolas, Monaco, Menlo, Consolas, monospace;
+$font-icon: FontAwesome;
+$font-icon-path: "fonts/fontawesome-webfont";
+$font-icon-version: "4.0.3";
+$font-size: 14px;
+$line-height: 1.6em;
+$line-height-title: 1.1em;
+
+// Header
+$logo-size: 40px;
+$subtitle-size: 16px;
+$banner-height: 300px;
+$banner-url: "images/banner.jpg";
+
+$sidebar: hexo-config("sidebar");
+
+// Layout
+$block-margin: 50px;
+$article-padding: 20px;
+$mobile-nav-width: 280px;
+$main-column: 9;
+$sidebar-column: 3;
+
+// Grids
+$column-width: 80px;
+$gutter-width: 20px;
+$columns: main-column + _sidebar-column;
+
+// Media queries
+$mq-mobile: "screen and (max-width: 479px)";
+$mq-tablet: "screen and (min-width: 480px) and (max-width: 767px)";
+$mq-normal: "screen and (min-width: 768px)";

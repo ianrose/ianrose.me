@@ -1,0 +1,94 @@
+h1, .h2, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-family: $font-sans;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+h1, .h1 {
+  $font-size: 54;
+  letter-spacing: -2px;
+  margin-bottom: emRhythm(4, $font-size);
+  @include setType($font-size, 9);
+}
+
+h2, .h2 {
+  $font-size: 22.783;
+  @include setType($font-size, 5);
+}
+
+h3, .h3 {
+  @include setType(20, 4);
+}
+
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  @include setType(18, 3);
+
+}
+
+p {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+  word-wrap: break-word;
+  max-width: 26rem;
+  margin-bottom: emRhythm(4);
+  @include setType(16, 4);
+}
+
+p + p {
+  margin-top: emRhythm(-4);
+  text-indent: emRhythm(4);
+}
+
+small, .font-small {
+  @include setType(13, 3);
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+blockquote {
+  font-family: $font-mono;
+  font-weight: bold;
+  margin-top: remRhythm(4);
+
+  p {
+    text-align: left;
+  }
+
+  footer {
+    cite {
+      &:before {
+        content: " – ";
+      }
+    }
+  }
+}
+
+pre, code {
+  font-family: $font-mono;
+}
+
+time, .time {
+  text-transform: uppercase;
+}
+
+abbr {
+  font-variant: small-caps; /* https://developer.mozilla.org/en-US/docs/CSS/font-variant */
+  font-weight: 600;
+  text-transform: lowercase;
+}
+
+abbr[title]:hover {
+  cursor: help; /* cursor changed to a question mark when it has a title */
+}
