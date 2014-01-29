@@ -8,6 +8,7 @@ $text-color: #000;
 
 // Typography
 $base-vertical-unit: 6px !default;
+$base-line-multi: 4 !default;
 $base-font-size: 16px !default;
 $type-ratio: 1.414 !default;
 
@@ -19,7 +20,7 @@ $h2-size: $h3-size * $type-ratio;
 $h1-size: $h2-size * $type-ratio;
 
 // Do not modify these variables, they are used internally
-$base-line-height: ($base-vertical-unit * 4) / $base-font-size; // Creates a unitless line-height that is based on typographic ideals and maintains vertical rhythm
+$base-line-height: ($base-vertical-unit * $base-line-multi) / $base-font-size; // Creates a unitless line-height that is based on typographic ideals and maintains vertical rhythm
 
 // Fonts
 $font-sans: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;

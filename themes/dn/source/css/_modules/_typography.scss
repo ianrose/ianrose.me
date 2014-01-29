@@ -10,7 +10,7 @@ h1, .h2, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 h1, .h1 {
   $font-size: $h1-size / ($type-ratio * $type-ratio); // [1]
   margin-bottom: emRhythm(4, $font-size); // [2]
-  @include setType($font-size, 5); // [3]
+  @include setType($font-size, 6); // [3]
 
   @media (min-width: 43.75em) {
     $font-size: $h1-size / $type-ratio;
@@ -22,7 +22,7 @@ h1, .h1 {
     $font-size: $h1-size;
     letter-spacing: -2px;
     margin-bottom: emRhythm(4, $font-size);
-    @include setType($font-size, 9);
+    @include setType($font-size, 10);
   }
 }
 
@@ -34,13 +34,13 @@ h2, .h2 {
   @media (min-width: 43.75em) {
     $font-size: $h2-size / $type-ratio;
     margin-bottom: emRhythm(4, $font-size);
-    @include setType($font-size, 5);
+    @include setType($font-size, 6);
   }
 
   @media (min-width: 56.25em) {
     $font-size: $h2-size;
     margin-bottom: emRhythm(4, $font-size);
-    @include setType($font-size, 5);
+    @include setType($font-size, 8);
   }
 }
 
@@ -52,22 +52,28 @@ h3, .h3 {
   @media (min-width: 56.25em) {
     $font-size: $h3-size;
     margin-bottom: emRhythm(4, $font-size);
-    @include setType($font-size, 5);
+    @include setType($font-size, 6);
   }
 }
 
-h4, .h4,
-h5, .h5,
-h6, .h6 {
-  $font-size: 18px;
+h4, .h4 {
+  $font-size: $h4-size;
   margin-bottom: emRhythm(4, $font-size);
-  @include setType($font-size, 3);
+  @include setType($font-size, 5);
+}
+
+h5, .h5 {
+  $font-size: $h5-size;
+  margin-bottom: emRhythm(4, $font-size);
+  @include setType($font-size, 4);
 
 }
 
+h6, .h6 {
+  @extend h5;
+}
+
 p {
-  $font-size: 16px;
-  text-align: justify;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
@@ -76,7 +82,10 @@ p {
   word-wrap: break-word;
   max-width: 36em;
   margin-bottom: emRhythm(4);
-  @include setType($font-size, 4);
+
+  @media (min-width: 43.75em) {
+    text-align: justify;
+  }
 }
 
 p + p {
@@ -101,11 +110,9 @@ blockquote {
   font-weight: bold;
   margin-top: emRhythm(4);
   margin-bottom: emRhythm(4);
-
-
-  p {
-    text-align: left;
-  }
+  padding-left: emRhythm(4);
+  margin-left: emRhythm(-5);
+  border-left: $base-vertical-unit solid lighten(#000, 50%);
 
   footer {
     cite {
