@@ -2,9 +2,9 @@
 $background-color: #d0cdc5;
 $color-meta: #999;
 $color-border: #ddd;
-$link-color: #000;
 $body-bg: #fff;
-$text-color: #000;
+$text-color: lighten(#000, 15%);
+$link-color: lighten($text-color, 30%);
 
 // Typography
 $base-vertical-unit: 6px !default;
