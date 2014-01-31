@@ -16,8 +16,21 @@ body {
 }
 
 a {
-  color: $link-color;
+  -webkit-transition: color 0.25s ease;
+  -moz-transition: color 0.25s ease;
+  transition: color 0.25s ease;
   text-decoration: none;
+  position: relative;
+
+  &:link, &:visited {
+    color: $link-color;
+    text-decoration: underline;
+  }
+
+  &:hover, &:active {
+    color: lighten($link-color, 15%);
+    text-decoration: none;
+  }
 }
 
 nav {

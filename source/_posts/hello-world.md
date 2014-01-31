@@ -61,7 +61,7 @@ Want to like to a source? No problem, just write a link like [this](http://googl
 ## What about images?
 
 Images work too! Already know the URL of the image you want to include in your article? Simply paste it in like this to make it show up:
-{% img [class names] http://25.media.tumblr.com/ec2b71d11fecd5e39b479afe8a65bac1/tumblr_mx1ok7DOG21sfie3io1_1280.jpg [width] [height] [title text [alt text]] %}
+{% img [class names] http://25.media.tumblr.com/ec2b71d11fecd5e39b479afe8a65bac1/tumblr_mx1ok7DOG21sfie3io1_1280.jpg title text %}
 
 ## Quoting
 
@@ -96,13 +96,13 @@ Every interaction is both precious and an opportunity to delight.
 * Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 * Aliquam tincidunt mauris eu risus.
 
-```html title http://google.com google
+``` html Code http://google.com google
 <html>
   <p>test</p> <!-- comment -->
 </html>
 ```
 
-```css title http://google.com google
+``` css Code http://google.com google
 body {
   background: red;
 }
