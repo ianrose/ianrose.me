@@ -4,17 +4,6 @@
   text-rendering: optimizeLegibility;
 }
 
-html {
-  font-size: ($base-font-size / 16px) * 100%;
-}
-
-body {
-  font-family: $font-serif;
-  font-weight: 400;
-  line-height: $base-line-height;
-  color: $text-color;
-}
-
 a {
   -webkit-transition: color 0.25s ease;
   -moz-transition: color 0.25s ease;

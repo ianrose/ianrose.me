@@ -3,29 +3,10 @@ $background-color: #d0cdc5;
 $color-meta: #999;
 $color-border: #ddd;
 $body-bg: #fff;
-$text-color: lighten(#000, 15%);
+$text-color: lighten(#000, 20%);
 $link-color: lighten($text-color, 30%);
 
-// Typography
-$base-vertical-unit: 6px !default;
-$base-line-multi: 4 !default;
-$base-font-size: 16px !default;
-$type-ratio: 1.414 !default;
-
-$h6-size: $base-font-size;
-$h5-size: $base-font-size;
-$h4-size: $base-font-size * $type-ratio;
-$h3-size: $h4-size * $type-ratio;
-$h2-size: $h3-size * $type-ratio;
-$h1-size: $h2-size * $type-ratio;
-
-// Do not modify these variables, they are used internally
-$base-line-height: ($base-vertical-unit * $base-line-multi) / $base-font-size; // Creates a unitless line-height that is based on typographic ideals and maintains vertical rhythm
-
 // Fonts
-$font-sans: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-serif: 'Droid Serif', Georgia, "Times New Roman", serif;
-$font-mono: "Droid Sans Mono", Consolas, Monaco, Menlo, Consolas, monospace;
 $font-icon: FontAwesome;
 $font-icon-path: "fonts/fontawesome-webfont";
 $font-icon-version: "4.0.3";

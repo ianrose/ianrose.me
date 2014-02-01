@@ -4,12 +4,8 @@
 // Config Modules
 @import "_modules/variables";
 
-// Configurable Functions
-@import "_functions/typeCalc";
-
 // Mixins
-@import "_mixins/setType";
-@import "_mixins/rhythmBorder";
+@import "_mixins/mixins";
 
 // Objects & Modules
 @import "_modules/reset";
