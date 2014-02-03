@@ -1,0 +1,5 @@
+.article-meta {
+  font-family: $font-sans;
+  text-transform: uppercase;
+  @include setType($ms-down1, 3);
+}

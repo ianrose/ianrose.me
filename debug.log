@@ -1,5 +1,5 @@
-date: 2014-01-27 20:55:12.952
-argv: node /usr/local/bin/hexo server
+date: 2014-02-02 15:05:08.813
+argv: node /usr/local/bin/hexo server --watch
 os: Darwin 13.0.0 darwin x64
 version:
   hexo: 2.4.5
@@ -13,35 +13,76 @@ version:
   openssl: 1.0.1e
 ---
 
-[debug] 20:54:36.716 Configuration file load successfully
-[debug] 20:54:36.718 Version info checked successfully
-[debug] 20:54:36.841 Plugin loaded successfully: hexo-minifer
-[debug] 20:54:36.847 Plugin loaded successfully: hexo-renderer-sass
-[debug] 20:54:36.849 Script load successfully: fancybox.js
-[debug] 20:54:36.859 Theme layout loaded
-[debug] 20:54:36.865 Theme configuration loaded
-[debug] 20:54:36.875 Theme source loaded
-[debug] 20:54:36.912 Processed: _posts/hello-world-2.md
-[debug] 20:54:36.914 Processed: _posts/hello-world-3.md
-[debug] 20:54:36.915 Processed: _posts/hello-world-4.md
-[debug] 20:54:36.917 Processed: _posts/hello-world-5.md
-[debug] 20:54:36.917 Processed: _posts/hello-world.md
-[debug] 20:54:36.922 Cache saved
-[info] 20:54:36.942 Hexo is running at localhost:4000/. Press Ctrl+C to stop.
-[debug] 20:54:41.313 Render index: 
-[update] 20:55:02.183 Theme: source/css/style.styl
-[debug] 20:55:04.455 Render index: 
-[delete] 20:55:12.845 Theme: source/css/style.styl
-[create] 20:55:12.846 Theme: source/css/style.scss
-[error] 20:55:12.948 ReferenceError: route is not defined
-ReferenceError: route is not defined
-    at _watchSource (/usr/local/lib/node_modules/hexo/lib/core/theme.js:210:5)
-    at /usr/local/lib/node_modules/hexo/lib/core/theme.js:260:15
-    at /usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:108:13
-    at Array.forEach (native)
-    at _each (/usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:32:24)
-    at Object.async.each (/usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:107:9)
-    at async.series.generate.watch (/usr/local/lib/node_modules/hexo/lib/core/theme.js:249:17)
-    at /usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:548:21
-    at /usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:224:13
-    at iterate (/usr/local/lib/node_modules/hexo/node_modules/async/lib/async.js:131:13)
+[debug] 14:44:31.030 Configuration file load successfully
+[debug] 14:44:31.053 Version info checked successfully
+[debug] 14:44:31.144 Loading database.
+[debug] 14:44:31.437 Plugin loaded successfully: hexo-minifer
+[debug] 14:44:31.561 Plugin loaded successfully: hexo-renderer-sass
+[debug] 14:44:31.608 Script load successfully: fancybox.js
+[debug] 14:44:31.894 Theme layout loaded
+[debug] 14:44:31.901 Theme configuration loaded
+[debug] 14:44:31.913 Theme source loaded
+[debug] 14:44:31.965 Processed: _posts/hello-world-2.md
+[debug] 14:44:31.965 Processed: _posts/hello-world-3.md
+[debug] 14:44:31.965 Processed: _posts/hello-world-4.md
+[debug] 14:44:31.966 Processed: _posts/hello-world-5.md
+[debug] 14:44:31.966 Processed: _posts/hello-world.md
+[debug] 14:44:31.973 Cache saved
+[info] 14:44:31.994 Hexo is running at localhost:4000/. Press Ctrl+C to stop.
+[debug] 14:44:39.020 Render index: 
+[debug] 14:44:42.245 Render post: 2013/12/27/hello-world/
+[debug] 14:44:56.573 Render post: 2013/12/27/hello-world/
+[debug] 14:51:46.283 Render archive: archives/
+[debug] 14:52:55.582 Render index: 
+[update] 14:53:54.268 Theme: source/css/style.scss
+[update] 14:55:54.087 Theme: layout/layout.ejs
+[debug] 14:55:57.356 Render index: 
+[debug] 14:58:13.911 Render index: 
+[debug] 14:58:28.581 Render index: 
+[debug] 15:00:36.463 Render post: 2013/12/27/hello-world/
+[update] 15:00:53.109 Source: _posts/hello-world.md
+[debug] 15:00:53.218 Processed: _posts/hello-world.md
+[debug] 15:00:53.219 Cache saved
+[debug] 15:00:53.485 Render post: 2013/12/27/hello-world/
+[debug] 15:00:53.485 Render post: 2013/12/27/hello-world/
+[debug] 15:00:56.970 Render index: 
+[debug] 15:01:06.187 Render post: 2013/12/27/hello-world/
+[update] 15:02:13.562 Source: _posts/hello-world.md
+[debug] 15:02:13.669 Processed: _posts/hello-world.md
+[debug] 15:02:13.670 Cache saved
+[debug] 15:02:14.229 Render post: 2013/12/27/hello-world/
+[debug] 15:02:25.368 Render post: 2013/12/27/hello-world/
+[debug] 15:02:36.692 Render index: 
+[debug] 15:02:52.340 Render category: categories/Front-end/
+[debug] 15:02:55.692 Render index: 
+[debug] 15:02:59.011 Render post: 2013/12/27/hello-world-5/
+[debug] 15:03:00.462 Render index: 
+[debug] 15:03:01.587 Render post: 2013/12/27/hello-world/
+[update] 15:03:34.429 Source: _posts/hello-world.md
+[debug] 15:03:34.543 Processed: _posts/hello-world.md
+[debug] 15:03:34.543 Cache saved
+[debug] 15:03:34.687 Render post: 2013/12/27/hello-world/
+[debug] 15:03:38.495 Render post: 2013/12/27/hello-world/
+[update] 15:04:29.370 Source: _posts/hello-world.md
+[debug] 15:04:29.477 Processed: _posts/hello-world.md
+[debug] 15:04:29.477 Cache saved
+[debug] 15:04:29.621 Render post: 2013/12/27/hello-world/
+[debug] 15:04:33.431 Render post: 2013/12/27/hello-world/
+[debug] 15:04:39.948 Render index: 
+[update] 15:04:56.935 Source: _posts/hello-world.md
+[debug] 15:04:57.045 Processed: _posts/hello-world.md
+[debug] 15:04:57.046 Cache saved
+[debug] 15:04:57.064 Render index: 
+[update] 15:05:08.708 Source: _posts/hello-world.md
+[error] 15:05:08.811 { rawMessage: 'Unexpected characters near "] [Scss]".',
+  parsedLine: 3,
+  snippet: 'tags: [type] [Scss]',
+  parsedFile: null,
+  message: 'Unexpected characters near "] [Scss]" at line 3 (near "tags: [type] [Scss]").',
+  domain: 
+   { domain: null,
+     _events: { error: [Function] },
+     _maxListeners: 10,
+     members: [],
+     _disposed: true },
+  domainThrown: true }

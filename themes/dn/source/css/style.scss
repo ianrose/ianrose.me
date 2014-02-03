@@ -1,6 +1,3 @@
-// Helper Functions
-@import "_functions/stripUnits";
-
 // Config Modules
 @import "_modules/variables";
 
@@ -12,5 +9,8 @@
 @import "_modules/defaults";
 @import "_modules/typography";
 @import "_modules/highlight";
+
+@import "_modules/article-meta";
+@import "_modules/tag";
 
 // Partials

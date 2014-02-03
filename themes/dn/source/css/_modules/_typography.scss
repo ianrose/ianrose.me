@@ -20,6 +20,11 @@ $ms-up4: $ms-up3 * $ms-ratio; // Four steps up in the modular scale in EMs
 // Do not modify these variables, they are used internally, use the config variables to adjust type settings.
 $base-line-height: ($base-vertical-unit * $base-line-multi) / $base-font-size; // Creates a unitless line-height that is based on typographic ideals and maintains vertical rhythm
 
+// Helper function(s)
+@function stripUnits($number) {
+  @return $number / ($number * 0 + 1);
+}
+
 // Typographic related functions
 @function emCalc($target, $context: $base-font-size) {
   @return stripUnits(($target / $context)) + 0em;
