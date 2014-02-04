@@ -1,5 +1,5 @@
 <header>
-        <a href="<%- config.root %>" id="logo"><%= config.title %></a>
+        <a href="<%- config.root %>" id="logo"><img src="img/uix-logo.svg" width="36"> <%= config.title %></a>
       <% if (theme.subtitle){ %>
         <h2 id="subtitle-wrap">
           <a href="<%- config.root %>" id="subtitle"><%= theme.subtitle %></a>
@@ -12,6 +12,4 @@
         <% if (theme.rss){ %>
           <a id="nav-rss-link" class="nav-icon" href="<%- theme.rss %>" title="RSS Feed"></a>
         <% } %>
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-        <%- search_form({button: '&#xF002;'}) %>
 </header>
