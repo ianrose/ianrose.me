@@ -1,39 +1,53 @@
-// Typography Config Variables
+/*
+* is an EM based Scss file that is completely configurable that creates perfectly
+* set type based on modular scale, vertical rhythm, and responsive ratio based headlines.
+* Oh, and pixel borders that maintain rhythm.
+*/
+
+// ---------------------
+// Config Variables
+// ---------------------
 $font-sans: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-serif: 'Droid Serif', Georgia, "Times New Roman", serif;
 $font-mono: "Droid Sans Mono", Consolas, Monaco, Menlo, Consolas, monospace;
+$text-color: #000 !default;
 
+// The vertical grid unit. Margin, padding, and line-height are set to multiples of this value.
+// This is the value that determines the baseline for our vertical rhythm. The default value of 6px
+// allows more fine tuned designs that still obery vertical rhythm.
 $base-vertical-unit: 6px !default;
-// The vertical grid unit. Margin, padding, and line-height are set to multiples of this value
+
+// The value that multiplies the $base-vertical-unit to get the $base-line-height. This gives type
+// an ideal line-height.
 $base-line-multi: 4 !default;
-// The value that multiplies the $base-vertical-unit to get the $base-line-height
+
+// Base font size in pixels.
 $base-font-size: 16px !default;
-// Base font size in pixels
-$base-em-font-size: ($base-font-size / 16px) * 1em;
+
 // Converts the $base-font-size value to EMs
-$ms-ratio: 1.414 !default;
+$base-em-font-size: ($base-font-size / 16px) * 1em;
+
 // Modular scale ratio that is used to figure out all the different font sizes
+$ms-ratio: 1.414 !default;
 
-$ms-down1: $base-em-font-size / $ms-ratio;
-// One step down in the modular scale in EMs
-$ms-down2: $ms-down1 /$ms-ratio;
-// Two steps down in the modular scale in EMs
-$ms-down3: $ms-down2 / $ms-ratio;
-// Three steps down in the modular scale in EMs
-$ms-up1: $base-em-font-size * $ms-ratio;
-// One step up in the modular scale in EMs
-$ms-up2: $ms-up1 * $ms-ratio;
-// Two steps up in the modular scale in EMs
-$ms-up3: $ms-up2 * $ms-ratio;
-// Three steps up in the modular scale in EMs
-$ms-up4: $ms-up3 * $ms-ratio;
-// Four steps up in the modular scale in EMs
+// ---------------------
+// Internal Variable(s)
+// ---------------------
+// Best not to adjust these variable.
+$ms-down1: $base-em-font-size / $ms-ratio;// One step down in the modular scale in EMs
+$ms-down2: $ms-down1 /$ms-ratio;// Two steps down in the modular scale in EMs
+$ms-down3: $ms-down2 / $ms-ratio;// Three steps down in the modular scale in EMs
+$ms-up1: $base-em-font-size * $ms-ratio;// One step up in the modular scale in EMs
+$ms-up2: $ms-up1 * $ms-ratio;// Two steps up in the modular scale in EMs
+$ms-up3: $ms-up2 * $ms-ratio;// Three steps up in the modular scale in EMs
+$ms-up4: $ms-up3 * $ms-ratio;// Four steps up in the modular scale in EMs
 
-// Do not modify these variables, they are used internally, use the config variables to adjust type settings.
+// Creates a unitless line-height that is based on typographic ideals and maintains vertical rhythm.
 $base-line-height: ($base-vertical-unit * $base-line-multi) / $base-font-size;
-// Creates a unitless line-height that is based on typographic ideals and maintains vertical rhythm
 
+// ---------------------
 // Helper function(s)
+// ---------------------
 @function stripUnits($number) {
   @return $number / ($number * 0 + 1);
 }
@@ -45,7 +59,7 @@ $base-line-height: ($base-vertical-unit * $base-line-multi) / $base-font-size;
 
 @function emRhythm($font-size: $base-font-size, $lines: $base-vertical-unit) {
   // Creates a vertical rhythm EM value
-  @return ($lines * stripUnits($base-vertical-unit)) / (stripUnits($font-size) * stripUnits($base-font-size)) + 0em;
+  @return (stripUnits($lines) * stripUnits($base-vertical-unit)) / (stripUnits($font-size) * stripUnits($base-font-size)) + 0em;
 }
 
 @function unitlessRhythm($font-size: $base-font-size, $lines: $base-vertical-unit) {
@@ -53,7 +67,12 @@ $base-line-height: ($base-vertical-unit * $base-line-multi) / $base-font-size;
   @return ($lines * stripUnits($base-vertical-unit)) / (stripUnits($font-size) * stripUnits($base-font-size));
 }
 
-// Typographic related mixins
+// ---------------------
+// Mixins
+// ---------------------
+// Finally, the tools that you can use throughout your project to set
+// all the wonderful type related stuffs.
+
 @mixin setType($font-size: $base-em-font-size, $lines: $base-line-multi) {
   // Sets the type in EMs and makes a vertical rhythm unitless line-height that is based on context.
   font-size: $font-size;
@@ -75,7 +94,9 @@ $base-line-height: ($base-vertical-unit * $base-line-multi) / $base-font-size;
   padding-bottom: (($lines * stripUnits($base-vertical-unit)) - stripUnits($border-width)) / (stripUnits($font-size) * stripUnits($base-font-size)) + 0em;;
 }
 
-// Typographic related base styles
+// ---------------------
+// Default Type Styles
+// ---------------------
 html {
   font-size: ($base-font-size / 16px) * 100%; // Sets the font-size of the project as a percentage. Makes it easy to scale up/down the whole project for specific media queries
 }
@@ -98,7 +119,6 @@ h1, .h2, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 // [3] A generic media query for tablet size ranges.
 // [4] Applies a margin bottom that is the same vertical grid value as the mobile first rule.
 // [5] Sets the type to one of the modular scale values and the second argument sets a unitless line-height as a multiple of the vertical grid.
-
 h1, .h1 {
   margin-bottom: emRhythm($ms-up2, 4); // [1]
   @include setType($ms-up2, 6); // [2]
