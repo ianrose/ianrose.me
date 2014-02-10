@@ -1,7 +1,8 @@
 # Header
 menu:
   Home: /
-  Archives: /archives
+  Articles: /archives
+  About: /about
 rss: /atom.xml
 
 # Content
@@ -17,7 +18,7 @@ widgets:
 - recent_posts
 
 # Miscellaneous
-google_analytics:
+google_analytics: UA-20417568-2
 favicon: /favicon.png
 twitter:
 google_plus:

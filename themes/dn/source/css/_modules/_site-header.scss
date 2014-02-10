@@ -1,0 +1,80 @@
+$logo-size: emRhythm($base-em-font-size, 3);
+
+.site-header {
+  border-style: solid;
+  border-color: lighten(#000, 80%);
+  padding-top: emRhythm($base-em-font-size, 2);
+  background-color: $body-bg;
+  z-index: 9;
+  width: 100%;
+  @include rhythmBorderBottom($base-em-font-size, 1px, 2);
+  @include clearfix;
+}
+
+.site-brand {
+  font-family: $font-sans;
+  text-transform: uppercase;
+  line-height: 0;
+  float: left;
+
+  a {
+    color: $text-color;
+  }
+
+  &:hover {
+    .site-subtitle {
+      top: 0;
+    }
+
+    .site-main-title {
+      top: 100%;
+    }
+  }
+}
+
+.site-logo {
+  height: $logo-size;
+  margin-right: 0.25em;
+}
+
+.site-titles {
+  position: relative;
+  height: $logo-size;
+  overflow: hidden;
+  width: 202px;
+  display: inline-block;
+}
+
+.site-title {
+  $site-title-size: emCalc(23px);
+  font-size: $site-title-size;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  margin-bottom: 0;
+  @include setLeading($site-title-size, 3);
+}
+
+.site-main-title {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.site-subtitle {
+  position: absolute;
+  top: -109%;
+  left: 0;
+}
+
+.site-nav {
+  float: right;
+  @include setLeading($base-em-font-size, 3);
+
+  a {
+    margin-left: 3em;
+    font-family: $font-sans;
+    text-transform: uppercase;
+    @include setType($ms-down1, 3);
+  }
+}

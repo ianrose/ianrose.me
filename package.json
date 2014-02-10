@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "hexo-renderer-sass": "0.0.3",
-    "hexo-minifer": "0.0.2"
+    "hexo-minifer": "0.0.2",
+    "hexo-generator-feed": "~0.1.0"
   }
 }

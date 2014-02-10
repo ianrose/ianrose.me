@@ -1,12 +1,14 @@
 <%- partial('_partial/head') %>
 <body>
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an outdated browser. <a href="http://whatbrowser.org">Upgrade your browser today</a> to better experience this site.</p>
+<![endif]-->
       <%- partial('_partial/header') %>
         <%- body %>
         <% if (theme.sidebar && theme.sidebar !== 'bottom'){ %>
           <%- partial('_partial/sidebar') %>
         <% } %>
       <%- partial('_partial/footer') %>
-    <%- partial('_partial/mobile-nav') %>
     <%- partial('_partial/after-footer') %>
 </body>
 </html>

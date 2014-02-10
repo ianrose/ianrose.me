@@ -1,15 +1,18 @@
-<header>
-        <a href="<%- config.root %>" id="logo"><img src="/img/uix-logo.svg" width="36"> <%= config.title %></a>
+<header class="site-header">
+  <div class="site-brand">
+  <a href="<%- config.root %>">
+    <img class="site-logo" src="/img/uix-logo.svg">
+    <div class="site-titles">
+      <h1 class="site-title site-main-title"><%= config.title %></h1>
       <% if (theme.subtitle){ %>
-        <h2 id="subtitle-wrap">
-          <a href="<%- config.root %>" id="subtitle"><%= theme.subtitle %></a>
-        </h2>
+      <h2 class="site-title site-subtitle"><%= theme.subtitle %></h2>
       <% } %>
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        <% for (var i in theme.menu){ %>
-          <a class="main-nav-link" href="<%- theme.menu[i] %>"><%= i %></a>
-        <% } %>
-        <% if (theme.rss){ %>
-          <a id="nav-rss-link" class="nav-icon" href="<%- theme.rss %>" title="RSS Feed"></a>
-        <% } %>
+    </div>
+  </a>
+  </div>
+  <nav class="site-nav">
+  <% for (var i in theme.menu){ %>
+    <a class="main-nav-link" href="<%- theme.menu[i] %>"><%= i %></a>
+    <% } %>
+  </nav>
 </header>

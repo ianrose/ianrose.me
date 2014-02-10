@@ -50,6 +50,11 @@
   line-height: 1em;
   margin-bottom: 1em;
 }
+
+.article-entry .highlight figcaption {
+  font-family: $font-mono;
+}
+
 .article-entry .highlight figcaption:before,
 .article-entry .highlight figcaption:after {
   content: "";

@@ -10,15 +10,18 @@ a {
   transition: color 0.25s ease;
   text-decoration: none;
   position: relative;
+  color: $link-color;
 
-  &:link, &:visited {
-    color: $link-color;
+  p &:link {
     text-decoration: underline;
   }
 
-  &:hover, &:active {
-    color: lighten($link-color, 15%);
+  &:link, &:visited {
     text-decoration: none;
+  }
+
+  .no-touch &:hover, &:active {
+    color: lighten($link-color, 15%);
   }
 }
 

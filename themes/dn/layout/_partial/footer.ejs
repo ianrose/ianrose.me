@@ -1,4 +1,7 @@
 <footer>
+  <% if (theme.rss){ %>
+  <a id="nav-rss-link" class="icon-rss" href="<%- theme.rss %>" title="RSS Feed"></a>
+  <% } %>
   <% if (theme.sidebar === 'bottom'){ %>
     <%- partial('_partial/sidebar') %>
   <% } %>

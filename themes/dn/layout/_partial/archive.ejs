@@ -1,13 +1,17 @@
+<div class="cards">
 <% if (pagination == 2){ %>
   <% page.posts.each(function(post){ %>
     <%- partial('article', {post: post, index: true}) %>
   <% }) %>
+</div>
   <% if (page.total > 1){ %>
-    <nav id="page-nav">
-      <%- paginator({
-        prev_text: '&laquo; Prev',
-        next_text: 'Next &raquo;'
-      }) %>
+    <nav class="page-nav">
+      <% if (page.prev){ %>
+      <a class="button button-default" href="<%- config.root %><%- page.prev_link %>">Prev</a>
+      <% } %>
+      <% if (page.next){ %>
+      <a class="button button-default" href="<%- config.root %><%- page.next_link %>">Next</a>
+      <% } %>
     </nav>
   <% } %>
 <% } else { %>

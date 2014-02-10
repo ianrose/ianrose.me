@@ -10,6 +10,7 @@
 $font-sans: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-serif: 'Droid Serif', Georgia, "Times New Roman", serif;
 $font-mono: "Droid Sans Mono", Consolas, Monaco, Menlo, Consolas, monospace;
+$font-icon: 'entypo';
 $text-color: #000 !default;
 
 // The vertical grid unit. Margin, padding, and line-height are set to multiples of this value.
@@ -86,12 +87,17 @@ $base-line-height: ($base-vertical-unit * $base-line-multi) / $base-font-size;
 
 @mixin rhythmBorderTop($font-size: $base-em-font-size, $border-width: 1px, $lines: $base-line-multi) {
   border-top-width: $border-width;
-  padding-top: (($lines * stripUnits($base-vertical-unit)) - stripUnits($border-width)) / (stripUnits($font-size) * stripUnits($base-font-size)) + 0em;;
+  padding-top: (($lines * stripUnits($base-vertical-unit)) - stripUnits($border-width)) / (stripUnits($font-size) * stripUnits($base-font-size)) + 0em;
 }
 
 @mixin rhythmBorderBottom($font-size: $base-em-font-size, $border-width: 1px, $lines: $base-line-multi) {
   border-bottom-width: $border-width;
-  padding-bottom: (($lines * stripUnits($base-vertical-unit)) - stripUnits($border-width)) / (stripUnits($font-size) * stripUnits($base-font-size)) + 0em;;
+  padding-bottom: (($lines * stripUnits($base-vertical-unit)) - stripUnits($border-width)) / (stripUnits($font-size) * stripUnits($base-font-size)) + 0em;
+}
+
+@mixin rhythmBorder($font-size: $base-em-font-size, $border-width: 1px, $lines: $base-line-multi) {
+  border-width: $border-width;
+  padding: (($lines * stripUnits($base-vertical-unit)) - stripUnits($border-width)) / (stripUnits($font-size) * stripUnits($base-font-size)) + 0em;
 }
 
 // ---------------------
