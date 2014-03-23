@@ -2,5 +2,10 @@
   "name": "ianrose-source",
   "version": "0.0.0",
   "dependencies": {
+    "normalize-css": "~3.0.0",
+    "normalize-scss": "~3.0.0"
+  },
+  "devDependencies": {
+    "typesettings": "~1.2.0"
   }
 }

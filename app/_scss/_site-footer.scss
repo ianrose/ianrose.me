@@ -1,0 +1,19 @@
+.site-footer {
+  text-align: center;
+  padding-left: emRhythm(4);
+  padding-right: emRhythm(4);
+  padding-top: emRhythm(8);
+  padding-bottom: emRhythm(8);
+  background-color: $tan-color;
+  @include clearfix();
+
+  p {
+    margin-bottom: 0;
+    max-width: none;
+  }
+}
+
+.site-details {
+  float: left;
+  @include setType(4, $ms-down1);
+}

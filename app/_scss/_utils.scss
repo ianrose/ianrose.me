@@ -1,0 +1,25 @@
+@mixin clearfix {
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+}
+
+@mixin link-bb (
+$color: inherit,
+$style: solid,
+$width: 1px
+) {
+
+  text-decoration: none;
+
+  border-bottom-width: $width;
+  border-bottom-style: $style;
+  @if $color != inherit {
+    border-bottom-color: $color;
+  }
+
+}

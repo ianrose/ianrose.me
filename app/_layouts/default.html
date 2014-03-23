@@ -1,48 +1,50 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>{{ page.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- build:css({app,.tmp}) /css/main.css -->
-        <!-- Syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+  <!-- build:css({app,.tmp}) /css/main.css -->
+  <!-- Syntax highlighting CSS -->
+  <link rel="stylesheet" href="/css/syntax.css">
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
-        <!-- endbuild -->
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/main.css">
+  <!-- endbuild -->
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/genericons/3.0.3/genericons.css">
+</head>
+<body id="top">
+<!--[if lt IE 8]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please
+  <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
 
-    </head>
-    <body>
+<header class="site-header">
+  <h1 class="site-header-item site-name"><a href="/">{{ site.name }}</a></h1>
+  <nav class="site-header-item site-nav">
+    <a class="site-nav-item" href="/about">About</a>
+  </nav>
+</header>
 
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
+{{ content }}
 
-          {{ content }}
+<footer class="site-footer">
+  <a class="button" href="#top">
+    Back to Top
+  </a>
+  <p class="site-details">&copy; 2014 Ian Rose // <a href="https://github.com/ianrose/ianrose-source">Site Source</a></p>
+  <ul class="social-list">
+    <li class="social-list-item"><a class="genericon genericon-twitter" href="https://twitter.com/rose_ian"></a></li>
+    <li class="social-list-item"><a class="genericon genericon-github" href="https://github.com/ianrose"></a></li>
+    <li class="social-list-item"><a class="genericon genericon-feed" href="http://feeds.feedburner.com/ianrose?format=xml"></a></li>
+  </ul>
+</footer>
 
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Ian Rose<br />
-                <a href="mailto:ian@ianrose.me">ian@ianrose.me</a>
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-              </p>
-            </div>
-          </div>
-        </div>
-
-    <!-- build:js(app) /js/scripts.js -->
-    <script src="/js/main.js"></script>
-    <!-- endbuild -->
-    </body>
+<!-- build:js(app) /js/scripts.js -->
+<script src="/js/main.js"></script>
+<!-- endbuild -->
+</body>
 </html>

@@ -3,8 +3,9 @@
 # 2. config.build.yml
 # 3. config.yml
 
-name: ianrose-source
-description: Ian Rose
+name: Ian Rose
+description: UI/UX Designer
+url: http://ianrose.me
 author:
   name: Ian Rose
   email: ian@ianrose.me
@@ -24,3 +25,4 @@ markdown: redcarpet
 #   extensions: ['fenced_code_blocks', 'smart']
 
 pygments: true
+permalink: pretty

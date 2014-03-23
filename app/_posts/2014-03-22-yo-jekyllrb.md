@@ -2,9 +2,8 @@
 layout: post
 title:  "Yo Jekyll!"
 categories: jekyll update
+excerpt: Test testy
 ---
-
-# 'Allo, 'Allo!
 
 You now have
 

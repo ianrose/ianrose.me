@@ -1,0 +1,6 @@
+.meta {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: lighten($text-color, 20%);
+  @include setType(2, $ms-down1);
+}

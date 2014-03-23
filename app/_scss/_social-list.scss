@@ -1,0 +1,18 @@
+.social-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  float: right;
+  line-height: 1;
+}
+
+.social-list-item {
+  display: inline-block;
+  padding-right: emRhythm(1);
+  padding-left: emRhythm(1);
+  line-height: 0;
+
+  a {
+    border: none;
+  }
+}

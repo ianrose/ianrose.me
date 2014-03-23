@@ -1,0 +1,39 @@
+.site-intro-container {
+  background-image: url(../img/intro.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% auto;
+  margin-bottom: emRhythm(8);
+  margin-top: emRhythm(-8);
+  height: emRhythm(44);
+  color: #fff;
+  text-align: center;
+  display: table;
+  width: 100%;
+
+  @media (min-width: 43.75em) {
+    height: 524px;
+  }
+
+  @media (min-width: 56.25em) {
+    height: 676px;
+  }
+}
+
+.site-intro {
+  display: table-cell;
+  vertical-align: middle;
+  letter-spacing: 0.175em;
+}
+
+.site-logo {
+  width: emRhythm(12);
+
+  @media (min-width: 43.75em) {
+    width: emRhythm(14);
+  }
+
+  @media (min-width: 56.25em) {
+    width: emRhythm(16);
+  }
+}
