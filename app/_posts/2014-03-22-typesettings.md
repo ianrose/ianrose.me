@@ -3,6 +3,7 @@ layout: post
 title:  "A Sass Type Toolkit: Typesettings"
 date:   2014-03-24 01:17:00
 categories: blog
+tags: sass type
 ---
 
 Setting type using modular scale and maintaining vertical rhythm is not a new topic, at all. There are so many great tools and articles out there that help designers do these things. However I couldn't find exactly what I was looking for. So I created [Typesettings](http://typesettings.io).
