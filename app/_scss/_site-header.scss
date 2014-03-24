@@ -1,5 +1,4 @@
 .site-header {
-  text-align: center;
   background-color: lighten($text-color, 70%);
   position: relative;
   margin-bottom: emRhythm(8);
@@ -12,7 +11,7 @@
 }
 
 .site-name {
-  display: inline-block;
+  text-align: center;
   letter-spacing: 0.175em;
   margin-bottom: 0;
   margin-top: emRhythm(3);
@@ -32,7 +31,6 @@
 }
 
 .site-nav {
-  display: inline-block;
   float: right;
 
   @media (min-width: 43.75em) {
