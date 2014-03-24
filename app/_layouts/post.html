@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<article class="post-container">
+<article class="container">
   <header class="post-header">
     <h2>{{ page.title }}</h2>
     <p class="meta">{{ page.date | date_to_string }}</p>
@@ -10,4 +10,10 @@ layout: default
   <div class="post">
     {{ content }}
   </div>
+  <small>Share Post: </small>
+  <ul class="social-list">
+    <li class="social-list-item"><a class="genericon genericon-twitter" target="_blank" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via=rose_ian"></a></li>
+    <li class="social-list-item"><a class="genericon genericon-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"></a></li>
+    <li class="social-list-item"><a class="genericon genericon-googleplus-alt" target="_blank" href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}"></a></li>
+  </ul>
 </article>

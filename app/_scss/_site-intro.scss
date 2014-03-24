@@ -1,5 +1,4 @@
-.site-intro-container {
-  background-image: url(../img/intro.jpg);
+.intro-container {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% auto;
@@ -18,6 +17,14 @@
   @media (min-width: 56.25em) {
     height: 676px;
   }
+}
+
+.site-intro-container {
+  background-image: url(../img/intro.jpg);
+}
+
+.about-intro-container {
+  background-color: $red-color;
 }
 
 .site-intro {

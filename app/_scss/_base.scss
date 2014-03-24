@@ -21,3 +21,23 @@ a {
     color: $link-color-active;
   }
 }
+
+h1, h2, h3, h4, h5, h6 {
+
+  a {
+    border: none;
+  }
+}
+
+.container {
+  padding-left: emRhythm(4);
+  padding-right: emRhythm(4);
+  max-width: 36em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: emRhythm(8);
+}
+
+.direction-right {
+  float: right;
+}

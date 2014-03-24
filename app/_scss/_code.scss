@@ -8,7 +8,7 @@
 
 .post pre,
 .post code {
-  background-color: #ddf6ff;
+  background-color: lighten($lightest-blue, 25%);
   border-color: #ddd;
 }
 

@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2014-03-22 21:29:37
-categories: jekyll update
-excerpt: Test testy
+title:  "A Sass Type Toolkit: Typesettings"
+date:   2014-03-23 21:29:37
+categories: sass
+excerpt: Set your type in Ems with modular scale, vertical rhythm, and responsive ratio based headlines using Sass. Why create another type toolkit in Sass? I wanted to and I couldn’t find exactly what I was looking for. Typesettings uses techniques from many different amazing tools while trying to keep it simple.
 ---
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
