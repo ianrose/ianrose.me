@@ -50,6 +50,7 @@
   text-transform: uppercase;
   border: none;
 
+  &:link,
   &:visited {
     color: #fff;
   }

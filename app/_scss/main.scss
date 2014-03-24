@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 @import "utils";
 @import "../_bower_components/normalize-scss/normalize";
 
@@ -39,4 +43,5 @@ $link-color-visited: $link-color-link;
 @import "code";
 @import "meta";
 @import "post";
+@import "syntax";
 

@@ -316,7 +316,8 @@ module.exports = function (grunt) {
       check: {
         src: [
           '<%= yeoman.app %>/css/**/*.css',
-          '<%= yeoman.app %>/_scss/**/*.scss'
+          '<%= yeoman.dist %>/css/*.css'
+//            '.tmp/css/*.css'
         ]
       }
     },
@@ -375,14 +376,14 @@ module.exports = function (grunt) {
     'concurrent:dist',
     'useminPrepare',
     'concat',
-    'autoprefixer:dist',
     'cssmin',
     'uglify',
     'imagemin',
     'svgmin',
     'filerev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'autoprefixer:dist'
     ]);
 
   grunt.registerTask('deploy', [
