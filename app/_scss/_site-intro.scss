@@ -42,13 +42,12 @@
 }
 
 .site-logo {
-  width: emRhythm(12);
+  margin-bottom: emRhythm(1, $ms-up4);
+  @include setType(12, $ms-up4);
 
   @media (min-width: 43.75em) {
-    width: emRhythm(14);
+    margin-bottom: emRhythm(2, $ms-up4 * $ms-ratio);
+    @include setType(16, $ms-up4 * $ms-ratio);
   }
 
-  @media (min-width: 56.25em) {
-    width: emRhythm(16);
-  }
 }
