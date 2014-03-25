@@ -4,11 +4,19 @@
   background-size: 100% auto;
   margin-bottom: emRhythm(8);
   margin-top: emRhythm(-8);
-  height: emRhythm(44);
+  height: emRhythm(35);
   color: #fff;
   text-align: center;
   display: table;
   width: 100%;
+
+  @media (min-width: 400px) {
+    height: emRhythm(45);
+  }
+
+  @media (min-width: 500px) {
+    height: emRhythm(55);
+  }
 
   @media (min-width: 43.75em) {
     height: 524px;
