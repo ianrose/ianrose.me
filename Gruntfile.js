@@ -130,7 +130,20 @@ module.exports = function (grunt) {
           dest: '.tmp/css',
           ext: '.css'
         }]
-      }
+      },
+        check: {
+            options: {
+                debugInfo: false,
+                lineNumbers: false
+            },
+            files: [{
+                expand: true,
+                cwd: '<%= yeoman.app %>/_scss',
+                src: '**/*.{scss,sass}',
+                dest: '.tmp/css',
+                ext: '.css'
+            }]
+        }
     },
     autoprefixer: {
       options: {
@@ -316,8 +329,8 @@ module.exports = function (grunt) {
       check: {
         src: [
           '<%= yeoman.app %>/css/**/*.css',
-          '<%= yeoman.dist %>/css/*.css'
-//            '.tmp/css/*.css'
+          '<%= yeoman.dist %>/css/*.css',
+          '.tmp/css/*.css'
         ]
       }
     },
@@ -364,7 +377,7 @@ module.exports = function (grunt) {
   grunt.registerTask('check', [
     'clean:server',
     'jekyll:check',
-    'sass:server',
+    'sass:check',
     'jshint:all',
     'csslint:check'
   ]);
