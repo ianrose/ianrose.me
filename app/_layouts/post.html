@@ -10,10 +10,12 @@ layout: default
   <div class="post">
     {{ content }}
   </div>
-  <small>Share Post: </small>
-  <ul class="social-list social-list-inline">
-    <li class="social-list-item"><a class="genericon genericon-twitter" target="_blank" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via=rose_ian"></a></li>
-    <li class="social-list-item"><a class="genericon genericon-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"></a></li>
-    <li class="social-list-item"><a class="genericon genericon-googleplus-alt" target="_blank" href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}"></a></li>
-  </ul>
+  <div class="post-share">
+      <small>Share Post: </small>
+      <ul class="social-list social-list-inline">
+          <li class="social-list-item"><a class="genericon genericon-twitter" target="_blank" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via=rose_ian" title="Twitter"></a></li>
+          <li class="social-list-item"><a class="genericon genericon-facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" title="Facebook"></a></li>
+          <li class="social-list-item"><a class="genericon genericon-googleplus-alt" target="_blank" href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" title="Google Plus"></a></li>
+      </ul>
+  </div>
 </article>
