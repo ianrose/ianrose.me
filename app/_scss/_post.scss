@@ -1,18 +1,6 @@
 .post-list {
-  margin-bottom: 0;
-}
-
-.post-container,
-.post-list {
-  padding-left: emRhythm(4);
-  padding-right: emRhythm(4);
-}
-
-.post-list,
-.post {
-  max-width: 36em;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 0;
+  margin: 0;
 }
 
 .post-list {
@@ -20,9 +8,16 @@
 }
 
 .post-list-item {
+  border-top-color: lighten($text-color, 60%);
+  border-top-style: solid;
+  @include rhythmBorderTop(1px, 6);
+}
+
+.post,
+.post-list-item {
   border-bottom-color: lighten($text-color, 60%);
   border-bottom-style: solid;
-  margin-bottom: emRhythm(8);
+  margin-bottom: emRhythm(4);
   @include rhythmBorderBottom(1px, 4);
 }
 
@@ -46,4 +41,11 @@
   background: transparent;
   color: inherit;
   font-weight: bold;
+}
+
+.post-share {
+  border-bottom-color: lighten($text-color, 60%);
+  border-bottom-style: solid;
+  margin-bottom: emRhythm(4);
+  @include rhythmBorderBottom(1px, 4);
 }
