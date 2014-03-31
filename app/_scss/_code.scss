@@ -1,42 +1,42 @@
-.post code,
-.post pre,
-.post pre.terminal {
+code,
+pre,
+pre.terminal {
   border-style: solid;
   border-radius: 3px;
   @include rhythmBorder(1px, 1, $ms-down1);
 }
 
-.post pre,
-.post code {
+pre,
+code {
   background-color: lighten($lightest-blue, 25%);
   border-color: #ddd;
 }
 
 // Standard
-.post pre {
+pre {
   padding-right: 1em;
   padding-left: 1em;
   margin-bottom: emRhythm(4);
   margin-top: 0;
 }
 
-.post code {
+code {
   padding-left: 0.2em;
   padding-right: 0.2em;
   @include setType(3, $ms-down1);
 }
 
-.post pre code {
+pre code {
   border: none;
 }
 
 // Terminal
-.post pre.terminal {
+pre.terminal {
   border-color: #000;
   background-color: #333;
   color: #fff;
 }
 
-.post pre.terminal code {
+pre.terminal code {
   background-color: #333;
 }

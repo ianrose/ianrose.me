@@ -8,11 +8,12 @@
 }
 
 .post-list-item {
-  border-top-color: lighten($text-color, 60%);
-  border-top-style: solid;
-  @include rhythmBorderTop(1px, 6);
+//  border-top-color: lighten($text-color, 60%);
+//  border-top-style: solid;
+//  @include rhythmBorderTop(1px, 6);
 }
 
+.title,
 .post,
 .post-list-item {
   border-bottom-color: lighten($text-color, 60%);
