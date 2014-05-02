@@ -57,7 +57,7 @@ $btn_md-font-size: $ms-down1; // Font size context variable using a modular scal
 }
 
 .btn_md {
-  @include setType(3, $btn_sm-font-size); // Sets the font size and line height
+  @include setType(3, $btn_md-font-size); // Sets the font size and line height
 }
 
 .btn_default {
