@@ -25,7 +25,7 @@
   "ids": true,
   "underscore-property-hack": false,
   "rules-count": false,
-  "qualified-headings": true,
+  "qualified-headings": false,
   "selector-max": false,
   "shorthand": false,
   "text-indent": false,
