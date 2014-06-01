@@ -1,11 +1,11 @@
 ---
 layout: default
 ---
-<article class="container">
-  <header class="post-header">
+<div class="container">
+  <div class="post-header">
     <h2>{{ page.title }}</h2>
     <p class="meta">{{ page.date | date_to_string }}</p>
-  </header>
+  </div>
 
   <div class="post">
     {{ content }}
@@ -18,4 +18,4 @@ layout: default
           <li class="social-list-item"><a class="genericon genericon-googleplus-alt" target="_blank" href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" title="Google Plus"><span class="screen-reader-txt">Google Plus</span></a></li>
       </ul>
   </div>
-</article>
+</div>
