@@ -6,5 +6,8 @@
     "hexo-renderer-ejs": "*",
     "hexo-renderer-sass": "https://github.com/knksmith57/hexo-renderer-sass/tarball/83034cd2d0d7d2af838428af4e3750ceaa43cf3d",
     "hexo-renderer-marked": "*"
+  },
+  "devDependencies": {
+    "hexo-livereload": "^0.1.0"
   }
 }
