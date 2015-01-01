@@ -5,3 +5,5 @@ debug.log
 node_modules/
 public/
 .deploy/
+.idea
+.idea/workspace.xml
