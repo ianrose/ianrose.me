@@ -6,7 +6,7 @@
 				<div class="col col-xs-12 col-sm-6 nav--post-prev">
 				<% if (post.prev) { %>
 				<a href="<%- config.root %><%- post.prev.path %>" class="article-nav-link-wrap">
-					<small><i class="ion-ios-arrow-thin-left"></i> Previous Post</small>
+					<small><i class="ion-ios-arrow-thin-left" aria-hidden="true"></i> Previous Post</small>
 
 					<div class="nav--post-title">
 						<% if (post.prev.title) { %>
@@ -21,7 +21,7 @@
 				<div class="col col-xs-12 col-sm-6 nav--post-next">
 				<% if (post.next) { %>
 				<a href="<%- config.root %><%- post.next.path %>" class="article-nav-link-wrap">
-					<small>Next Post <i class="ion-ios-arrow-thin-right"></i></small>
+					<small>Next Post <i class="ion-ios-arrow-thin-right" aria-hidden="true"></i></small>
 
 					<div class="nav--post-title"><%= post.next.title %></div>
 				</a>

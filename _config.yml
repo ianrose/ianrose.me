@@ -103,3 +103,7 @@ feed:
   type: atom
   path: atom.xml
   limit: 0
+
+yaml-front-matter:
+
+after_post_render:

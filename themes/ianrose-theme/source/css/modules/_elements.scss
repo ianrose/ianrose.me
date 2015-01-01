@@ -308,3 +308,13 @@ tbody tr:nth-child(odd) {
 mark {
   background-color: $yellow;
 }
+
+figure {
+  margin-left: 0;
+  margin-bottom: emRhythm($base-line-multi);
+}
+
+td.gutter {
+  width: emRhythm(6);
+  text-align: right;
+}
