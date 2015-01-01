@@ -4,8 +4,8 @@ tags: design
 categories:
 - articles
 ---
-<!-- more -->
 
+<!-- more -->
 Meanwhile, at least 30 buildings collapsed under the snow's weight on Thursday night, and local authorities expect that many more will follow. The Associated Press reports:
 <!-- more -->
 
