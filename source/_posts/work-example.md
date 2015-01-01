@@ -1,10 +1,10 @@
-title: Test Post 04
+title: Work Example
 date: 2014-12-30 17:20:41
 tags:
 - Design
 - Code
 categories:
-- test
+- work
 comments: true
 updated: 2014-12-31 17:20:41
 ---

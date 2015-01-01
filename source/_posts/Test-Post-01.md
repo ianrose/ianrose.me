@@ -1,6 +1,8 @@
 title: Test Post 01
 date: 2014-12-30 17:19:25
 tags: design
+categories:
+- articles
 ---
 <!-- more -->
 

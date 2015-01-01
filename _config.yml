@@ -17,7 +17,7 @@ root: /
 permalink: :year/:month/:day/:title/
 tag_dir: tags
 archive_dir: archives
-category_dir: categories
+category_dir: /
 code_dir: downloads/code
 permalink_defaults:
 
@@ -28,7 +28,7 @@ public_dir: public
 # Writing
 new_post_name: :title.md # File name of new posts
 default_layout: post
-titlecase: false # Transform title into titlecase
+titlecase: true # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
