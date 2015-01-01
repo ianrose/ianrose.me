@@ -1,0 +1,6 @@
+.entry-meta--container {
+  border-bottom-color: $border-color;
+  border-bottom-style: solid;
+  margin-bottom: emRhythm(1);
+  @include rhythmBorderBottom(1px, 1);
+}

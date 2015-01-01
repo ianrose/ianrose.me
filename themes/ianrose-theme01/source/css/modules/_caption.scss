@@ -1,0 +1,9 @@
+.caption {
+  color: $light-grey;
+  display: block;
+  text-align: right;
+  margin-top: emRhythm(-3, $ms-down2);
+  font-family: $font-sans;
+  margin-bottom: emRhythm(2, $ms-down2);
+  @include setType(3, $ms-down2);
+}

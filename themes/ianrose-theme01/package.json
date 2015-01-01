@@ -1,0 +1,7 @@
+{
+  "name": "ianrose-theme",
+  "version": "0.0.0",
+  "description": "ianrose-theme hexo theme",
+  "private": true,
+  "dependencies": {}
+}

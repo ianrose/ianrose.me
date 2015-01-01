@@ -1,0 +1,29 @@
+.details {
+  border-bottom-style: solid;
+  border-bottom-color: $border-color;
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+  margin-bottom: emRhythm(1);
+  @include rhythmBorderBottom(1px, 1);
+  @include setType($base-line-multi, $share-size);
+  @include clearfix();
+
+  @media (min-width: $screen-md-min) {
+    border: none;
+  }
+}
+
+.details > li {
+  float: left;
+  margin-right: emRhythm(4, $share-size);
+
+  @media (min-width: $screen-md-min) {
+    float: none;
+    margin-right: 0;
+    margin-bottom: emRhythm(2, $share-size);
+    border-bottom-style: solid;
+    border-bottom-color: $border-color;
+    @include rhythmBorderBottom(1px, 2, $share-size);
+  }
+}

@@ -1,0 +1,19 @@
+.media--full,
+img.media--full{
+  float: none;
+  width: 100%;
+}
+
+.media--entry {
+  float: left;
+  width: 120px;
+  margin-right: emRhythm(1);
+}
+
+.media--illustration {
+  width: 35%;
+  float: left;
+  margin-right: -8em;
+  margin-top: -4em;
+  margin-bottom: emRhythm(12);
+}

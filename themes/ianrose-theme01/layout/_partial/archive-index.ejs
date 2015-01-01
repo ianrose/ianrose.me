@@ -1,0 +1,5 @@
+<% page.posts.each(function(post) { %>
+	<%- partial('archive-post', {post: post, index: true}) %>
+<% }) %>
+
+<%- list_posts({count:5,orderby: "updated",order:-1,query:{categories: 'articles'}}) %>

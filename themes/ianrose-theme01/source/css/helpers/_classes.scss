@@ -1,0 +1,42 @@
+.clearfix {
+  @include clearfix;
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.display-font {
+  font-family: $font-display-serif;
+}
+
+.list--sans {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.pad-bottom {
+  margin-bottom: emRhythm(4);
+}
+
+.hidden-xs {
+  display: none;
+
+  @media (min-width: $screen-sm-min) {
+    display: block;
+  }
+}

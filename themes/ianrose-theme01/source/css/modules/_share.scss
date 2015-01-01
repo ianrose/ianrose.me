@@ -1,0 +1,74 @@
+$share-size: $ms-down1;
+
+.share {
+  border-bottom-style: solid;
+  border-bottom-color: $border-color;
+  font-family: $font-sans;
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+  margin-bottom: emRhythm(1);
+  @include rhythmBorderBottom(1px, 1);
+  @include setType($base-line-multi, $share-size);
+  @include clearfix();
+
+  @media (min-width: $screen-md-min) {
+    border: none;
+  }
+}
+
+.share > li {
+  float: left;
+  margin-right: emRhythm(1, $share-size);
+  display: block;
+
+  @media (min-width: $screen-md-min) {
+    float: none;
+    margin-right: 0;
+    text-align: center;
+    border-bottom: 1px solid $border-color;
+  }
+}
+
+.share > li a {
+  display: block;
+  color: $text-color;
+  padding-right: emRhythm(2, $share-size);
+  padding-left: emRhythm(2, $share-size);
+  transition: background-color $trans-dur $trans-ease;
+
+  @media (min-width: $screen-md-min) {
+    padding-bottom: emRhythm(2);
+    padding-top: emRhythm(2);
+  }
+}
+
+.share--facebook {
+  &:hover {
+    color: $facebook-blue;
+    @media (min-width: $screen-md-min) {
+      color: #fff;
+      background-color: $facebook-blue;
+    }
+  }
+}
+
+.share--twitter {
+  &:hover {
+    color: $twitter-blue;
+    @media (min-width: $screen-md-min) {
+      color: #fff;
+      background-color: $twitter-blue;
+    }
+  }
+}
+
+.share--google {
+  &:hover {
+    color: $google-red;
+    @media (min-width: $screen-md-min) {
+      color: #fff;
+      background-color: $google-red;
+    }
+  }
+}

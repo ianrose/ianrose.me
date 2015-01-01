@@ -1,0 +1,31 @@
+<div class="layout--footer">
+	<div class="layout--main">
+		<div class="layout--nav">
+			<div class="layout--footer-legal">
+				<ul class="nav">
+					<li><a href="/about">Site Source</a></li>
+				</ul>
+				<ul class="nav nav--legal">
+					<li>&copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %></li>
+				</ul>
+			</div>
+		</div>
+		<div class="layout--content">
+			<div class="layout--footer-main">
+				<div class="container">
+					<div class="row center-xs">
+						<div class="col col-xs-12 col-md-10 col-lg-8 pad-xs">
+							<form class="form form--inline form--box" style="text-align: center;" action="https://tinyletter.com/ian-rose" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/ian-rose', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+								<p><label for="tlemail">Sign up to have updates sent directly to
+										your inbox.</label></p>
+								<input class="pad-bottom" type="text" placeholder="Your email here" name="email" id="tlemail"/>
+								<input type="hidden" value="1" name="embed"/>
+								<input type="submit" value="Subscribe" class="btn btn--default"/>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

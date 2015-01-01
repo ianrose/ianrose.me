@@ -1,0 +1,26 @@
+<div id="<%= post.layout %>-<%= post.slug %>" class="entry--post article-type-<%= post.layout %>" itemscope itemprop="blogPost">
+	<div class="row">
+		<div class="col col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 pad-xs">
+			<%- partial('post/date', {
+				class_name: 'entry-meta-item entry-meta-item--time',
+				date_format: null
+			}) %>
+			<%- partial('post/title', {class_name: 'article-title'}) %>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col col-xs-12 col-md-9 col-lg-7 last-md pad-xs" itemprop="articleBody">
+			<div class="article">
+				<%- post.content %>
+			</div>
+			<%- partial('post/meta') %>
+
+		</div>
+		<div class="col col-xs-12 col-md-1 col-md-offset-1 col-lg-offset-2 pad-xs">
+			<%- partial('post/share') %>
+		</div>
+	</div>
+</div>
+<% if (!index) { %>
+<%- partial('post/nav') %>
+<% } %>
