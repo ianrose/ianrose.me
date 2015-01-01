@@ -98,3 +98,8 @@ marked:
 
 livereload:
   port: 35729
+
+feed:
+  type: atom
+  path: atom.xml
+  limit: 0
