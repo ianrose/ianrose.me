@@ -1,5 +1,6 @@
 <div class="container">
 	<div class="row">
+		<div class="layout--col col col-xs-12 col-sm-7 col-md-5 col-lg-8 pad-xs">
 		<% if (pagination == 2) { %>
 		<% page.posts.each(function(post) { %>
 		<%- partial('archive-post', {post: post, index: true}) %>
@@ -18,7 +19,6 @@
 		<% var year = post.date.year(); %>
 		<% if (last != year) { %>
 		<% if (last != null) { %>
-	</div>
 	<% } %>
 	<% last = year; %>
 		<div class="archive-year-wrap">
@@ -32,6 +32,14 @@
 		</div>
 	<% } %>
 	<% } %>
+	</div>
+		<div class="col col-xs-12 col-sm-7 col-md-5 col-lg-4 pad-xs">
+			<%- list_archives() %>
+			<% site.categories.each(function(cate){ %>
+			<%= cate.name %>
+			<%- list_posts({count:5,orderby: "updated",order:-1,query:{categories:  cate.name}}) %>
+			<% }) %>
+		</div>
 	</div>
 </div>
 

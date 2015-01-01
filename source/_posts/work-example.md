@@ -5,6 +5,7 @@ tags:
 - Code
 categories:
 - work
+type: work
 comments: true
 updated: 2014-12-31 17:20:41
 ---

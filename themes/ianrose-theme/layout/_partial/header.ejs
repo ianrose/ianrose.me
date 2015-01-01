@@ -11,7 +11,14 @@
 				<div class="container">
 					<div class="row">
 						<div class="col col-xs-12">
-							<p class="site-title site-title--desc">Front-End Designer</p>
+							<p class="site-title site-title--desc">
+
+								<% if (page.header){ %>
+								<%= page.header %>
+								<% } else { %>
+								<%= header %>
+								<% } %>
+							</p>
 						</div>
 					</div>
 				</div>
