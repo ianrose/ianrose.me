@@ -1,0 +1,14 @@
+.footnotes,
+#footnote {
+  margin-left: 0;
+  color: $aside-txt-color;
+  border-bottom-color: $border-color;
+  border-bottom-style: solid;
+  margin-bottom: emRhythm(1, $ms-down1);
+  @include rhythmBorderBottom(1px, 6, $ms-down1);
+  @include setType(3, $ms-down1);
+
+  & li {
+    margin-bottom: emRhythm(1, $ms-down1);
+  }
+}

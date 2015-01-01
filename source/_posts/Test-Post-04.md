@@ -1,12 +1,21 @@
 ---
+<<<<<<< Updated upstream
 title: Test Post 04
 excerpt: "Excerpt"
+=======
+title: Article Title
+excerpt: Excerpt
+>>>>>>> Stashed changes
 date: 2014-12-30 17:20:41
 tags:
 - Design
 - Code
 categories:
+<<<<<<< Updated upstream
 - notes
+=======
+- articles
+>>>>>>> Stashed changes
 comments: true
 updated: 2014-12-31 17:20:41
 ---

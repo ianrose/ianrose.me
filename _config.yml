@@ -4,8 +4,13 @@
 
 # Site
 title: Ian Rose
+<<<<<<< Updated upstream
 subtitle:
 description: Front-End Designer
+=======
+subtitle: Front-end Designer
+description: Ian Rose is a Front-end designer living and working in New York City
+>>>>>>> Stashed changes
 author: Ian Rose
 email:
 language:
@@ -17,7 +22,7 @@ root: /
 permalink: :year/:month/:day/:title/
 tag_dir: tags
 archive_dir: archives
-category_dir: /
+category_dir: categories
 code_dir: downloads/code
 permalink_defaults:
 
@@ -48,9 +53,9 @@ tag_map:
 ## 2: Enable pagination
 ## 1: Disable pagination
 ## 0: Fully Disable
-archive: 2
-category: 2
-tag: 2
+archive: 1
+category: 1
+tag: 1
 
 # Server
 ## Hexo uses Connect as a server
@@ -74,12 +79,12 @@ per_page: 0
 pagination_dir: page
 
 # Disqus
-disqus_shortname:
+disqus_shortname: ianrose
 
 # Extensions
 ## Plugins: https://github.com/hexojs/hexo/wiki/Plugins
 ## Themes: https://github.com/hexojs/hexo/wiki/Themes
-theme: ianrose-theme
+theme: ianrose-theme-alt
 exclude_generator:
 
 # Deployment

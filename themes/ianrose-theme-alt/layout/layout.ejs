@@ -1,0 +1,18 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<%- partial('_partial/head') %>
+<body>
+<%- partial('_partial/header') %>
+<div class="layout--main">
+	<div class="layout--content layout--content-main">
+		<%- body %>
+	</div>
+	<%- partial('_partial/nav') %>
+</div>
+<% if (theme.sidebar && theme.sidebar !== 'bottom'){ %>
+	<%- partial('_partial/sidebar') %>
+<% } %>
+<%- partial('_partial/footer') %>
+<%- partial('_partial/after-footer') %>
+</body>
+</html>

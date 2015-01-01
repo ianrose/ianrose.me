@@ -1,0 +1,30 @@
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="<%= config.description%>">
+  <%
+  var title = page.title;
+  if (is_archive()) {
+    title = 'Archives';
+    if (is_month()) {
+      title += ': ' + page.year + '/' + page.month;
+    } else if (is_year()) {
+      title += ': ' + page.year;
+    }
+  } else if (is_category()) {
+    title = 'Category: ' + page.category;
+  } else if (is_tag()) {
+    title = 'Tag: ' + page.tag;
+  }
+  %>
+  <title><% if (title) { %><%= title %> | <% } %><%= config.title %></title>
+  <% if (theme.rss) { %>
+    <link rel="alternative" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
+  <% } %>
+  <% if (theme.favicon) { %>
+    <link rel="icon" href="<%- theme.favicon %>">
+  <% } %>
+	<link rel="stylesheet" href="//cloud.typography.com/7467332/623026/css/fonts.css"/>
+	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css"/>
+  <%- css('css/style') %>
+</head>

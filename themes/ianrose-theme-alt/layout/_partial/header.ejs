@@ -1,0 +1,29 @@
+<div class="layout--header">
+	<div class="layout--main">
+		<div class="layout--nav">
+			<div class="site-title--container site-title--name-container">
+				<button class="js-toggle-menu btn btn--menu">
+					<i class="ion-navicon"></i></button>
+				<h1 class="site-title site-title--name">
+					<a href="<%- config.root %>"><%= config.title %></a></h1>
+			</div>
+		</div>
+		<div class="layout--content">
+			<div class="site-title--container site-title--desc-container">
+				<div class="container">
+					<div class="row">
+						<div class="col col-xs-12">
+							<p class="site-title site-title--desc">
+								<% if (page.category) { %>
+									<%= page.category %>
+								<% } else { %>
+									<%= theme.subtitle %>
+								<% } %>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
