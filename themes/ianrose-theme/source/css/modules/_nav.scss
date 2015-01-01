@@ -16,16 +16,22 @@ $nav-item-border-color: $menu-border-color;
     color: $lighter-grey;
 
     &:last-of-type {
-       a {
+       a,
+       button {
+         border: none;
          border-bottom-color: $nav-item-border-color;
          border-bottom-style: solid;
+         background-color: transparent;
          @include rhythmBorderBottom(1px, $nav-padding, $nav-font-size);
        }
     }
 
-    & > a {
+    & > a,
+    & > button {
       color: $lighter-grey;
       display: block;
+      width: 100%;
+      text-align: left;
       border-bottom-color: $nav-border-color;
       border-bottom-style: solid;
       padding-left: emRhythm($nav-pad-left, $nav-font-size);
@@ -51,6 +57,11 @@ $nav-item-border-color: $menu-border-color;
         vertical-align: baseline;
         color: $lighter-grey;
       }
+    }
+
+    & > button:focus {
+        outline: none;
+        background-color: $grey;
     }
   }
 }
