@@ -4,6 +4,12 @@
 			<%- partial('post/date', {
 				class_name: 'entry-meta-item entry-meta-item--time',
 				date_format: null
+			}) %> <small>in</small>
+			<%- list_categories(post.categories, {
+				show_count: false,
+				style: 'none',
+				separator: '',
+				amount: 1
 			}) %>
 			<%- partial('post/title', {class_name: 'article-title'}) %>
 		</div>
