@@ -9,7 +9,21 @@
 	<div class="row">
 		<div class="layout--col col col-xs-12 col-sm-7 col-md-5 col-lg-5 pad-xs">
 			<h2 class="heading--alt h4"><a href="categories/articles">Articles</a></h2>
-			<%- partial('_partial/index_loop') %>
+			<% site.posts.find(site.categories).limit(6).each(function(post) { %>
+			<li>
+				<a href="<%- config.root %><%- post.path %>"><%= post.title%>
+					<%= post.layout%>
+				</a>
+			</li>
+			<% }) %>
+			/////
+			<% site.posts.sort('date').limit(1).each(function(post) { %>
+			<li>
+
+				<%= post.categories._index[0] %>
+			</li>
+			<% }) %>
+
 		</div>
 		<div class="layout--col layout--work col col-xs-12 col-sm-5 col-md-4 col-lg-4 pad-xs pad-xs">
 			<h2 class="heading--alt h4"><a href="categories/work">Work</a></h2>
@@ -17,5 +31,16 @@
 		<div class="layout--notes col col-xs-12 col-sm-7 col-md-3 col-lg-3 pad-xs">
 			<h2 class="heading--alt h4"><a href="categories/notes">Notes</a></h2>
 		</div>
+	</div>
+	<div class="container">
+		<% site.categories.populate('posts').each(function(category){ %>
+		<%= category %>
+		<% }) %>
+	</div>
+	<div>
+		<% site.categories.each(function(cate){ %>
+		<%= cate.name %>
+		<%- list_posts({count:5,orderby: "updated",order:-1,query:{categories:  cate.name}}) %>
+		<% }) %>
 	</div>
 </div>
