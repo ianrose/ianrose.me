@@ -1,9 +1,21 @@
 <div class="container">
 	<div class="row">
 		<div class="col col-xs-12 pad-xs">
-			<p class="dek dek-xlg">Ian Rose is a designer living &amp; working
-				in New York City.</p>
+			<p class="dek dek-xlg">Ian Rose is a designer living &amp; working in New York City.</p>
 		</div>
 	</div>
 </div>
-<%- partial('_partial/archive', { pagination: 1, index: true }) %>
+<div class="container">
+	<div class="row">
+		<div class="layout--col col col-xs-12 col-sm-7 col-md-5 col-lg-5 pad-xs">
+			<h2 class="heading--alt h4"><a href="categories/articles">Articles</a></h2>
+			<%- partial('_partial/index_loop') %>
+		</div>
+		<div class="layout--col layout--work col col-xs-12 col-sm-5 col-md-4 col-lg-4 pad-xs pad-xs">
+			<h2 class="heading--alt h4"><a href="categories/work">Work</a></h2>
+		</div>
+		<div class="layout--notes col col-xs-12 col-sm-7 col-md-3 col-lg-3 pad-xs">
+			<h2 class="heading--alt h4"><a href="categories/notes">Notes</a></h2>
+		</div>
+	</div>
+</div>

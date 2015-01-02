@@ -3,8 +3,8 @@ title: Work Title
 date: 2014-12-30 17:20:41
 excerpt: Excerpt
 tags:
-- Design
-- Code
+- design
+- code
 categories:
 - work
 ---

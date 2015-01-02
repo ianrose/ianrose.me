@@ -6,7 +6,7 @@
 <%- partial('post/entry-article-title', {class_name: 'archive-article-title'}) %>
 
 <% if (post.excerpt && index) { %>
-<p>
+<p class="excerpt">
 		<%- post.excerpt %>
 	<% } else { %>
 		<a href="<%- config.root %> <%- post.path %>#more"><%= theme.excerpt_link %></a>

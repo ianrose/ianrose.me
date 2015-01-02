@@ -1,16 +1,19 @@
 <div id="<%= post.layout %>-<%= post.slug %>" class="entry--post article-type-<%= post.layout %>" itemscope itemprop="blogPost">
 	<div class="row">
 		<div class="col col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 pad-xs">
-			<%- partial('post/date', {
-				class_name: 'entry-meta-item entry-meta-item--time',
-				date_format: null
-			}) %> <small>in</small>
-			<%- list_categories(post.categories, {
-				show_count: false,
-				style: 'none',
-				separator: '',
-				amount: 1
-			}) %>
+			<div>
+				<%- partial('post/date', {
+					class_name: 'entry-meta-item entry-meta-item--time entry-meta-item--alt',
+					date_format: null
+				}) %> <small class="entry-meta-item entry-meta-item--alt">|</small>
+				<%- list_categories(post.categories, {
+					show_count: false,
+					style: 'none',
+					separator: '',
+					amount: 1,
+					class: 'entry-meta-item category'
+				}) %>
+			</div>
 			<%- partial('post/title', {class_name: 'article-title'}) %>
 		</div>
 	</div>

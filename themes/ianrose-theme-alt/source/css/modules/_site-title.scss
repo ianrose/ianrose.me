@@ -49,5 +49,6 @@
   font-weight: 700;
   color: $accent-color;
   text-align: center;
+  text-transform: capitalize;
   @include setType(5);
 }

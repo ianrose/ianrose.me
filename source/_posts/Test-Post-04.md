@@ -3,8 +3,8 @@ title: Test Post 04
 excerpt: "Excerpt"
 date: 2014-12-30 17:20:41
 tags:
-- Design
-- Code
+- design
+- code
 categories:
 - articles
 comments: true
