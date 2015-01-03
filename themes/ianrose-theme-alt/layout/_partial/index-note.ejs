@@ -1,0 +1,16 @@
+<div class="entry archive-type-<%= post.layout %>">
+<%- partial('post/date', { class_name: 'entry-meta-item entry-meta-item--time', date_format: 'MMMM D, YYYY'}) %>
+  <h3 class="h5" itemprop="name">
+    <a href="<%- config.root %><%- post.path %>"><%= post.title %></a>
+  </h3>
+<% if (post.art) { %>
+  <img class="img-responsive media--entry" src="/img/<%=post.art%>" alt=""/>
+<% } %>
+<% if(post.excerpt && index) {%>
+  <p class="excerpt">
+    <%- post.excerpt %>
+	<% } else { %>
+  <a href="<%- config.root %><%- post.path %>"><%= theme.excerpt_link %></a>
+</p>
+<% } %>
+</div>

@@ -1,10 +1,10 @@
 ---
-title: Article Title
+title: "A Sass Type Toolkit: Typesettings"
 excerpt: Excerpt
-date: 2014-12-30 17:20:30
+date: 2014-03-24 17:20:30
 tags:
 categories:
-- notes
+- articles
 ---
 
 <span class=dropcap>P</span>aragraph

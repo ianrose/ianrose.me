@@ -2,10 +2,9 @@
 <%- partial('post/date', { class_name: 'entry-meta-item entry-meta-item--time', date_format: 'MMMM D, YYYY'}) %>
 <%- partial('post/entry-article-title', {class_name: 'archive-article-title'}) %>
 <% if (post.art) { %>
-  <img class="img-responsive<%if (media_entry) {%> media--entry<%}%>" src="/img/<%=post.art%>" alt=""/>
+  <img class="img-responsive media--entry" src="/img/<%=post.art%>" alt=""/>
 <% } %>
-<% if (!media_entry ) { %>
-  <%} else if(post.excerpt && index) {%>
+<% if(post.excerpt && index) {%>
   <p class="excerpt">
     <%- post.excerpt %>
 	<% } else { %>
