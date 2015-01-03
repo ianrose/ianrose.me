@@ -3,7 +3,7 @@
 		<div class="col col-xs-12 col-sm-7 col-md-8 col-lg-6 pad-xs">
 			<% if (pagination == 2) { %>
 			<% page.posts.each(function(post) { %>
-			<%- partial('article', {post: post, index: true}) %>
+      <%- partial('article', {post: post, index: true}) %>
 			<% }) %>
 			<% if (page.total > 1) { %>
 			<nav id="page-nav">
