@@ -6,7 +6,7 @@ tags:
 - design
 - code
 categories:
-- articles
+- notes
 comments: true
 updated: 2014-12-31 17:20:41
 ---

@@ -1,15 +1,20 @@
 <div class="entry archive-type-<%= post.layout %>">
-  <%- partial('post/date', {
-    class_name: 'entry-meta-item entry-meta-item--time',
-    date_format: 'MMMM D, YYYY'
-  }) %>
-  <%- partial('post/title', {class_name: 'archive-article-title'}) %>
-
-  <% if (post.excerpt && index) { %>
-  <p>
-    <%- post.excerpt %>
-    <% } else { %>
-    <a href="<%- config.root %> <%- post.path %>#more"><%= theme.excerpt_link %></a>
-  </p>
-  <% } %>
+  <div class="row">
+    <%if (post.art) {%>
+    <div class="col-md-3 pad-xs">
+      <img class="img-responsive" src="/img/<%=post.art%>" alt=""/>
+    </div>
+    <%}%>
+    <div class="col-md-8 col-md-offset-<%if (post.art) {%>1<%} else { %>4<%}%> pad-xs">
+      <%- partial('post/date', { class_name: 'entry-meta-item entry-meta-item--time', date_format: 'MMMM D, YYYY'}) %>
+      <%- partial('post/title', {class_name: 'archive-article-title'}) %>
+      <% if (post.excerpt && index) { %>
+      <p>
+        <%- post.excerpt %>
+        <% } else { %>
+        <a href="<%- config.root %> <%- post.path %>#more"><%= theme.excerpt_link %></a>
+      </p>
+      <% } %>
+    </div>
+  </div>
 </div>

@@ -1,35 +1,32 @@
-<div class="container">
-	<div class="row">
-		<div class="col col-xs-12 col-sm-7 col-md-8 col-lg-6 pad-xs">
-			<% if (pagination == 2) { %>
-			<% page.posts.each(function(post) { %>
-      <%- partial('article', {post: post, index: true}) %>
-			<% }) %>
-			<% if (page.total > 1) { %>
-			<nav id="page-nav">
-				<%- paginator({
-					prev_text: '&laquo; Prev',
-					next_text: 'Next &raquo;'
-				}) %>
-			</nav>
-			<% } %>
-			<% } else { %>
-			<% var last; %>
-			<% page.posts.each(function(post, i) { %>
-			<% var year = post.date.year(); %>
-			<% if (last != year) { %>
-			<% if (last != null) { %>
-			<% } %>
-			<% last = year; %>
-			<% } %>
-			<%- partial('archive-post', {post: post, even: i % 2 == 0}) %>
-			<% }) %>
-			<% if (page.posts.length) { %>
-			<% } %>
-			<% } %>
-		</div>
-		<div class="layout--sidebar col col-xs-12 col-sm-7 col-md-8 col-lg-4 col-lg-offset-2 pad-xs">
-		<%- partial('sidebar')%>
-		</div>
-	</div>
-</div>
+
+    <% if (page.category == 'notes') { %>
+    <% page.posts.each(function(post) { %>
+    <%- partial('article', {post: post, index: true}) %>
+    <% }) %>
+    <% if (page.total > 1) { %>
+    <nav id="page-nav">
+      <%- paginator({
+        prev_text: '&laquo; Prev',
+        next_text: 'Next &raquo;'
+      }) %>
+    </nav>
+    <% } %>
+    <% } else { %>
+    <div class="row middle-sm">
+      <div class="col-xs-10 pad-xs">
+        <% var last; %>
+        <% page.posts.each(function(post, i) { %>
+        <% var year = post.date.year(); %>
+        <% if (last != year) { %>
+        <% if (last != null) { %>
+        <% } %>
+        <% last = year; %>
+        <% } %>
+        <%- partial('archive-post', {post: post, even: i % 2 == 0}) %>
+        <% }) %>
+        <% if (page.posts.length) { %>
+        <% } %>
+      </div>
+    </div>
+
+    <% } %>
