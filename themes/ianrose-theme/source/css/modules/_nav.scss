@@ -67,6 +67,8 @@ $nav-item-border-color: $menu-border-color;
 }
 
 .nav--post {
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
   margin-bottom: emRhythm(12);
 
   & > a {
@@ -75,16 +77,6 @@ $nav-item-border-color: $menu-border-color;
     }
     transition: background-color $trans-dur $trans-ease;
   }
-
-  a:hover {
-    text-decoration: none;
-    background-color: $link-color-active;
-    color: #fff;
-
-    .nav--post-title {
-      color: #fff;
-    }
-  }
 }
 
 .nav--post-title {
@@ -92,40 +84,36 @@ $nav-item-border-color: $menu-border-color;
   font-weight: 600;
 }
 
-.nav--post-next,
-.nav--post-prev {
-  border-bottom: 1px solid $border-color;
-  border-top: 1px solid $border-color;
-}
 
 .nav--post-prev {
   text-align: center;
-  border-bottom-color: transparent;
+  border-bottom: 1px solid $border-color;
+
+  &.sans-next {
+    border-bottom: none;
+  }
 
   & > a {
     padding-left: $grid-pad;
     padding-right: $grid-pad;
     padding-top: emRhythm(6);
     padding-bottom: emRhythm(6);
-
-    @media (min-width: $screen-sm-min) {
-      border-bottom-color: $border-color;
-    }
   }
 
   @media (min-width: $screen-sm-min) {
     text-align: left;
     margin-bottom: 0;
-    border-bottom-color: $border-color;
+    border-bottom: none;
   }
 }
 
 .nav--post-next {
   text-align: center;
+  border-top: none;
 
   a {
-     padding-left: $grid-pad;
-     padding-right: $grid-pad;
+    padding-left: $grid-pad;
+    padding-right: $grid-pad;
     padding-top: emRhythm(6);
     padding-bottom: emRhythm(6);
    }
