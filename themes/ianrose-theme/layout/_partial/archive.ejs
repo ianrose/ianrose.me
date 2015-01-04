@@ -10,8 +10,6 @@
   })%>
 </nav><%}%>
 <%} else {%>
-<div class="row middle-sm">
-  <div class="col-xs-10 pad-xs">
     <%var last;%>
     <%page.posts.each(function(post, i) {%>
     <%var year = post.date.year();%>
@@ -24,6 +22,4 @@
     <%})%>
     <%if (page.posts.length) {%>
     <%}%>
-  </div>
-</div>
 <%}%>

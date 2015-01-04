@@ -5,7 +5,7 @@
   @include rhythmBorderBottom(1px, 6);
   @include clearfix();
 
-  .col &:last-child {
+  .col > &:last-child {
     border-bottom: none;
   }
 }

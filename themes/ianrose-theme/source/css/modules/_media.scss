@@ -6,8 +6,16 @@ img.media--full{
 
 .media--entry {
   float: left;
+}
+
+.media--entry-default {
   width: 120px;
   margin-right: emRhythm(1);
+}
+
+.media--entry-work {
+  width: 176px;
+  margin-right: emRhythm(2);
 }
 
 .media--illustration {

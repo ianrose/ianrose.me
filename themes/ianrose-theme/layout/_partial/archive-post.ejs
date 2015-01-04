@@ -1,20 +1,23 @@
-<div class="entry archive-type-<%= post.layout %>">
-  <div class="row">
-    <%if (post.art) {%>
-    <div class="col-md-3 pad-xs">
-      <img class="img-responsive" src="/img/<%=post.art%>" alt=""/>
-    </div>
-    <%}%>
-    <div class="col-md-8 col-md-offset-<%if (post.art) {%>1<%} else { %>4<%}%> pad-xs">
-      <%- partial('post/date', { class_name: 'entry-meta-item entry-meta-item--time', date_format: 'MMMM D, YYYY'}) %>
-      <%- partial('post/title', {class_name: 'archive-article-title'}) %>
-      <% if (post.excerpt && index) { %>
+<div class="row middle-xs">
+  <div class="col col-xs-12 col-md-10 col-lg-8 pad-xs">
+<div>
+    <div class="entry archive-type-<%=post.layout%>">
+      <%-partial('post/date', {
+          class_name: 'entry-meta-item entry-meta-item--time',
+          date_format: 'MMMM D, YYYY'
+        })%>
+      <%-partial('post/title', {class_name: 'archive-article-title'})%>
+      <%if (post.art) {%>
+      <img class="img-responsive media--entry media--entry-work" src="/img/<%=post.art%>" alt=""/>
+      <%}%>
+      <%if (post.excerpt && index) {%>
       <p>
-        <%- post.excerpt %>
-        <% } else { %>
-        <a href="<%- config.root %> <%- post.path %>#more"><%= theme.excerpt_link %></a>
+        <%-post.excerpt%>
+        <%} else {%>
+        <a href="<%-config.root%> <%-post.path%>#more"><%=theme.excerpt_link%></a>
       </p>
-      <% } %>
+      <%}%>
     </div>
   </div>
+</div>
 </div>
