@@ -1,7 +1,10 @@
 # Header
 menu:
   Home: /
-  Archives: /archives
+  About: /about
+  Articles: /categories/articles
+  Notes: /categories/notes
+  Work: /categories/work
 rss: /atom.xml
 
 # Content
@@ -12,13 +15,9 @@ sidebar:
 widgets:
 - category
 - tag
-- tagcloud
 - archive
 - recent_posts
 
 # Miscelaneous
 favicon: /favicon.png
 twitter: ThatIanRose
-google_plus:
-fb_admins:
-fb_app_id:

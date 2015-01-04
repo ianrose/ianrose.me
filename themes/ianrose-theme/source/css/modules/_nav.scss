@@ -69,7 +69,7 @@ $nav-item-border-color: $menu-border-color;
 .nav--post {
   margin-bottom: emRhythm(12);
 
-  a {
+  & > a {
     .nav--post-title {
       color: $text-color;
     }
@@ -102,7 +102,7 @@ $nav-item-border-color: $menu-border-color;
   text-align: center;
   border-bottom-color: transparent;
 
-  a {
+  & > a {
     padding-left: $grid-pad;
     padding-right: $grid-pad;
     padding-top: emRhythm(6);

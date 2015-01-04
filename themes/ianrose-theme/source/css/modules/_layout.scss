@@ -104,6 +104,10 @@
   border-right: 1px solid $border-color;
 }
 
+.layout--sidebar {
+  border-left: 1px solid $border-color;
+}
+
 .layout--work {
   @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
     position: absolute;

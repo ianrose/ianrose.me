@@ -1,8 +1,12 @@
 ---
 title: Work Title
 date: 2014-12-30 17:20:41
-excerpt: Excerpt
+excerpt: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porttitor laoreet auctor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 art: west-4.jpg
+layout: work
+role: Creator and Maintainer
+team: Personal Project
+visit: "http://typesettings.io"
 tags:
 - design
 - code
@@ -10,6 +14,12 @@ categories:
 - work
 ---
 
-<span class="dropcap">T</span>oo massive lake-effect snowstorm that hit western New York this week is finally letting up, but residents of the area now have another thing to worry about: flooding. Temperatures are expected to climb to almost 60 degrees over the weekend, which means that all that snow — as much as seven feet of it in some places — could turn into a lot of water very quickly. Oh, and it's also supposed to rain.
+{% img img-responsive media--full /img/west-4.jpg Photo at the West Fourth stop %}
 
-Meanwhile, at least 30 buildings collapsed under the snow's weight on Thursday night, and local authorities expect that many more will follow. The Associated Press reports:
+{% img img-responsive /img/west-4.jpg Photo at the West Fourth stop %}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porttitor laoreet auctor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis ac iaculis metus, eget posuere lacus. Maecenas vestibulum sit amet nisl dignissim tristique. Vestibulum porta, lacus sit amet sagittis consequat, purus nisi iaculis est, viverra sodales felis est nec ante. Donec in lorem vestibulum, porttitor felis ut, porta erat. Fusce erat neque, bibendum et nibh et, placerat auctor odio.
+
+{% img img-responsive /img/west-4.jpg Photo at the West Fourth stop %}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porttitor laoreet auctor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis ac iaculis metus, eget posuere lacus. Maecenas vestibulum sit amet nisl dignissim tristique. Vestibulum porta, lacus sit amet sagittis consequat, purus nisi iaculis est, viverra sodales felis est nec ante. Donec in lorem vestibulum, porttitor felis ut, porta erat. Fusce erat neque, bibendum et nibh et, placerat auctor odio.

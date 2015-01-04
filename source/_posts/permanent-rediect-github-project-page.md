@@ -1,6 +1,7 @@
 ---
-title: Permanent Redirect Github Project Page to Custom Domain
+title: Permanent Redirect GitHub Project Page to Custom Domain
 excerpt: The setup, you have your personal page at username.github.io with a custom domain, like custom.me. You have also created a project page for one of your repositories.
+art: west-4.jpg
 date: 2014-04-30 17:20:20
 tags:
 categories:
@@ -55,4 +56,4 @@ You are going to Add new rule with Forwarding turned on. The URL pattern you ent
 
 Set Forwarding type to Permanent - 301 and click Add rule to apply your new redirect.
 
-This nicer setup is directly taken from a great post at Higher Order Heroku. The post goes into how to setup an apex domain using a CNAME. This looks to be an older setup that could be done instead of doing the newer "CNAME flattening".
+This nicer setup is directly taken from a great [post at Higher Order Heroku](http://www.higherorderheroku.com/articles/cloudflare-dns-heroku/). The post goes into how to setup an apex domain using a CNAME. This looks to be an older setup that could be done instead of doing the newer "CNAME flattening".
