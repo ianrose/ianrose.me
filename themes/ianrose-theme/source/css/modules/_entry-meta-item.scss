@@ -1,9 +1,8 @@
-$entry-meta-item-size: $ms-down2;
+$entry-meta-item-size: $ms-down1;
 
 .entry-meta-item {
   display: inline-block;
   margin-right: emRhythm(1, $entry-meta-item-size);
-  text-transform: capitalize;
   @include setType(3, $entry-meta-item-size);
 }
 

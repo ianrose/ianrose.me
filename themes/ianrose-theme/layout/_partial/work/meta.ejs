@@ -1,9 +1,9 @@
 <ul class="details">
-  <li class="entry-meta--container"><span class="entry-meta-item entry-meta-item--label">Role</span> <span class="entry-meta-item"><%= post.role %></span></li>
-  <li class="entry-meta--container"><span class="entry-meta-item entry-meta-item--label">Team</span> <span class="entry-meta-item"><%= post.team %></span></li>
-  <li class="entry-meta--container"><span class="entry-meta-item entry-meta-item--label">Visit</span> <span class="entry-meta-item"><a href="<%= post.visit %>"><%= post.visit %></a></span></li>
+  <li class="entry-meta--container"><span class="entry-meta-item entry-meta-item--label"><small>Role</small></span> <span class="entry-meta-item"><%= post.role %></span></li>
+  <li class="entry-meta--container"><span class="entry-meta-item entry-meta-item--label"><small>Team</small></span> <span class="entry-meta-item"><%= post.team %></span></li>
+  <li class="entry-meta--container"><span class="entry-meta-item entry-meta-item--label"><small>Visit</small></span> <span class="entry-meta-item"><a href="<%= post.visit %>"><%= post.visit %></a></span></li>
   <li class="entry-meta--container">
-    <span class="entry-meta-item entry-meta-item--label">Tagged</span>
+    <span class="entry-meta-item entry-meta-item--label"><small>Tagged</small></span>
     <%- list_tags(post.tags, {
       show_count: false,
       class: 'entry-meta-item entry-meta-item--tax entry-meta-item--tag',

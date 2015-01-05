@@ -3,7 +3,7 @@
   padding-left: 0;
   margin-left: 0;
   margin-bottom: emRhythm(1);
-  @include setType($base-line-multi, $share-size);
+  @include setType($base-line-multi);
 
   @media (min-width: $screen-md-min) {
     border: none;
@@ -12,9 +12,9 @@
 
 .details > li {
   margin-right: 0;
-  margin-bottom: emRhythm(1, $share-size);
+  margin-bottom: emRhythm(1);
   border-bottom-style: solid;
   border-bottom-color: $border-color;
-  @include rhythmBorderBottom(1px, 1, $share-size);
+  @include rhythmBorderBottom(1px, 1);
 
 }

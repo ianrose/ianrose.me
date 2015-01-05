@@ -54,10 +54,11 @@
 
 .layout--content-main {
   padding-top: emRhythm(6);
-  margin-bottom: emRhythm(18);
+  margin-bottom: emRhythm(4);
 
   @media (min-width: $screen-sm-min) {
     padding-top: emRhythm(12);
+    margin-bottom: emRhythm(18);
   }
 }
 
