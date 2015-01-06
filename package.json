@@ -6,6 +6,7 @@
     "hexo-front-matter-excerpt": "0.0.2",
     "hexo-generator-autoprefixer": "0.0.5",
     "hexo-generator-feed": "^0.2.1",
+    "hexo-processor-copyassets": "0.0.1",
     "hexo-renderer-ejs": "*",
     "hexo-renderer-marked": "*",
     "hexo-renderer-sass": "https://github.com/knksmith57/hexo-renderer-sass/tarball/83034cd2d0d7d2af838428af4e3750ceaa43cf3d"

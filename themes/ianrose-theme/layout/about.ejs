@@ -7,37 +7,33 @@
   </div>
   <div class="row">
     <div class="col col-xs-12 col-md-8 pad-xs">
-      <h2 class="heading--alt h4">Information</h2>
+      <h2 class="heading--sub h4">Information</h2>
       <%- page.content %>
     </div>
     <div class="col col-xs-12 col-md-4 pad-xs">
-      <h2 class="heading--alt h4">Contact Me</h2>
+      <h2 class="heading--sub h4">Contact Me</h2>
 
       <p>You can find me on <a href="#">Twitter</a>, <a href="#">GitHub</a>,
         <a href="#">Google+</a>, and <a href="#">LinkedIn</a>.</p>
-
-      <h2 class="heading--alt h4">Select Clients</h2>
-      <ul class="list--sans">
-        <li>Sony</li>
-        <li>vh1</li>
-        <li>Disney</li>
-        <li>VooDoo Music Experience</li>
-        <li>Hyatt</li>
-        <li>Visit Baton Rouge</li>
-        <li>Louisiana Charter Schools</li>
-      </ul>
-
-      <h2 class="heading--alt h4">Currently Reading</h2>
-      <ul class="list--sans">
+      <%if(page.clients) { %>
+        <h2 class="heading--sub h4">Select Clients</h2>
+        <ul class="list--sans">
+          <% page.clients.forEach(function(clients) { %>
+          <li>
+            <%= clients %>
+          </li>
+          <% }) %>
+        </ul>
+      <% } %>
+      <h2 class="heading--sub h4">Currently Reading</h2>
+      <ul class="list--display">
         <li>
-          <a href="http://www.francescofranchi.com/designingnews"><em>Designing News</em> &mdash; Francesco Franchi</a>
+          <a href="http://www.amazon.com/gp/product/389955468X/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=389955468X&linkCode=as2&tag=ianrose-20&linkId=4I3R6H5MUGJSQ4Y3"><em>Designing News</em></a> &mdash; Francesco Franchi
+        </li>
+        <li>
+          <a href="http://www.amazon.com/gp/product/0684868768/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0684868768&linkCode=as2&tag=ianrose-20&linkId=JFH5DZLC7LJOAXJL"><em>Emergence: The Connected Lives of Ants, Brains, Cities, and Software</em></a> &mdash; Steven Johnson
         </li>
       </ul>
-      <h2 class="heading--alt h4">Colophon</h2>
-
-      <p>This site is a created with Mercury body text and Mercury display and Gotham are used for headings and supplementary text. Fonts are served using typography.com Typesettings Gridsettings Sass Hexo
-        Thanks to <a href="http://bradoyler.com/">Brad Oyler</a> for all his help.
-      </p>
     </div>
   </div>
 </div>

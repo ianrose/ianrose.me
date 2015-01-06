@@ -1,8 +1,8 @@
-.heading--alt {
+.heading--alt,
+.heading--sub {
   font-family: $font-display-serif;
   border-bottom-color: $border-color;
   border-bottom-style: solid;
-  margin-bottom: emRhythm(4, $ms-up1);
   @include rhythmBorderBottom(1px, 1, $ms-up1);
 
   a:link,
@@ -14,4 +14,12 @@
   a:active {
     text-decoration: underline;
   }
+}
+
+.heading--alt {
+  margin-bottom: emRhythm(4, $ms-up1);
+}
+
+.heading--sub {
+  margin-bottom: emRhythm(2, $ms-up1);
 }
