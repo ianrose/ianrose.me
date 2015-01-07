@@ -1,4 +1,4 @@
-$entry-meta-item-size: $ms-down1;
+$entry-meta-item-size: $ms-down2;
 
 .entry-meta-item {
   display: inline-block;
@@ -26,16 +26,28 @@ $entry-meta-item-size: $ms-down1;
   }
 }
 
+.entry-meta-item--tax,
+a.entry-meta-item--tax {
+  color: $red;
+  text-transform: capitalize;
+}
+
 .entry-meta-item--time,
 a.entry-meta-item--time {
   font-weight: 800;
-  color: $red;
+  color: $light-grey;
 
   @media (min-width: $screen-md-min) {
     margin-bottom: emRhythm(1, $entry-meta-item-size);
   }
 }
 
+.entry-meta-item--time-sm,
+a.entry-meta-item--time-sm {
+  @media (min-width: $screen-md-min) {
+    margin-bottom: 0;
+  }
+}
 
 .entry-meta-item--label {
   font-family: $font-sans;

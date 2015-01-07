@@ -1,10 +1,11 @@
 .dropcap {
   float: left;
-  font-size: 4.5em;
+  font-size: 3em;
   line-height: 1;
-  font-family: $font-sans;
   font-weight: 800;
   margin-right: 0.1em;
+  display: block;
+  font-family: $font-sans;
 }
 
 .dropcap {

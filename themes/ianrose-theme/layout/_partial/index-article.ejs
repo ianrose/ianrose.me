@@ -1,5 +1,5 @@
 <div class="entry archive-type-<%= post.layout %>">
-<%- partial('post/date', { class_name: 'entry-meta-item entry-meta-item--time', date_format: 'MMMM D, YYYY'}) %>
+<%- partial('post/date', { class_name: 'entry-meta-item entry-meta-item--time entry-meta-item--time-sm', date_format: 'MMMM D, YYYY'}) %>
 <%- partial('post/entry-article-title', {class_name: 'archive-article-title'}) %>
 <% if (post.art) { %>
   <img class="img-responsive media--entry media--entry-default" src="/img/<%=post.art%>" alt=""/>

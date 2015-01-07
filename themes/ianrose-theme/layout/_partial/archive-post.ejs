@@ -8,13 +8,13 @@
         })%>
       <%-partial('post/title', {class_name: 'archive-article-title'})%>
       <%if (post.art) {%>
-      <img class="img-responsive media--entry media--entry-work" src="/img/<%=post.art%>" alt=""/>
+      <a href="<%-config.root%><%-post.path%>"><img class="img-responsive media--entry media--entry-work" src="/img/<%=post.art%>" alt=""/></a>
       <%}%>
       <%if (post.excerpt && index) {%>
       <p>
         <%-post.excerpt%>
         <%} else {%>
-        <a href="<%-config.root%> <%-post.path%>#more"><%=theme.excerpt_link%></a>
+        <a href="<%-config.root%><%-post.path%>"><%=theme.excerpt_link%></a>
       </p>
       <%}%>
     </div>

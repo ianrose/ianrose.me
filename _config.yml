@@ -79,7 +79,7 @@ autoprefixer:
   browsers:
     - last 4 versions
 
-copyAssets: _redirects
+copyAssets: _redirects,_headers
 
 # Disqus
 disqus_shortname: ianrose
