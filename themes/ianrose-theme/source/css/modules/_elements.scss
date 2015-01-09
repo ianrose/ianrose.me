@@ -65,13 +65,13 @@ h6, .h6 {
 // [5] Sets the type to one of the modular scale values and the second argument
 // sets a unitless line-height as a multiple of the vertical grid.
 h1, .h1 {
-  margin-bottom: emRhythm(2, $ms-up2); // [1]
-  @include setType(5, $ms-up2); // [2]
+  margin-bottom: emRhythm(2, $ms-up3); // [1]
+  @include setType(5, $ms-up3); // [2]
 
   @media (min-width: $screen-sm-min) {
     // [3]
-    margin-bottom: emRhythm(4, $ms-up3); // [4]
-    @include setType(6, $ms-up3); // [5]
+    margin-bottom: emRhythm(2, $ms-up4); // [4]
+    @include setType(7, $ms-up4); // [5]
   }
 
   @media (min-width: $screen-md-min) {
@@ -158,8 +158,8 @@ blockquote {
   padding-top: 0;
   padding-bottom: 0;
   padding-left: emRhythm($base-line-multi);
-  font-weight: 400;
-  font-style: italic;
+  font-weight: 700;
+  font-family: $font-display-serif;
   position: relative;
   border-left: 1px solid $border-color;
   clear: both;
@@ -170,7 +170,9 @@ blockquote {
   }
 
   footer {
-    font-weight: 600;
+    font-weight: 400;
+    font-family: $font-sans;
+    @include setType(4, $ms-down1);
     cite {
       font-style: normal;
       &:before {
@@ -225,13 +227,9 @@ dl {
   margin-left: 0;
   margin-top: 0;
   margin-bottom: emRhythm($base-line-multi);
-  padding-left: emRhythm($base-line-multi);
+  padding-left: emRhythm(5);
   padding-top: 0;
   padding-bottom: 0;
-
-  @media (min-width: $screen-sm-min) {
-    margin-left: emRhythm($base-line-multi);
-  }
 }
 
 ul ul,
