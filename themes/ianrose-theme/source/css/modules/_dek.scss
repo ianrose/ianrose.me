@@ -1,10 +1,11 @@
 .dek {
   font-family: $font-display-serif;
-  font-weight: 400;
+  font-weight: 700;
   margin-bottom: emRhythm($base-line-multi, $ms-up1);
   @include setType(4, $ms-up1);
 
   @media (min-width: $screen-sm-min) {
+    font-weight: 400;
     margin-bottom: emRhythm($base-line-multi, $ms-up2);
     @include setType(5, $ms-up2);
   }
