@@ -1,7 +1,8 @@
 ---
 title: Hello World Title
-excerpt: This is my post excerpt
+excerpt: This is my post excerp
 art: west-4.jpg
+arttext: West 4
 categories:
 - articles
 comments: true

@@ -3,6 +3,7 @@ title: Typesettings
 date: 2014-12-30 17:20:41
 excerpt: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porttitor laoreet auctor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 art: west-4.jpg
+arttext: West 4
 layout: work
 role: Creator/Maintainer
 team: Personal Project

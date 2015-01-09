@@ -2,6 +2,7 @@
 title: Permanent Redirect GitHub Project Page to Custom Domain
 excerpt: The setup, you have your personal page at username.github.io with a custom domain, like custom.me. You have also created a project page for one of your repositories.
 art: west-4.jpg
+arttext: West 4
 date: 2014-03-30 17:20:20
 tags:
 categories:

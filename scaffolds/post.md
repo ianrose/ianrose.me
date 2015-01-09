@@ -1,7 +1,9 @@
 ---
 title: {{ title }}
-excerpt:
 date: {{ date }}
+excerpt:
+art:
+arttext:
 tags:
 layout:
 ---

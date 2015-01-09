@@ -1,8 +1,9 @@
 ---
 title: "{{ title }}"
+date: {{ date }}
 excerpt:
 art:
-date: {{ date }}
+arttext:
 role:
 team:
 visit: ""
