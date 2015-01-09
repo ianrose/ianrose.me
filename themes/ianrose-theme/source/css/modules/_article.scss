@@ -1,8 +1,5 @@
 .article {
-  border-bottom-style: solid;
-  border-bottom-color: $border-color;
   margin-bottom: emRhythm(1);
-  @include rhythmBorderBottom(1px, 1);
 }
 
 .article img {
@@ -15,7 +12,7 @@
     float: left;
     width: 50%;
     margin-right: emRhythm($base-line-multi);
-    margin-top: emRhythm(($base-line-multi / 3.5), $silent: true);
+    margin-top: emRhythm(1);
   }
 }
 
@@ -26,6 +23,8 @@
   }
 }
 
-.media-full {
+.media--full,
+img.media--full {
+  margin-top: 0;
   float: none;
 }

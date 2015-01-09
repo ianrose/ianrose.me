@@ -1,5 +1,5 @@
 ---
-title: Test Post 04
+title: Organizing Styles When Using Typesettings
 excerpt: "If you’ve worked on a website design with a large team or client, chances are good you’ve spent some time debating (arguing?) with each other about what the homepage should look like, or which department gets to be in the top-level navigation—perhaps forgetting that many of the site’s visitors might never even see the homepage if they land there via search."
 date: 2014-12-30 17:20:41
 tags:
