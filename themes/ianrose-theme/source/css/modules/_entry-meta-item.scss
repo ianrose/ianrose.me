@@ -54,6 +54,11 @@ a.entry-meta-item--time-sm {
   margin-right: emRhythm(1, $ms-down2);
 }
 
-.entry-meta-item--alt {
-  margin-right: 0;
+.entry-meta-item--alt,
+a.entry-meta-item--alt {
+  margin-bottom: emRhythm(2, $entry-meta-item-size);
+
+  @media (min-width: $screen-md-min) {
+    margin-bottom: emRhythm(3, $entry-meta-item-size);
+  }
 }
