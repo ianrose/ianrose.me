@@ -32,7 +32,7 @@ $share-size: $ms-down1;
 
 .share > li a {
   display: block;
-  color: $text-color;
+  color: $accent-color;
   padding-right: emRhythm(2, $share-size);
   padding-left: emRhythm(2, $share-size);
   transition: background-color $trans-dur $trans-ease;
