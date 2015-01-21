@@ -10,7 +10,6 @@ $ms-up7: $ms-up6 * $ms-ratio;
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  text-rendering: optimizeLegibility;
 }
 
 ::selection {
@@ -41,6 +40,7 @@ h6, .h6 {
   font-weight: 700;
   font-style: normal;
   font-family: $font-narrow-sans;
+  text-rendering: optimizeLegibility;
 
   a:link,
   a:visited {
@@ -163,10 +163,11 @@ blockquote {
   position: relative;
   border-left: 1px solid $border-color;
   clear: both;
+  text-rendering: optimizeLegibility;
 
   p {
     margin-bottom: emRhythm(2);
-    @include setType(5, $ms-up1);
+    @include setType(6, $ms-up3);
   }
 
   footer {
@@ -190,8 +191,10 @@ blockquote {
 }
 
 .pullquote {
+  display: none;
   @media (min-width: $screen-sm-min) {
     width: 50%;
+    display: block;
   }
 
   p {

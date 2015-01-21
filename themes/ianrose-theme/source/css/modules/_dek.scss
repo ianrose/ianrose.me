@@ -2,6 +2,7 @@
   font-family: $font-display-serif;
   font-weight: 700;
   margin-bottom: emRhythm($base-line-multi, $ms-up1);
+  text-rendering: optimizeLegibility;
   @include setType(4, $ms-up1);
 
   @media (min-width: $screen-sm-min) {

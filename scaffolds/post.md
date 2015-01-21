@@ -5,5 +5,6 @@ excerpt:
 art:
 arttext:
 tags:
-layout:
+categories:
+layout: post
 ---
