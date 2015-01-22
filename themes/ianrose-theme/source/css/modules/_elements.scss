@@ -233,6 +233,10 @@ dl {
   padding-left: emRhythm(5);
   padding-top: 0;
   padding-bottom: 0;
+
+  & li {
+    margin-bottom: emRhythm(2);
+  }
 }
 
 ul ul,

@@ -1,13 +1,13 @@
 ---
 title: Getting Posts by Category with Hexo
 excerpt: While building with Hexo I came across a need get all the posts by a specific category and render them through a specific partial.
-date: 2014-01-20 20:39:15
+date: 2015-01-20 20:39:15
 tags:
 categories:
 - notes
 ---
 
-<span class=dropcap>H</span>exo is great open source project in many ways. However due to language barriers the English documentation needs help from the project’s community. Myself included. Skip right to the [solution](#The_Solution).
+Hexo is great open source project in many ways. However due to language barriers the English documentation needs help from the project’s community. Myself included. Skip right to the [solution](#The_Solution).
 
 ## The Scenario
 
@@ -19,7 +19,7 @@ The challenge it turned out wasn’t the lack of functionality with Hexo just pa
 
 ## The Solution
 
-Thanks to [Brad Oyler](http://bradoyler.com/ "Brad Oyler's website") for pairing up with me to figure this out. Hexo does offer helpers that leverage its API. The helper, `get_posts`, that solves this.
+Thanks to [Brad Oyler](http://bradoyler.com/ "Brad Oyler's website") for pairing up with me to figure this out. Hexo does offer helpers that leverage its API. The helper, `get_posts` is the one to use.
 
 ```js`
 <% get_posts(
