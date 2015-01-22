@@ -15,7 +15,7 @@ Let’s say we have two categories, “Articles” and “Projects”. You have 
 
 At first I could not find an example of this scenario anywhere, in the [documentation](http://hexo.io/docs/ "Hexo Docs"), [GitHub issues](https://github.com/hexojs/hexo/issues/976 "My GitHub Issue"), or countless Google Searches.
 
-The challenge it turned out wasn’t the lack of functionality with Hexo just parsing through the docs and other information was difficult.
+The challenge it turned out was not the lack of functionality with Hexo it was parsing through the docs, repositories and using Google translate.
 
 ## The Solution
 
