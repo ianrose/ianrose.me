@@ -3,11 +3,11 @@
     <div class="col col-xs-12 col-md-12 col-lg-12 pad-xs">
       <div>
         <%- partial('post/date', {
-          class_name: 'entry-meta-item entry-meta-item--time entry-meta-item--alt',
+          class_name: 'entry-meta-item entry-meta-item--time',
           date_format: null
         }) %>
         <% if(!page.category) {%>
-        <small class="entry-meta-item entry-meta-item--alt">|</small>
+        <small class="entry-meta-item">|</small>
         <%- list_categories(post.categories, {
           show_count: false,
           style: 'none',

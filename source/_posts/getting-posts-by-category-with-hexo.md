@@ -19,7 +19,7 @@ The challenge it turned out was not the lack of functionality with Hexo it was p
 
 ## The Solution
 
-Thanks to [Brad Oyler](http://bradoyler.com/ "Brad Oyler's website") for pairing up with me to figure this out. Hexo does offer helpers that leverage its API. The helper, `get_posts` is the one to use.
+Thanks to [Brad Oyler](http://bradoyler.com/ "Brad Oyler's website") for pairing up with me to figure this out. Hexo does offer [helpers](http://hexo.io/docs/helpers.html) that leverage its API. The helper, `get_posts` is the one to use.
 
 ```js`
 <% get_posts(
@@ -32,4 +32,4 @@ Thanks to [Brad Oyler](http://bradoyler.com/ "Brad Oyler's website") for pairing
 <% }) %>
 ```
 
-The `query` option is the key to all this and knowing to pass `categories: 'projects'` made the solution click.
+The `query` option is the key to all this and knowing to pass `categories: 'projects'` did the trick.

@@ -2,6 +2,7 @@
 title: About
 date: 2014-12-31 20:49:06
 layout: about
+dek:
 clients:
 - Sony
 - vh1
@@ -14,8 +15,8 @@ clients:
 
 {% img img-responsive pad-bottom /img/west-4.jpg Photo at the West Fourth stop %}
 
-I’m a Front-end Designer at [NBC News Digital](http://www.nbcuni.com/digital/nbc-news-digital/ "NBC News Digital"). I take pride in designing and building clean, accessible, creative interactive media. I get pumped about CSS, HTML, typography, mobile development, responsive web design, and the idea that people use the things that I create. Before NBC News I worked in New Orleans at the design studio [Thinka](http://thinkabig.com/ "Thinka") and before that the ad agency [Zehnder Communications](http://z-comm.com/ "Zehnder Communications"). I’m also the creator of [Typesettings](http://typesettings.io/ "Typesettings") and Gridsettings.
+I’m a Front-end Designer at [NBC News Digital](http://www.nbcuni.com/digital/nbc-news-digital/ "NBC News Digital"). I take pride in designing and building clean, accessible, creative interactive media. I get pumped about CSS, HTML, typography, mobile development, responsive web design, and the idea that people use the things that I create. Before NBC News I worked in New Orleans at the design studio [Thinka](http://thinkabig.com/ "Thinka") and before that the ad agency [Zehnder Communications](http://z-comm.com/ "z-comm.com"). I’m also the creator of [Typesettings](http://typesettings.io/ "typesettings.io") and [Gridsettings](https://github.com/ianrose/gridsettings "GitHub").
 
 <h2 class="heading--sub h4">Colophon</h2>
 
-This site is a created with Mercury body text and Mercury display and Gotham are used for headings and supplementary text. Fonts are served using typography.com Typesettings Gridsettings Sass Hexo. Thanks to <a href="http://bradoyler.com/">Brad Oyler</a> for all his help.
+This site is built with [Hexo](http://hexo.io/ "hexo.io"), [Sass](http://sass-lang.com/ "Sass-lang.com"), and [CSS Flexbox](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes "MDN"). The body text is set in [Mercury Text](http://www.typography.com/fonts/mercury-text/overview/ "typography.com"). Supplmentary text and alternative subheads are set in [Mercury Display](http://www.typography.com/fonts/mercury-display/overview/ "typography.com"). The headings are set in Gotham Narrow while the UI elements are in Gotham. All the fonts are served by [typography.com](http://www.typography.com/ "Hoefler & Co"). Also, thanks to [Brad Oyler](http://bradoyler.com "bradoyler.com") for all his help.
