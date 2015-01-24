@@ -2,8 +2,8 @@
 title: Typesettings
 date: 2014-12-30 17:20:41
 excerpt: A CSS preprocessor toolkit that helps set type & elements in Ems with modular scale, vertical rhythm, and responsive ratio based headlines.
-art: west-4.jpg
-arttext: West 4
+art: art.gif
+arttext: Typesettings Mark by Q. Li from The Noun Project
 layout: work
 role: Creator/Maintainer
 team: Personal Project
@@ -32,5 +32,3 @@ Borders set in pixels all while maintaing vertical rhythm
 {% endpullquote %}
 
 Typesettings’ is unique because of its ability to have padding, margin, and font size set in Ems and have borders set in pixels all while maintaing vertical rythm. The toolkit does this by converting an entered pixel border width into Ems and subtracts that value from the padding of the element.
-
-

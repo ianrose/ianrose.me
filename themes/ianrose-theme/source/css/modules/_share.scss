@@ -20,6 +20,7 @@ $share-size: $ms-down1;
 .share > li {
   float: left;
   margin-right: emRhythm(1, $share-size);
+  margin-bottom: 0;
   display: block;
 
   @media (min-width: $screen-md-min) {

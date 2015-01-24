@@ -27,7 +27,7 @@
     <div class="col col-xs-12 col-md-9 col-lg-7 last-md pad-xs" itemprop="articleBody">
       <div class="article">
         <%if (post.art) { %>
-          <img class="media--full" src="/<%-post.path%><%=post.art%>" alt=""/>
+          <img class="media--full" src="/<%-post.path%><%-post.art%>" alt=""/>
         <% } %>
         <%- post.content %>
       </div>
