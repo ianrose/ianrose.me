@@ -19,16 +19,18 @@ categories:
 
 ## What Does It Solve
 
-The math involved in setting type both in size and space is not overly complex. However it can become very tedious. This toolkit, along with others, leverages the ability of a CSS preprocessors to calculate numbers combined with functions to remove that tedious work. Typesettings also provides optional default styles to make creating nice type even easier.
+{% pullquote right %}
+  Default styles to make creating nice type even easier
+{% endpullquote %}
 
-{% blockquote @nternetinspired https://twitter.com/nternetinspired/status/441937797004677120 %}
-  Typesettings is pretty darn awesome! http://ianrose.me/typesettings/  #Sass
-{% endblockquote %}
+The math involved in setting type both in size and space is not overly complex. However it can become very tedious. This toolkit, along with others, leverages the ability of a CSS preprocessors to calculate numbers combined with functions to remove that tedious work. Typesettings also provides optional default styles to make creating nice type even easier.
 
 ## Why Another Type Toolkit
 
-{% pullquote right %}
+{% pullquote left %}
 Borders set in pixels all while maintaing vertical rhythm
 {% endpullquote %}
 
 Typesettings’ is unique because of its ability to have padding, margin, and font size set in Ems and have borders set in pixels all while maintaing vertical rythm. The toolkit does this by converting an entered pixel border width into Ems and subtracts that value from the padding of the element.
+
+

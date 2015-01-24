@@ -167,7 +167,9 @@ blockquote {
 
   p {
     margin-bottom: emRhythm(2);
-    @include setType(6, $ms-up3);
+    @media (min-width: $screen-sm-min) {
+      @include setType(6, $ms-up3);
+    }
   }
 
   footer {
@@ -191,18 +193,14 @@ blockquote {
 }
 
 .pullquote {
-  display: none;
-  @media (min-width: $screen-sm-min) {
-    width: 50%;
-    display: block;
-  }
+  width: 50%;
+  display: block;
 
   p {
     margin-bottom: 0;
   }
 }
 
-@media (min-width: $screen-sm-min) {
 .pullquote.left {
   float: left;
   margin-right: emRhythm($base-line-multi);
@@ -213,11 +211,11 @@ blockquote {
   padding-left: 0;
 }
 
-  .pullquote.right {
-    float: right;
-    margin-left: emRhythm($base-line-multi);
-  }
+.pullquote.right {
+  float: right;
+  margin-left: emRhythm($base-line-multi);
 }
+
 
 pre,
 code {
