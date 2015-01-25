@@ -94,7 +94,7 @@ exclude_generator:
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: github
-  repo: https://github.com/ianrose/ianrose.github.io
+  repo: git@github.com:ianrose/ianrose.github.io.git
 
 marked:
   gfm: true
