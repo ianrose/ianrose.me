@@ -310,5 +310,7 @@ pre .javascript .function {
 
 .highlight {
   margin-bottom: emRhythm($base-line-multi);
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
 }
 
