@@ -1,0 +1,20 @@
+<div id="js-menu" class="layout--nav layout--menu">
+  <ul class="nav">
+    <% for (var i in theme.menu) { %>
+    <li><a class="main-nav-link" href="<%- theme.menu[i] %>"><%= i %></a></li>
+    <% } %>
+  </ul>
+  <ul class="nav">
+    <li><a href="https://twitter.com/ThatIanRose">Twitter</a></li>
+    <li><a href="https://github.com/ianrose">GitHub</a></li>
+    <li><a href="http://linkedin.com/in/roseian/">LinkedIn</a></li>
+    <li><a href="https://tinyletter.com/ian-rose">Newsletter</a></li>
+    <% if (theme.rss) { %>
+    <li><a href="http://feeds.feedburner.com/ianrose?format=xml">RSS</a></li>
+    <% } %>
+  </ul>
+  <ul class="nav">
+    <li><a href="https://github.com/ianrose/ianrose-source">Site Source</a></li>
+  </ul>
+</div>
+

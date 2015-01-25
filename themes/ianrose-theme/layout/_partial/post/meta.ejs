@@ -1,0 +1,12 @@
+<div class="entry-meta">
+	<% if (post.updated) { %>
+	<div class="entry-meta--container">
+		<span class="entry-meta-item entry-meta-item--label"><small>Last Updated</small></span>
+		<%- partial('update', {
+			class_name: 'entry-meta-item entry-meta-item--time',
+			date_format: null
+		}) %>
+	</div>
+	<% } %>
+	<%- partial ('tag')%>
+</div>

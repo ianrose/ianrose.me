@@ -1,0 +1,498 @@
+@charset "UTF-8";
+
+// =============================================================================
+// Gridsettings
+// =============================================================================
+// A Sass toolkit that creates responsive grids.
+//
+// Release Versions: https://github.com/ianrose/gridsettings/releases
+// Github: https://github.com/ianrose/gridsettings
+// License: The MIT License (MIT)
+//
+// Inspired by and used stuff from:
+// https://github.com/twbs/bootstrap-sass
+// https://github.com/kristoferjoseph/flexboxgrid
+
+// Grid Type, either flexbox or float based
+$flexbox-grid: false !default;
+
+// Breakpoints TODO - Provide ability to generate any number of breakpoints
+$screen-xs-min: 480px !default;
+$screen-sm-min: 768px !default;
+$screen-md-min: 992px !default;
+$screen-lg-min: 1200px !default;
+$screen-xs-max: ($screen-sm-min -1px) !default;
+$screen-sm-max: ($screen-md-min - 1px) !default;
+$screen-md-max: ($screen-lg-min - 1px) !default;
+
+// Grid attributes
+$grid-columns: 8 !default;
+$grid-pad: 16px !default;
+$static-col-width: 300px !default;
+$static-col-name: static !default;
+$grid-col-name: col- !default;
+$grid-xs-bp-name: xs- !default;
+$grid-sm-bp-name: sm- !default;
+$grid-md-bp-name: md- !default;
+$grid-lg-bp-name: lg- !default;
+$grid-push-name: push- !default;
+$grid-pull-name: pull- !default;
+$grid-offset-name: offset- !default;
+$grid-container-name: container !default;
+$grid-row-name: row !default;
+$grid-pad-name: pad- !default;
+$container-sm-width: 750px !default;
+$container-md-width: 970px !default;
+$container-lg-width: 1170px !default;
+
+// String replacement
+@function str-replace($string, $substr, $newsubstr, $all: 0) {
+  $position-found: str-index($string, $substr);
+  $processed: ();
+
+  @while ($position-found and $position-found > 0) {
+    $length-substr: str-length($substr);
+    $processed: append($processed, str-slice($string, 0, $position-found - 1));
+    $processed: append($processed, $newsubstr);
+    $string: str-slice($string, $position-found + $length-substr);
+
+    $position-found: 0;
+
+    @if ($all > 0) {
+      $position-found: str-index($string, $substr);
+    }
+  }
+
+  $processed: append($processed, $string);
+  $string: "";
+
+  @each $s in $processed {
+    $string: #{$string}#{$s};
+  }
+
+  @return $string;
+}
+
+// Clearfix mixin
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Centers the "container" on the page and clears floats.
+@mixin make-container($flexbox-grid) {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  @if ($flexbox-grid == false) {
+    @include clearfix();
+  }
+}
+
+// Creates a wrapper for a series of columns and with negative margin allows
+// first and last column to be flush left and right of container. Clears
+// "column" floats.
+@mixin make-row($flexbox-grid) {
+  @if ($flexbox-grid) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -ms-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -ms-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+  } @else {
+    @include clearfix();
+  }
+}
+
+// Shared rules for all columns
+.col {
+  position: relative;
+  @if ($flexbox-grid) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -ms-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-flex: 0;
+    -ms-box-flex: 0;
+    -moz-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  } @else {
+    min-height: 1px;
+  }
+}
+
+// Sets the width of a column based on the columns index and its type ie
+// width, pull, offset, or push.
+@mixin calc-grid-column($index, $bp, $type, $flexbox-grid) {
+  @if ($type == width) and ($index > 0) {
+    .#{$grid-col-name}#{$bp}#{$index} {
+      @if ($flexbox-grid) {
+        -webkit-flex-basis: percentage(($index / $grid-columns));
+        -ms-flex-preferred-size: percentage(($index / $grid-columns));
+        flex-basis: percentage(($index / $grid-columns));
+        max-width: percentage(($index / $grid-columns));
+      } @else {
+        width: percentage(($index / $grid-columns));
+      }
+    }
+  }
+
+  @if ($type == push) and ($index > 0) {
+    .#{$grid-col-name}#{$bp}#{$grid-push-name}#{$index} {
+      left: percentage(($index / $grid-columns));
+    }
+  }
+
+  @if ($type == push) and ($index == 0) {
+    .#{$grid-col-name}#{$bp}#{$grid-push-name}0 {
+      left: auto;
+    }
+  }
+
+  @if ($type == pull) and ($index > 0) {
+    .#{$grid-col-name}#{$bp}#{$grid-pull-name}#{$index} {
+      right: percentage(($index / $grid-columns));
+    }
+  }
+
+  @if ($type == pull) and ($index == 0) {
+    .#{$grid-col-name}#{$bp}#{$grid-pull-name}0 {
+      right: auto;
+    }
+  }
+
+  @if ($type == offset) {
+    .#{$grid-col-name}#{$bp}#{$grid-offset-name}#{$index} {
+      @if ($index > 0) {
+        margin-left: percentage(($index / $grid-columns));
+      } @else if ($index == 0) {
+        margin-left: ($index / $grid-columns);
+      }
+    }
+  }
+}
+
+// Float the column class based on breakpoint
+@mixin float-grid-columns($bp, $flexbox-grid) {
+  @if ($flexbox-grid == false) {
+    $list: '';
+    $i: 1;
+    $list: ".#{$grid-col-name}#{$bp}#{$i}";
+    @for $i from (1 + 1) through $grid-columns {
+      $list: "#{$list}, .#{$grid-col-name}#{$bp}#{$i}";
+    }
+    #{$list} {
+      float: left;
+    }
+  }
+}
+
+// Optional gutter classes baseed on breakpoint
+@mixin make-grid-pad($bp, $pad) {
+  $bp: str-replace($bp, '-', '');
+  .#{$grid-pad-name}#{$bp} {
+    padding-left: $pad;
+    padding-right: $pad;
+  }
+}
+
+// Calculate column classes
+@mixin loop-grid-columns($columns, $bp, $type, $flexbox-grid) {
+  @for $i from 0 through $columns {
+    @include calc-grid-column($i, $bp, $type, $flexbox-grid);
+  }
+}
+
+// Make a grid based on breakpoint
+@mixin make-grid($bp, $flexbox-grid, $pad) {
+  // Generate width column classes for a breakpoint
+  @include loop-grid-columns($grid-columns, $bp, width, $flexbox-grid);
+
+  // Float columns for specified breakpoint and up
+  @include float-grid-columns($bp, $flexbox-grid);
+
+  // Generate optional gutter classes
+  @include make-grid-pad($bp, $pad);
+
+  // Generate push column classes for a breakpoint
+  @include loop-grid-columns($grid-columns, $bp, push, $flexbox-grid);
+
+  // Generate pull column classes for a breakpoint
+  @include loop-grid-columns($grid-columns, $bp, pull, $flexbox-grid);
+
+  // Generate offset column classes for a breakpoint
+  @include loop-grid-columns($grid-columns, $bp, offset, $flexbox-grid);
+}
+
+@mixin make-static-fluid($bp) {
+  .#{$grid-col-name}#{$bp}#{$static-col-name} {
+    width: $static-col-width;
+  }
+
+  .fluid-#{$bp}wrapper {
+    width: 100%;
+  }
+
+  .static-right .fluid-#{$bp}wrapper {
+    float: left;
+  }
+
+  .static-left .fluid-#{$bp}wrapper {
+    float: right;
+  }
+
+  .static-right {
+    .#{$grid-col-name}#{$bp}fluid {
+      margin-right: $static-col-width;
+
+    }
+
+    .#{$grid-col-name}#{$bp}#{$static-col-name} {
+      float: left;
+      margin-left: $static-col-width * -1;
+    }
+  }
+
+  .static-left {
+    .#{$grid-col-name}#{$bp}fluid {
+      margin-left: $static-col-width;
+    }
+
+    .#{$grid-col-name}#{$bp}#{$static-col-name} {
+      float: right;
+      margin-right: $static-col-width * -1;
+    }
+  }
+}
+
+// TODO - later be part of optional generated CSS
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+@include make-grid($grid-xs-bp-name, $flexbox-grid, $grid-pad);
+@include make-static-fluid($grid-xs-bp-name);
+
+@if ($flexbox-grid) {
+  .start-xs {
+    justify-content: flex-start;
+    text-align: start;
+  }
+  .center-xs {
+    justify-content: center;
+    text-align: center;
+  }
+  .end-xs {
+    justify-content: flex-end;
+    text-align: end;
+  }
+  .top-xs {
+    align-items: flex-start;
+  }
+  .middle-xs {
+    align-items: center;
+    justify-content: center;
+  }
+  .bottom-xs {
+    align-items: flex-end;
+  }
+  .around-xs {
+    justify-content: space-around;
+  }
+  .between-xs {
+    justify-content: space-between;
+  }
+  .first-xs {
+    order: -1;
+  }
+  .last-xs {
+    order: 1;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  @include make-grid($grid-sm-bp-name, $flexbox-grid, $grid-pad);
+  @include make-static-fluid($grid-sm-bp-name);
+  @if ($flexbox-grid) {
+    .start-sm {
+      justify-content: flex-start;
+      text-align: start;
+    }
+    .center-sm {
+      justify-content: center;
+      text-align: center;
+    }
+    .end-sm {
+      justify-content: flex-end;
+      text-align: end;
+    }
+    .top-sm {
+      align-items: flex-start;
+    }
+    .middle-sm {
+      align-items: center;
+      justify-content: center;
+    }
+    .bottom-sm {
+      align-items: flex-end;
+    }
+    .around-sm {
+      justify-content: space-around;
+    }
+    .between-sm {
+      justify-content: space-between;
+    }
+    .first-sm {
+      order: -1;
+    }
+    .last-sm {
+      order: 1;
+    }
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  @include make-grid($grid-md-bp-name, $flexbox-grid, $grid-pad);
+  @if ($flexbox-grid) {
+    .start-md {
+      justify-content: flex-start;
+      text-align: start;
+    }
+    .center-md {
+      justify-content: center;
+      text-align: center;
+    }
+    .end-md {
+      justify-content: flex-end;
+      text-align: end;
+    }
+    .top-md {
+      align-items: flex-start;
+    }
+    .middle-md {
+      align-items: center;
+      justify-content: center;
+    }
+    .bottom-md {
+      align-items: flex-end;
+    }
+    .around-md {
+      justify-content: space-around;
+    }
+    .between-md {
+      justify-content: space-between;
+    }
+    .first-md {
+      order: -1;
+    }
+    .last-md {
+      order: 1;
+    }
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  @include make-grid($grid-lg-bp-name, $flexbox-grid, $grid-pad);
+  @if ($flexbox-grid) {
+    .start-lg {
+      justify-content: flex-start;
+      text-align: start;
+    }
+    .center-lg {
+      justify-content: center;
+      text-align: center;
+    }
+    .end-lg {
+      justify-content: flex-end;
+      text-align: end;
+    }
+    .top-lg {
+      align-items: flex-start;
+    }
+    .middle-lg {
+      align-items: center;
+      justify-content: center;
+    }
+    .bottom-lg {
+      align-items: flex-end;
+    }
+    .around-lg {
+      justify-content: space-around;
+    }
+    .between-lg {
+      justify-content: space-between;
+    }
+    .first-lg {
+      order: -1;
+    }
+    .last-lg {
+      order: 1;
+    }
+  }
+}
+
+.#{$grid-container-name}fluid {
+  @include make-container($flexbox-grid);
+}
+
+.#{$grid-container-name} {
+  @include make-container($flexbox-grid);
+
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm-width;
+    @include make-container($flexbox-grid);
+  }
+  @media (min-width: $screen-md-min) {
+    width: $container-md-width;
+  }
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg-width;
+  }
+}
+
+.#{$grid-row-name} {
+  @include make-row($flexbox-grid);
+
+  @media (min-width: $screen-sm-min) {
+    @include make-row($flexbox-grid);
+  }
+}

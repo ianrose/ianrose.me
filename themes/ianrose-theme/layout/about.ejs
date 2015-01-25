@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    <div class="col col-xs-12 col-md-12 pad-xs">
+      <p class="dek dek-lg">Ian Rose is a designer focused on editorial design &amp; front-end architecture living in New York City.
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-xs-12 col-md-8 pad-xs">
+      <div>
+        <h2 class="heading--sub h4">Information</h2>
+        <%- page.content %>
+      </div>
+    </div>
+    <div class="col col-xs-12 col-md-4 pad-xs">
+      <h2 class="heading--sub h4">Contact Me</h2>
+
+      <p>You can find me on <a href="#">Twitter</a>, <a href="#">GitHub</a>,
+        <a href="#">Google+</a>, and <a href="#">LinkedIn</a>.</p>
+      <%if(page.clients) { %>
+        <h2 class="heading--sub h4">Select Clients</h2>
+        <ul class="list--display">
+          <% page.clients.forEach(function(clients) { %>
+          <li>
+            <%= clients %>
+          </li>
+          <% }) %>
+        </ul>
+      <% } %>
+      <h2 class="heading--sub h4">Currently Reading</h2>
+      <ul class="list--display">
+        <li>
+          <a href="http://www.amazon.com/gp/product/389955468X/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=389955468X&linkCode=as2&tag=ianrose-20&linkId=4I3R6H5MUGJSQ4Y3"><em>Designing News</em></a> &mdash; Francesco Franchi
+        </li>
+        <li>
+          <a href="http://www.amazon.com/gp/product/0684868768/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0684868768&linkCode=as2&tag=ianrose-20&linkId=JFH5DZLC7LJOAXJL"><em>Emergence: The Connected Lives of Ants, Brains, Cities, and Software</em></a> &mdash; Steven Johnson
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

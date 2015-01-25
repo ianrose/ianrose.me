@@ -1,0 +1,125 @@
+.layout--header {
+  display: flex;
+}
+
+.layout--main {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $screen-sm-min) {
+    flex: 1 1 auto;
+    flex-direction: row;
+  }
+}
+
+.layout--content {
+  @media (min-width: $screen-sm-min) {
+    flex: 1;
+  }
+}
+
+.layout--nav {
+  order: -1;
+  color: #fff;
+  position: relative;
+}
+
+.layout--menu {
+  background-color: #000;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height $trans-dur $trans-ease;
+
+  &.is-open {
+    max-height: 600px;
+    overflow: auto;
+
+    @media (min-width: $screen-sm-min) {
+      max-height: none;
+    }
+  }
+
+  @media (min-width: $screen-sm-min) {
+    max-height: none;
+    overflow: auto;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .layout--nav,
+  .layout--rail {
+    flex: 0 0 $layout-nav-width;
+  }
+}
+
+.layout--content-main {
+  padding-top: emRhythm(6);
+  margin-bottom: emRhythm(4);
+
+  @media (min-width: $screen-sm-min) {
+    padding-top: emRhythm(12);
+    margin-bottom: emRhythm(18);
+  }
+}
+
+.layout--header {
+  .layout--main {
+    flex: 1 1 auto;
+    flex-direction: row;
+  }
+
+  .layout--nav {
+    @media (min-width: $screen-sm-min) {
+      flex: 0 0 $layout-nav-width;
+    }
+  }
+
+  .layout--content {
+    flex: 1;
+  }
+}
+
+.layout--footer {
+  .layout--main {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $screen-sm-min) {
+      flex-direction: row;
+    }
+  }
+  .layout--nav {
+    order: 1;
+    background-color: #000;
+
+    @media (min-width: $screen-sm-min) {
+      order: 0;
+    }
+  }
+}
+
+.layout--footer-legal {
+  border-top: 1px solid $grey;
+}
+
+.layout--col {
+  border-right: 1px solid $border-color;
+}
+
+.layout--sidebar {
+  border-left: 1px solid $border-color;
+}
+
+.layout--work {
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-right: none;
+  }
+}
+
+.layout--notes {
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    border-right: 1px solid $border-color;
+  }
+}

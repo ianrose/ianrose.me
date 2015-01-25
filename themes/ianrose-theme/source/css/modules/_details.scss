@@ -1,0 +1,19 @@
+.details {
+  border-top-style: solid;
+  border-top-color: $border-color;
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+  margin-bottom: emRhythm(1, $base-em-font-size);
+  @include rhythmBorderTop(1px, 1);
+  @include setType($base-line-multi, $base-em-font-size);
+}
+
+.details > li {
+  margin-right: 0;
+  margin-bottom: emRhythm(1);
+  border-bottom-style: solid;
+  border-bottom-color: $border-color;
+  @include rhythmBorderBottom(1px, 1);
+
+}

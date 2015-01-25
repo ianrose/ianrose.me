@@ -1,7 +1,0 @@
-.meta {
-  text-transform: uppercase;
-  font-weight: bold;
-  color: lighten($text-color, 20%);
-  margin-bottom: emRhythm(4, $ms-down1);
-  @include setType(2, $ms-down1);
-}
