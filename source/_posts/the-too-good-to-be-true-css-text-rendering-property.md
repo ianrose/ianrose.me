@@ -1,5 +1,5 @@
 ---
-title: The to Good to be True CSS Text Rendering Property
+title: The Too Good to Be True CSS Text Rendering Property
 date: 2015-01-22 22:18:10
 excerpt: The CSS text rendering property is a mixed bag. On initial pass it seems to be an obvious choice for improving type on the web.
 art: text-rendering.gif
