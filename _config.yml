@@ -77,7 +77,7 @@ autoprefixer:
   enable: true
   debug: true
   browsers:
-    - last 4 versions
+    - last 6 versions
 
 copyAssets: _redirects,_headers
 
