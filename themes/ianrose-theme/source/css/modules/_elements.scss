@@ -167,6 +167,7 @@ blockquote {
 
   p {
     margin-bottom: emRhythm(2);
+    @include setType(4, $ms-up1);
     @media (min-width: $screen-sm-min) {
       @include setType(6, $ms-up3);
     }
@@ -203,17 +204,26 @@ blockquote {
 
 .pullquote.left {
   float: left;
-  margin-right: emRhythm($base-line-multi);
+  margin-right: emRhythm(2);
   text-align: right;
   border-left: none;
   border-right: 1px solid lighten($text-color, 60%);
-  padding-right: emRhythm($base-line-multi);
+  padding-right: emRhythm(2);
   padding-left: 0;
+
+  @media (min-width: $screen-sm-min) {
+    margin-right: emRhythm($base-line-multi);
+    padding-right: emRhythm($base-line-multi);
+  }
 }
 
 .pullquote.right {
   float: right;
-  margin-left: emRhythm($base-line-multi);
+  margin-left: emRhythm(2);
+
+  @media (min-width: $screen-sm-min) {
+    margin-left: emRhythm($base-line-multi);
+  }
 }
 
 
