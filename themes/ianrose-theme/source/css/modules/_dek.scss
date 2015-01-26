@@ -9,6 +9,15 @@
     margin-bottom: emRhythm($base-line-multi, $ms-up2);
     @include setType(6, $ms-up2);
   }
+
+  @media (min-width: $screen-md-min) {
+    margin-bottom: emRhythm($base-line-multi, $ms-up2);
+    @include setType(7, $ms-up3);
+  }
+}
+
+.dek--archive {
+  font-style: normal;
 }
 
 .dek + p,

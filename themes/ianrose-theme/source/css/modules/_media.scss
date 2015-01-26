@@ -14,8 +14,12 @@ img.media--full{
 }
 
 .media--entry-work {
-  width: 176px;
+  width: 124px;
   margin-right: emRhythm(2);
+
+  @media (min-width: $screen-sm-min) {
+    width: 176px;
+  }
 }
 
 .media--illustration {

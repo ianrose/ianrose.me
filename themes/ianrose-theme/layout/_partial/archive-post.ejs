@@ -1,5 +1,5 @@
-<div class="row middle-xs">
-  <div class="col col-xs-12 col-md-10 col-lg-8 pad-xs">
+<div class="row">
+  <div class="col col-xs-12 col-lg-10 col-lg-offset-1 pad-xs">
 <div>
     <div class="entry archive-type-<%=post.layout%>">
       <%-partial('post/date', {
@@ -11,7 +11,7 @@
       <a href="<%-config.root%><%-post.path%>"><img class="img-responsive media--entry media--entry-work" src="/<%-post.path%><%-post.art%>" alt="<%=post.arttext%>"/></a>
       <%}%>
       <%if (post.excerpt && index) {%>
-      <p>
+      <p class="dek dek--archive">
         <%-post.excerpt%>
         <%} else {%>
         <a href="<%-config.root%><%-post.path%>"><%=theme.excerpt_link%></a>

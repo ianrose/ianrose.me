@@ -1,6 +1,6 @@
 <div id="<%= post.layout %>-<%= post.slug %>" class="entry--<%= post.layout %>" itemscope itemprop="blogPost">
   <div class="row">
-    <div class="col col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 pad-xs">
+    <div class="col col-xs-12 col-md-12 col-lg-10 col-lg-offset-1 pad-xs">
       <div>
         <%- partial('post/date', {
           class_name: 'entry-meta-item entry-meta-item--time',
@@ -24,7 +24,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col col-xs-12 col-md-9 col-lg-7 last-md pad-xs" itemprop="articleBody">
+    <div class="col col-xs-12 col-md-10 col-lg-8 last-md pad-xs" itemprop="articleBody">
       <div class="article">
         <%if (post.art) { %>
           <img class="media--full" src="/<%-post.path%><%-post.art%>" alt=""/>
@@ -33,7 +33,7 @@
       </div>
       <%- partial('post/meta') %>
     </div>
-    <div class="col col-xs-12 col-md-1 col-md-offset-1 col-lg-offset-2 pad-xs">
+    <div class="col col-xs-12 col-md-1 col-lg-offset-1 pad-xs">
       <%- partial('post/share') %>
     </div>
   </div>
@@ -41,7 +41,7 @@
 <% if (!index) { %>
 <% if (post.prev || post.next) { %>
 <div class="row">
-  <div class="col col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 pad-xs">
+  <div class="col col-xs-12 col-md-10 col-md-offset-1 pad-xs">
     <%- partial('post/nav')%>
   </div>
 </div>
@@ -49,7 +49,7 @@
 <% } %>
 <% if (post.comments && config.disqus_shortname && !page.category) { %>
 <div id="comments" class="row">
-  <div class="col col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 pad-xs">
+  <div class="col col-xs-12 col-md-10 col-md-offset-1 pad-xs">
     <div id="disqus_thread"></div>
     <script type="text/javascript">
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
