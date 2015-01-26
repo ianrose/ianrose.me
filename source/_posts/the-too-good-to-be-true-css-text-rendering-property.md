@@ -10,7 +10,7 @@ tags:
 layout:
 ---
 
-However after a bit of reading there are known [bugs](https://github.com/h5bp/html5-boilerplate/issues/78 "HTML5 Boilerplate GitHub") in some [browsers](https://code.google.com/p/chromium/issues/detail?id=114719 "Chromium Issues"), [operating systems](https://code.google.com/p/android/issues/detail?id=15067 "Android Issues") and [performance issues](http://www.marco.org/2012/11/15/text-rendering-optimize-legibility "Marco.org") on Android and older versions of iOS.<sup>[1](#fn1)</sup>
+<span class=dropcap>H</span>owever after a bit of reading there are known [bugs](https://github.com/h5bp/html5-boilerplate/issues/78 "HTML5 Boilerplate GitHub") in some [browsers](https://code.google.com/p/chromium/issues/detail?id=114719 "Chromium Issues"), [operating systems](https://code.google.com/p/android/issues/detail?id=15067 "Android Issues") and [performance issues](http://www.marco.org/2012/11/15/text-rendering-optimize-legibility "Marco.org") on Android and older versions of iOS.<sup>[1](#fn1)</sup>
 
 There are four values that text rendering can be set to <sup>[2](#fn2)</sup>:
 

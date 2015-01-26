@@ -1,6 +1,6 @@
 ---
 title: Permanent Redirect GitHub Project Page to Custom Domain
-excerpt: The setup, you have your personal page at username.github.io with a custom domain, like custom.me. You have also created a project page for one of your repositories.
+excerpt: How to get a GitHub hosted project site to 301 redirect to a custom domain name using CloudFlare.
 art:
 arttext:
 date: 2014-03-30 17:20:20
@@ -9,7 +9,7 @@ categories:
 - articles
 ---
 
-<span class=dropcap>T</span>he setup, you have your personal page at username.github.io with a custom domain, like custom.me. You have also created a project page for one of your repositories that by default would exist at custom.me/projectname. You want custom.me/projectname to 301 redirect to projectname.io.
+<span class=dropcap>T</span>he setup, you have your personal page at username.github.io with a custom domain, like custom.me. You have also created a project page for one of your repositories that by default would exist at custom.me/projectname.
 
 This is assuming you have `projectname.io` already setup with the proper CNAME in the root of your site and your DNS working using CloudFlare.
 

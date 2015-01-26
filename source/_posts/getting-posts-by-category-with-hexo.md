@@ -1,13 +1,13 @@
 ---
 title: Getting Posts by Category with Hexo
-excerpt: While building with Hexo I came across a need get all the posts by a specific category and render them through a specific partial.
+excerpt: While building with Hexo I came across a need to get all the posts by a specific category and render them through a specific partial.
 date: 2015-01-20 20:39:15
 tags:
 categories:
 - notes
 ---
 
-Hexo is great open source project in many ways. However due to language barriers the English documentation needs help from the project’s community. Myself included. Skip right to the [solution](#The_Solution).
+<span class=dropcap>H</span>exo is great open source project in many ways. However due to language barriers the English documentation needs help from the project’s community. Myself included. Skip right to the [solution](#The_Solution).
 
 ## The Scenario
 
