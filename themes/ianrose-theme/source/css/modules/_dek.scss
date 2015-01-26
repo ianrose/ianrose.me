@@ -1,14 +1,13 @@
 .dek {
   font-family: $font-display-serif;
-  font-weight: 700;
+  font-style: italic;
   margin-bottom: emRhythm($base-line-multi, $ms-up1);
   text-rendering: optimizeLegibility;
-  @include setType(4, $ms-up1);
+  @include setType(5, $ms-up1);
 
   @media (min-width: $screen-sm-min) {
-    font-weight: 400;
     margin-bottom: emRhythm($base-line-multi, $ms-up2);
-    @include setType(5, $ms-up2);
+    @include setType(6, $ms-up2);
   }
 }
 
@@ -18,6 +17,7 @@
 }
 
 .dek-lg {
+  font-style: normal;
   margin-bottom: emRhythm(6, $ms-up3);
   @include setType(6, $ms-up3);
 
@@ -28,6 +28,7 @@
 }
 
 .dek-xlg {
+  font-style: normal;
   margin-bottom: emRhythm(6, $ms-up4);
   @include setType(7, $ms-up4);
 
