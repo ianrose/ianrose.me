@@ -65,17 +65,17 @@ h6, .h6 {
 // [5] Sets the type to one of the modular scale values and the second argument
 // sets a unitless line-height as a multiple of the vertical grid.
 h1, .h1 {
-  margin-bottom: emRhythm(2, $ms-up3); // [1]
-  @include setType(5, $ms-up3); // [2]
+  margin-bottom: emRhythm(1, $ms-up3); // [1]
+  @include setType(6, $ms-up3); // [2]
 
   @media (min-width: $screen-sm-min) {
     // [3]
-    margin-bottom: emRhythm(2, $ms-up4); // [4]
+    margin-bottom: emRhythm(1, $ms-up4); // [4]
     @include setType(7, $ms-up4); // [5]
   }
 
   @media (min-width: $screen-md-min) {
-    margin-bottom: emRhythm(3, $ms-up5);
+    margin-bottom: emRhythm(1, $ms-up5);
     @include setType(9, $ms-up5);
   }
 }
@@ -96,11 +96,11 @@ h2, .h2 {
 }
 
 h3, .h3 {
-  margin-bottom: emRhythm(1, $ms-up1);
+  margin-bottom: emRhythm(0.5, $ms-up1);
   @include setType(4, $ms-up1);
 
   @media (min-width: $screen-md-min) {
-    margin-bottom: emRhythm(1, $ms-up2);
+    margin-bottom: emRhythm(0.5, $ms-up2);
     @include setType(5, $ms-up2);
   }
 }
@@ -112,7 +112,7 @@ h4, .h4 {
 
 h5, .h5,
 h6, .h6 {
-  margin-bottom: emRhythm(1);
+  margin-bottom: emRhythm(0.5);
   @include setType(3.5);
 }
 

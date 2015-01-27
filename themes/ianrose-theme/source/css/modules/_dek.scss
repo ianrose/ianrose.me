@@ -32,14 +32,14 @@
 
   @media (min-width: $screen-sm-min) {
     margin-bottom: emRhythm(12, $ms-up5);
-    @include setType(8, $ms-up5);
+    @include setType(9, $ms-up5);
   }
 }
 
 .dek-xlg {
   font-style: normal;
-  margin-bottom: emRhythm(6, $ms-up4);
-  @include setType(7, $ms-up4);
+  margin-bottom: emRhythm(6, $ms-up3);
+  @include setType(6, $ms-up3);
 
   @media (min-width: $screen-sm-min) {
     margin-bottom: emRhythm(12, $ms-up5);
@@ -53,6 +53,6 @@
 
   @media (min-width: $screen-lg-min) {
     margin-bottom: emRhythm(12, $ms-up7);
-    @include setType(12, $ms-up7);
+    @include setType(13, $ms-up7);
   }
 }
