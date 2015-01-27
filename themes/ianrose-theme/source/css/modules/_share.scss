@@ -9,7 +9,6 @@ $share-size: $ms-down1;
   margin-left: 0;
   margin-bottom: emRhythm(1);
   @include rhythmBorderBottom(1px, 1);
-  @include setType($base-line-multi, $share-size);
   @include clearfix();
 
   @media (min-width: $screen-md-min) {
@@ -18,13 +17,13 @@ $share-size: $ms-down1;
 }
 
 .share > li {
-  float: left;
   margin-right: emRhythm(1, $share-size);
   margin-bottom: 0;
-  display: block;
+  display: inline-block;
+  @include setType($base-line-multi, $share-size);
 
   @media (min-width: $screen-md-min) {
-    float: none;
+    display: block;
     margin-right: 0;
     text-align: center;
     border-bottom: 1px solid $border-color;
@@ -72,4 +71,9 @@ $share-size: $ms-down1;
       background-color: $google-red;
     }
   }
+}
+
+li.share--label {
+  padding-bottom: emRhythm(1, $entry-meta-item-size);
+  @include setType(2, $entry-meta-item-size);
 }

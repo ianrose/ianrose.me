@@ -12,7 +12,7 @@ $base-line-multi: 5;
 $ms-ratio: 1.25;
 
 // Colors
-$text-color: #000;
+$text-color: #282828;
 $aside-txt-color:lighten($text-color, 30%);
 $light-blue: #059cc7;
 $lightest-grey: #f3f3f3;
@@ -30,13 +30,13 @@ $link-color: $blue;
 $link-color-active: darken($link-color, 10%);
 $border-color: $lighter-grey;
 $accent-color: lighten($text-color, 30%);
-$menu-border-color: $grey;
+$menu-border-color: lighten($text-color, 8%);
 $twitter-blue: #55acee;
 $facebook-blue: #3b5998;
 $google-red: #dd4b39;
 
 // Site Layout
-$layout-nav-width: 136px;
+$layout-nav-width: 142px;
 
 // Grid Type, either flexbox or float based
 $flexbox-grid: true;

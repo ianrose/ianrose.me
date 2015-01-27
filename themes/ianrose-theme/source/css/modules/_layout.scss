@@ -25,7 +25,7 @@
 }
 
 .layout--menu {
-  background-color: #000;
+  background-color: $text-color;
   max-height: 0;
   overflow: hidden;
   transition: max-height $trans-dur $trans-ease;
@@ -89,7 +89,7 @@
   }
   .layout--nav {
     order: 1;
-    background-color: #000;
+    background-color: $text-color;
 
     @media (min-width: $screen-sm-min) {
       order: 0;
