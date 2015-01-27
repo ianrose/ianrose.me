@@ -11,7 +11,7 @@
   }
 
   @media (min-width: $screen-md-min) {
-    margin-bottom: emRhythm($base-line-multi, $ms-up2);
+    margin-bottom: emRhythm($base-line-multi, $ms-up3);
     @include setType(7, $ms-up3);
   }
 }
