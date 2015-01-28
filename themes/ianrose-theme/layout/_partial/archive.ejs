@@ -1,6 +1,6 @@
 <%if (page.category == 'notes') {%>
 <%page.posts.each(function(post) {%>
-<%-partial('article', {post: post, index: true})%>
+  <%-partial('article', {post: post, index: true})%>
 <%})%>
 <%if (page.total > 1) {%>
 <nav id="page-nav">

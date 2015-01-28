@@ -34,6 +34,7 @@
   padding-left: emRhythm(2);
   padding-right: emRhythm(2);
   text-align: center;
+  font-family: $font-narrow-sans;
   @include setType(5);
 
   @media (min-width: $screen-sm-min) {

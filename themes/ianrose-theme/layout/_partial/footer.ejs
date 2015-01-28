@@ -2,12 +2,16 @@
   <div class="layout--main">
     <div class="layout--nav">
       <div class="layout--footer-legal">
-        <ul class="nav">
-          <li><a href="#">Back to Top</a></li>
-        </ul>
-        <ul class="nav nav--legal">
-          <li>&copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %></li>
-        </ul>
+        <div role="navigation">
+          <ul class="nav">
+            <li><a href="#">Back to Top</a></li>
+          </ul>
+        </div>
+        <div role="contentinfo">
+          <ul class="nav nav--legal">
+            <li>&copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %></li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="layout--content">

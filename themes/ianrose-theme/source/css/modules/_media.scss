@@ -18,6 +18,9 @@ img.media--full{
   margin-right: emRhythm(2);
 
   @media (min-width: $screen-sm-min) {
+    float: right;
+    margin-right: 0;
+    margin-left: emRhythm(2);
     width: 176px;
   }
 }

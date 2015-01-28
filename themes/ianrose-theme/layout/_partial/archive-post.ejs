@@ -6,7 +6,9 @@
           class_name: 'entry-meta-item entry-meta-item--time',
           date_format: 'MMMM D, YYYY'
         })%>
-      <%-partial('post/title', {class_name: 'archive-article-title'})%>
+      <h2 class="h1" itemprop="name">
+        <a href="<%- config.root %><%- post.path %>"><%= post.title %></a>
+      </h2>
       <%if (post.art) {%>
       <a href="<%-config.root%><%-post.path%>"><img class="img-responsive media--entry media--entry-work" src="/<%-post.path%><%-post.art%>" alt="<%=post.arttext%>"/></a>
       <%}%>

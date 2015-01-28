@@ -75,7 +75,7 @@ pagination_dir: page
 
 autoprefixer:
   enable: true
-  debug: true
+  debug: false
   browsers:
     - last 6 versions
 
