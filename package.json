@@ -6,6 +6,7 @@
     "hexo-front-matter-excerpt": "0.0.2",
     "hexo-generator-autoprefixer": "0.0.5",
     "hexo-generator-feed": "^0.2.1",
+    "hexo-generator-sitemap": "^0.2.0",
     "hexo-processor-copyassets": "0.0.1",
     "hexo-renderer-ejs": "*",
     "hexo-renderer-marked": "*",
