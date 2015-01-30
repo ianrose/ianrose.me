@@ -18,8 +18,12 @@
         <% } %>
       </div>
       <%- partial('post/title', {class_name: 'article-title'}) %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-xs-12 pad-xs">
       <% if (post.excerpt) { %>
-      <p class="dek"><%- post.excerpt %></p>
+        <p class="dek"><%- post.excerpt %></p>
       <% } %>
     </div>
   </div>
@@ -27,7 +31,7 @@
     <div class="col col-xs-12 col-md-9 pad-xs" itemprop="articleBody">
       <div class="article">
         <%if (post.art) { %>
-          <img class="media--full" src="/<%-post.path%><%-post.art%>" alt="<%=post.arttext%>"/>
+        <img class="media--full" src="/<%-post.path%><%-post.art%>" alt="<%=post.arttext%>"/>
         <% } %>
         <%- post.content %>
       </div>
