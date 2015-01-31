@@ -1,13 +1,13 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <%- partial('_partial/head') %>
-<body>
+<body itemscope itemtype="http://schema.org/WebPage">
 <!--[if lte IE 9]>
 <p class="align-center">This is a portfolio site. I used this opportunity to experiment with <a href="http://caniuse.com/#feat=flexbox" title="Can I Use">CSS Flexbox</a>. Please use a <a href="http://browsehappy.com/" title="Browse Happy">modern browser</a>.</p>
 <![endif]-->
 <%- partial('_partial/header') %>
 <div class="layout--main">
-	<div class="layout--content layout--content-main" role="main">
+	<div class="layout--content layout--content-main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 		<div class="container">
 			<%- body %>
 		</div>

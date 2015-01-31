@@ -1,20 +1,20 @@
-<div id="js-menu" class="layout--nav layout--menu" role="navigation">
+<div id="js-menu" class="layout--nav layout--menu" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
   <ul class="nav">
     <% for (var i in theme.menu) { %>
-    <li><a class="main-nav-link" href="<%- theme.menu[i] %>"><%= i %></a></li>
+    <li itemprop="url"><a class="main-nav-link" href="<%- theme.menu[i] %>" itemprop="name"><%= i %></a></li>
     <% } %>
   </ul>
   <ul class="nav">
-    <li><a href="https://twitter.com/ThatIanRose">Twitter</a></li>
-    <li><a href="https://github.com/ianrose">GitHub</a></li>
-    <li><a href="http://linkedin.com/in/roseian/">LinkedIn</a></li>
-    <li><a href="https://tinyletter.com/ian-rose">Newsletter</a></li>
+    <li itemprop="url"><a href="https://twitter.com/ThatIanRose" itemprop="name">Twitter</a></li>
+    <li itemprop="url"><a href="https://github.com/ianrose" itemprop="name">GitHub</a></li>
+    <li itemprop="url"><a href="http://linkedin.com/in/roseian/" itemprop="name">LinkedIn</a></li>
+    <li itemprop="url"><a href="https://tinyletter.com/ian-rose" itemprop="name">Newsletter</a></li>
     <% if (theme.rss) { %>
-    <li><a href="http://feeds.feedburner.com/ianrose?format=xml">RSS</a></li>
+    <li itemprop="url"><a href="http://feeds.feedburner.com/ianrose?format=xml" itemprop="name">RSS</a></li>
     <% } %>
   </ul>
   <ul class="nav">
-    <li><a href="https://github.com/ianrose/ianrose-source">Site Source</a></li>
+    <li itemprop="url"><a href="https://github.com/ianrose/ianrose-source" itemprop="name">Site Source</a></li>
   </ul>
 </div>
 

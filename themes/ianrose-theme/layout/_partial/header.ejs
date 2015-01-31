@@ -1,15 +1,15 @@
-<div class="layout--header" role="banner">
+<div class="layout--header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
   <div class="layout--main">
     <div class="layout--nav">
       <div class="site-title--container site-title--name-container">
         <button id="js-toggle-menu" class="btn btn--menu">
           <i class="ion-navicon"></i></button>
           <% if ((page.path === '') || (page.layout === 'about')){ %>
-            <h1 class="site-title site-title--name">
+            <h1 class="site-title site-title--name" itemprop="headline">
               <a href="<%- config.root %>"><%= config.title %></a>
             </h1>
           <% } else { %>
-            <p class="site-title site-title--name">
+            <p class="site-title site-title--name" itemprop="headline">
               <a href="<%- config.root %>"><%= config.title %></a>
             </p>
           <% } %>
@@ -21,13 +21,13 @@
           <div class="row">
             <div class="col col-xs-12">
               <% if (is_archive()) { %>
-                <h1 class="site-title site-title--desc">Archives</h1>
+                <h1 class="site-title site-title--desc" itemprop="description">Archives</h1>
               <% } else if (is_category()) { %>
-                <h1 class="site-title site-title--desc"><%= page.category %></h1>
+                <h1 class="site-title site-title--desc" itemprop="description"><%= page.category %></h1>
               <% } else if (is_tag()) { %>
-                <h1 class="site-title site-title--desc"><%= page.tag %></h1>
+                <h1 class="site-title site-title--desc" itemprop="description"><%= page.tag %></h1>
               <% } else { %>
-                <p class="site-title site-title--desc"> <%= theme.subtitle %></p>
+                <p class="site-title site-title--desc" itemprop="description"> <%= theme.subtitle %></p>
               <% } %>
             </div>
           </div>

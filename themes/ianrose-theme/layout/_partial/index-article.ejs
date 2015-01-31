@@ -1,4 +1,4 @@
-<div class="entry archive-type-<%= post.layout %>">
+<div class="entry archive-type-<%= post.layout %>" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
 <%- partial('post/date', { class_name: 'entry-meta-item entry-meta-item--time entry-meta-item--time-sm', date_format: 'MMMM D, YYYY'}) %>
 <%- partial('post/entry-article-title', {class_name: 'archive-article-title'}) %>
 <% if (post.art) { %>
