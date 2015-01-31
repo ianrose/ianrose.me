@@ -1,4 +1,4 @@
-<div id="<%= post.layout %>-<%= post.slug %>" class="entry--<%= post.layout %>" itemscope itemprop="blogPost">
+<div id="<%= post.layout %>-<%= post.slug %>" class="entry--<%= post.layout %>" itemscope itemprop="http://schema.org/BlogPosting">
   <div class="row">
     <div class="col col-xs-12 pad-xs">
       <div>
@@ -8,14 +8,16 @@
         }) %>
         <% if(!page.category) {%>
         <small class="entry-meta-item">|</small>
-        <%- list_categories(post.categories, {
-          show_count: false,
-          style: 'none',
-          separator: '',
-          amount: 1,
-          class: 'entry-meta-item entry-meta-item--tax category'
-        }) %>
-        <% } %>
+        <span itemprop="articleSection">
+          <%- list_categories(post.categories, {
+            show_count: false,
+            style: 'none',
+            separator: '',
+            amount: 1,
+            class: 'entry-meta-item entry-meta-item--tax category'
+          }) %>
+          <% } %>
+        </span>
       </div>
       <%- partial('post/title', {class_name: 'article-title'}) %>
     </div>
