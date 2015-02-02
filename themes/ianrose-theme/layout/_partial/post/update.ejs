@@ -1,3 +1,1 @@
-<a href="<%- config.root %><%- post.path %>" class="<%= class_name %>">
-  <time datetime="<%= date_xml(post.updated) %>" itemprop="dateModified"><%= date(post.updated, date_format) %></time>
-</a>
+<time class="<%= class_name %>" datetime="<%= date_xml(post.updated) %>" itemprop="dateModified"><%= date(post.updated, date_format) %></time>
