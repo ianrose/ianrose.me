@@ -1,6 +1,6 @@
 {
   "name": "typesettings",
-  "version": "2.3.2",
+  "version": "2.3.3",
   "homepage": "https://github.com/ianrose/typesettings",
   "authors": [
     "Ian Rose"
@@ -28,13 +28,13 @@
     "Gruntfile.js",
     "package.json"
   ],
-  "_release": "2.3.2",
+  "_release": "2.3.3",
   "_resolution": {
     "type": "version",
-    "tag": "v2.3.2",
-    "commit": "bbbd144d2f2ad7da9794821749b113737c5bcb86"
+    "tag": "v2.3.3",
+    "commit": "69250a2eddf62f8df88fc59322b410c24fcd017c"
   },
   "_source": "git://github.com/ianrose/typesettings.git",
-  "_target": "2.3.2",
+  "_target": "2.3.3",
   "_originalSource": "typesettings"
 }
