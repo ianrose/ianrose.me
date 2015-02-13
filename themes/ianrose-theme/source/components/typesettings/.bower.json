@@ -1,6 +1,6 @@
 {
   "name": "typesettings",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "homepage": "https://github.com/ianrose/typesettings",
   "authors": [
     "Ian Rose"
@@ -11,8 +11,10 @@
     "typography",
     "design",
     "type",
-    "vertical rhythm",
-    "modular scale",
+    "vertical",
+    "rhythm",
+    "modular",
+    "scale",
     "ui"
   ],
   "license": "MIT",
@@ -26,13 +28,13 @@
     "Gruntfile.js",
     "package.json"
   ],
-  "_release": "2.3.1",
+  "_release": "2.3.2",
   "_resolution": {
     "type": "version",
-    "tag": "v2.3.1",
-    "commit": "7f1e9a7f39482f665cd5b599741fa834daeafc05"
+    "tag": "v2.3.2",
+    "commit": "bbbd144d2f2ad7da9794821749b113737c5bcb86"
   },
   "_source": "git://github.com/ianrose/typesettings.git",
-  "_target": "2.3.1",
+  "_target": "2.3.2",
   "_originalSource": "typesettings"
 }

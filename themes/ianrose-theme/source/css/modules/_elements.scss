@@ -96,11 +96,11 @@ h2, .h2 {
 }
 
 h3, .h3 {
-  margin-bottom: emRhythm(0.5, $ms-up1);
+  margin-bottom: emRhythm(0.5, $ms-up1, true);
   @include setType(4, $ms-up1);
 
   @media (min-width: $screen-md-min) {
-    margin-bottom: emRhythm(0.5, $ms-up2);
+    margin-bottom: emRhythm(0.5, $ms-up2, true);
     @include setType(5, $ms-up2);
   }
 }
@@ -112,7 +112,7 @@ h4, .h4 {
 
 h5, .h5,
 h6, .h6 {
-  margin-bottom: emRhythm(0.5);
+  margin-bottom: emRhythm(0.5, $silent: true);
   @include setType(3.5);
 }
 
