@@ -30,6 +30,9 @@
     </div>
   </div>
   <div class="row">
+    <div class="col col-xs-12 col-md-3 pad-xs">
+      <%- partial('work/meta') %>
+    </div>
     <div class="col col-xs-12 col-md-9 pad-xs" itemprop="articleBody">
       <div class="article">
         <%if (post.art) { %>
@@ -37,9 +40,6 @@
         <% } %>
         <%- post.content %>
       </div>
-    </div>
-    <div class="col col-xs-12 col-md-3 pad-xs">
-      <%- partial('work/meta') %>
     </div>
   </div>
 </div>
