@@ -25,7 +25,7 @@
 }
 
 .layout--menu {
-  background-color: $text-color;
+  background-color: #222222;
   max-height: 0;
   overflow: hidden;
   transition: max-height $trans-dur $trans-ease;
@@ -53,12 +53,12 @@
 }
 
 .layout--content-main {
-  padding-top: emRhythm(6);
-  margin-bottom: emRhythm(4);
+  //padding-top: emRhythm(6);
+  //margin-bottom: emRhythm(4);
 
   @media (min-width: $screen-sm-min) {
-    padding-top: emRhythm(12);
-    margin-bottom: emRhythm(18);
+    //padding-top: emRhythm(12);
+    //margin-bottom: emRhythm(18);
   }
 }
 
@@ -89,7 +89,7 @@
   }
   .layout--nav {
     order: 1;
-    background-color: $text-color;
+    background-color: #222222;
 
     @media (min-width: $screen-sm-min) {
       order: 0;
@@ -122,4 +122,8 @@
   @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
     border-right: 1px solid $border-color;
   }
+}
+
+.layout--about {
+  //background-color: #f3f3f3;
 }

@@ -1,13 +1,14 @@
-<div id="<%= post.layout %>-<%= post.slug %>" class="entry--<%= post.layout %>" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  <div class="row">
-    <div class="col col-xs-12 col-md-12 pad-xs">
-      <div>
-        <%- partial('post/date', {
-          class_name: 'entry-meta-item entry-meta-item--time',
-          date_format: null
-        }) %>
-        <% if(!page.category) {%>
-        <small class="entry-meta-item">|</small>
+<div class="container">
+  <div id="<%= post.layout %>-<%= post.slug %>" class="entry--<%= post.layout %>" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+    <div class="row">
+      <div class="col col-xs-12 col-md-12 pad-xs">
+        <div>
+          <%- partial('post/date', {
+            class_name: 'entry-meta-item entry-meta-item--time',
+            date_format: null
+          }) %>
+          <% if(!page.category) {%>
+          <small class="entry-meta-item">|</small>
         <span itemprop="articleSection">
           <%- list_categories(post.categories, {
             show_count: false,
@@ -18,37 +19,38 @@
           }) %>
           <% } %>
         </span>
+        </div>
+        <%- partial('post/title', {class_name: 'article-title'}) %>
       </div>
-      <%- partial('post/title', {class_name: 'article-title'}) %>
+    </div>
+    <div class="row">
+      <div class="col col-xs-12 pad-xs">
+        <% if (post.excerpt) { %>
+        <p class="dek"><%- post.excerpt %></p>
+        <% } %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-xs-12 col-md-3 pad-xs">
+        <%- partial('work/meta') %>
+      </div>
+      <div class="col col-xs-12 col-md-9 pad-xs" itemprop="articleBody">
+        <div class="article">
+          <%if (post.art) { %>
+          <img class="media--full" src="/<%-post.path%><%-post.art%>" alt="<%=post.arttext%>"/>
+          <% } %>
+          <%- post.content %>
+        </div>
+      </div>
     </div>
   </div>
+  <% if (!index) { %>
+  <% if (post.prev || post.next) { %>
   <div class="row">
     <div class="col col-xs-12 pad-xs">
-      <% if (post.excerpt) { %>
-        <p class="dek"><%- post.excerpt %></p>
-      <% } %>
+      <%- partial('post/nav')%>
     </div>
   </div>
-  <div class="row">
-    <div class="col col-xs-12 col-md-3 pad-xs">
-      <%- partial('work/meta') %>
-    </div>
-    <div class="col col-xs-12 col-md-9 pad-xs" itemprop="articleBody">
-      <div class="article">
-        <%if (post.art) { %>
-        <img class="media--full" src="/<%-post.path%><%-post.art%>" alt="<%=post.arttext%>"/>
-        <% } %>
-        <%- post.content %>
-      </div>
-    </div>
-  </div>
+  <% } %>
+  <% } %>
 </div>
-<% if (!index) { %>
-<% if (post.prev || post.next) { %>
-<div class="row">
-  <div class="col col-xs-12 pad-xs">
-    <%- partial('post/nav')%>
-  </div>
-</div>
-<% } %>
-<% } %>

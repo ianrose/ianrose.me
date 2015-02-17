@@ -1,6 +1,6 @@
 ---
-title: Joule Solar Energy
-date: 2013-02-06 17:20:41
+title: Clear Creek Transit Village
+date: 2013-01-16 17:20:41
 excerpt: A CSS preprocessor toolkit that helps set type & elements in Ems with modular scale, vertical rhythm, and responsive ratio based headlines.
 art: art.gif
 arttext: Typesettings Mark by Q. Li from The Noun Project

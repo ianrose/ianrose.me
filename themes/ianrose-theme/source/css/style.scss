@@ -30,3 +30,36 @@
 @import "modules/caption";
 @import "modules/details";
 @import "modules/highlight";
+
+.section--intro {
+  padding-top: emRhythm(6);
+
+  @media (min-width: $screen-sm-min) {
+    padding-top: emRhythm(20);
+    padding-bottom: emRhythm(20);
+  }
+}
+
+.section--intro-home {
+  color: #fff;
+  background-color: #181818;
+}
+
+.section--intro-about {
+  padding-top: emRhythm(6);
+
+  @media (min-width: $screen-sm-min) {
+    padding-top: emRhythm(20);
+    padding-bottom: emRhythm(20);
+  }
+}
+
+.section--main {
+  padding-top: emRhythm(10);
+  padding-bottom: emRhythm(10);
+  background-color: #f3f3f3;
+}
+
+.section--footer {
+  background-color: $blue;
+}
