@@ -9,15 +9,17 @@
 }
 
 .btn--default {
-  background-color: $link-color;
+  background-color: $blue;
   padding-top: emRhythm(2);
   padding-bottom: emRhythm(2);
   padding-left: emRhythm(3);
   padding-right: emRhythm(3);
+  color: #fff;
   @include setType();
 
   &:hover {
     background-color: $link-color-active;
+    color: #fff
   }
 
   &:active {

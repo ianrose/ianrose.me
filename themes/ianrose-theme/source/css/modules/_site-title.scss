@@ -14,7 +14,7 @@
 }
 
 .site-title--name-container {
-  background-color: $text-color;
+  background-color: #222222;
   border-bottom: 1px solid $menu-border-color;
   position: relative;
 
@@ -50,7 +50,6 @@
   font-family: $font-narrow-sans;
   font-weight: 700;
   color: $red;
-  text-align: center;
   text-transform: capitalize;
   @include setType(5);
 }

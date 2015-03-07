@@ -1,4 +1,4 @@
-<div class="layout--header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+<header class="layout--header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
   <div class="layout--main">
     <div class="layout--nav">
       <div class="site-title--container site-title--name-container">
@@ -19,7 +19,7 @@
       <div class="site-title--container site-title--desc-container">
         <div class="container">
           <div class="row">
-            <div class="col col-xs-12">
+            <div class="col col-xs-12 pad-xs">
               <% if (is_archive()) { %>
                 <h1 class="site-title site-title--desc" itemprop="description">Archives</h1>
               <% } else if (is_category()) { %>
@@ -35,4 +35,4 @@
       </div>
     </div>
   </div>
-</div>
+</header>
