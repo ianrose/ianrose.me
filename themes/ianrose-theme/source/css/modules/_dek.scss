@@ -1,17 +1,17 @@
 .dek {
   font-family: $font-display-serif;
   font-style: italic;
-  margin-bottom: emRhythm($base-line-multi, $ms-up1);
+  margin-bottom: emRhythm(10, $ms-up1);
   text-rendering: optimizeLegibility;
   @include setType(5, $ms-up1);
 
   @media (min-width: $screen-sm-min) {
-    margin-bottom: emRhythm($base-line-multi, $ms-up2);
+    margin-bottom: emRhythm(10, $ms-up2);
     @include setType(6, $ms-up2);
   }
 
   @media (min-width: $screen-md-min) {
-    margin-bottom: emRhythm($base-line-multi, $ms-up3);
+    margin-bottom: emRhythm(10, $ms-up3);
     @include setType(7, $ms-up3);
   }
 }
