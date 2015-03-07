@@ -1,4 +1,4 @@
-<div id="js-menu" class="layout--nav layout--menu" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<nav id="js-menu" class="layout--nav layout--menu" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
   <ul class="nav">
     <% for (var i in theme.menu) { %>
     <li itemprop="url"><a class="main-nav-link" href="<%- theme.menu[i] %>" itemprop="name"><%= i %></a></li>
@@ -16,5 +16,5 @@
   <ul class="nav">
     <li itemprop="url"><a href="https://github.com/ianrose/ianrose-source" itemprop="name">Site Source</a></li>
   </ul>
-</div>
+</nav>
 

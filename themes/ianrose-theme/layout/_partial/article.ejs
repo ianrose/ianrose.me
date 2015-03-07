@@ -1,7 +1,7 @@
-<div class="section--main">
+<article class="section--main">
   <div class="container">
     <div id="<%= post.layout %>-<%= post.slug %>" class="entry--<%= post.layout %>" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-      <div class="row">
+      <header class="row">
         <div class="col col-xs-12 pad-xs">
           <div>
             <%- partial('post/date', {
@@ -23,7 +23,7 @@
           </div>
           <%- partial('post/title', {class_name: 'article-title'}) %>
         </div>
-      </div>
+      </header>
       <div itemprop="articleBody">
         <div class="row">
           <div class="col col-xs-12 pad-xs">
@@ -80,4 +80,4 @@
       </div>
     </div><% } %>
   </div>
-</div>
+</article>

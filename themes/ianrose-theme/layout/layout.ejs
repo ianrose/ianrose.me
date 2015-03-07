@@ -7,9 +7,9 @@
 <![endif]-->
 <%- partial('_partial/header') %>
 <div class="layout--main">
-	<div class="layout--content" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+	<main class="layout--content" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 			<%- body %>
-	</div>
+	</main>
 	<%- partial('_partial/nav') %>
 </div>
 <% if (theme.sidebar && theme.sidebar !== 'bottom'){ %>

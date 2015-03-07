@@ -4,6 +4,7 @@ date: 2014-12-31 20:49:06
 layout: about
 dek:
 clients:
+- NBC News
 - Sony
 - vh1
 - Disney
