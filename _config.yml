@@ -73,12 +73,6 @@ time_format: H:mm:ss
 per_page: 10
 pagination_dir: page
 
-autoprefixer:
-  enable: true
-  debug: false
-  browsers:
-    - last 6 versions
-
 copyAssets: _redirects,_headers
 
 # Disqus
@@ -115,7 +109,5 @@ feed:
   type: atom
   path: atom.xml
   limit: 0
-
-yaml-front-matter:
 
 after_post_render:

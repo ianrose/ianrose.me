@@ -2,15 +2,26 @@
   "name": "ianrose.me",
   "version": "2.8.3",
   "private": true,
+  "hexo": {
+    "version": "3.0.0"
+  },
   "dependencies": {
-    "hexo-front-matter-excerpt": "0.0.2",
-    "hexo-generator-autoprefixer": "0.0.5",
-    "hexo-generator-feed": "^0.2.1",
-    "hexo-generator-sitemap": "^0.2.0",
+    "hexo": "^3.0.0",
+    "hexo-deployer-git": "0.0.4",
+    "hexo-deployer-heroku": "0.0.3",
+    "hexo-deployer-openshift": "0.0.1",
+    "hexo-deployer-rsync": "0.0.2",
+    "hexo-generator-archive": "^0.1.1",
+    "hexo-generator-category": "^0.1.1",
+    "hexo-generator-feed": "^1.0.1",
+    "hexo-generator-index": "^0.1.0",
+    "hexo-generator-sitemap": "^1.0.1",
+    "hexo-generator-tag": "^0.1.0",
     "hexo-processor-copyassets": "0.0.1",
     "hexo-renderer-ejs": "*",
-    "hexo-renderer-marked": "*",
-    "hexo-renderer-sass": "https://github.com/knksmith57/hexo-renderer-sass/tarball/83034cd2d0d7d2af838428af4e3750ceaa43cf3d"
+    "hexo-renderer-marked": "^0.2.5",
+    "hexo-renderer-sass": "https://github.com/knksmith57/hexo-renderer-sass/tarball/83034cd2d0d7d2af838428af4e3750ceaa43cf3d",
+    "hexo-server": "^0.1.2"
   },
   "devDependencies": {
     "hexo-livereload": "^0.1.0"
