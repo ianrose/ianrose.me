@@ -73,8 +73,6 @@ time_format: H:mm:ss
 per_page: 10
 pagination_dir: page
 
-copyAssets: _redirects,_headers
-
 # Disqus
 disqus_shortname: ianrose
 
