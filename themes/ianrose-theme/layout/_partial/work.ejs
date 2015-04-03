@@ -27,7 +27,7 @@
       <div class="row">
         <div class="col col-xs-12 pad-xs">
           <% if (post.excerpt) { %>
-          <p class="dek"><%- post.excerpt %></p>
+          <div class="dek"><%- post.excerpt %></div>
           <% } %>
         </div>
       </div>
@@ -40,7 +40,7 @@
             <%if (post.art) { %>
             <img class="media--full" src="/<%-post.path%><%-post.art%>" alt="<%=post.arttext%>"/>
             <% } %>
-            <%- post.content %>
+            <%- post.more %>
           </div>
         </div>
       </div>
