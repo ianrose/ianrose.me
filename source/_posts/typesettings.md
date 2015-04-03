@@ -1,7 +1,5 @@
----
 title: Typesettings
 date: 2014-12-30 17:20:41
-excerpt: A CSS preprocessor toolkit that helps set type & elements in Ems with modular scale, vertical rhythm, and responsive ratio based headlines.
 art: art.gif
 arttext: Typesettings Mark by Q. Li from The Noun Project
 layout: work
@@ -14,6 +12,9 @@ tags:
 categories:
 - work
 ---
+
+A CSS preprocessor toolkit that helps set type & elements in Ems with modular scale, vertical rhythm, and responsive ratio based headlines.
+<!--more-->
 
 <span class=dropcap>T</span>ypesettings provides a designer or developer a toolkit of Sass or Stylus functions and mixins that make setting nice type on the web easier.
 

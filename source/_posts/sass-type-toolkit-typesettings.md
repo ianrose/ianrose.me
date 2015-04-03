@@ -1,6 +1,4 @@
----
 title: "A Sass Type Toolkit: Typesettings"
-excerpt: Setting type using modular scale and maintaining vertical rhythm is not a new topic, at all. There are so many great tools and articles out there that help designers do these things. However I couldn't find exactly what I was looking for.
 art:
 arttext:
 date: 2014-03-24 17:20:30
@@ -9,6 +7,9 @@ tags:
 categories:
 - articles
 ---
+
+Setting type using modular scale and maintaining vertical rhythm is not a new topic, at all. There are so many great tools and articles out there that help designers do these things. However I couldn't find exactly what I was looking for.
+<!--more-->
 
 <span class=dropcap>S</span>o I created [Typesettings](http://typesettings.io). I wanted a tool that only had one dependency and that dependency is Sass. There are some incredibly smart and effective tools out there. However I have experienced the pain of updating one Gem to have another Gem not work. So I wanted to remove that potential pain point for setting type.
 
