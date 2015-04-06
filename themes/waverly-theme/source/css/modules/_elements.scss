@@ -10,6 +10,8 @@ body {
   font-family: $font-serif;
   font-weight: 400;
   color: $text-color;
+  max-width: 700px;
+  margin: auto;
 }
 
 h1, .h1,
@@ -178,11 +180,6 @@ code {
   margin: 0;
 }
 
-time,
-.time {
-  text-transform: uppercase;
-}
-
 ol,
 ul,
 dl {
@@ -240,12 +237,135 @@ table {
   margin-bottom: emRhythm(3);
 }
 
-table th,
-table td {
-  padding: emRhythm(1);
+//table th,
+//table td {
+//  padding: emRhythm(1);
+//}
+
+//table tbody > tr:nth-child(even),
+//table thead > tr:nth-child(odd) {
+//  background-color: lighten($text-color, 75%);
+//}
+
+th,
+td {
+  padding: $base-vertical-unit $base-vertical-unit;
+  text-align: left;
+  border-bottom: 1px solid $lighter-grey;
 }
 
-table tbody > tr:nth-child(even),
-table thead > tr:nth-child(odd) {
-  background-color: lighten($text-color, 75%);
+th:first-child,
+td:first-child {
+  padding-left: 0;
+}
+
+th:last-child,
+td:last-child {
+  padding-right: 0;
+}
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  height: $base-vertical-unit * 4;
+  padding: 6px $base-vertical-unit; /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: #fff;
+  border: 1px solid lighten($text-color, 60%);
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+textarea {
+  min-height: $base-vertical-unit * 9;
+  padding-top: $base-vertical-unit;
+  padding-bottom: $base-vertical-unit;
+}
+
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border: 1px solid #33C3F0;
+  outline: 0; }
+label,
+legend {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 600; }
+fieldset {
+  padding: 0;
+  border-width: 0; }
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline; }
+label > .label-body {
+  display: inline-block;
+  margin-left: .5rem;
+  font-weight: normal; }
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="file"] {
+  display: inline-block;
+  height: $base-vertical-unit * 5;
+  padding: 0 ($base-vertical-unit * 3);
+  color: $light-grey;
+  text-align: center;
+  font-size: $ms-down1;
+  font-weight: 400;
+  line-height: $base-vertical-unit * 5;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  font-family: $font-sans;
+}
+
+input[type="file"] {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: $text-color;
+  border-color: #888;
+  outline: 0;
 }
