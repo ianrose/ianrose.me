@@ -1,0 +1,22 @@
+.highlight {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: emRhythm(3);
+  background-color: lighten($text-color, 75%);
+
+  td {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .gutter {
+    text-align: right;
+    width: emRhythm(3, $ms-down1);
+    border-right: 1px solid $text-color;
+  }
+
+  .code {
+    padding-left: emRhythm(1);
+  }
+}

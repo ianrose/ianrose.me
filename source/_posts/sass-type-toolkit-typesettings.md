@@ -17,6 +17,10 @@ Typesettings is also an experiment in trying to use more Sass functions with van
 
 Lately the use of REMs as the go to unit for setting type I think is a little much. In recent projects I've had times where having the type set in REMs made things just as inflexible as if it were set in pixels. Jeremy Brunch has a [great post](http://j.eremy.net/confused-about-rem-and-em/) about when to use different units. So I wanted to see if I could figure out a toolkit that could use Ems and handle the math for the compounding effect. Thanks to Sass this is possible. I definitely looked at what [Compass](http://compass-style.org/reference/compass/typography/vertical_rhythm/) does for this concept.
 
+{% pullquote left %}
+“They really call into question what it means to speak in a digital age.”
+{% endpullquote %}
+
 Setting type on a baseline is not complicated. For me, setting **every** element on a page to land on the baseline is not as simple. Many posts explain how to setup vertical rhythm using the `line-height` value of the body type. Few explain how to set every element on the page on the baseline. The `line-height` is often a value around `24px` which does not provide the ability to fine-tune a UI. [Sassaparilla](http://sass.fffunction.co/) has the great idea of setting a base vertical unit to a much smaller value to allow designers to setup a layout where all elements land on a baseline. The base vertical unit is also used to set the body type `line-height` This concept can be found in Typesettings.
 
 The one feature that I think is unique (my Google-fu may be weak) to Typesettings is the ability to have padding, margin, and font size set in Ems and have borders set in pixels while still maintaing vertical rhythm. Typesettings converts the pixel border width into Ems and subtracts that from the padding of the element. It then sets a border with a pixel value.

@@ -1,0 +1,251 @@
+// Stops devices from scaling up text.
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-serif;
+  font-weight: 400;
+  color: $text-color;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-family: $font-sans;
+  font-weight: 900;
+  color: #000;
+}
+
+// [1] Applies a margin bottom that is a multiple of the vertical grid in EMs.
+// The first argument is the font size context and the second is multiple of the
+// vertical grid unit.
+// [2] Sets the type to one of the modular scale values and the second argument
+// sets a unitless line-height as a multiple of the vertical grid.
+// [3] A generic media query for tablet size ranges.
+// [4] Applies a margin bottom that is the same vertical grid value as the mobile
+// first rule.
+// [5] Sets the type to one of the modular scale values and the second argument
+// sets a unitless line-height as a multiple of the vertical grid.
+h1, .h1 {
+  margin-bottom: emRhythm(1, $ms-up2); // [1]
+  @include setType(4, $ms-up2); // [2]
+
+  @media (min-width: 43.75em) {
+    // [3]
+    margin-bottom: emRhythm(1, $ms-up3); // [4]
+    @include setType(5, $ms-up3); // [5]
+  }
+
+  @media (min-width: 56.25em) {
+    margin-bottom: emRhythm(1, $ms-up4);
+    @include setType(6, $ms-up4);
+  }
+}
+
+h2, .h2 {
+  margin-bottom: emRhythm(1, $ms-up1);
+  @include setType(3, $ms-up1);
+
+  @media (min-width: 43.75em) {
+    margin-bottom: emRhythm(1, $ms-up2);
+    @include setType(4, $ms-up2)
+  }
+
+  @media (min-width: 56.25em) {
+    margin-bottom: emRhythm(1, $ms-up3);
+    @include setType(5, $ms-up3);
+  }
+}
+
+h3, .h3 {
+  margin-bottom: emRhythm(1, $ms-up1);
+  @include setType(3, $ms-up1);
+
+  @media (min-width: 56.25em) {
+    margin-bottom: emRhythm(1, $ms-up2);
+    @include setType(4, $ms-up2);
+  }
+}
+
+h4, .h4 {
+  margin-bottom: emRhythm(1, $ms-up1);
+  @include setType(3, $ms-up1);
+}
+
+h5, .h5,
+h6, .h6 {
+  margin-bottom: 0;
+  @include setType(3);
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: emRhythm($base-line-multi);
+  padding-top: 0;
+  padding-bottom: 0;
+  -webkit-hyphens: auto;
+  -epub-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+  word-wrap: break-word;
+
+  @media (min-width: 43.75em) {
+    @if $paragraph-justify {
+      text-align: justify;
+    }
+  }
+}
+
+@if $paragraph-indent {
+  p + p {
+    margin-top: emRhythm($base-line-multi * -1);
+    text-indent: emRhythm($base-line-multi);
+  }
+}
+
+small,
+.font-small {
+  @include setType(3, $ms-down1);
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+blockquote {
+  margin-top: emRhythm(3);
+  margin-bottom: emRhythm(3);
+  margin-left: 0;
+  padding-bottom: 0;
+  margin-right: 0;
+  padding-top: emRhythm(2);
+  border-top: ($base-vertical-unit * 2) solid $text-color;
+  font-family: $font-serif;
+
+  p {
+    font-weight: 900;
+    margin-bottom: emRhythm(1, $ms-up1);
+    text-indent: $base-vertical-unit * -1;
+    padding-left: $base-vertical-unit;
+    @include setType(3, $ms-up1);
+  }
+
+  footer {
+    color: $light-grey;
+    font-weight: 400;
+    font-family: $font-sans;
+    @include setType(2, $ms-down1, $ms-up1);
+    strong {
+      font-weight: 400;
+    }
+    cite {
+      &:before {
+        content: " – ";
+      }
+    }
+  }
+}
+
+blockquote.left {
+  float: left;
+  width: 50%;
+  margin-right: emRhythm(3);
+}
+
+pre,
+code {
+  font-family: $font-mono;
+  font-size: $ms-down1;
+  background-color: lighten($text-color, 75%);
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+  margin: 0;
+}
+
+time,
+.time {
+  text-transform: uppercase;
+}
+
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: emRhythm(4);
+  margin-left: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+ul ul,
+ol ol,
+dl dl {
+  margin-bottom: 0;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+// [1] https://developer.mozilla.org/en-US/docs/CSS/font-variant
+abbr {
+  font-variant: small-caps; // [1]
+  font-weight: 600;
+  text-transform: lowercase;
+}
+
+// Cursor changed to a question mark when it has a title
+abbr[title]:hover {
+  cursor: help;
+}
+
+mark {
+  background: $yellow;
+}
+
+// Creates horizontal rules that obey the baseline.
+// [1] Zero outs the user agent border
+hr {
+  margin-top: emRhythm(4);
+  margin-bottom: 0;
+  border: none; // [1]
+  border-top-color: $lighter-grey;
+  border-top-style: solid;
+  @include rhythmBorderTop(1px, 3);
+}
+
+table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: emRhythm(3);
+}
+
+table th,
+table td {
+  padding: emRhythm(1);
+}
+
+table tbody > tr:nth-child(even),
+table thead > tr:nth-child(odd) {
+  background-color: lighten($text-color, 75%);
+}

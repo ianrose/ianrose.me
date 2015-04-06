@@ -1,0 +1,64 @@
+
+<%
+var pageTitle = page.title || config.subtitle || '';
+if (is_archive()) pageTitle = 'Archives';
+if (is_tag()) pageTitle = 'Tag: ' + page.tag;
+if (is_category()) pageTitle = 'Category: ' + page.category;
+if (is_month()) pageTitle += ': ' + page.month + '/' + page.year;
+if (is_year()) pageTitle += ': ' + page.year;
+pageTitle += ' [ ' + config.title + ' ]';
+%>
+
+<!doctype html>
+<html class="no-js" lang="<%= config.language %>">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title><%=pageTitle%></title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<%- open_graph() %>
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:900,400|Source+Serif+Pro:400,700|Source+Code+Pro' rel='stylesheet' type='text/css'>
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<% theme.stylesheets.forEach(function(url) { %>
+		<link rel="stylesheet" href="<%=url%>">
+	<% }); %>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+<header role="banner">
+	<% if (is_home() || (page.layout === 'about')){ %>
+	<h1 class="site-title site-title--name" itemprop="headline">
+		<a href="<%- config.root %>"><%= config.title %></a>
+	</h1>
+	<% } else { %>
+	<p class="site-title site-title--name" itemprop="headline">
+		<a href="<%- config.root %>"><%= config.title %></a>
+	</p>
+	<% } %>
+</header>
+<nav role="navigation">
+  <% Object.keys(theme.menu).forEach(function(key) { %>
+   <a href="<%=theme.menu[key]%>"><%=key%></a>
+	<% }); %>
+</nav>
+<main role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+	<%- body %>
+</main>
+<footer role="contentinfo">
+	<div id="bottom-outer">
+		<div id="bottom-inner">
+			Site by <%=config.author%> using
+			<a href="http://hexo.io">hexo blog framework</a>.
+			<br>
+			<a href="<%=config.root%>">Home</a>
+		</div>
+	</div>
+</footer>
+
+
+	<script type='text/javascript' id="__bs_script__">//<![CDATA[
+		document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.2.5.2.js'><\/script>".replace("HOST", location.hostname));
+		//]]></script>
+
+</body>
+</html>

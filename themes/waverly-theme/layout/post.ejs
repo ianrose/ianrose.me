@@ -1,0 +1,55 @@
+
+<article itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+	<% if (page.categories && page.categories.length) { %>
+	<span>
+		<%- list_categories(page.categories, {
+			show_count: false,
+			style: 'none',
+			separator: '',
+			amount: 1
+		}) %>
+	</span>
+	<% } %>
+	<% if (page.tags && page.tags.length) { %>
+	<span>
+		in
+		<%- list_tags(page.tags, {
+			show_count: false,
+			style: 'none',
+			separator: '',
+			amount: 1
+		}) %>
+	</span>
+	<% } %>
+	<time datetime="<%= date_xml(page.date) %>" itemprop="datePublished"><%= date(page.date, config.date_format) %></time>
+	updated <time datetime="<%= date_xml(page.updated) %>" itemprop="dateModified"><%= date(page.updated, config.date_format) %></time>
+	<header>
+		<h1 itemprop="name">
+			<%=page.title%>
+		</h1>
+		<% if (page.excerpt) { %>
+
+			<p class="dek"><%= strip_html(page.excerpt) %></p>
+
+		<% } %>
+		<%if (config.author) { %>
+			<div class="byline">
+				by <span itemprop="author creator"><%= config.author %></span>
+			</div>
+		<% } %>
+	</header>
+	<%-page.more%>
+</article>
+<nav>
+<% if (page.prev) { %>
+	<h5><%= page.prev.title %></h5>
+	<p><%= strip_html(page.prev.excerpt) %></p>
+	<a href="<%- url_for(page.prev.path) %>">Previous</a>
+<% } %>
+
+<% if (page.next) { %>
+	<h5><%= page.next.title %></h5>
+	<p><%= strip_html(page.next.excerpt) %></p>
+	<a href="<%- url_for(page.next.path) %>">Next</a>
+<% } %>
+</nav>

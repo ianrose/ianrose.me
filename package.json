@@ -20,7 +20,7 @@
     "hexo-processor-copyassets": "0.0.1",
     "hexo-renderer-ejs": "*",
     "hexo-renderer-marked": "^0.2.5",
-    "hexo-renderer-sass": "https://github.com/knksmith57/hexo-renderer-sass/tarball/83034cd2d0d7d2af838428af4e3750ceaa43cf3d",
+    "hexo-renderer-node-sass": "https://github.com/illuser/hexo-renderer-node-sass/tarball/7cfda8000f7048779b3a229d4fedc263c472cecf",
     "hexo-server": "^0.1.2"
   },
   "devDependencies": {
