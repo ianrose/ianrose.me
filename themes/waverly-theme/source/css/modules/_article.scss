@@ -1,5 +1,14 @@
-.article {
+.article--post {
   header + p:first-line {
     font-weight: 700;
+  }
+}
+
+@if $paragraph-indent {
+  .article--post {
+    p + p {
+      margin-top: emRhythm($base-line-multi * -1);
+      text-indent: emRhythm($base-line-multi);
+    }
   }
 }

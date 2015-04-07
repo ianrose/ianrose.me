@@ -30,6 +30,7 @@ h6, .h6 {
   font-family: $font-sans;
   font-weight: 900;
   color: #000;
+  text-rendering: optimizeLegibility;
 }
 
 // [1] Applies a margin bottom that is a multiple of the vertical grid in EMs.
@@ -110,15 +111,6 @@ p {
   @media (min-width: 43.75em) {
     @if $paragraph-justify {
       text-align: justify;
-    }
-  }
-}
-
-@if $paragraph-indent {
-  .article {
-    p + p {
-      margin-top: emRhythm($base-line-multi * -1);
-      text-indent: emRhythm($base-line-multi);
     }
   }
 }

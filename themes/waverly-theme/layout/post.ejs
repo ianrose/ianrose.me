@@ -1,5 +1,5 @@
 
-<article class="article" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+<article class="article--post" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
 	<% if (page.categories && page.categories.length) { %>
 	<span>
 		<%- list_categories(page.categories, {
@@ -21,8 +21,12 @@
 		}) %>
 	</span>
 	<% } %>
-	<time datetime="<%= date_xml(page.date) %>" itemprop="datePublished"><%= date(page.date, config.date_format) %></time>
-	updated <time datetime="<%= date_xml(page.updated) %>" itemprop="dateModified"><%= date(page.updated, config.date_format) %></time>
+	<div class="meta">
+		<time datetime="<%= date_xml(page.date) %>" itemprop="datePublished"><%= date(page.date, config.date_format) %></time>
+		<% if (page.updated) { %>
+		<span class="meta--alt">updated <time datetime="<%= date_xml(page.updated) %>" itemprop="dateModified"><%= date(page.updated, config.date_format) %></time></span>
+		<% } %>
+	</div>
 	<header>
 		<h1 itemprop="name">
 			<%=page.title%>
