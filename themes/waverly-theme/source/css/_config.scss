@@ -31,7 +31,7 @@ $ms-ratio: 1.333;
 // of a new paragraph.
 // [2] Paragraph setting that you can turn on or off to have your paragraphs ragged
 // right or justified.
-$paragraph-indent: false; // [1]
+$paragraph-indent: true; // [1]
 $paragraph-justify: false; // [2]
 
 // You can optionally load type styles that use Typesettings.
@@ -41,3 +41,4 @@ $grey: $text-color;
 $light-grey: lighten($grey, 30%);
 $lighter-grey: lighten($grey, 70%);
 $yellow: #fefac1;
+$highlight-color: $yellow;

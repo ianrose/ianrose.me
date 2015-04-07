@@ -91,9 +91,9 @@ Code can be presented inline, like `<?php bloginfo('stylesheet_url'); ?>`, or wi
 
 ```css
 #container {
-    float: left;
-    margin: 0 -240px 0 0;
-    width: 100%;
+  float: left;
+  margin: 0 -240px 0 0;
+  width: 100%;
 }
 ```
 
@@ -115,7 +115,7 @@ And here’s a bit of trailing text.
 
 The <a href="#">a element</a> example <br>
 The <abbr>abbr element</abbr> and <abbr title="Title text">abbr element with title</abbr> examples <br>
-The <b>b element</b> example <br>
+The b element example <br>
 The <cite>cite element</cite> example <br>
 The <code>code element</code> example <br>
 The <del>del element</del> example <br>
@@ -144,39 +144,39 @@ The <u>u element</u> example
 <fieldset>
 <legend>Inputs as descendents of labels (form legend)</legend>
 <label>
-<b>Text input</b>
+Text input
 <input value="default value" type="text">
 </label>
 <label>
-<b>Email input</b>
+Email input
 <input type="email">
 </label>
 <label>
-<b>Search input</b>
+Search input
 <input type="search">
 </label>
 <label>
-<b>Tel input</b>
+Tel input
 <input type="tel">
 </label>
 <label>
-<b>URL input</b>
+URL input
 <input placeholder="http://" type="url">
 </label>
 <label>
-<b>Password input</b>
+Password input
 <input value="password" type="password">
 </label>
 <label>
-<b>File input</b>
+File input
 <input type="file">
 </label>
 <label>
-<b>Radio input</b>
+Radio input
 <input name="rad" type="radio">
 </label>
 <label>
-<b>Checkbox input</b>
+Checkbox input
 <input type="checkbox">
 </label>
 <label>
@@ -186,14 +186,14 @@ The <u>u element</u> example
 <input type="checkbox"> Checkbox input
 </label>
 <label>
-<b>Select field</b>
+Select field
 <select>
 <option>Option 01</option>
 <option>Option 02</option>
 </select>
 </label>
 <label>
-<b>Textarea</b>
+Textarea
 <textarea cols="30" rows="5">Textarea text</textarea>
 </label>
 </fieldset>

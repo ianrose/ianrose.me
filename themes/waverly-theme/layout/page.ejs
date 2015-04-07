@@ -2,6 +2,16 @@
 <article id="page">
 	<h1><%=page.title%></h1>
 	<%-page.content%>
+	<%if(page.clients) { %>
+	<h2 class="h4">Select Clients</h2>
+	<ul>
+		<% page.clients.forEach(function(clients) { %>
+		<li>
+			<%= clients %>
+		</li>
+		<% }) %>
+	</ul>
+	<% } %>
 </article>
 
 <%-partial('partials/pagination')%>

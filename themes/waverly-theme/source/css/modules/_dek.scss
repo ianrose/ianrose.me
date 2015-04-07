@@ -1,0 +1,6 @@
+.dek {
+  color: $light-grey;
+  font-weight: 600;
+  margin-bottom: 0;
+  @include setType(4, $ms-up1);
+}
