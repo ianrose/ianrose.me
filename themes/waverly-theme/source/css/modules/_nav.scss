@@ -1,0 +1,9 @@
+.nav {
+
+}
+
+.nav--post-heading {
+  border-top: $border-width-narrow solid $grey;
+  padding-top: emRhythm(1, $ms-down1);
+  @include setType(2, $ms-down1);
+}

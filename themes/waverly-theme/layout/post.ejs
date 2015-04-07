@@ -1,30 +1,35 @@
 
 <article class="article--post" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+	<div class="meta--container">
 	<% if (page.categories && page.categories.length) { %>
-	<span>
-		<%- list_categories(page.categories, {
-			show_count: false,
-			style: 'none',
-			separator: '',
-			amount: 1
-		}) %>
-	</span>
+		<span class="meta meta--primary">
+			<%- list_categories(page.categories, {
+				class: 'meta-',
+				show_count: false,
+				style: 'none',
+				separator: '',
+				amount: 1
+			}) %>
+		</span>
 	<% } %>
 	<% if (page.tags && page.tags.length) { %>
-	<span>
-		in
-		<%- list_tags(page.tags, {
-			show_count: false,
-			style: 'none',
-			separator: '',
-			amount: 1
-		}) %>
+
+		<span class="meta meta--alt">in</span>
+				<span class="meta meta--primary">
+			<%- list_tags(page.tags, {
+				class: 'meta-',
+				show_count: false,
+				style: 'none',
+				separator: '',
+				amount: 1
+			}) %>
 	</span>
 	<% } %>
-	<div class="meta">
-		<time datetime="<%= date_xml(page.date) %>" itemprop="datePublished"><%= date(page.date, config.date_format) %></time>
+	</div>
+	<div class="meta--container">
+		<time class="meta meta--primary" datetime="<%= date_xml(page.date) %>" itemprop="datePublished"><%= date(page.date, config.date_format) %></time>
 		<% if (page.updated) { %>
-		<span class="meta--alt">updated <time datetime="<%= date_xml(page.updated) %>" itemprop="dateModified"><%= date(page.updated, config.date_format) %></time></span>
+		<span class="meta meta--alt">updated <time datetime="<%= date_xml(page.updated) %>" itemprop="dateModified"><%= date(page.updated, config.date_format) %></time></span>
 		<% } %>
 	</div>
 	<header>
@@ -33,7 +38,7 @@
 		</h1>
 		<% if (page.excerpt) { %>
 
-			<p class="dek"><%= strip_html(page.excerpt) %></p>
+			<p class="dek dek--lg"><%= strip_html(page.excerpt) %></p>
 
 		<% } %>
 		<%if (config.author) { %>
@@ -46,14 +51,18 @@
 </article>
 <nav>
 <% if (page.prev) { %>
-	<h5><%= page.prev.title %></h5>
-	<p><%= strip_html(page.prev.excerpt) %></p>
-	<a href="<%- url_for(page.prev.path) %>">Previous</a>
+	<div class="nav--post nav--prev">
+		<h5 class="nav--post-heading"><%= page.prev.title %></h5>
+		<p class="dek dek--sm"><%= strip_html(page.prev.excerpt) %></p>
+		<a class="button--link" href="<%- url_for(page.prev.path) %>">Previous</a>
+	</div>
 <% } %>
 
 <% if (page.next) { %>
-	<h5><%= page.next.title %></h5>
-	<p><%= strip_html(page.next.excerpt) %></p>
-	<a href="<%- url_for(page.next.path) %>">Next</a>
+	<div class="nav--post nav--next">
+		<h5 class="nav--post-heading"><%= page.next.title %></h5>
+		<p class="dek dek--sm"><%= strip_html(page.next.excerpt) %></p>
+		<a class="button--link" href="<%- url_for(page.next.path) %>">Next</a>
+	</div>
 <% } %>
 </nav>

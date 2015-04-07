@@ -42,3 +42,7 @@ $light-grey: lighten($grey, 30%);
 $lighter-grey: lighten($grey, 70%);
 $yellow: #fefac1;
 $highlight-color: $yellow;
+
+$border-width-narrow: 1px;
+$border-width-normal: $base-vertical-unit;
+$border-width-wide: $border-width-normal * 2;

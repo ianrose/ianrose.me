@@ -1,8 +1,33 @@
-.meta {
-  font-weight: 600;
+.meta--link {
+  text-transform: capitalize;
+
+  &:link,
+  &:visited {
+    text-decoration: none;
+    color: $text-color;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: $light-grey;
+  }
+}
+
+.meta--container {
+  border-top: $border-width-narrow solid $text-color;
   font-family: $font-sans;
+  padding-top: emRhythm(1, $ms-down1);
+  @include setType(2, $ms-down1);
+}
+
+.meta--primary {
+  font-weight: 600;
 }
 
 .meta--alt {
   font-weight: 400;
+  color: $light-grey;
 }

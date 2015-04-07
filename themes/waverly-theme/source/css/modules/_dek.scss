@@ -1,6 +1,13 @@
 .dek {
   color: $light-grey;
+}
+
+.dek--lg {
   font-weight: 600;
   margin-bottom: 0;
   @include setType(4, $ms-up1);
+}
+
+.dek--sm {
+  @include setType(2, $ms-down1);
 }

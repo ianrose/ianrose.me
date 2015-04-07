@@ -135,7 +135,7 @@ blockquote {
   padding-bottom: 0;
   margin-right: 0;
   padding-top: emRhythm(2);
-  border-top: ($base-vertical-unit * 2) solid $text-color;
+  border-top: $border-width-wide solid $text-color;
   font-family: $font-serif;
 
   p {
@@ -182,10 +182,11 @@ ol,
 ul,
 dl {
   margin-top: 0;
-  margin-bottom: emRhythm(4);
+  margin-bottom: emRhythm(3);
   margin-left: 0;
   padding-top: 0;
   padding-bottom: 0;
+  padding-left: emRhythm(3);
 }
 
 ul ul,
@@ -345,44 +346,7 @@ input[type="radio"] {
   display: inline;
 }
 
-.button,
-button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"],
-input[type="file"] {
-  display: inline-block;
-  height: $base-vertical-unit * 5;
-  padding: 0 ($base-vertical-unit * 3);
-  color: $light-grey;
-  text-align: center;
-  font-size: $ms-down1;
-  font-weight: 400;
-  line-height: $base-vertical-unit * 5;
-  text-decoration: none;
-  white-space: nowrap;
-  background-color: transparent;
-  border: 1px solid #bbb;
-  cursor: pointer;
-  font-family: $font-sans;
-}
-
 input[type="file"] {
   padding-left: 0;
   padding-right: 0;
-}
-
-.button:hover,
-button:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover,
-.button:focus,
-button:focus,
-input[type="submit"]:focus,
-input[type="reset"]:focus,
-input[type="button"]:focus {
-  color: $text-color;
-  border-color: #888;
-  outline: 0;
 }
