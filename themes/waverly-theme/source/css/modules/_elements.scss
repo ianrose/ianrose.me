@@ -95,6 +95,23 @@ h6, .h6 {
   @include setType(3);
 }
 
+a:link {
+  color: $link-color;
+  text-decoration: none;
+}
+
+a:visited {
+  color: darken($link-color, 10%);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  color: darken($link-color, 30%);
+}
+
 p {
   margin-top: 0;
   margin-bottom: emRhythm($base-line-multi);
@@ -186,7 +203,7 @@ dl {
   margin-left: 0;
   padding-top: 0;
   padding-bottom: 0;
-  padding-left: emRhythm(3);
+  padding-left: emRhythm(6);
 }
 
 ul ul,
@@ -287,6 +304,7 @@ select {
   box-sizing: border-box;
   font-family: $font-sans;
   font-weight: 400;
+  vertical-align: middle;
 }
 
 /* Removes awkward default styles on some inputs for iOS */

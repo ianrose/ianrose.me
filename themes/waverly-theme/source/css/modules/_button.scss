@@ -5,19 +5,42 @@ input[type="reset"],
 input[type="button"],
 input[type="file"] {
   display: inline-block;
-  height: $base-vertical-unit * 5;
+  height: $base-vertical-unit * 4;
   padding: 0 ($base-vertical-unit * 3);
   color: $light-grey;
   text-align: center;
   font-size: $ms-down1;
   font-weight: 400;
-  line-height: $base-vertical-unit * 5;
+  line-height: $base-vertical-unit * 4;
   text-decoration: none;
   white-space: nowrap;
   background-color: transparent;
-  border: 1px solid #bbb;
+  border: 1px solid $light-grey;
   cursor: pointer;
   font-family: $font-sans;
+  vertical-align: middle;
+}
+
+.button.button--primary,
+button.button--primary,
+input[type="submit"].button--primary,
+input[type="reset"].button--primary,
+input[type="button"].button--primary,
+input[type="file"].button--primary  {
+  color: #fff;
+  background-color: $text-color;
+  border: 1px solid $text-color;
+}
+
+.button.button--primary:hover,
+button.button--primary:hover,
+input[type="submit"].button--primary:hover,
+input[type="reset"].button--primary:hover,
+input[type="button"].button--primary:hover,
+input[type="file"].button--primary:hover  {
+  color: darken(#fff, 10%);
+  background-color: darken($text-color, 10%);
+  border: 1px solid darken($text-color, 10%);
 }
 
 .button:hover,
