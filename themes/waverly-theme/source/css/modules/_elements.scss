@@ -95,17 +95,18 @@ h6, .h6 {
   @include setType(3);
 }
 
+a,
 a:link {
-  color: $link-color;
-  text-decoration: none;
+  color: #000;
+  font-weight: 600;
 }
 
 a:visited {
-  color: darken($link-color, 10%);
+  color: $text-color;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: $link-color;
 }
 
 a:active {
