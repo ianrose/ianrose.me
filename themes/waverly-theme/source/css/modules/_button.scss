@@ -43,6 +43,15 @@ input[type="file"].button--primary:hover  {
   border: 1px solid darken($text-color, 10%);
 }
 
+.button.button--primary:active,
+button.button--primary:active,
+input[type="submit"].button--primary:active,
+input[type="reset"].button--primary:active,
+input[type="button"].button--primary:active,
+input[type="file"].button--primary:active  {
+  color: darken(#fff, 20%);
+}
+
 .button:hover,
 button:hover,
 input[type="submit"]:hover,

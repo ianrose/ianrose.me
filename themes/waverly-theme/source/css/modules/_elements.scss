@@ -31,6 +31,11 @@ h6, .h6 {
   font-weight: 900;
   color: #000;
   text-rendering: optimizeLegibility;
+
+  a:link {
+    font-weight: 900;
+    text-decoration: none;
+  }
 }
 
 // [1] Applies a margin bottom that is a multiple of the vertical grid in EMs.
@@ -159,7 +164,7 @@ blockquote {
   p {
     font-weight: 900;
     margin-bottom: emRhythm(1, $ms-up1);
-    text-indent: $base-vertical-unit * -1;
+    text-indent: $base-vertical-unit * -1.5;
     padding-left: $base-vertical-unit;
     @include setType(3, $ms-up1);
   }

@@ -37,9 +37,7 @@
 			<%=page.title%>
 		</h1>
 		<% if (page.excerpt) { %>
-
 			<p class="dek dek--lg"><%= strip_html(page.excerpt) %></p>
-
 		<% } %>
 		<%if (config.author) { %>
 			<div class="byline">
@@ -52,7 +50,7 @@
 <nav>
 <% if (page.prev) { %>
 	<div class="nav--post nav--prev">
-		<h5 class="nav--post-heading"><%= page.prev.title %></h5>
+		<h5 class="nav--post-heading"><a href="<%- url_for(page.prev.path) %>"><%= page.prev.title %></a></h5>
 		<p class="dek dek--sm"><%= strip_html(page.prev.excerpt) %></p>
 		<a class="button--link" href="<%- url_for(page.prev.path) %>">Previous</a>
 	</div>
@@ -60,7 +58,7 @@
 
 <% if (page.next) { %>
 	<div class="nav--post nav--next">
-		<h5 class="nav--post-heading"><%= page.next.title %></h5>
+		<h5 class="nav--post-heading"><a href="<%- url_for(page.next.path) %>"><%= page.next.title %></a></h5>
 		<p class="dek dek--sm"><%= strip_html(page.next.excerpt) %></p>
 		<a class="button--link" href="<%- url_for(page.next.path) %>">Next</a>
 	</div>

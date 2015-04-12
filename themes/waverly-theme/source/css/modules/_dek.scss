@@ -1,11 +1,7 @@
-.dek {
-  color: $light-grey;
-}
-
 .dek--lg {
   font-weight: 600;
   margin-bottom: 0;
-  @include setType(4, $ms-up1);
+  @include setType(3.5, $ms-up1, $silent: true);
 }
 
 .dek--sm {
