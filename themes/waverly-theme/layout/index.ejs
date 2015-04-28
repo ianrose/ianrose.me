@@ -1,16 +1,15 @@
 <h2>Articles</h2>
-<%site.categories.findOne({name: 'articles'}).posts.sort('date', -1).limit(14).each(function(post) {%>
-  <%- partial('partials/entry-post', {post: post, index: true}) %>
-<% })%>
+	<%site.categories.findOne({name: 'articles'}).posts.sort('date', -1).limit(14).each(function(post) {%>
+	<%- partial('partials/entry-post', {post: post, index: true}) %>
+	<% })%>
 
-<h2>Work</h2>
-<%site.categories.findOne({name: 'articles'}).posts.sort('date', -1).limit(14).each(function(post) {%>
-  <%- partial('partials/entry-post', {post: post, index: true}) %>
-<% })%>
+	<h2>Work</h2>
+	<%site.categories.findOne({name: 'articles'}).posts.sort('date', -1).limit(14).each(function(post) {%>
+	<%- partial('partials/entry-post', {post: post, index: true}) %>
+	<% })%>
 
-<h2>Notes</h2>
-<%site.categories.findOne({name: 'notes'}).posts.sort('date', -1).limit(14).each(function(post) {%>
-  <%- partial('partials/entry-post', {post: post, index: true}) %>
-<% })%>
-
+	<h2>Notes</h2>
+	<%site.categories.findOne({name: 'notes'}).posts.sort('date', -1).limit(14).each(function(post) {%>
+	<%- partial('partials/entry-post', {post: post, index: true}) %>
+	<% })%>
 <%-partial('partials/pagination')%>

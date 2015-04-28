@@ -1,14 +1,32 @@
-<article class="entry archive-type-<%= post.layout %>" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-	<%- partial('post/date', { class_name: 'entry-meta-item entry-meta-item--time entry-meta-item--time-sm', date_format: 'MMMM D, YYYY'}) %>
+<div class="entry archive-type-<%= post.layout %>" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta--container">
+		<time class="meta meta--primary" datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date, config.date_format) %></time>
+		<% if (post.updated) { %>
+		<span class="meta meta--alt">updated <time datetime="<%= date_xml(post.updated) %>" itemprop="dateModified"><%= date(post.updated, config.date_format) %></time></span>
+		<% } %>
+		<% if (post.tags && post.tags.length) { %>
+
+		<span class="meta meta--alt">in</span>
+				<span class="meta meta--primary">
+			<%- list_tags(post.tags, {
+				class: 'meta-',
+				show_count: false,
+				style: 'none',
+				separator: '',
+				amount: 1
+			}) %>
+	</span>
+		<% } %>
+	</div>
 	<%- partial('entry-heading', {class_name: 'archive-article-title'}) %>
 	<% if (post.art) { %>
 	<a href="<%- config.root %><%- post.path %>"><img class="img-responsive media--entry media--entry-default" src="/img/<%=post.art%>" alt="<%=post.arttext%>"/></a>
 	<% } %>
 	<% if(post.excerpt && index) {%>
-	<p class="excerpt">
+	<p class="excerpt" itemprop="description">
 		<%= strip_html(post.excerpt) %>
 		<% } else { %>
 		<a href="<%- config.root %><%- post.path %>"><%= theme.excerpt_link %></a>
 	</p>
 	<% } %>
-</article>
+</div>

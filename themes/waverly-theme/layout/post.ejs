@@ -2,7 +2,7 @@
 <article class="article--post" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
 	<div class="meta--container">
 	<% if (page.categories && page.categories.length) { %>
-		<span class="meta meta--primary">
+		<span class="meta meta--primary" itemprop="articleSection">
 			<%- list_categories(page.categories, {
 				class: 'meta-',
 				show_count: false,
@@ -15,7 +15,7 @@
 	<% if (page.tags && page.tags.length) { %>
 
 		<span class="meta meta--alt">in</span>
-				<span class="meta meta--primary">
+				<span class="meta meta--primary" itemprop="articleSection">
 			<%- list_tags(page.tags, {
 				class: 'meta-',
 				show_count: false,
@@ -33,7 +33,7 @@
 		<% } %>
 	</div>
 	<header>
-		<h1 itemprop="name">
+		<h1 itemprop="name headline">
 			<%=page.title%>
 		</h1>
 		<% if (page.excerpt) { %>
@@ -45,7 +45,9 @@
 			</div>
 		<% } %>
 	</header>
-	<%-page.more%>
+	<div itemprop="articleBody">
+		<%-page.more%>
+	</div>
 </article>
 <nav>
 <% if (page.prev) { %>
