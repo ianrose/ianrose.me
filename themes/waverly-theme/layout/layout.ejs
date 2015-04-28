@@ -1,4 +1,3 @@
-
 <%
 var pageTitle = page.title || config.subtitle || '';
 if (is_archive()) pageTitle = 'Archives';
@@ -8,14 +7,12 @@ if (is_month()) pageTitle += ': ' + page.month + '/' + page.year;
 if (is_year()) pageTitle += ': ' + page.year;
 pageTitle += ' [ ' + config.title + ' ]';
 %>
-
 <!doctype html>
 <html class="no-js" lang="<%= config.language %>">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<title><%=pageTitle%></title>
-
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<%- open_graph() %>
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900|Source+Code+Pro|Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
@@ -29,21 +26,22 @@ pageTitle += ' [ ' + config.title + ' ]';
 <body itemscope itemtype="http://schema.org/WebPage">
 <header role="banner">
 	<% if (is_home() || (page.layout === 'about')){ %>
-	<h1 class="site-title site-title--name" itemprop="headline">
+	<h1 class="site-title site-title--name" itemprop="name">
 		<a href="<%- config.root %>"><%= config.title %></a>
 	</h1>
 	<% } else { %>
-	<p class="site-title site-title--name" itemprop="headline">
+	<p class="site-title site-title--name" itemprop="name">
 		<a href="<%- config.root %>"><%= config.title %></a>
 	</p>
 	<% } %>
+	<p itemprop="specialty"><%= config.subtitle %></p>
 </header>
-<nav role="navigation">
+<nav role="navigation" itemprop="breadcrumb">
   <% Object.keys(theme.menu).forEach(function(key) { %>
    <a href="<%=theme.menu[key]%>"><%=key%></a>
 	<% }); %>
 </nav>
-<main role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+<main role="main" itemscope itemtype="http://schema.org/Blog">
 	<%- body %>
 </main>
 <footer role="contentinfo">
@@ -55,17 +53,14 @@ pageTitle += ' [ ' + config.title + ' ]';
 		<input type="hidden" value="1" name="embed"/>
 		<input type="submit" value="Subscribe" class="button button--primary"/>
 	</form>
-			Site by <%=config.author%> using
-			<a href="http://hexo.io">hexo blog framework</a>.
-			<br>
-			<a href="<%=config.root%>">Home</a>
-
+	Site by <%=config.author%> using
+	<a href="http://hexo.io">hexo blog framework</a>.
+	<br>
+	<a href="<%=config.root%>">Home</a>
 </footer>
-
-
-	<script type='text/javascript' id="__bs_script__">//<![CDATA[
-		document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.2.5.2.js'><\/script>".replace("HOST", location.hostname));
-		//]]></script>
-
+<script type='text/javascript' id="__bs_script__">//<![CDATA[
+	document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.2.5.2.js'><\/script>".replace("HOST", location.hostname));
+	//]]>
+</script>
 </body>
 </html>
