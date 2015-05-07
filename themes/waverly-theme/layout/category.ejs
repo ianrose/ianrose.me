@@ -1,35 +1,5 @@
-<div id="category">
-	<h1 class="heading heading--page"><%- titlecase(page.category) %></h1>
-	<% page.posts.each(function(page) { %>
-	<div class="category-item">
-		<% if (page.link) { %>
-		<a href="<%= url_for(page.link) %>" target="_blank">
-			<%= page.title || 'No Title' %>
-		</a>
-		<% } else { %>
-			<h2 class="h3"><a href="<%= url_for(page.path) %>"><%= page.title || 'No Title' %></a></h2>
-		<% if (page.excerpt) { %>
-			<p class="dek dek--lg"><%= strip_html(page.excerpt) %></p>
-		<% } %>
-		<% } %>
-		<div class="meta--container">
-			<time class="meta meta--primary" datetime="<%= date_xml(page.date) %>" itemprop="datePublished"><%= date(page.date, config.date_format) %></time>
-			<% if (page.tags && page.tags.length) { %>
-			<span class="meta meta--alt">in</span>
-			<span class="meta meta--primary">
-				<%- list_tags(page.tags, {
-					class: 'meta-',
-					show_count: false,
-					style: 'none',
-					separator: '',
-					amount: 1
-				}) %>
-			</span>
-			<% } %>
-		</div>
-
-	</div>
-	<% }); %>
-</div>
-
-<%- partial('partials/pagination') %>
+<h1><%=page.category%></h1>
+<% page.posts.each(function(post) { %>
+	<%- partial('partials/entry-post', {post: post, index: true}) %>
+<% }); %>
+<%-partial('partials/pagination')%>

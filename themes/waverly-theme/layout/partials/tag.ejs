@@ -1,0 +1,12 @@
+<% if (page.tags && page.tags.length) { %>
+<span class="meta meta--alt">in</span>
+<span class="meta meta--primary">
+			<%- list_tags(page.tags, {
+				class: 'meta-',
+				show_count: false,
+				style: 'none',
+				separator: '',
+				amount: 1
+			}) %>
+	</span>
+<% } %>

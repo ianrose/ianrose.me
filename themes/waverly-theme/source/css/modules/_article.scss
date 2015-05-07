@@ -1,5 +1,5 @@
 .article--post {
-  header + p:first-line {
+  .article--body > p:first-line {
     font-weight: 700;
   }
 }

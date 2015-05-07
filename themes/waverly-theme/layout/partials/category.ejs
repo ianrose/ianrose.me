@@ -1,0 +1,11 @@
+<% if (page.categories && page.categories.length) { %>
+<span class="meta meta--primary">
+			<%- list_categories(page.categories, {
+				class: 'meta-',
+				show_count: false,
+				style: 'none',
+				separator: '',
+				amount: 1
+			}) %>
+		</span>
+<% } %>
