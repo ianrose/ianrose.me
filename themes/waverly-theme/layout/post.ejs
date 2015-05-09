@@ -1,10 +1,10 @@
 
 <article class="article--post" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-	<div class="meta--container">
+	<div class="meta--txt meta--heading">
 		<%- partial('partials/category', {class_name: ''}) %>
 		<%- partial('partials/tag', {class_name: ''}) %>
 	</div>
-	<div class="meta--container">
+	<div class="meta--txt meta--heading">
 		<%- partial('partials/date', {class_name: ''}) %>
 	</div>
 	<header>
@@ -24,7 +24,7 @@
 		<%-page.more%>
 	</div>
 </article>
-<nav>
+<nav class="nav" role="navigation">
 <% if (page.prev) { %>
 	<div class="nav--post nav--prev">
 		<h5 class="nav--post-heading"><%= page.prev.title %></h5>
