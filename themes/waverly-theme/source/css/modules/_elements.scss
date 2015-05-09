@@ -9,13 +9,14 @@ html {
 }
 
 body {
-  margin: 0;
   padding: 0;
   font-family: $font-serif;
   font-weight: 400;
   color: $text-color;
   max-width: 700px;
   margin: auto;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures;
 }
 
 h1, .h1,
@@ -60,7 +61,7 @@ h1, .h1 {
 
   @media (min-width: 56.25em) {
     margin-bottom: emRhythm(0.5, $ms-up4, $silent: true);
-    @include setType(6, $ms-up4);
+    @include setType(7, $ms-up4);
   }
 }
 
@@ -157,8 +158,6 @@ blockquote {
   margin-left: 0;
   padding-bottom: 0;
   margin-right: 0;
-  padding-top: emRhythm(2);
-  border-top: $border-width-wide solid $text-color;
   font-family: $font-serif;
 
   p {
@@ -185,9 +184,15 @@ blockquote {
   }
 }
 
+blockquote.left,
+blockquote.right {
+  padding-top: emRhythm(2);
+  border-top: $border-width-wide solid $text-color;
+  width: 50%;
+}
+
 blockquote.left {
   float: left;
-  width: 50%;
   margin-right: emRhythm(3);
 }
 
@@ -287,6 +292,10 @@ td:last-child {
   padding-right: 0;
 }
 
+form p {
+  margin-bottom: 0;
+}
+
 input[type="email"],
 input[type="number"],
 input[type="search"],
@@ -354,10 +363,12 @@ select:focus {
 
 label,
 legend {
+  color: $light-grey;
   display: block;
-  margin-bottom: .5rem;
   font-weight: 400;
-  font-family: $font-sans;
+  font-family: $font-serif;
+  margin-bottom: emRhythm(1, $ms-down1);
+  @include setType($base-line-multi, $ms-down1);
 }
 
 fieldset {
