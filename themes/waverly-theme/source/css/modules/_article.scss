@@ -1,7 +1,5 @@
-.article--post {
-  .article--body > p:first-line {
-    font-weight: 700;
-  }
+header + .article--body p:first-child:first-line {
+  font-weight: 700;
 }
 
 @if $paragraph-indent {
