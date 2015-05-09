@@ -1,6 +1,4 @@
-
 <nav role="navigation">
-
 	<% if (page.prev_link) { %>
 		<a href="<%=url_for(page.prev_link)%>" class="prev">&larr; Prev</a>
 	<% } else if (page.prev && page.prev.path) { %>
@@ -18,5 +16,4 @@
 	<% } else if (page.next && page.next.path) { %>
 		<a href="<%=url_for(page.next.path)%>" class="next">Next &rarr;</a>
 	<% } %>
-
 </nav>
