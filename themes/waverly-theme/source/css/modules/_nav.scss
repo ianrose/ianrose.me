@@ -1,5 +1,13 @@
-.nav {
+.nav ul {
+  list-style: none;
+  padding-left: 0;
+}
 
+.nav ul a {
+  font-family: $font-sans;
+  text-decoration: none;
+  font-weight: 400;
+  @include setType(2, $ms-down1);
 }
 
 .nav--post-heading {
