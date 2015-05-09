@@ -18,6 +18,7 @@
 
 .meta--txt {
   font-family: $font-sans;
+  margin-bottom: emRhythm(0.5, $ms-down1, $silent: true);
   @include setType(2, $ms-down1);
 }
 

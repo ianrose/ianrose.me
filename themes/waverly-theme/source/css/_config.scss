@@ -6,10 +6,12 @@
 // apart if you want :)
 
 // Font families and default text color.
-$font-sans: 'aktiv-grotesk-std', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-serif: 'leitura-news', Georgia, 'Times New Roman', serif;
+$font-sans: 'Neue Haas Grotesk W01', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-headline: 'Neue Haas Grotesk W01 Disp', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-serif: 'Leitura News W01', Georgia, 'Times New Roman', serif;
+$font-display-serif: 'Leitura W01 Display', Georgia, 'Times New Roman', serif;
 $font-mono: Menlo, Monaco, monospace;
-$text-color: lighten(#000, 15%);
+$text-color: #282832;
 
 // The vertical grid unit. Margin, padding, and line-height are set to multiples
 // of this value. This is the value that determines the baseline for our vertical
@@ -43,7 +45,9 @@ $lighter-grey: lighten($grey, 70%);
 $yellow: #fefac1;
 $highlight-color: $yellow;
 $link-color: #1893d8;
+$background-color: #fff;
 
 $border-width-narrow: 1px;
 $border-width-normal: $base-vertical-unit;
 $border-width-wide: $border-width-normal * 2;
+

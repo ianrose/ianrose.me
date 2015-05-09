@@ -13,10 +13,13 @@ body {
   font-family: $font-serif;
   font-weight: 400;
   color: $text-color;
-  max-width: 700px;
   margin: auto;
   font-kerning: normal;
   font-variant-ligatures: common-ligatures;
+  background-color: $background-color;
+
+
+  margin-left: 200px;
 }
 
 h1, .h1,
@@ -28,14 +31,13 @@ h6, .h6 {
   margin-top: 0;
   padding-top: 0;
   padding-bottom: 0;
-  font-family: $font-sans;
-  font-weight: 900;
-  color: #000;
+  font-family: $font-headline;
+  font-weight: 700;
   text-rendering: optimizeLegibility;
 
   a:link {
-    font-weight: 900;
     text-decoration: none;
+    font-weight: 700;
   }
 }
 
@@ -50,12 +52,12 @@ h6, .h6 {
 // [5] Sets the type to one of the modular scale values and the second argument
 // sets a unitless line-height as a multiple of the vertical grid.
 h1, .h1 {
-  margin-bottom: emRhythm(1, $ms-up2); // [1]
+  margin-bottom: emRhythm(0.5, $ms-up2, $silent: true); // [1]
   @include setType(4, $ms-up2); // [2]
 
   @media (min-width: 43.75em) {
     // [3]
-    margin-bottom: emRhythm(1, $ms-up3); // [4]
+    margin-bottom: emRhythm(0.5, $ms-up3, $silent: true); // [4]
     @include setType(5, $ms-up3); // [5]
   }
 
@@ -66,16 +68,16 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  margin-bottom: emRhythm(1, $ms-up1);
+  margin-bottom: emRhythm(0.5, $ms-up1, $silent: true);
   @include setType(3, $ms-up1);
 
   @media (min-width: 43.75em) {
-    margin-bottom: emRhythm(1, $ms-up2);
+    margin-bottom: emRhythm(0.5, $ms-up2, $silent: true);
     @include setType(4, $ms-up2)
   }
 
   @media (min-width: 56.25em) {
-    margin-bottom: emRhythm(1, $ms-up3);
+    margin-bottom: emRhythm(0.5, $ms-up3, $silent: true);
     @include setType(5, $ms-up3);
   }
 }
@@ -91,7 +93,7 @@ h3, .h3 {
 }
 
 h4, .h4 {
-  margin-bottom: emRhythm(1, $ms-up1);
+  margin-bottom: emRhythm(0.5, $ms-up1, $silent: true);
   @include setType(3, $ms-up1);
 }
 

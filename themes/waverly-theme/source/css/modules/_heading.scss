@@ -1,4 +1,5 @@
 .heading--page {
   @extend .h1;
-  font-family: $font-serif;
+  font-family: $font-display-serif;
+  font-weight: 600;
 }

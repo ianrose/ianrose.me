@@ -16,32 +16,33 @@ pageTitle += ' [ ' + config.title + ' ]';
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<%- open_graph() %>
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/5e032a37-9d8b-4f87-a5f8-27da504f3d82.css"/>
 	<% theme.stylesheets.forEach(function(url) { %>
 		<link rel="stylesheet" href="<%=url%>">
 	<% }); %>
-	<script src="//use.typekit.net/ebb4vdi.js"></script>
-	<script>try{Typekit.load();}catch(e){}</script>
 </head>
-<body itemscope itemtype="http://schema.org/WebPage">
-<header class="site-header" role="banner">
-	<% if (is_home()){ %>
-	<h1 class="site-title site-title--name" itemprop="name">
-		<a href="<%- config.root %>"><%= config.title %></a>
-	</h1>
-	<% } else { %>
-	<p class="site-title site-title--name" itemprop="name">
-		<a href="<%- config.root %>"><%= config.title %></a>
-	</p>
-	<% } %>
-	<p class="site-title site-title--sub" itemprop="specialty"><%= config.subtitle %></p>
-</header>
-<nav class="nav" role="navigation" itemprop="breadcrumb">
-	<ul>
-  <% Object.keys(theme.menu).forEach(function(key) { %>
-		<li><a href="<%=theme.menu[key]%>"><%=key%></a></li>
-	<% }); %>
-	</ul>
-</nav>
+<body itemscope itemtype="http://schema.org/WebPage" class="">
+<div class="site-menu">
+	<header class="site-header" role="banner">
+		<% if (is_home()){ %>
+		<h1 class="site-title site-title--name" itemprop="name">
+			<a href="<%- config.root %>"><%= config.title %></a>
+		</h1>
+		<% } else { %>
+		<p class="site-title site-title--name" itemprop="name">
+			<a href="<%- config.root %>"><%= config.title %></a>
+		</p>
+		<% } %>
+		<p class="site-title site-title--sub" itemprop="specialty"><%= config.subtitle %></p>
+	</header>
+	<nav class="nav" role="navigation" itemprop="breadcrumb">
+		<ul>
+			<% Object.keys(theme.menu).forEach(function(key) { %>
+			<li><a href="<%=theme.menu[key]%>"><%=key%></a></li>
+			<% }); %>
+		</ul>
+	</nav>
+</div>
 <main role="main" itemscope itemtype="http://schema.org/Blog">
 	<%- body %>
 </main>

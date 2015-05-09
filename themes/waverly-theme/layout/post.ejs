@@ -21,6 +21,9 @@
 		<% } %>
 	</header>
 	<div class="article--body" itemprop="articleBody">
+		<%if (page.art) { %>
+		<img src="/<%-page.path%><%-page.art%>" alt="<%= page.arttext %>"/>
+		<% } %>
 		<%-page.more%>
 	</div>
 </article>

@@ -5,8 +5,8 @@
 <% })%>
 
 <h2 class="meta--txt meta--primary meta--heading">Work</h2>
-<%site.categories.findOne({name: 'articles'}).posts.sort('date', -1).limit(14).each(function(post) {%>
-<%- partial('partials/entry-post', {post: post, index: true}) %>
+<%site.categories.findOne({name: 'work'}).posts.sort('date', -1).limit(14).each(function(post) {%>
+<%- partial('partials/entry-work', {post: post, index: true}) %>
 <% })%>
 
 <h2 class="meta--txt meta--primary meta--heading">Notes</h2>
