@@ -7,11 +7,9 @@ tags:
 categories:
 - articles
 ---
-
 Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.
-<!-- more -->
 
-# Heading 1
+<!-- more -->
 ## Heading 2
 ### Heading 3
 #### Heading 4
@@ -20,7 +18,7 @@ Below is just about everything you’ll need to style in the theme. Check the so
 
 ***
 
-Lorem ipsum dolor sit amet, [text link](test link) adipiscing elit. **This is strong**. Nullam dignissim convallis est. Quisque aliquam. *This is emphasized*. Donec faucibus. Nunc iaculis suscipit dui. 5<sup>3</sup> = 125. Water is H<sub>2</sub>O. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. <cite>New York Times</cite> (That's a citation). <span style="text-decoration:underline;">Underline.</span> Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.
+Lorem ipsum dolor sit amet, [text link](http://google.com) adipiscing elit. **This is strong**. Nullam dignissim convallis est. Quisque aliquam. *This is emphasized*. Donec faucibus. Nunc iaculis suscipit dui. 5<sup>3</sup> = 125. Water is H<sub>2</sub>O. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. <cite>New York Times</cite> (That's a citation). <span style="text-decoration:underline;">Underline.</span> Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.
 
 <abbr title="Hyper Text Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> are our tools. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. To copy a file type `COPY filename`. ~~Dinner's at 5:00.~~ <ins>Let’s make that 7.</ins>
 
