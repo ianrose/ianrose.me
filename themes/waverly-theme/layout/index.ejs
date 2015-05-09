@@ -1,15 +1,16 @@
-<h2>Articles</h2>
-	<%site.categories.findOne({name: 'articles'}).posts.sort('date', -1).limit(14).each(function(post) {%>
-	<%- partial('partials/entry-post', {post: post, index: true}) %>
-	<% })%>
+<p class="heading heading--page"><%= config.description %></p>
+<h2 class="meta--txt meta--primary meta--heading">Articles</h2>
+<%site.categories.findOne({name: 'articles'}).posts.sort('date', -1).limit(14).each(function(post) {%>
+<%- partial('partials/entry-post', {post: post, index: true}) %>
+<% })%>
 
-	<h2>Work</h2>
-	<%site.categories.findOne({name: 'articles'}).posts.sort('date', -1).limit(14).each(function(post) {%>
-	<%- partial('partials/entry-post', {post: post, index: true}) %>
-	<% })%>
+<h2 class="meta--txt meta--primary meta--heading">Work</h2>
+<%site.categories.findOne({name: 'articles'}).posts.sort('date', -1).limit(14).each(function(post) {%>
+<%- partial('partials/entry-post', {post: post, index: true}) %>
+<% })%>
 
-	<h2>Notes</h2>
-	<%site.categories.findOne({name: 'notes'}).posts.sort('date', -1).limit(14).each(function(post) {%>
-	<%- partial('partials/entry-post', {post: post, index: true}) %>
-	<% })%>
+<h2 class="meta--txt meta--primary meta--heading">Notes</h2>
+<%site.categories.findOne({name: 'notes'}).posts.sort('date', -1).limit(14).each(function(post) {%>
+<%- partial('partials/entry-post', {post: post, index: true}) %>
+<% })%>
 <%-partial('partials/pagination')%>
