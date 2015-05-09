@@ -1,0 +1,16 @@
+.site-title--name {
+  margin-bottom: 0;
+  @include setType($base-line-multi, $ms-down1);
+}
+
+.site-title--name a {
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.site-title--sub {
+  color: $light-grey;
+  margin-bottom: 0;
+  @include setType($base-line-multi, $ms-down1);
+}
