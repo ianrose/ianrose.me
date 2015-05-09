@@ -16,11 +16,14 @@
   }
 }
 
-.meta--container {
-  border-top: $border-width-narrow solid $text-color;
+.meta--txt {
   font-family: $font-sans;
-  padding-top: emRhythm(1, $ms-down1);
   @include setType(2, $ms-down1);
+}
+
+.meta--heading {
+  border-top: $border-width-narrow solid $text-color;
+  padding-top: emRhythm(1, $ms-down1);
 }
 
 .meta--primary {
