@@ -8,8 +8,8 @@
 // Font families and default text color.
 $font-sans: 'aktiv-grotesk-std', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-serif: 'leitura-news', Georgia, 'Times New Roman', serif;
-$font-mono: 'Source Code Pro', Monaco, monospace;
-$text-color: #333;
+$font-mono: Menlo, Monaco, monospace;
+$text-color: lighten(#000, 15%);
 
 // The vertical grid unit. Margin, padding, and line-height are set to multiples
 // of this value. This is the value that determines the baseline for our vertical
