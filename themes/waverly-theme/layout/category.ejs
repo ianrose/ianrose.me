@@ -1,4 +1,4 @@
-<h1><%=page.category%></h1>
+<h1 class="heading heading--page"><%- titlecase(page.category) %></h1>
 <% page.posts.each(function(post) { %>
 	<%- partial('partials/entry-post', {post: post, index: true}) %>
 <% }); %>
