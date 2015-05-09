@@ -1,3 +1,4 @@
 .heading--page {
+  @extend .h1;
   font-family: $font-serif;
 }
