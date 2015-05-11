@@ -1,11 +1,13 @@
+		<div class="col-xs-7 col-md-half pad-xs">
 <div class="entry archive-type-<%= post.layout %>" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-	<div class="row">
-		<div class="col <% if (post.art) { %>col-md-4<% } else { %>col-md-7<% } %>">
 			<div class="meta--txt">
 				<%- partial('partials/date', {class_name: '', page: post}) %>
 				<%- partial('partials/tag', {class_name: '', page: post}) %>
 			</div>
 			<%- partial('entry-heading', {class_name: 'archive-article-title'}) %>
+	<% if (post.art) { %>
+	<a href="<%- config.root %> <%- post.path %>"><img class="img-responsive media--entry media--entry-default" src="/<%- post.path %><%- post.art %>" alt="<%= post.arttext %>"/></a>
+	<% } %>
 			<% if(post.excerpt && index) { %>
 			<p class="dek" itemprop="description">
 				<%= strip_html(post.excerpt) %>
@@ -14,10 +16,4 @@
 			</p>
 		<% } %>
 		</div>
-		<% if (post.art) { %>
-		<div class="col col-md-3">
-			<a href="<%- config.root %> <%- post.path %>"><img class="img-responsive media--entry media--entry-default" src="/<%- post.path %><%- post.art %>" alt="<%= post.arttext %>"/></a>
-		</div>
-		<% } %>
-	</div>
 </div>
