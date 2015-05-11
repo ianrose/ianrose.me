@@ -1,0 +1,21 @@
+.media--entry {
+  margin-bottom: emRhythm(1);
+}
+
+.media-full {
+
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm-width;
+    margin-left: -27px;
+  }
+
+  @media (min-width: $screen-md-min) {
+    width: $container-md-width;
+    margin-left: -27px;
+  }
+
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg-width;
+    margin-left: -194px;
+  }
+}
