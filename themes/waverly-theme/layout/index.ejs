@@ -1,16 +1,44 @@
-<p class="heading heading--page"><%= config.description %></p>
-<h2 class="meta--txt meta--primary meta--heading">Articles</h2>
-<%site.categories.findOne({name: 'articles'}).posts.sort('date', -1).limit(14).each(function(post) {%>
-<%- partial('partials/entry-post', {post: post, index: true}) %>
-<% })%>
-
-<h2 class="meta--txt meta--primary meta--heading">Work</h2>
-<%site.categories.findOne({name: 'work'}).posts.sort('date', -1).limit(14).each(function(post) {%>
-<%- partial('partials/entry-work', {post: post, index: true}) %>
-<% })%>
-
-<h2 class="meta--txt meta--primary meta--heading">Notes</h2>
-<%site.categories.findOne({name: 'notes'}).posts.sort('date', -1).limit(14).each(function(post) {%>
-<%- partial('partials/entry-post', {post: post, index: true}) %>
-<% })%>
-<%-partial('partials/pagination')%>
+<div class="row">
+	<div class="col col-xs-7 col-lg-6 col-lg-offset-1">
+		<p class="heading heading--page"><%= config.description %></p>
+	</div>
+</div>
+<div class="row">
+	<div class="col col-xs-7 col-sm-1">
+		<div class="h1 alt-txt" aria-hidden="true">01</div>
+	</div>
+	<div class="col col-xs-7 col-sm-6">
+		<h2 class="meta--txt meta--primary meta--heading">Articles</h2>
+		<div class="row">
+			<%site.categories.findOne({name: 'articles'}).posts.sort('date', -1).limit(14).each(function(post) {%>
+			<%- partial('partials/entry-post', {post: post, index: true}) %>
+			<% })%>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col col-xs-7 col-sm-1">
+		<div class="h1 alt-txt" aria-hidden="true">02</div>
+	</div>
+	<div class="col col-xs-7 col-sm-6">
+		<h2 class="meta--txt meta--primary meta--heading">Work</h2>
+		<div class="row">
+			<%site.categories.findOne({name: 'work'}).posts.sort('date', -1).limit(14).each(function(post) {%>
+			<%- partial('partials/entry-work', {post: post, index: true}) %>
+			<% })%>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col col-xs-7 col-sm-1">
+		<div class="h1 alt-txt" aria-hidden="true">03</div>
+	</div>
+	<div class="col col-xs-7 col-sm-6">
+		<h2 class="meta--txt meta--primary meta--heading">Notes</h2>
+		<div class="row">
+			<%site.categories.findOne({name: 'notes'}).posts.sort('date', -1).limit(14).each(function(post) {%>
+			<%- partial('partials/entry-post', {post: post, index: true}) %>
+			<% })%>
+		</div>
+	</div>
+</div>

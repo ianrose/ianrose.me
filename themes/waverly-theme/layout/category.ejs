@@ -1,5 +1,5 @@
 <h1 class="heading heading--page"><%- titlecase(page.category) %></h1>
 <% page.posts.each(function(post) { %>
-	<%- partial('partials/entry-post', {post: post, index: true}) %>
+	<%- partial('partials/entry-category', {post: post, index: true}) %>
 <% }); %>
 <%-partial('partials/pagination')%>

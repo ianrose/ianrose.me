@@ -37,3 +37,11 @@
   height: auto;
   display: block;
 }
+
+.alt-txt {
+  color: $lighter-grey;
+
+  &.h1 {
+    border-top: $border-width-narrow solid $text-color;
+  }
+}

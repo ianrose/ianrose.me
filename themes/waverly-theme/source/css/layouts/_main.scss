@@ -1,6 +1,33 @@
 .site-menu {
-  left: 0;
-  top: 0;
+//  display: none;
   position: fixed;
   background-color: $background-color;
+  width: $site-menu-width;
+  padding-left: $grid-pad;
+}
+
+
+.layout--main {
+  margin-top: emRhythm($base-line-multi);
+  padding-left: $site-menu-width;
+  margin-bottom: emRhythm(9);
+
+  & > .container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1;
+  }
+}
+
+.layout--post-meta {
+  min-height: $site-header-height;
+}
+
+.layout--footer-col {
+  padding-top: emRhythm(1);
+  border-top: $border-width-narrow solid $text-color;
 }

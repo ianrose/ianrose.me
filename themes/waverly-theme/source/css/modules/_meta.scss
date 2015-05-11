@@ -1,3 +1,5 @@
+$meta-size: $ms-down1;
+
 .meta--link {
   text-transform: capitalize;
 
@@ -18,13 +20,14 @@
 
 .meta--txt {
   font-family: $font-sans;
-  margin-bottom: emRhythm(0.5, $ms-down1, $silent: true);
-  @include setType(2, $ms-down1);
+  margin-bottom: emRhythm(0.5, $meta-size, $silent: true);
+  @include setType(2, $meta-size);
 }
 
 .meta--heading {
   border-top: $border-width-narrow solid $text-color;
   padding-top: emRhythm(1, $ms-down1);
+  margin-bottom: emRhythm(6, $ms-down1);
 }
 
 .meta--primary {

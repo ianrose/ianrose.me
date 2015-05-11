@@ -5,6 +5,8 @@ arttext:
 categories:
 - notes
 tags:
+- design
+- code
 layout:
 ---
 The CSS text rendering property is a mixed bag. On initial pass it seems to be an obvious choice for improving type on the web.

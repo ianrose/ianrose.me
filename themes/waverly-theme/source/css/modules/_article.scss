@@ -1,4 +1,4 @@
-header + .article--body p:first-child:first-line {
+.article--body p:first-of-type:first-line {
   font-weight: 600;
 }
 
@@ -10,3 +10,34 @@ header + .article--body p:first-child:first-line {
     }
   }
 }
+
+.article--post {
+  header {
+    margin-bottom: emRhythm($base-line-multi);
+  }
+
+  .media-full {
+
+    @media (min-width: $screen-sm-min) {
+      width: $container-sm-width;
+      margin-left: -27px;
+    }
+
+    @media (min-width: $screen-md-min) {
+      width: $container-md-width;
+      margin-left: -27px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+      width: $container-lg-width;
+      margin-left: -194px;
+    }
+  }
+
+  img {
+    @extend .img-responsive;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+

@@ -17,9 +17,6 @@ body {
   font-kerning: normal;
   font-variant-ligatures: common-ligatures;
   background-color: $background-color;
-
-
-  margin-left: 200px;
 }
 
 h1, .h1,
@@ -55,14 +52,8 @@ h1, .h1 {
   margin-bottom: emRhythm(0.5, $ms-up2, $silent: true); // [1]
   @include setType(4, $ms-up2); // [2]
 
-  @media (min-width: 43.75em) {
-    // [3]
-    margin-bottom: emRhythm(0.5, $ms-up3, $silent: true); // [4]
-    @include setType(5, $ms-up3); // [5]
-  }
-
-  @media (min-width: 56.25em) {
-    margin-bottom: emRhythm(0.5, $ms-up4, $silent: true);
+  @media (min-width: $screen-sm-min) {
+    margin-bottom: emRhythm(1, $ms-up4, $silent: true);
     @include setType(7, $ms-up4);
   }
 }
@@ -71,12 +62,12 @@ h2, .h2 {
   margin-bottom: emRhythm(0.5, $ms-up1, $silent: true);
   @include setType(3, $ms-up1);
 
-  @media (min-width: 43.75em) {
+  @media (min-width: $screen-sm-min) {
     margin-bottom: emRhythm(0.5, $ms-up2, $silent: true);
     @include setType(4, $ms-up2)
   }
 
-  @media (min-width: 56.25em) {
+  @media (min-width: $screen-md-min) {
     margin-bottom: emRhythm(0.5, $ms-up3, $silent: true);
     @include setType(5, $ms-up3);
   }
@@ -86,7 +77,7 @@ h3, .h3 {
   margin-bottom: emRhythm(1, $ms-up1);
   @include setType(3, $ms-up1);
 
-  @media (min-width: 56.25em) {
+  @media (min-width: $screen-md-min) {
     margin-bottom: emRhythm(1, $ms-up2);
     @include setType(4, $ms-up2);
   }
@@ -134,7 +125,7 @@ p {
   hyphens: auto;
   word-wrap: break-word;
 
-  @media (min-width: 43.75em) {
+  @media (min-width: $screen-sm-min) {
     @if $paragraph-justify {
       text-align: justify;
     }
@@ -160,14 +151,14 @@ blockquote {
   margin-left: 0;
   padding-bottom: 0;
   margin-right: 0;
-  font-family: $font-serif;
+  font-family: $font-display-serif;
 
   p {
-    font-weight: 900;
-    margin-bottom: emRhythm(1, $ms-up1);
+    font-weight: 600;
+    margin-bottom: emRhythm(1, $ms-up2);
     text-indent: $base-vertical-unit * -1.5;
     padding-left: $base-vertical-unit;
-    @include setType(3, $ms-up1);
+    @include setType(4, $ms-up2);
   }
 
   footer {
@@ -179,6 +170,7 @@ blockquote {
       font-weight: 400;
     }
     cite {
+      font-style: normal;
       &:before {
         content: " – ";
       }
@@ -191,11 +183,18 @@ blockquote.right {
   padding-top: emRhythm(2);
   border-top: $border-width-wide solid $text-color;
   width: 50%;
+
+  p {
+    margin-bottom: emRhythm(1, $ms-up1);
+    text-indent: $base-vertical-unit * -1.5;
+    @include setType(3, $ms-up1);
+  }
 }
 
 blockquote.left {
   float: left;
   margin-right: emRhythm(3);
+  margin-left: -$grid-pad;
 }
 
 pre,
@@ -296,6 +295,10 @@ td:last-child {
 
 form p {
   margin-bottom: 0;
+}
+
+figure {
+  margin: 0;
 }
 
 input[type="email"],

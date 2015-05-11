@@ -252,7 +252,9 @@ Sometimes all you want to do is embed a little love from another location and se
 
 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-{% youtube xFEN7BQ7Zus %}
+<div class="media-full">
+  {% youtube xFEN7BQ7Zus %}
+</div>
 
 Culpa qui officia deserunt mollit anim id est laborum.
 

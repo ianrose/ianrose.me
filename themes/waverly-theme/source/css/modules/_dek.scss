@@ -1,6 +1,6 @@
 .dek--lg {
   font-weight: 600;
-  margin-bottom: 0;
+  margin-bottom: emRhythm(1, $ms-up1);
   @include setType(3.5, $ms-up1, $silent: true);
 }
 

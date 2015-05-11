@@ -1,4 +1,5 @@
 .site-title--name {
+  border-top: $border-width-normal solid $text-color;
   font-family: $font-sans;
   margin-bottom: emRhythm(10, $ms-down1);
   @include setType($base-line-multi, $ms-down1);
@@ -13,5 +14,6 @@
 .site-title--sub {
   color: $light-grey;
   margin-bottom: 0;
+  border-bottom: $border-width-narrow solid $text-color;
   @include setType($base-line-multi, $ms-down1);
 }

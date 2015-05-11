@@ -39,7 +39,7 @@ $paragraph-justify: false; // [2]
 // You can optionally load type styles that use Typesettings.
 $load-typesetted: false;
 
-$grey: $text-color;
+$grey: #333;
 $light-grey: lighten($grey, 30%);
 $lighter-grey: lighten($grey, 70%);
 $yellow: #fefac1;
@@ -50,4 +50,39 @@ $background-color: #fff;
 $border-width-narrow: 1px;
 $border-width-normal: $base-vertical-unit;
 $border-width-wide: $border-width-normal * 2;
+
+$site-header-height: 249px;
+$site-menu-width: 167px;
+
+// Grid Type, either flexbox or float based
+$flexbox-grid: true;
+
+// Breakpoints TODO - Provide ability to generate any number of breakpoints
+$screen-xs-min: 480px;
+$screen-sm-min: 768px + $site-menu-width;
+$screen-md-min: 992px + $site-menu-width;
+$screen-lg-min: 1200px + $site-menu-width;
+$screen-xs-max: ($screen-sm-min -1px);
+$screen-sm-max: ($screen-md-min - 1px);
+$screen-md-max: ($screen-lg-min - 1px);
+
+// Grid attributes
+$grid-columns: 7;
+$grid-pad: $base-vertical-unit * $base-line-multi;
+$static-col-width: 300px;
+$static-col-name: static;
+$grid-col-name: col-;
+$grid-xs-bp-name: xs-;
+$grid-sm-bp-name: sm-;
+$grid-md-bp-name: md-;
+$grid-lg-bp-name: lg-;
+$grid-push-name: push-;
+$grid-pull-name: pull-;
+$grid-offset-name: offset-;
+$grid-container-name: container;
+$grid-row-name: row;
+$grid-pad-name: pad-;
+$container-sm-width: 750px;
+$container-md-width: 970px;
+$container-lg-width: 1170px;
 
