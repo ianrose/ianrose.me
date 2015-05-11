@@ -2,6 +2,10 @@
   font-weight: 600;
 }
 
+.article--body > p:last-of-type:after {
+  content: '\25c6';
+}
+
 @if $paragraph-indent {
   .article--post {
     p + p {
@@ -12,26 +16,10 @@
 }
 
 .article--post {
+  margin-bottom: emRhythm(9);
+
   header {
     margin-bottom: emRhythm($base-line-multi);
-  }
-
-  .media-full {
-
-    @media (min-width: $screen-sm-min) {
-      width: $container-sm-width;
-      margin-left: -27px;
-    }
-
-    @media (min-width: $screen-md-min) {
-      width: $container-md-width;
-      margin-left: -27px;
-    }
-
-    @media (min-width: $screen-lg-min) {
-      width: $container-lg-width;
-      margin-left: -194px;
-    }
   }
 
   img {
