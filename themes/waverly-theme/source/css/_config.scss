@@ -68,7 +68,7 @@ $screen-md-max: ($screen-lg-min - 1px);
 
 // Grid attributes
 $grid-columns: 7;
-$grid-pad: $base-vertical-unit * $base-line-multi;
+$grid-pad: ($base-vertical-unit * $base-line-multi) / 2;
 $static-col-width: 300px;
 $static-col-name: static;
 $grid-col-name: col-;
