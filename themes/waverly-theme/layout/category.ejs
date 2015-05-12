@@ -3,13 +3,8 @@
 		<h1 class="heading heading--page"><%- titlecase(page.category) %></h1>
 	</div>
 </div>
-<div class="row">
-	<div class="col col-xs-7 col-sm-6 col-lg-offset-1">
-		<div class="row">
-			<% page.posts.each(function(post) { %>
-			<%- partial('partials/entry-category', {post: post, index: true}) %>
-			<% }); %>
-			<%-partial('partials/pagination')%>
-		</div>
-	</div>
-</div>
+
+<% page.posts.each(function(post) { %>
+<%- partial('partials/entry-category', {post: post, index: true}) %>
+<% }); %>
+<%-partial('partials/pagination')%>

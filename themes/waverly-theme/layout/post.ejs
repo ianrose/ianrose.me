@@ -1,13 +1,13 @@
 <article class="article--post" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
 	<div class="layout--post-meta">
 		<div class="row">
-			<div class="col col-sm-3 col-md-2 col-lg-2 col-lg-offset-1">
+			<div class="col col-sm-3 col-md-2 col-lg-2 col-lg-offset-1 pad-xs">
 				<div class="meta--txt meta--heading">
 					<%- partial('partials/category', {class_name: ''}) %>
 					<%- partial('partials/tag', {class_name: ''}) %>
 				</div>
 			</div>
-			<div class="col col-sm-3 col-md-2 col-lg-2 col-sm-offset-1 col-md-offset-2 col-lg-offset-2">
+			<div class="col col-sm-3 col-md-2 col-lg-2 col-sm-offset-1 col-md-offset-2 col-lg-offset-2 pad-xs">
 				<div class="meta--txt meta--heading">
 					<%- partial('partials/date', {class_name: ''}) %>
 				</div>
@@ -15,7 +15,7 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col col-xs-7 col-md-6 col-lg-5 col-lg-offset-1">
+		<div class="col col-xs-7 col-md-6 col-lg-5 col-lg-offset-1 pad-xs">
 			<header>
 				<h1 itemprop="name">
 					<%=page.title%>
@@ -32,7 +32,7 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col col-xs-7 col-sm-6 col-md-5 col-lg-4 col-lg-offset-1">
+		<div class="col col-xs-7 col-sm-6 col-md-5 col-lg-4 col-lg-offset-1 pad-xs">
 			<div class="article--body" itemprop="articleBody">
 				<%if (page.art) { %>
 				<figure class="media-full">
