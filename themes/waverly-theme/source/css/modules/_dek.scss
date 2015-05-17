@@ -7,3 +7,14 @@
 .dek--sm {
   @include setType(2, $ms-down1);
 }
+
+.dek--intro {
+  @extend .h1;
+  margin-bottom: $site-header-height / 2;
+
+  @media (min-width: $screen-lg-min) {
+    @include col();
+    @include span(6, $grid-columns);
+    @include offset(1, $grid-columns);
+  }
+}
