@@ -36,7 +36,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.
 
-{% img class names https://demo.ghost.io/content/images/2014/09/testimg1.jpeg 100 100 'Title Text' 'Alt Text' %}
+{% img media-small https://demo.ghost.io/content/images/2014/09/testimg1.jpeg "Title" "Alt" %}
 
 ***
 

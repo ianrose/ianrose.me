@@ -33,7 +33,7 @@ $ms-ratio: 1.333;
 // of a new paragraph.
 // [2] Paragraph setting that you can turn on or off to have your paragraphs ragged
 // right or justified.
-$paragraph-indent: true; // [1]
+$paragraph-indent: false; // [1]
 $paragraph-justify: false; // [2]
 
 // You can optionally load type styles that use Typesettings.
@@ -41,7 +41,7 @@ $load-typesetted: false;
 
 $grey: #333;
 $light-grey: lighten($grey, 30%);
-$lighter-grey: lighten($grey, 70%);
+$lighter-grey: #949494;
 $yellow: #fefac1;
 $highlight-color: $yellow;
 $link-color: #1893d8;
@@ -59,7 +59,7 @@ $flexbox-grid: true;
 
 // Breakpoints TODO - Provide ability to generate any number of breakpoints
 $screen-xs-min: 480px;
-$screen-sm-min: 768px + $site-menu-width;
+$screen-sm-min: 740px + $site-menu-width;
 $screen-md-min: 992px + $site-menu-width;
 $screen-lg-min: 1200px + $site-menu-width;
 $screen-xs-max: ($screen-sm-min -1px);
@@ -82,7 +82,7 @@ $grid-offset-name: offset-;
 $grid-container-name: container;
 $grid-row-name: row;
 $grid-pad-name: pad-;
-$container-sm-width: 750px;
-$container-md-width: 970px;
-$container-lg-width: 1170px;
+$container-sm-width: 730px;
+$container-md-width: 900px;
+$container-lg-width: 1100px;
 

@@ -2,6 +2,9 @@
   @extend .h1;
   font-family: $font-display-serif;
   font-weight: 600;
-  min-height: $site-header-height;
-  margin-bottom: 0;
+
+  @media (min-width: $screen-sm-min) {
+    min-height: $site-header-height;
+    margin-bottom: 0;
+  }
 }

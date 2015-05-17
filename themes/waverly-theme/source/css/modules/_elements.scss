@@ -145,6 +145,19 @@ strong {
   font-weight: bold;
 }
 
+figure {
+  margin: 0;
+  position: relative;
+}
+
+figcaption {
+  margin-top: $base-vertical-unit;
+  color: $light-grey;
+  font-weight: 400;
+  font-family: $font-sans;
+  @include setType(2, $ms-down1, $ms-up1);
+}
+
 blockquote {
   margin-top: emRhythm(3);
   margin-bottom: emRhythm(3);
@@ -166,6 +179,7 @@ blockquote {
     font-weight: 400;
     font-family: $font-sans;
     @include setType(2, $ms-down1, $ms-up1);
+
     strong {
       font-weight: 400;
     }
@@ -295,10 +309,6 @@ td:last-child {
 
 form p {
   margin-bottom: 0;
-}
-
-figure {
-  margin: 0;
 }
 
 input[type="email"],

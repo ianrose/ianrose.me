@@ -124,7 +124,6 @@ $container-lg-width: 1170px !default;
 
 // Shared rules for all columns
 .col {
-  position: relative;
   @if ($flexbox-grid) {
     display: -webkit-box;
     display: -webkit-flex;

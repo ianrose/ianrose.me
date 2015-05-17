@@ -1,4 +1,8 @@
 .site-header {
   font-family: $font-sans;
-  min-height: $site-header-height;
+  border-top: $border-width-normal solid $text-color;
+
+  @media (min-width: $screen-sm-min) {
+    min-height: $site-header-height;
+  }
 }

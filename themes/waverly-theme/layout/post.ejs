@@ -47,7 +47,7 @@
 <nav class="nav nav--post" role="navigation">
 	<div class="row">
 		<% if (page.prev) { %>
-		<div class="col col-sm-2 col-md-2 pad-xs">
+		<div class="col col-xs-7 col-sm-2 col-md-2 pad-xs">
 			<div class="nav--prev">
 				<h5 class="nav--post-heading"><%= page.prev.title %></h5>
 				<p class="dek dek--sm"><%= strip_html(page.prev.excerpt) %></p>
@@ -61,7 +61,7 @@
 		<% } %>
 
 		<% if (page.next) { %>
-		<div class="col col-sm-2 col-md-2 col-md-offset-1 pad-xs">
+		<div class="col col-xs-7 col-sm-2 col-md-2 col-md-offset-1 pad-xs">
 			<div class="nav--next">
 				<h5 class="nav--post-heading"><%= page.next.title %></h5>
 				<p class="dek dek--sm"><%= strip_html(page.next.excerpt) %></p>
