@@ -4,11 +4,6 @@
 
 .media-full {
 
-  @media (min-width: $screen-sm-min) {
-    width: $container-sm-width;
-    margin-left: $grid-pad * -1;
-  }
-
   @media (min-width: $screen-md-min) {
     width: $container-md-width;
     margin-left: $grid-pad * -1;
@@ -16,13 +11,18 @@
 
   @media (min-width: $screen-lg-min) {
     width: $container-lg-width;
+    margin-left: $grid-pad * -1;
+  }
+
+  @media (min-width: $screen-xl-min) {
+    width: $container-xl-width;
     margin-left: -170px;
   }
 }
 
 .media-full figcaption {
   margin-top: $base-vertical-unit;
-  @media (min-width: $screen-md-min){
+  @media (min-width: $screen-lg-min){
     position: absolute;
     right: 0;
     padding-left: $grid-pad * 2;
@@ -37,7 +37,7 @@
     padding-left: $grid-pad * 2;
     max-width: 50%;
 
-    @media (min-width: $screen-md-min) {
+    @media (min-width: $screen-lg-min) {
       position: absolute;
       right: 0;
       padding-right: $grid-pad;

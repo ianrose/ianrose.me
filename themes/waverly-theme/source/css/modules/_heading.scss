@@ -2,9 +2,17 @@
   @extend .h1;
   font-family: $font-display-serif;
   font-weight: 600;
+  padding-left: $grid-pad;
+  padding-right: $grid-pad;
 
   @media (min-width: $screen-sm-min) {
     min-height: $site-header-height;
     margin-bottom: 0;
+  }
+
+  @media (min-width: $screen-lg-min) {
+    @include col();
+    @include span(6, $grid-columns);
+    @include offset(1, $grid-columns);
   }
 }
