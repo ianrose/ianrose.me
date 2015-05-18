@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "hexo": "^3.0.1",
+    "hexo-autoprefixer": "0.0.1",
     "hexo-deployer-git": "0.0.4",
     "hexo-deployer-heroku": "0.0.3",
     "hexo-deployer-openshift": "0.0.1",
@@ -20,7 +21,7 @@
     "hexo-processor-copyassets": "0.0.1",
     "hexo-renderer-ejs": "*",
     "hexo-renderer-marked": "^0.2.5",
-    "hexo-renderer-node-sass": "https://github.com/illuser/hexo-renderer-node-sass/tarball/7cfda8000f7048779b3a229d4fedc263c472cecf",
+    "hexo-renderer-sass": "^0.1.2",
     "hexo-server": "^0.1.2"
   },
   "devDependencies": {
