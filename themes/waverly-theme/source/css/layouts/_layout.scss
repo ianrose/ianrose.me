@@ -1,20 +1,20 @@
 .site-menu {
-  padding-right: $grid-pad;
-  padding-left: $grid-pad;
+  padding-right: $gutter;
+  padding-left: $gutter;
 
   @media (min-width: $screen-sm-min) {
-    margin-top: $grid-pad * 2;
+    margin-top: $gutter * 2;
     position: fixed;
     background-color: $background-color;
     width: $site-menu-width;
-    padding-left: $grid-pad * 2;
-    padding-right: $grid-pad;
+    padding-left: $gutter * 2;
+    padding-right: $gutter;
   }
 }
 
 
 .layout--main {
-  padding-top: $grid-pad * 2;
+  padding-top: $gutter * 2;
   padding-bottom: emRhythm(9);
 
   @media (min-width: $screen-sm-min) {

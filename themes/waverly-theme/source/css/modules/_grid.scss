@@ -1,53 +1,11 @@
-@mixin row() {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -moz-box-orient: horizontal;
-  -ms-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
-  -ms-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-@mixin col() {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -moz-box-orient: vertical;
-  -ms-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
-  -ms-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-flex: 0;
-  -ms-box-flex: 0;
-  -moz-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-
-@mixin span($span, $columns){
-  -webkit-flex-basis: percentage($span / $columns);
-  -ms-flex-preferred-size: percentage($span / $columns);
-  flex-basis: percentage($span / $columns);
-  max-width: percentage($span / $columns);
-}
+$span-1: 14.285714285714%;
+$span-2: 28.571428571429%;
+$span-3: 42.857142857143%;
+$span-4: 57.142857142857%;
+$span-5: 71.428571428571%;
+$span-6: 85.714285714286%;
+$span-7: 100%;
+$span-half: 50%;
 
 @mixin clearfix() {
   &:before,
@@ -58,10 +16,6 @@
   &:after {
     clear: both;
   }
-}
-
-@mixin offset($offset, $columns) {
-  margin-left: percentage($offset / $columns);
 }
 
 .container {
@@ -82,41 +36,37 @@
 }
 
 .row {
-  @include row();
-}
-
-.col {
-  @include col();
+  display: flex;
 }
 
 .col-1 {
-  @include span(1, $grid-columns);
+  flex-basis: $span-1;
 }
 
 .col-2 {
-  @include span(2, $grid-columns);
+  flex-basis: $span-2;
 }
 
 .col-3 {
-  @include span(3, $grid-columns);
+  flex-basis: $span-3;
 }
 
 .col-4 {
-  @include span(4, $grid-columns);
+  flex-basis: $span-4;
 }
 
 .col-5 {
-  @include span(5, $grid-columns);
+  flex-basis: $span-5;
 }
 
 .col-6 {
-  @include span(6, $grid-columns);
+  flex-basis: $span-6;
 }
 
 .col-7 {
-  @include span(7, $grid-columns);
+  flex-basis: $span-7;
 }
 
 .col-half {
-  @include span(1, 2);
+  flex-basis: $span-half;
 }

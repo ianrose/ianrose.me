@@ -208,7 +208,7 @@ blockquote.right {
 blockquote.left {
   float: left;
   margin-right: emRhythm(3);
-  margin-left: -$grid-pad;
+  margin-left: -$gutter;
 }
 
 pre,

@@ -2,8 +2,8 @@
   @extend .h1;
   font-family: $font-display-serif;
   font-weight: 600;
-  padding-left: $grid-pad;
-  padding-right: $grid-pad;
+  padding-left: $gutter;
+  padding-right: $gutter;
 
   @media (min-width: $screen-sm-min) {
     min-height: $site-header-height;
@@ -11,8 +11,7 @@
   }
 
   @media (min-width: $screen-lg-min) {
-    @include col();
-    @include span(6, $grid-columns);
-    @include offset(1, $grid-columns);
+    flex-basis: $span-6;
+    margin-left: $span-1;
   }
 }
