@@ -11,63 +11,51 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col col-xs-7 col-md-6 col-lg-5 col-lg-offset-1 pad-xs">
-			<header>
-				<h1 itemprop="name">
-					<%=page.title%>
-				</h1>
-				<% if (page.excerpt) { %>
-				<p class="dek dek--lg"><%= strip_html(page.excerpt) %></p>
-				<% } %>
-				<%if (config.author) { %>
-				<div class="byline">
-					by <span itemprop="author creator"><%= config.author %></span>
-				</div>
-				<% } %>
-			</header>
-		</div>
+		<header>
+			<h1 itemprop="name">
+				<%=page.title%>
+			</h1>
+			<% if (page.excerpt) { %>
+			<p class="dek dek--lg"><%= strip_html(page.excerpt) %></p>
+			<% } %>
+			<%if (config.author) { %>
+			<div class="byline">
+				by <span itemprop="author creator"><%= config.author %></span>
+			</div>
+			<% } %>
+		</header>
 	</div>
 	<div class="row">
-		<div class="col col-xs-7 col-sm-6 col-md-5 col-lg-4 col-lg-offset-1 pad-xs">
-			<div class="article--body" itemprop="articleBody">
-				<%if (page.art) { %>
-				<figure class="media-full">
-					<img src="/<%-page.path%><%-page.art%>" alt="<%= page.arttext %>"/>
-				</figure>
-				<% } %>
-				<%-page.more%>
-			</div>
+		<div class="article--body" itemprop="articleBody">
+			<%if (page.art) { %>
+			<figure class="media-full">
+				<img src="/<%-page.path%><%-page.art%>" alt="<%= page.arttext %>"/>
+			</figure>
+			<% } %>
+			<%-page.more%>
 		</div>
 	</div>
 </article>
 <nav class="nav nav--post" role="navigation">
 	<div class="row">
 		<% if (page.prev) { %>
-		<div class="col col-xs-7 col-sm-2 col-md-2 pad-xs">
 			<div class="nav--prev">
 				<h5 class="nav--post-heading"><%= page.prev.title %></h5>
 				<p class="dek dek--sm"><%= strip_html(page.prev.excerpt) %></p>
 			</div>
-		</div>
-		<div class="col col-sm-1 first-md pad-xs">
 			<div class="nav--post-button">
 				<a class="button--link" href="<%- url_for(page.prev.path) %>">Previous</a>
 			</div>
-		</div>
 		<% } %>
 
 		<% if (page.next) { %>
-		<div class="col col-xs-7 col-sm-2 col-md-2 col-md-offset-1 pad-xs">
 			<div class="nav--next">
 				<h5 class="nav--post-heading"><%= page.next.title %></h5>
 				<p class="dek dek--sm"><%= strip_html(page.next.excerpt) %></p>
 			</div>
-		</div>
-		<div class="col col-md-1 pad-xs">
 			<div class="nav--post-button">
 				<a class="button--link" href="<%- url_for(page.next.path) %>">Next</a>
 			</div>
-		</div>
 		<% } %>
 	</div>
 </nav>

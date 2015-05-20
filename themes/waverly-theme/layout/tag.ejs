@@ -1,7 +1,5 @@
 <div class="row">
-	<div class="col col-xs-7 col-lg-6 col-lg-offset-1 pad-xs">
-		<h1 class="heading heading--page"><%- titlecase(page.tag) %></h1>
-	</div>
+	<h1 class="heading heading--page"><%- titlecase(page.tag) %></h1>
 </div>
 <% page.posts.each(function(post) { %>
 <%- partial('partials/entry-category', {post: post, index: true}) %>
