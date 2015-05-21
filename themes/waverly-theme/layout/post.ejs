@@ -1,17 +1,21 @@
 <article class="article--post" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
 	<div class="layout--post-meta">
 		<div class="row">
-			<div class="meta--txt meta--heading">
-				<%- partial('partials/category', {class_name: ''}) %>
-				<%- partial('partials/tag', {class_name: ''}) %>
+			<div class="meta--container">
+				<div class="meta--txt meta--heading">
+					<%- partial('partials/category', {class_name: ''}) %>
+					<%- partial('partials/tag', {class_name: ''}) %>
+				</div>
 			</div>
-			<div class="meta--txt meta--heading">
-				<%- partial('partials/date', {class_name: ''}) %>
+			<div class="meta--container">
+				<div class="meta--txt meta--heading">
+					<%- partial('partials/date', {class_name: ''}) %>
+				</div>
 			</div>
 		</div>
 	</div>
 	<div class="row">
-		<header>
+		<header class="article--header">
 			<h1 itemprop="name">
 				<%=page.title%>
 			</h1>
