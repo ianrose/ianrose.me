@@ -27,7 +27,7 @@
     right: 0;
     padding-left: $gutter * 2;
     padding-right: $gutter;
-    @extend .col-md-2;
+    max-width: $span-2;
   }
 }
 
@@ -41,7 +41,7 @@
       position: absolute;
       right: 0;
       padding-right: $gutter;
-      @extend .col-md-2;
+      width: $span-2;
     }
   }
 }
