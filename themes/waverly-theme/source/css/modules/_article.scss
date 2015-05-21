@@ -16,7 +16,6 @@
 }
 
 .article--post {
-  margin-bottom: emRhythm(9);
 
   header {
     margin-bottom: emRhythm($base-line-multi);
@@ -31,5 +30,22 @@
   figure {
     margin-bottom: emRhythm(3);
   }
+}
+
+.article--header {
+  margin-bottom: emRhythm(9);
+  margin-left: $span-1;
+  flex-basis: $span-5;
+  max-width: $span-5;
+  padding-left: $gutter;
+  padding-right: $gutter;
+}
+
+.article--body {
+  margin-left: $span-1;
+  flex-basis: $span-4;
+  max-width: $span-4;
+  padding-left: $gutter;
+  padding-right: $gutter;
 }
 
