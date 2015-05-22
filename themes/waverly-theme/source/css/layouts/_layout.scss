@@ -45,3 +45,34 @@
 .layout--gutter-bottom {
   margin-bottom: $site-header-height / 2;
 }
+
+.layout--back-to-top {
+  flex-basis: $span-1;
+  margin-left: $span-1;
+  padding-left: $gutter;
+  padding-right: $gutter;
+}
+
+.layout--newsletter {
+  flex-basis: $span-3;
+  padding-left: $gutter;
+  padding-right: $gutter;
+}
+
+.layout--footer-nav {
+  flex-basis: $span-2;
+  padding-left: $gutter;
+  padding-right: $gutter;
+}
+
+.layout--footer-nav .layout--footer-col {
+  flex-basis: $span-half;
+}
+
+.layout--footer-nav .layout--footer-col:first-child {
+  padding-right: $gutter;
+}
+
+.layout--footer-nav .layout--footer-col:last-child {
+  padding-left: $gutter;
+}

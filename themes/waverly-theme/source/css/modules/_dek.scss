@@ -5,6 +5,7 @@
 }
 
 .dek--sm {
+  margin-bottom: 0;
   @include setType(2, $ms-down1);
 }
 

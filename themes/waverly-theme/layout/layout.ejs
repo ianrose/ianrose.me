@@ -48,8 +48,8 @@ pageTitle += ' [ ' + config.title + ' ]';
 		<main role="main" itemscope itemtype="http://schema.org/Blog">
 			<%- body %>
 		</main>
-		<footer role="contentinfo">
-			<div class="row">
+		<footer class="row" role="contentinfo">
+			<div class="layout--newsletter">
 				<div class="layout--footer-col">
 					<form class="form form--inline form--box" action="https://tinyletter.com/ian-rose" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/ian-rose', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
 						<p>
@@ -60,23 +60,27 @@ pageTitle += ' [ ' + config.title + ' ]';
 						<input type="submit" value="Subscribe" class="button button--primary"/>
 					</form>
 				</div>
-					<nav class="nav row" role="navigation">
-						<div class="layout--footer-col">
-							<div><a href="https://twitter.com/ThatIanRose" target="_blank">Twitter</a></div>
-							<div><a href="https://github.com/ianrose" target="_blank">GitHub</a></div>
-							<div><a href="http://linkedin.com/in/roseian/" target="_blank">LinkedIn</a></div>
-							<div><a href="https://tinyletter.com/ian-rose" target="_blank">Newsletter</a></div>
-						</div>
-						<div class="layout--footer-col">
-							<div><a href="http://feeds.feedburner.com/ianrose?format=xml" target="_blank">RSS</a></div>
-							<div><a href="/archives">Archive</a></div>
-							<div><a href="https://github.com/ianrose/ianrose-source" target="_blank">Site Source</a></div>
-						</div>
-					</nav>
+			</div>
+			<div class="layout--footer-nav">
+				<nav class="nav row" role="navigation">
+					<div class="layout--footer-col">
+						<div><a href="https://twitter.com/ThatIanRose" target="_blank">Twitter</a></div>
+						<div><a href="https://github.com/ianrose" target="_blank">GitHub</a></div>
+						<div><a href="http://linkedin.com/in/roseian/" target="_blank">LinkedIn</a></div>
+						<div><a href="https://tinyletter.com/ian-rose" target="_blank">Newsletter</a></div>
+					</div>
+					<div class="layout--footer-col">
+						<div><a href="http://feeds.feedburner.com/ianrose?format=xml" target="_blank">RSS</a></div>
+						<div><a href="/archives">Archive</a></div>
+						<div><a href="https://github.com/ianrose/ianrose-source" target="_blank">Site Source</a></div>
+					</div>
+				</nav>
+			</div>
+				<div class="layout--back-to-top">
 					<div class="layout--footer-col">
 						<a class="button--link" href="#top">Back to Top</a>
 					</div>
-			</div>
+				</div>
 		</footer>
 	</div>
 </div>
