@@ -30,20 +30,22 @@ $meta-size: $ms-down1;
   margin-bottom: emRhythm(6, $ms-down1);
 }
 
-.meta--container {
+.meta--container-post {
   flex-basis: $span-2;
 }
 
-.meta--container:first-child {
-  margin-left: $span-1;
+.meta--container {
   padding-left: $gutter;
   padding-right: $gutter;
 }
 
-.meta--container:last-child {
+.meta--container-post:first-child {
+  margin-left: $span-1;
+
+}
+
+.meta--container-post:last-child {
   margin-left: $span-2;
-  padding-left: $gutter;
-  padding-right: $gutter;
 }
 
 .meta--primary {
@@ -53,4 +55,8 @@ $meta-size: $ms-down1;
 .meta--alt {
   font-weight: 400;
   color: $light-grey;
+}
+
+.meta--post--l {
+  min-height: $site-header-height;
 }

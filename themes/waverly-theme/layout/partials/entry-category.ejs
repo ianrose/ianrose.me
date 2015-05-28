@@ -1,25 +1,19 @@
-
-		<div class="entry archive-type-<%= post.layout %>" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-			<div class="row">
-				<div class="col col-xs-7 col-sm-4 col-md-5 col-lg-4 col-lg-offset-1 pad-xs">
-					<div class="meta--txt">
-						<%- partial('partials/date', {class_name: '', page: post}) %>
-						<%- partial('partials/tag', {class_name: '', page: post}) %>
-					</div>
-				<%- partial('entry-heading', {class_name: 'archive-article-title'}) %>
-					<% if(post.excerpt && index) { %>
-					<p class="dek" itemprop="description">
-						<%= strip_html(post.excerpt) %>
-						<% } else { %>
-						<a href="<%- config.root %> <%- post.path %>"><%= theme.excerpt_link %></a>
-					</p>
-					<% } %>
-				</div>
-					<% if (post.art) { %>
-				<div class="col col-xs-7 col-sm-3 col-md-2 pad-xs">
-					<a href="<%- config.root %><%- post.path %>"><img class="img-responsive media--entry media--entry-default" src="/<%- post.path %><%- post.art %>" alt="<%= post.arttext %>"/></a>
-				</div>
-					<% } %>
+<div class="entry entry--category archive-type-<%= post.layout %>" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+	<div class="entry--txt">
+		<div class="meta--txt">
+			<%- partial('partials/date', {class_name: '', page: post}) %>
+			<%- partial('partials/tag', {class_name: '', page: post}) %>
 		</div>
+		<%- partial('entry-heading', {class_name: 'archive-article-title'}) %>
+		<% if(post.excerpt && index) { %>
+		<p class="dek" itemprop="description">
+			<%= strip_html(post.excerpt) %>
+			<% } else { %>
+			<a href="<%- config.root %> <%- post.path %>"><%= theme.excerpt_link %></a>
+		</p>
+		<% } %>
+	</div>
+	<% if (post.art) { %>
+		<a class="entry--media" href="<%- config.root %><%- post.path %>"><img class="img-responsive media--entry media--entry-default" src="/<%- post.path %><%- post.art %>" alt="<%= post.arttext %>"/></a>
+	<% } %>
 </div>
-

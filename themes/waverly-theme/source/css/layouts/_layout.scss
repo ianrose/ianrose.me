@@ -1,18 +1,3 @@
-.site-menu {
-  padding-right: $gutter;
-  padding-left: $gutter;
-
-  @media (min-width: $screen-sm-min) {
-    margin-top: $gutter * 2;
-    position: fixed;
-    background-color: $background-color;
-    width: $site-menu-width;
-    padding-left: $gutter * 2;
-    padding-right: $gutter;
-  }
-}
-
-
 .layout--main {
   padding-top: $gutter * 2;
   padding-bottom: emRhythm(9);
@@ -33,46 +18,6 @@
   }
 }
 
-.layout--post-meta {
-  min-height: $site-header-height;
-}
-
-.layout--footer-col {
-  padding-top: emRhythm(1);
-  border-top: $border-width-narrow solid $text-color;
-}
-
 .layout--gutter-bottom {
   margin-bottom: $site-header-height / 2;
-}
-
-.layout--back-to-top {
-  flex-basis: $span-1;
-  margin-left: $span-1;
-  padding-left: $gutter;
-  padding-right: $gutter;
-}
-
-.layout--newsletter {
-  flex-basis: $span-3;
-  padding-left: $gutter;
-  padding-right: $gutter;
-}
-
-.layout--footer-nav {
-  flex-basis: $span-2;
-  padding-left: $gutter;
-  padding-right: $gutter;
-}
-
-.layout--footer-nav .layout--footer-col {
-  flex-basis: $span-half;
-}
-
-.layout--footer-nav .layout--footer-col:first-child {
-  padding-right: $gutter;
-}
-
-.layout--footer-nav .layout--footer-col:last-child {
-  padding-left: $gutter;
 }

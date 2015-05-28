@@ -1,9 +1,10 @@
+<p class="heading heading--page"><%= config.description %></p>
 <div class="row">
-	<p class="heading heading--page"><%= config.description %></p>
-</div>
-<div class="row">
-	<div class="h1 alt-txt" aria-hidden="true">01</div>
-		<div class="pad-xs">
+	<div class="section--id--l">
+		<div class="section--id" aria-hidden="true">01</div>
+	</div>
+	<div class="section--posts">
+		<div class="meta--container">
 			<h2 class="meta--txt meta--primary meta--heading">Articles</h2>
 		</div>
 		<div class="row">
@@ -11,11 +12,14 @@
 			<%- partial('partials/entry-post', {post: post, index: true}) %>
 			<% })%>
 		</div>
+	</div>
 </div>
 <div class="row">
-	<div class="h1 alt-txt" aria-hidden="true">02</div>
-	<div class="col col-xs-7 col-sm-6">
-		<div class="pad-xs">
+	<div class="section--id--l">
+		<div class="section--id" aria-hidden="true">02</div>
+	</div>
+	<div class="section--posts">
+		<div class="meta--container">
 			<h2 class="meta--txt meta--primary meta--heading">Work</h2>
 		</div>
 		<div class="row">
@@ -24,10 +28,13 @@
 			<% })%>
 		</div>
 	</div>
-</div>
+	</div>
 <div class="row">
-	<div class="h1 alt-txt" aria-hidden="true">03</div>
-		<div class="pad-xs">
+	<div class="section--id--l">
+		<div class="section--id" aria-hidden="true">03</div>
+	</div>
+	<div class="section--posts">
+		<div class="meta--container">
 			<h2 class="meta--txt meta--primary meta--heading">Notes</h2>
 		</div>
 		<div class="row">
@@ -35,4 +42,5 @@
 			<%- partial('partials/entry-post', {post: post, index: true}) %>
 			<% })%>
 		</div>
+	</div>
 </div>

@@ -38,6 +38,7 @@ $span-half: 50%;
 .row {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .col-1 {

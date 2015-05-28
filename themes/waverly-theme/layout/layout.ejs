@@ -22,7 +22,7 @@ pageTitle += ' [ ' + config.title + ' ]';
 	<% }); %>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" class="">
-<div class="site-menu">
+<div class="nav--menu">
 	<header class="site-header" role="banner">
 		<% if (is_home()){ %>
 		<h1 class="site-title site-title--name" itemprop="name">
@@ -49,8 +49,8 @@ pageTitle += ' [ ' + config.title + ' ]';
 			<%- body %>
 		</main>
 		<footer class="row" role="contentinfo">
-			<div class="layout--newsletter">
-				<div class="layout--footer-col">
+			<div class="newsletter--l">
+				<div class="footer--col--l">
 					<form class="form form--inline form--box" action="https://tinyletter.com/ian-rose" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/ian-rose', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
 						<p>
 							<label for="tlemail">Sign up to have updates sent directly to your inbox.</label>
@@ -61,23 +61,23 @@ pageTitle += ' [ ' + config.title + ' ]';
 					</form>
 				</div>
 			</div>
-			<div class="layout--footer-nav">
+			<div class="footer--nav--l">
 				<nav class="nav row" role="navigation">
-					<div class="layout--footer-col">
+					<div class="footer--col--l">
 						<div><a href="https://twitter.com/ThatIanRose" target="_blank">Twitter</a></div>
 						<div><a href="https://github.com/ianrose" target="_blank">GitHub</a></div>
 						<div><a href="http://linkedin.com/in/roseian/" target="_blank">LinkedIn</a></div>
 						<div><a href="https://tinyletter.com/ian-rose" target="_blank">Newsletter</a></div>
 					</div>
-					<div class="layout--footer-col">
+					<div class="footer--col--l">
 						<div><a href="http://feeds.feedburner.com/ianrose?format=xml" target="_blank">RSS</a></div>
 						<div><a href="/archives">Archive</a></div>
 						<div><a href="https://github.com/ianrose/ianrose-source" target="_blank">Site Source</a></div>
 					</div>
 				</nav>
 			</div>
-				<div class="layout--back-to-top">
-					<div class="layout--footer-col">
+				<div class="back-to-top--l">
+					<div class="footer--col--l">
 						<a class="button--link" href="#top">Back to Top</a>
 					</div>
 				</div>

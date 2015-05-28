@@ -6,7 +6,6 @@
 .nav a {
   font-family: $font-sans;
   text-decoration: none;
-  font-weight: 400;
   vertical-align: text-top;
   @include setType(2, $ms-down1);
 }
@@ -45,4 +44,18 @@
 
 .nav--prev + .nav--post-button {
   order: -1;
+}
+
+.nav--menu {
+  padding-right: $gutter;
+  padding-left: $gutter;
+
+  @media (min-width: $screen-sm-min) {
+    margin-top: $gutter * 2;
+    position: fixed;
+    background-color: $background-color;
+    width: $site-menu-width;
+    padding-left: $gutter * 2;
+    padding-right: $gutter;
+  }
 }
