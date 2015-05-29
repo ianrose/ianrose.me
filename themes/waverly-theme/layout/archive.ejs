@@ -10,14 +10,6 @@ var categoriesList = list_categories({ show_count: false }),
 
 		<h1 class="heading heading--page">Archives</h1>
 
-		<% if (theme.atom) { %>
-			<p>
-				The feed is available via
-				<a href="<%=theme.atom%>">atom</a>.
-			</p>
-			<br>
-		<% } %>
-
 		<aside>
 			<h2>Categories</h2>
 			<% if (categoriesList) { %>

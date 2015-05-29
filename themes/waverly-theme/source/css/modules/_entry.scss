@@ -12,8 +12,18 @@
   display: block;
 }
 
-.entry--category {
+.entry--category-container {
   flex-basis: $span-half;
+  max-width: $span-6;
   padding-left: $gutter;
   padding-right: $gutter;
+  display: flex;
+}
+
+.entry--category {
+  border-bottom: $border-width-narrow solid $text-color;
+}
+
+.entry-heading--category {
+  @extend .h2;
 }

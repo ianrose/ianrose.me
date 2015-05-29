@@ -11,7 +11,7 @@
 
   @media (min-width: $screen-lg-min) {
     width: $container-lg-width;
-    margin-left: $gutter * -1;
+    margin-left: -142px;
   }
 
   @media (min-width: $screen-xl-min) {
@@ -22,7 +22,8 @@
 
 .media-full figcaption {
   margin-top: $base-vertical-unit;
-  @media (min-width: $screen-lg-min){
+
+  @media (min-width: $screen-xl-min){
     position: absolute;
     right: 0;
     padding-left: $gutter * 2;
@@ -37,7 +38,7 @@
     padding-left: $gutter * 2;
     max-width: 50%;
 
-    @media (min-width: $screen-lg-min) {
+    @media (min-width: $screen-xl-min) {
       position: absolute;
       right: 0;
       padding-right: $gutter;

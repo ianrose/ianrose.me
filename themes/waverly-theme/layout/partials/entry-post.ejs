@@ -3,7 +3,7 @@
 		<%- partial('partials/date', {class_name: '', page: post}) %>
 		<%- partial('partials/tag', {class_name: '', page: post}) %>
 	</div>
-	<%- partial('entry-heading', {class_name: 'archive-article-title'}) %>
+	<%- partial('entry-heading', {class_name: 'h4 archive-article-title'}) %>
 	<% if(post.excerpt && index) {%>
 	<p class="dek" itemprop="description">
 		<%= strip_html(post.excerpt) %>

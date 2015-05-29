@@ -36,16 +36,40 @@
 
 .article--header {
   margin-bottom: emRhythm(9);
-  margin-left: $span-1;
-  max-width: $span-5;
   padding-left: $gutter;
   padding-right: $gutter;
+
+  @media (min-width: $screen-md-min) {
+    max-width: $span-7;
+  }
+
+  @media (min-width: $screen-lg-min) {
+    margin-left: $span-1;
+    max-width: $span-6;
+  }
+
+  @media (min-width: $screen-xl-min) {
+    margin-left: $span-1;
+    max-width: $span-5;
+  }
 }
 
 .article--body {
-  margin-left: $span-1;
-  max-width: $span-4;
   padding-left: $gutter;
   padding-right: $gutter;
+
+  @media (min-width: $screen-md-min) {
+    max-width: $span-6;
+  }
+
+  @media (min-width: $screen-lg-min) {
+    margin-left: $span-1;
+    max-width: $span-5;
+  }
+
+  @media (min-width: $screen-xl-min) {
+    margin-left: $span-1;
+    max-width: $span-4;
+  }
 }
 
