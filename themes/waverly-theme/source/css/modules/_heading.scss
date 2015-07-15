@@ -15,3 +15,9 @@
     max-width: $span-6;
   }
 }
+
+.heading--home {
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    @include setType(5, $ms-up3);
+  }
+}
