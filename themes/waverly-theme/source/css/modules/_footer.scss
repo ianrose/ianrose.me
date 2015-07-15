@@ -13,7 +13,9 @@
 }
 
 .footer--nav--l .footer--col--l:last-child {
-  padding-left: $gutter;
+  @media (min-width: $screen-lg-min) {
+    padding-left: $gutter;
+  }
 }
 
 .footer--col--l {

@@ -1,8 +1,13 @@
 .site-header {
   font-family: $font-sans;
   border-top: $border-width-normal solid $text-color;
+  display: flex;
+  align-items: center;
+  margin-bottom: $gutter;
 
   @media (min-width: $screen-sm-min) {
     min-height: $site-header-height;
+    display: block;
+    margin-bottom: 0;
   }
 }

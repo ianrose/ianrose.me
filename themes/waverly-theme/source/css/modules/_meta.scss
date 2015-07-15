@@ -27,11 +27,18 @@ $meta-size: $ms-down1;
 .meta--heading {
   border-top: $border-width-narrow solid $text-color;
   padding-top: emRhythm(1, $ms-down1);
-  margin-bottom: emRhythm(6, $ms-down1);
+
+  @media (min-width: $screen-lg-min) {
+    margin-bottom: emRhythm(6, $ms-down1);
+  }
 }
 
 .meta--container-post {
-  flex-basis: $span-2;
+  flex-basis: $span-3;
+
+  @media (min-width: $screen-lg-min) {
+    flex-basis: $span-2;
+  }
 }
 
 .meta--container {
@@ -40,12 +47,15 @@ $meta-size: $ms-down1;
 }
 
 .meta--container-post:first-child {
-  margin-left: $span-1;
-
+  @media (min-width: $screen-lg-min) {
+    margin-left: $span-1;
+  }
 }
 
 .meta--container-post:last-child {
-  margin-left: $span-2;
+  @media (min-width: $screen-lg-min) {
+    margin-left: $span-2;
+  }
 }
 
 .meta--primary {
@@ -58,5 +68,8 @@ $meta-size: $ms-down1;
 }
 
 .meta--post--l {
-  min-height: $site-header-height;
+
+  @media (min-width: $screen-sm-min) {
+    min-height: $site-header-height;
+  }
 }

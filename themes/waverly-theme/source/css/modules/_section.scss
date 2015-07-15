@@ -1,11 +1,10 @@
-.section {
-//  margin-left: $span-1;
-}
-
 .section--id {
   @extend .h1;
   color: $lighter-grey;
-  border-top: $border-width-narrow solid $text-color;
+
+  @media (min-width: $screen-md-min) {
+    border-top: $border-width-narrow solid $text-color;
+  }
 }
 
 .section--id--l {
@@ -21,9 +20,12 @@
 .section--heading {
   @extend .h5;
   flex-basis: $span-1;
-  margin-left: $span-1;
   padding-left: $gutter;
   padding-right: $gutter;
+
+  @media (min-width: $screen-lg-min) {
+    margin-left: $span-1;
+  }
 }
 
 .section--body {

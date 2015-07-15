@@ -1,10 +1,17 @@
+.site-title {
+  margin-right: $base-vertical-unit;
+
+  @media (min-width: $screen-sm-min) {
+    margin-right: 0;
+  }
+}
+
 .site-title--name {
-  display: inline-block;
   font-family: $font-sans;
+  margin-bottom: 0;
   @include setType($base-line-multi, $ms-down1);
 
   @media (min-width: $screen-sm-min) {
-    display: block;
     margin-bottom: emRhythm(10, $ms-down1);
   }
 }
@@ -13,16 +20,19 @@
   font-weight: 800;
   text-transform: uppercase;
   text-decoration: none;
+  vertical-align: sub;
+
+  @media (min-width: $screen-sm-min) {
+    vertical-align: baseline;
+  }
 }
 
 .site-title--sub {
-  display: inline-block;
   color: $light-grey;
   margin-bottom: 0;
   @include setType($base-line-multi, $ms-down1);
 
   @media (min-width: $screen-sm-min) {
-    display: block;
     border-bottom: $border-width-narrow solid $text-color;
   }
 }

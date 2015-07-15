@@ -85,3 +85,15 @@ input[type="button"]:focus {
     color: $text-color;
   }
 }
+
+.button--menu {
+  font-size: $ms-up2;
+  padding: 0 $base-vertical-unit;
+  order: -1;
+  margin-right: $base-vertical-unit;
+  border: none;
+
+  @media (min-width: $screen-sm-min) {
+    display: none;
+  }
+}

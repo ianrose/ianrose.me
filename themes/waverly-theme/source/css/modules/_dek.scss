@@ -12,9 +12,6 @@
 .dek--intro {
   @extend .h1;
   margin-bottom: $site-header-height / 2;
-
-  @media (min-width: $screen-lg-min) {
-    padding-left: $gutter;
-    padding-right: $gutter;
-  }
+  padding-left: $gutter;
+  padding-right: $gutter;
 }

@@ -16,7 +16,6 @@
   @include setType(2, $ms-down1);
 }
 
-.nav--post-button a,
 .nav--post-heading {
   border-top: $border-width-narrow solid $grey;
 }
@@ -30,6 +29,11 @@
 .nav--post-button a {
   display: block;
   padding-top: emRhythm(1);
+  border-top: none;
+
+  @media (min-width: $screen-md-min) {
+    border-top: $border-width-narrow solid $grey;
+  }
 }
 
 .nav--prev,
@@ -39,11 +43,14 @@
   padding-right: $gutter;
 }
 .nav--next {
-  margin-left: $span-1;
+  @media (min-width: $screen-md-min) {
+    margin-left: $span-1;
+  }
 }
 
 .nav--prev + .nav--post-button {
   order: -1;
+  margin-bottom: $gutter;
 }
 
 .nav--menu {
@@ -58,4 +65,17 @@
     padding-left: $gutter * 2;
     padding-right: $gutter;
   }
+}
+
+.nav--menu nav {
+  max-height: 0;
+  overflow-y: hidden;
+
+  @media (min-width: $screen-sm-min) {
+    max-height: none;
+  }
+}
+
+nav.is-open {
+  max-height: none;
 }

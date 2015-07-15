@@ -17,11 +17,13 @@ pageTitle += ' [ ' + config.title + ' ]';
 	<%- open_graph() %>
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 	<link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/5e032a37-9d8b-4f87-a5f8-27da504f3d82.css"/>
+	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
 	<% theme.stylesheets.forEach(function(url) { %>
 		<link rel="stylesheet" href="<%=url%>">
 	<% }); %>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage" class="">
+<!--[if lte IE 9 ]><p>This site uses modern techniques. I'm a believer in progressive enhancement but this portfolio is a chance to experiment with new techniques. </p><![endif]-->
 <div class="nav--menu">
 	<header class="site-header" role="banner">
 		<% if (is_home()){ %>
@@ -34,8 +36,9 @@ pageTitle += ' [ ' + config.title + ' ]';
 		</p>
 		<% } %>
 		<p class="site-title site-title--sub" itemprop="specialty"><%= config.subtitle %></p>
+		<button id="js-toggle-menu" class="button--menu" aria-label="Site Menu"><i class="ion-navicon" aria-hidden="true"></i></button>
 	</header>
-	<nav class="nav" role="navigation" itemprop="breadcrumb">
+	<nav id="js-menu" class="nav" role="navigation" itemprop="breadcrumb">
 		<ul>
 			<% Object.keys(theme.menu).forEach(function(key) { %>
 			<li><a href="<%=theme.menu[key]%>"><%=key%></a></li>
@@ -51,7 +54,7 @@ pageTitle += ' [ ' + config.title + ' ]';
 		<footer class="row" role="contentinfo">
 			<div class="newsletter--l">
 				<div class="footer--col--l">
-					<form class="form form--inline form--box" action="https://tinyletter.com/ian-rose" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/ian-rose', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+					<form class="form form--box" action="https://tinyletter.com/ian-rose" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/ian-rose', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
 						<p>
 							<label for="tlemail">Sign up to have updates sent directly to your inbox.</label>
 						</p>
@@ -67,11 +70,10 @@ pageTitle += ' [ ' + config.title + ' ]';
 						<div><a href="https://twitter.com/ThatIanRose" target="_blank">Twitter</a></div>
 						<div><a href="https://github.com/ianrose" target="_blank">GitHub</a></div>
 						<div><a href="http://linkedin.com/in/roseian/" target="_blank">LinkedIn</a></div>
-						<div><a href="https://tinyletter.com/ian-rose" target="_blank">Newsletter</a></div>
 					</div>
 					<div class="footer--col--l">
+						<div><a href="https://tinyletter.com/ian-rose" target="_blank">Newsletter</a></div>
 						<div><a href="http://feeds.feedburner.com/ianrose?format=xml" target="_blank">RSS</a></div>
-						<div><a href="/archives">Archive</a></div>
 						<div><a href="https://github.com/ianrose/ianrose-source" target="_blank">Site Source</a></div>
 					</div>
 				</nav>
@@ -84,5 +86,6 @@ pageTitle += ' [ ' + config.title + ' ]';
 		</footer>
 	</div>
 </div>
+<%- js('js/script') %>
 </body>
 </html>
