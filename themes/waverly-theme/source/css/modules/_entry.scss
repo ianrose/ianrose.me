@@ -4,9 +4,12 @@
 
 .entry--post {
   flex-basis: $span-half;
-  max-width: $span-half;
   padding-left: $gutter;
   padding-right: $gutter;
+
+  @media (min-width: $screen-md-min) {
+    max-width: $span-half;
+  }
 }
 
 .entry--media {
