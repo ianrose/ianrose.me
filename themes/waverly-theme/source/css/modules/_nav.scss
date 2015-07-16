@@ -58,12 +58,13 @@
   padding-left: $gutter;
 
   @media (min-width: $screen-sm-min) {
-    margin-top: $gutter * 2;
     position: fixed;
     background-color: $background-color;
     width: $site-menu-width;
     padding-left: $gutter * 2;
     padding-right: $gutter;
+    bottom: 0;
+    top: 0;
   }
 }
 
