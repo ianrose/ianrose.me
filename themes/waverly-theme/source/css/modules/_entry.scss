@@ -4,6 +4,7 @@
 
 .entry--post {
   flex-basis: $span-half;
+  max-width: $span-half;
   padding-left: $gutter;
   padding-right: $gutter;
 }
