@@ -7,3 +7,4 @@ public/
 .deploy/
 .idea
 .idea/workspace.xml
+.deploy_git

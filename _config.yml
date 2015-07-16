@@ -76,7 +76,7 @@ exclude_generator:
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  type: github
+  type: git
   repo: git@github.com:ianrose/ianrose.github.io.git
 
 marked:
