@@ -13,7 +13,7 @@ tags:
 categories:
 - work
 ---
-Joule Solar Energy needed a consumer facing website that worked across devices to attract new ones and provide resources for current customers.
+Joule Solar Energy needed a consumer facing website that worked across devices to attract new customers and provide resources for current customers.
 
 <!--more-->
 
