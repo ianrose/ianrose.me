@@ -46,32 +46,40 @@ $span-half: 50%;
 
 .col-1 {
   flex-basis: $span-1;
+  max-width: $span-1;
 }
 
 .col-2 {
   flex-basis: $span-2;
+  max-width: $span-2;
 }
 
 .col-3 {
   flex-basis: $span-3;
+  max-width: $span-3;
 }
 
 .col-4 {
   flex-basis: $span-4;
+  max-width: $span-4;
 }
 
 .col-5 {
   flex-basis: $span-5;
+  max-width: $span-5;
 }
 
 .col-6 {
   flex-basis: $span-6;
+  max-width: $span-6
 }
 
 .col-7 {
   flex-basis: $span-7;
+  max-width: $span-7
 }
 
 .col-half {
   flex-basis: $span-half;
+  max-width: $span-half;
 }

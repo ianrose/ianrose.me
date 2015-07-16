@@ -22,6 +22,7 @@
 
 .nav--post-button {
   flex-basis: $span-1;
+  max-width: $span-1;
   padding-left: $gutter;
   padding-right: $gutter;
 }
@@ -39,6 +40,7 @@
 .nav--prev,
 .nav--next {
   flex-basis: $span-2;
+  max-width: $span-2;
   padding-left: $gutter;
   padding-right: $gutter;
 }
