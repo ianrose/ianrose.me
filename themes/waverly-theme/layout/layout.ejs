@@ -48,7 +48,9 @@ pageTitle += ' [ ' + config.title + ' ]';
 <div class="layout--main">
 	<div class="container">
 		<main role="main" itemscope itemtype="http://schema.org/Blog">
-			<!--[if lte IE 9 ]><p>This site uses modern techniques. I'm a believer in progressive enhancement but this portfolio is a chance to experiment with new techniques. </p><![endif]-->
+			<!--[if lte IE 9]>
+			<p class="align-center">This is a portfolio site. I used this opportunity to experiment with <a href="http://caniuse.com/#feat=flexbox" title="Can I Use">CSS Flexbox</a>. Please use a <a href="http://browsehappy.com/" title="Browse Happy">modern browser</a>.</p>
+			<![endif]-->
 			<%- body %>
 		</main>
 		<footer class="row" role="contentinfo">
