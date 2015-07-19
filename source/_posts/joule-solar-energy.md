@@ -6,7 +6,7 @@ arttext: Artwork done by a third party
 layout: work
 role: Design/Development
 team: Thinka
-visit: "http://joule"
+visit:
 tags:
 - design
 - code
