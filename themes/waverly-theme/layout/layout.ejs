@@ -5,7 +5,7 @@ if (is_tag()) pageTitle = 'Tag: ' + page.tag;
 if (is_category()) pageTitle = 'Category: ' + page.category;
 if (is_month()) pageTitle += ': ' + page.month + '/' + page.year;
 if (is_year()) pageTitle += ': ' + page.year;
-pageTitle += ' [ ' + config.title + ' ]';
+pageTitle += ' | ' + config.title;
 %>
 <!doctype html>
 <html class="no-js" lang="<%= config.language %>">
@@ -35,7 +35,7 @@ pageTitle += ' [ ' + config.title + ' ]';
 		</p>
 		<% } %>
 		<p class="site-title site-title--sub" itemprop="specialty"><%= config.subtitle %></p>
-		<button id="js-toggle-menu" class="button--menu" aria-label="Site Menu"><i class="ion-navicon" aria-hidden="true"></i></button>
+		<button id="js-toggle-menu" class="button--menu" aria-label="Site Menu"><i class="button--menu-open ion-navicon" aria-hidden="true"></i><i class="button--menu-close ion-android-close" aria-hidden="true"></i></button>
 	</header>
 	<nav id="js-menu" class="nav" role="navigation" itemprop="breadcrumb">
 		<ul>

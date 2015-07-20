@@ -16,7 +16,10 @@
 
 .section--posts {
   flex-basis: $span-6;
-  max-width: $span-6;
+
+  @media (min-width: $screen-lg-min) {
+    max-width: $span-6;
+  }
 }
 
 .section--heading {

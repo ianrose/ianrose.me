@@ -33,6 +33,10 @@ $meta-size: $ms-down1;
   }
 }
 
+.section--posts .meta--heading {
+  margin-bottom: emRhythm(6, $ms-down1);
+}
+
 .meta--container-post {
   flex-basis: $span-3;
 

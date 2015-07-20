@@ -3,9 +3,9 @@
 		<%- partial('partials/date', {class_name: '', page: post}) %>
 		<%- partial('partials/tag', {class_name: '', page: post}) %>
 	</div>
-	<%- partial('entry-heading', {class_name: 'h4 archive-article-title'}) %>
 	<% if (post.art) { %>
 	<a href="<%- config.root %><%- post.path %>"><img class="img-responsive media--entry media--entry-default" src="/<%-post.path%><%-post.art%>" alt="<%=post.arttext%>"/></a>
 	<% } %>
+	<%- partial('entry-heading', {class_name: 'h4 archive-article-title'}) %>
 </div>
 

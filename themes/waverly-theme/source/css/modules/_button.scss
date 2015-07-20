@@ -92,8 +92,21 @@ input[type="button"]:focus {
   order: -1;
   margin-right: $base-vertical-unit;
   border: none;
+  width: 38px;
 
   @media (min-width: $screen-sm-min) {
     display: none;
   }
+}
+
+.button--menu-close {
+  display: none;
+}
+
+.is-active .button--menu-close {
+  display: inline;
+}
+
+.is-active .button--menu-open {
+  display: none;
 }
