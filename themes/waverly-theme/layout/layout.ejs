@@ -1,0 +1,108 @@
+<%
+var pageTitle = page.title || config.subtitle || '';
+if (is_archive()) pageTitle = 'Archives';
+if (is_tag()) pageTitle = 'Tag: ' + page.tag;
+if (is_category()) pageTitle = 'Category: ' + page.category;
+if (is_month()) pageTitle += ': ' + page.month + '/' + page.year;
+if (is_year()) pageTitle += ': ' + page.year;
+pageTitle += ' | ' + config.title;
+%>
+<!doctype html>
+<html class="no-js" lang="<%= config.language %>">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title><%=pageTitle%></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<%- open_graph() %>
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/5e032a37-9d8b-4f87-a5f8-27da504f3d82.css"/>
+	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
+	<% theme.stylesheets.forEach(function(url) { %>
+		<link rel="stylesheet" href="<%=url%>">
+	<% }); %>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" class="<%=page.slug %>">
+<div class="nav--menu">
+	<header class="site-header" role="banner">
+		<% if (is_home()){ %>
+		<h1 class="site-title site-title--name" itemprop="name">
+			<a href="<%- config.root %>"><%= config.title %></a>
+		</h1>
+		<% } else { %>
+		<p class="site-title site-title--name" itemprop="name">
+			<a href="<%- config.root %>"><%= config.title %></a>
+		</p>
+		<% } %>
+		<p class="site-title site-title--sub" itemprop="specialty"><%= config.subtitle %></p>
+		<button id="js-toggle-menu" class="button--menu" aria-label="Site Menu"><i class="button--menu-open ion-navicon" aria-hidden="true"></i><i class="button--menu-close ion-android-close" aria-hidden="true"></i></button>
+	</header>
+	<nav id="js-menu" class="nav" role="navigation" itemprop="breadcrumb">
+		<ul>
+			<% Object.keys(theme.menu).forEach(function(key) { %>
+			<li><a href="<%=theme.menu[key]%>"><%=key%></a></li>
+			<% }); %>
+		</ul>
+	</nav>
+</div>
+<div class="layout--main">
+	<div class="container">
+		<main role="main" itemscope itemtype="http://schema.org/Blog">
+			<!--[if lte IE 9]>
+			<p class="align-center">This is a portfolio site. I used this opportunity to experiment with <a href="http://caniuse.com/#feat=flexbox" title="Can I Use">CSS Flexbox</a>. Please use a <a href="http://browsehappy.com/" title="Browse Happy">modern browser</a>.</p>
+			<![endif]-->
+			<%- body %>
+		</main>
+		<footer class="row" role="contentinfo">
+			<div class="newsletter--l">
+				<div class="footer--col--l">
+					<form class="form form--box" action="https://tinyletter.com/ian-rose" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/ian-rose', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+						<p>
+							<label for="tlemail">Sign up to have updates sent directly to your inbox.</label>
+						</p>
+						<input type="text" placeholder="Your email here" name="email" id="tlemail"/>
+						<input type="hidden" value="1" name="embed"/>
+						<input type="submit" value="Subscribe" class="button button--primary"/>
+					</form>
+				</div>
+			</div>
+			<div class="footer--nav--l">
+				<nav class="nav row" role="navigation">
+					<div class="footer--col--l">
+						<div><a href="https://twitter.com/ThatIanRose" target="_blank">Twitter</a></div>
+						<div><a href="https://github.com/ianrose" target="_blank">GitHub</a></div>
+						<div><a href="http://linkedin.com/in/roseian/" target="_blank">LinkedIn</a></div>
+					</div>
+					<div class="footer--col--l">
+						<div><a href="https://tinyletter.com/ian-rose" target="_blank">Newsletter</a></div>
+						<div><a href="http://feeds.feedburner.com/ianrose?format=xml" target="_blank">RSS</a></div>
+						<div><a href="https://github.com/ianrose/ianrose-source" target="_blank">Site Source</a></div>
+					</div>
+				</nav>
+			</div>
+				<div class="back-to-top--l">
+					<div class="footer--col--l">
+						<a class="button--link" href="#top">Back to Top</a>
+					</div>
+				</div>
+		</footer>
+	</div>
+</div>
+<%- js('js/script') %>
+<script>
+	(function (i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r;
+		i[r] = i[r] || function () {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date();
+		a = s.createElement(o),
+			m = s.getElementsByTagName(o)[0];
+		a.async = 1;
+		a.src = g;
+		m.parentNode.insertBefore(a, m)
+	})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+	ga('create', 'UA-20417568-2', 'ianrose.me');
+	ga('send', 'pageview');
+</script>
+</body>
+</html>

@@ -12,21 +12,21 @@
     <div class="row">
       <div class="layout--col col col-xs-12 col-sm-7 col-md-5 col-lg-5 pad-xs">
         <h2 class="heading--alt h4"><a href="categories/articles">Articles</a></h2>
-        <% get_posts({ count: 5, orderby: "date", order: -1, query: {categories: 'articles'}}).each(function(post) { %>
+        <%site.categories.findOne({name: 'articles'}).posts.sort('date', -1).limit(14).each(function(post) {%>
         <%- partial('_partial/index-article', {post: post, index: true}) %>
-        <% }) %>
+        <% })%>
       </div>
       <div class="layout--col layout--work col col-xs-12 col-sm-5 col-md-4 col-lg-4 pad-xs pad-xs">
         <h2 class="heading--alt h4"><a href="categories/work">Work</a></h2>
-        <% get_posts({count: 5, orderby: "date", order: -1, query: {categories: 'work'}}).each(function(post) { %>
+        <%site.categories.findOne({name: 'work'}).posts.sort('date', -1).limit(14).each(function(post) {%>
         <%- partial('_partial/index-work', {post: post, index: true}) %>
-        <% }) %>
+        <% })%>
       </div>
       <div class="layout--notes col col-xs-12 col-sm-7 col-md-3 col-lg-3 pad-xs">
         <h2 class="heading--alt h4"><a href="categories/notes">Notes</a></h2>
-        <% get_posts({count: 5, orderby: "date", order: -1, query: {categories: 'notes'}}).each(function(post) { %>
+        <%site.categories.findOne({name: 'notes'}).posts.sort('date', -1).limit(14).each(function(post) {%>
         <%- partial('_partial/index-note', {post: post, index: true}) %>
-        <% }) %>
+        <% })%>
       </div>
     </div>
   </div>

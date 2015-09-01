@@ -5,10 +5,10 @@
 # Site
 title: Ian Rose
 subtitle: Front-end Designer
-description: Ian Rose is a Front-end designer living and working in New York City
+description: Ian Rose is a Front-end designer living & working in New York City
 author: Ian Rose
 email: ian@ianrose.me
-language:
+language: en
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -52,20 +52,11 @@ archive: 2
 category: 2
 tag: 2
 
-# Server
-## Hexo uses Connect as a server
-## You can customize the logger format as defined in
-## http://www.senchalabs.org/connect/logger.html
-port: 8080
-server_ip: localhost
-logger: false
-logger_format: dev
-
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
 ## http://momentjs.com/docs/#/displaying/format/
-date_format: MMMM D, YYYY
+date_format: MMM DD, YYYY
 time_format: H:mm:ss
 
 # Pagination
@@ -73,27 +64,19 @@ time_format: H:mm:ss
 per_page: 10
 pagination_dir: page
 
-autoprefixer:
-  enable: true
-  debug: false
-  browsers:
-    - last 6 versions
-
-copyAssets: _redirects,_headers
-
 # Disqus
 disqus_shortname: ianrose
 
 # Extensions
 ## Plugins: https://github.com/hexojs/hexo/wiki/Plugins
 ## Themes: https://github.com/hexojs/hexo/wiki/Themes
-theme: ianrose-theme
+theme: waverly-theme
 exclude_generator:
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  type: github
+  type: git
   repo: git@github.com:ianrose/ianrose.github.io.git
 
 marked:
@@ -116,6 +99,17 @@ feed:
   path: atom.xml
   limit: 0
 
-yaml-front-matter:
+node_sass:
+  outputStyle: nested
+  precision: 8
+  imagePath: images
+  sourceComments: none
+  includePaths:
+    - ''
+  indentedSyntax: false
+  omitSourceMapUrl: false
+  sourceMapEmbed: false
+  sourceMapContents: false
 
-after_post_render:
+autoprefixer:
+  exclude:

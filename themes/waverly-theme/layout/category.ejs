@@ -1,0 +1,6 @@
+<h1 class="heading heading--page"><%- titlecase(page.category) %></h1>
+<div class="section row">
+	<% page.posts.each(function(post) { %>
+	<%- partial('partials/entry-category', {post: post, index: true}) %>
+	<% }); %>
+</div>

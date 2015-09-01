@@ -1,0 +1,4 @@
+<time class="meta meta--primary" datetime="<%= date_xml(page.date) %>" itemprop="datePublished"><%= date(page.date, config.date_format) %></time>
+<% if (page.updated) { %>
+<span class="meta meta--alt">updated <time datetime="<%= date_xml(page.updated) %>" itemprop="dateModified"><%= date(page.updated, config.date_format) %></time></span>
+<% } %>

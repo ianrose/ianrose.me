@@ -1,0 +1,14 @@
+<div class="entry entry--post archive-type-<%= post.layout %>" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+	<div class="meta--txt">
+		<%- partial('partials/date', {class_name: '', page: post}) %>
+		<%- partial('partials/tag', {class_name: '', page: post}) %>
+	</div>
+	<%- partial('entry-heading', {class_name: 'h4 archive-article-title'}) %>
+	<% if(post.excerpt && index) {%>
+	<p class="dek" itemprop="description">
+		<%= strip_html(post.excerpt) %>
+		<% } else { %>
+		<a href="<%- config.root %><%- post.path %>"><%= theme.excerpt_link %></a>
+	</p>
+	<% } %>
+</div>

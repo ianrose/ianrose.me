@@ -1,0 +1,40 @@
+.section--id {
+  @extend .h1;
+  color: $lighter-grey;
+
+  @media (min-width: $screen-md-min) {
+    border-top: $border-width-narrow solid $text-color;
+  }
+}
+
+.section--id--l {
+  flex-basis: $span-1;
+  max-width: $span-1;
+  padding-left: $gutter;
+  padding-right: $gutter;
+}
+
+.section--posts {
+  flex-basis: $span-6;
+
+  @media (min-width: $screen-lg-min) {
+    max-width: $span-6;
+  }
+}
+
+.section--heading {
+  @extend .h5;
+  flex-basis: $span-1;
+  padding-left: $gutter;
+  padding-right: $gutter;
+
+  @media (min-width: $screen-lg-min) {
+    margin-left: $span-1;
+  }
+}
+
+.section--body {
+  flex-basis: $span-4;
+  padding-left: $gutter;
+  padding-right: $gutter;
+}

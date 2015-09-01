@@ -1,0 +1,36 @@
+.entry {
+  margin-bottom: emRhythm(6);
+}
+
+.entry--post {
+  flex-basis: $span-half;
+  padding-left: $gutter;
+  padding-right: $gutter;
+
+  @media (min-width: $screen-md-min) {
+    max-width: $span-half;
+  }
+}
+
+.entry--media {
+  display: block;
+}
+
+.entry--category-container {
+  padding-left: $gutter;
+  padding-right: $gutter;
+
+  @media (min-width: $screen-lg-min) {
+    display: flex;
+    flex-basis: $span-half;
+    max-width: $span-half;
+  }
+}
+
+.entry--category {
+  border-bottom: $border-width-narrow solid $text-color;
+}
+
+.entry-heading--category {
+  @extend .h2;
+}
