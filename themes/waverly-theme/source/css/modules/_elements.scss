@@ -61,16 +61,6 @@ h1, .h1 {
 h2, .h2 {
   margin-bottom: emRhythm(0.5, $ms-up1, $silent: true);
   @include setType(3, $ms-up1);
-
-  @media (min-width: $screen-sm-min) {
-    margin-bottom: emRhythm(0.5, $ms-up2, $silent: true);
-    @include setType(4, $ms-up2);
-  }
-
-  @media (min-width: $screen-md-min) {
-    margin-bottom: emRhythm(0.5, $ms-up3, $silent: true);
-    @include setType(5, $ms-up3);
-  }
 }
 
 h3, .h3 {
@@ -84,8 +74,8 @@ h3, .h3 {
 }
 
 h4, .h4 {
-  margin-bottom: emRhythm(0.5, $ms-up1, $silent: true);
-  @include setType(3, $ms-up1);
+  margin-bottom: emRhythm(0.5, $silent: true);
+  @include setType(3);
 }
 
 h5, .h5,
@@ -114,7 +104,7 @@ a:active {
 
 p {
   margin-top: 0;
-  margin-bottom: emRhythm($base-line-multi);
+  margin-bottom: emRhythm(2);
   padding-top: 0;
   padding-bottom: 0;
 
