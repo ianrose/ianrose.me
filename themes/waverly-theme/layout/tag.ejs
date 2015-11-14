@@ -1,5 +1,0 @@
-<h1 class="heading heading--page"><%- titlecase(page.tag) %></h1>
-<% page.posts.each(function(post) { %>
-<%- partial('partials/entry-category', {post: post, index: true}) %>
-<% }); %>
-<%-partial('partials/pagination')%>

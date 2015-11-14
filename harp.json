@@ -1,0 +1,46 @@
+{
+  "globals": {
+    "name": "Ian Rose",
+    "title": "Front-end Designer",
+    "url": "http://ianrose.me",
+    "description": "Ian Rose is a Front-end designer living &amp; working in New York City.",
+    "keywords": "Ian Rose, Web Designer, Front-end, Designer",
+    "domain": "surge.sh",
+    "authors": {
+      "firstlast": {
+        "name": "Ian Rose",
+        "email": "ian@ianrose.me",
+        "bio": "Designer at News Org",
+        "role": "Designer",
+        "twitter": "thatianrose",
+        "github": "ianrose"
+      },
+      "secondthird": {
+        "name": "Second Last",
+        "email": "second@address.com",
+        "bio": "Editor at News Org",
+        "role": "Editor",
+        "twitter": "secondLast",
+        "github": "secondLast"
+      }
+    },
+    "service": {
+      "analytics": "UA-XXXXXX-1",
+      "service": "example",
+      "googlefonts": ["Lora:400,400italic,700:latin", "Work+Sans:400,600,800:latin"],
+      "googleverification": null,
+      "facebookid": null,
+      "socialimage": "images/social-image.jpg",
+      "appleid": null,
+      "twitter": "thatianrose",
+      "disqus": "storysettings"
+    },
+    "thanks": {
+      "firstlast": {
+       "name": "First Last",
+       "url": "firstlast.com"
+      }
+    }
+  },
+  "domains": []
+}

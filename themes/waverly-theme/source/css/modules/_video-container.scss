@@ -1,9 +1,0 @@
-.video-container {
-  @extend .ratio-16x9;
-  @extend .intrinsic-wrapper;
-  margin-bottom: emRhythm($base-line-multi);
-
-  iframe {
-    @extend .intrinsic-wrapper-element;
-  }
-}
