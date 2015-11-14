@@ -1,0 +1,14 @@
+{
+  "name": "jquery-2.1.4",
+  "_cacheHeaders": {
+    "ETag": "\"553fb284-3c72d\"",
+    "Last-Modified": "Tue, 28 Apr 2015 16:17:08 GMT",
+    "Content-Length": "247597",
+    "Content-Type": "application/javascript; charset=utf-8"
+  },
+  "_release": "e-tag:553fb284-",
+  "main": "index.js",
+  "_source": "http://code.jquery.com/jquery-2.1.4.js",
+  "_target": "*",
+  "_originalSource": "http://code.jquery.com/jquery-2.1.4.js"
+}

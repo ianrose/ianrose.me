@@ -1,0 +1,31 @@
+.highlight {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  overflow: auto;
+
+  td {
+    border-bottom: none;
+  }
+
+  td {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  pre {
+    background-color: transparent;
+  }
+
+  .gutter {
+    color: $light-grey;
+    text-align: right;
+    width: emRhythm(3, $ms-down1);
+    border-right: 1px solid $lighter-grey;
+  }
+
+  .code {
+    padding-left: emRhythm(1);
+  }
+}

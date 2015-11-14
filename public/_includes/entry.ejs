@@ -1,0 +1,16 @@
+<div class="entry--category-container">
+  <div class="entry entry--category<% if (current.path[0] == 'index'){ %> is-home<% } %>" itemscope="" itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+    <div class="entry--txt">
+      <% if(entry.date) { %>
+      <div class="meta--txt">
+        <% include time%>
+      </div>
+      <% } %>
+      <a class="entry--media" href="/work/<%= slug %>">
+        <img class="img-responsive media--entry media--entry-default" src="../img/projects/<%= slug %>.png" alt="<%= entry.title %>">
+      </a>
+      <h3 class="entry-heading--category" itemprop="headline"><a href="/work/<%= slug %>"><%= entry.title %></a></h3>
+      <p class="dek" itemprop="description"><%= entry.desc %></p>
+    </div>
+  </div>
+</div>

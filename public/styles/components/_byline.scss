@@ -1,0 +1,9 @@
+.byline {
+  color: $light-grey;
+  font-family: $font-sans;
+
+  span {
+    font-weight: 600;
+    color: $text-color;
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "start-a-blog-with-harp": {
+    "title": "Start a blog with Harp",
+    "date": "2014-05-07",
+    "tags": ["harp", "static", "blog"],
+    "author": "kennethormandy"
+  },
+  "draft-post": {
+    "title": "Draft post",
+    "date": "2013-12-20",
+    "author": "kennethormandy",
+    "published": false
+  },
+  "example-post": {
+    "title": "Example Post",
+    "date": "2013-07-03",
+    "tags": ["lorem" , "harp", "css"],
+    "author": "simurai"
+  }
+}

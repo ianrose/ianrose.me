@@ -1,0 +1,22 @@
+.layout--main {
+  padding-top: $gutter * 2;
+  padding-bottom: emRhythm(9);
+
+  @media (min-width: $screen-sm-min) {
+    margin-left: $site-menu-width;
+  }
+
+  & > .container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    margin-bottom: emRhythm(9);
+  }
+}
+
+.layout--gutter-bottom {
+  margin-bottom: $site-header-height / 2;
+}

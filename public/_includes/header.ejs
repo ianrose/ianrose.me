@@ -1,0 +1,13 @@
+<header class="site-header">
+  <% if (current.path[0] == 'index'){ %>
+  <h1 class="site-title site-title--name" itemprop="name">
+    <a href="/"><%= name %></a>
+  </h1>
+  <% } else { %>
+  <p class="site-title site-title--name" itemprop="name">
+    <a href="/"><%= name %></a>
+  </p>
+  <% } %>
+  <p class="site-title site-title--sub" itemprop="specialty"><%= title %></p>
+  <button id="js-toggle-menu" class="button--menu" aria-label="Site Menu"><i class="button--menu-open ion-navicon" aria-hidden="true"></i><i class="button--menu-close ion-android-close" aria-hidden="true"></i></button>
+</header>
