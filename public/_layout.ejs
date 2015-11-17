@@ -1,5 +1,4 @@
 <% include _includes/typogr %>
-<% include _includes/moment %>
 <!doctype html>
 <html lang="en" class="no-js">
   <% include _includes/head %>
@@ -17,7 +16,7 @@
 
 
 
-          <% if(current.path[0] == "work" && current.source !== 'index') { %>
+          <% if(current.path[0] == "work" || "articles" && current.source !== 'index') { %>
             <%- partial(current.path[0] + "/_nest") %>
           <% } else { %>
             <%- typogr.typogrify(yield) %>

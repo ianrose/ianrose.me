@@ -6,29 +6,24 @@
     "description": "Ian Rose is a Front-end designer living &amp; working in New York City.",
     "keywords": "Ian Rose, Web Designer, Front-end, Designer",
     "domain": "surge.sh",
-    "authors": {
-      "firstlast": {
-        "name": "Ian Rose",
-        "email": "ian@ianrose.me",
-        "bio": "Designer at News Org",
-        "role": "Designer",
-        "twitter": "thatianrose",
-        "github": "ianrose"
-      },
-      "secondthird": {
-        "name": "Second Last",
-        "email": "second@address.com",
-        "bio": "Editor at News Org",
-        "role": "Editor",
-        "twitter": "secondLast",
-        "github": "secondLast"
-      }
+    "sourceurl": "https://github.com/ianrose/ianrose-source",
+    "author": {
+      "name": "Ian Rose",
+      "email": "ian@ianrose.me",
+      "bio": "Designer at News Org",
+      "role": "Designer",
+      "twitter": "thatianrose",
+      "github": "ianrose",
+      "linkedin": "roseian",
+      "tinyletter": "ian-rose",
+      "feedburner": "ianrose"
     },
     "service": {
       "analytics": "UA-XXXXXX-1",
       "service": "example",
-      "googlefonts": ["Lora:400,400italic,700:latin", "Work+Sans:400,600,800:latin"],
+      "googlefonts": null,
       "googleverification": null,
+      "fontscom": "5e032a37-9d8b-4f87-a5f8-27da504f3d82",
       "facebookid": null,
       "socialimage": "images/social-image.jpg",
       "appleid": null,
@@ -37,8 +32,8 @@
     },
     "thanks": {
       "firstlast": {
-       "name": "First Last",
-       "url": "firstlast.com"
+        "name": "First Last",
+        "url": "firstlast.com"
       }
     }
   },

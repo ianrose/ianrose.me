@@ -1,30 +1,23 @@
-<% if(typeof published==='undefined' || published!==false) { %>
-
-<main class="main">
-
-  <article class="article">
-    <h1><%- title %></h1>
-    <div class="article-meta">
-      <% if(author) { %>
-      <a href="http://twitter.com/<%= authors[author].twitter %>"><%= authors[author].name %></a>
-      <% } %>
-      <time class="time"> on <%- date %></time>
+<article class="article--post">
+  <div class="meta--post--l">
+    <div class="row">
+      <div class="meta--container meta--container-post">
+        <div class="meta--txt meta--heading">
+          <span class="meta meta--primary"><a class="meta--link" href="/categories/work/"><%- current.path[0] %></a></span>
+        </div>
+      </div>
+      <div class="meta--container meta--container-post">
+        <div class="meta--txt meta--heading">
+          <% include ../_includes/time %>
+        </div>
+      </div>
     </div>
-    <%- yield %>
-  </article>
-
-  <% include ../_includes/comments %>
-
-</main>
-
-<nav class="subnav">
-
-  <%- partial("../_includes/article-nav") %>
-
-</nav>
-
-<% } else { %>
-
-<% include ../404 %>
-
-<% } %>
+  </div>
+  <header class="article--header">
+    <h1 itemprop="name"><%- typogr.typogrify(title) %></h1>
+    <p class="dek dek--lg"><%- typogr.typogrify(desc) %></p>
+  </header>
+  <div class="article--body" itemprop="articleBody">
+    <%- typogr.typogrify(yield) %>
+  </div>
+</article>

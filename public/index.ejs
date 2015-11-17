@@ -11,6 +11,7 @@
       <% for(var slug in public.articles._data){ %>
       <% var entry = public.articles._data[slug] %>
       <% var date = entry.date %>
+      <% var modified = entry.modified %>
       <% include _includes/entry %>
       <% } %>
     </div>
@@ -28,6 +29,7 @@
       <% for(var slug in public.work._data){ %>
       <% var entry = public.work._data[slug] %>
       <% var date = entry.date %>
+      <% var modified = entry.modified %>
         <% include _includes/entry %>
       <% } %>
     </div>
