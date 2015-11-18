@@ -16,7 +16,7 @@
 
 
 
-          <% if(current.path[0] == "work" || "articles" && current.source !== 'index') { %>
+          <% if((current.path[0] == "work" || current.path[0] == "articles") && current.source !== 'index') { %>
             <%- partial(current.path[0] + "/_nest") %>
           <% } else { %>
             <%- typogr.typogrify(yield) %>

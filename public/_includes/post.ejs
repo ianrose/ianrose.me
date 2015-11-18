@@ -1,0 +1,40 @@
+<article class="article--post">
+  <div class="meta--post--l">
+    <div class="row">
+      <div class="meta--container meta--container-post">
+        <div class="meta--txt meta--heading">
+          <span class="meta meta--primary"><a class="meta--link" href="/<%- current.path[0] %>"><%- current.path[0] %></a></span>
+        </div>
+      </div>
+      <div class="meta--container meta--container-post">
+        <div class="meta--txt meta--heading">
+          <% include time %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <header class="article--header">
+    <h1 itemprop="name"><%- typogr.typogrify(title) %></h1>
+    <p class="dek dek--lg"><%- typogr.typogrify(desc) %></p>
+    <% include byline %>
+  </header>
+  <div class="article--body" itemprop="articleBody">
+    <%- typogr.typogrify(yield) %>
+  </div>
+</article>
+<nav class="nav nav--post row" role="navigation">
+  <div class="nav--prev">
+    <h5 class="nav--post-heading">Typesettings</h5>
+    <p class="dek dek--sm">A CSS preprocessor toolkit that helps set type and elements in Ems with modular scale, vertical rhythm, and responsive ratio based headlines.</p>
+  </div>
+  <div class="nav--post-button">
+    <a class="button--link" href="/<%- current.path[0] %>/#">Previous</a>
+  </div>
+  <div class="nav--next">
+    <h5 class="nav--post-heading">Permanent Redirect GitHub Project Page to Custom Domain</h5>
+    <p class="dek dek--sm">How to get a GitHub hosted project site to 301 redirect to a custom domain name using CloudFlare.</p>
+  </div>
+  <div class="nav--post-button">
+    <a class="button--link" href="/<%- current.path[0] %>/">Next</a>
+  </div>
+</nav>

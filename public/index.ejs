@@ -9,6 +9,7 @@
     </div>
     <div class="row">
       <% for(var slug in public.articles._data){ %>
+      <% var parentSlug = 'articles' %>
       <% var entry = public.articles._data[slug] %>
       <% var date = entry.date %>
       <% var modified = entry.modified %>
@@ -27,10 +28,11 @@
     </div>
     <div class="row">
       <% for(var slug in public.work._data){ %>
+      <% var parentSlug = 'work' %>
       <% var entry = public.work._data[slug] %>
       <% var date = entry.date %>
       <% var modified = entry.modified %>
-        <% include _includes/entry %>
+      <% include _includes/entry %>
       <% } %>
     </div>
   </div>
