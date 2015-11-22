@@ -1,1 +1,10 @@
 <% include ../_includes/post %>
+<% var posts = []; %>
+<% for(var slug in public.articles._data){ %>
+  <% var post = public.articles._data[slug] %>
+  <% if(post.date && post.published !== false) { %>
+    <% post.slug = slug; %>
+    <% posts.push(public.articles._data[slug]);%>
+  <% } %>
+<% } %>
+<% include ../_includes/pagination %>

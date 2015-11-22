@@ -8,9 +8,10 @@
       <h2 class="meta--txt meta--primary meta--heading">Articles</h2>
     </div>
     <div class="row">
-      <% for(var slug in public.articles._data){ %>
+      <% var slug = Object.keys(public.articles._data);
+      for(var i=0; i<Math.min(6,slug.length); i++) { %>
       <% var parentSlug = 'articles' %>
-      <% var entry = public.articles._data[slug] %>
+      <% var entry = public.articles._data[slug[i]] %>
       <% var date = entry.date %>
       <% var modified = entry.modified %>
       <% include _includes/entry %>
@@ -27,9 +28,10 @@
       <h2 class="meta--txt meta--primary meta--heading">Work</h2>
     </div>
     <div class="row">
-      <% for(var slug in public.work._data){ %>
+      <% var slug = Object.keys(public.work._data); %>
+      <% for(var i=0; i<Math.min(6,slug.length); i++) { %>
       <% var parentSlug = 'work' %>
-      <% var entry = public.work._data[slug] %>
+      <% var entry = public.work._data[slug[i]] %>
       <% var date = entry.date %>
       <% var modified = entry.modified %>
       <% include _includes/entry %>
@@ -46,7 +48,8 @@
       <h2 class="meta--txt meta--primary meta--heading">Notes</h2>
     </div>
     <div class="row">
-
+      <h1><%= public.work._data %></h1>
+      <pre><%- JSON.stringify(public, null, '\t') %></pre>
     </div>
   </div>
 </div>
