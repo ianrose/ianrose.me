@@ -1,6 +1,5 @@
 While building with Hexo I came across a need to get all the posts by a specific category and render them through a specific partial.
 
-<!--more-->
 Hexo is great open source project in many ways. However due to language barriers the English documentation needs help from the project’s community. Myself included. Skip right to the [solution](#The_Solution).
 
 ## The Scenario
@@ -22,7 +21,7 @@ Thanks to [Brad Oyler](http://bradoyler.com/ "Brad Oyler's website") for pairing
   order: -1,
   query: categories: ‘projects’
   }).each(function(post)  %>
-    <%- partial('_partial/index-post', post: post, index: true) %> 
+    <%- partial('_partial/index-post', post: post, index: true) %>
 <% }) %>
 ```
 

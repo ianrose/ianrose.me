@@ -175,20 +175,23 @@ blockquote {
   }
 }
 
-blockquote.left,
-blockquote.right {
+.pullquote.left,
+.pullquote.right {
+  margin-top: emRhythm(3);
+  margin-bottom: emRhythm(3);
+  font-family: $font-display-serif;
   padding-top: emRhythm(2);
   border-top: $border-width-wide solid $text-color;
   width: 50%;
 
   p {
-    margin-bottom: emRhythm(1, $ms-up1);
+    margin-bottom: emRhythm(1, $ms-up2);
     text-indent: $base-vertical-unit * -1.5;
-    @include setType(3, $ms-up1);
+    @include setType(4, $ms-up2);
   }
 }
 
-blockquote.left {
+.pullquote.left {
   float: left;
   margin-right: emRhythm(3);
   margin-left: -$gutter;
@@ -202,6 +205,7 @@ code {
   padding-left: 0.25em;
   padding-right: 0.25em;
   margin: 0;
+  margin-bottom: emRhythm(3);
 }
 
 ol,

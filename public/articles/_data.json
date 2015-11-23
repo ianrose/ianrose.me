@@ -1,33 +1,46 @@
 {
-  "post-four": {
-    "title": "Post Four",
-    "date": "2014-01-01",
+  "organizing-styles-when-using-typesettings": {
+    "title": "Organizing Styles When Using Typesettings",
+    "date": "2014-05-01",
     "modified": null,
     "tags": ["lorem" , "harp", "css"],
-    "desc": "A CSS preprocessor toolkit that helps set type and elements in Ems with modular scale, vertical rhythm, and responsive ratio based headlines.",
-    "published": true
+    "desc": "At work I’ve been cranking on a prototype. I decided to give a Typesettings a go in more of a production setting that required designing in the browser. Overall the experience has been pretty good.",
+    "published": true,
+    "art": null
   },
-  "post-three": {
-    "title": "Post Three",
-    "date": "2015-01-01",
+  "permanent-rediect-github-project-page": {
+    "title": "Permanent Redirect GitHub Project Page to Custom Domain",
+    "date": "2014-04-30",
     "modified": null,
-    "desc": "A CSS preprocessor toolkit that helps set type and elements in Ems with modular scale, vertical rhythm, and responsive ratio based headlines.",
-    "published": true
+    "desc": "How to get a GitHub hosted project site to 301 redirect to a custom domain name using CloudFlare.",
+    "published": true,
+    "art": null
   },
-  "post-two": {
-    "title": "Post Two",
-    "date": "2016-01-01",
+  "sass-type-toolkit-typesettings": {
+    "title": "A Sass Type Toolkit: Typesettings",
+    "date": "2014-04-24",
     "modified": null,
     "tags": ["harp", "static", "blog"],
-    "desc": "A CSS preprocessor toolkit that helps set type and elements in Ems with modular scale, vertical rhythm, and responsive ratio based headlines.",
-    "published": true
+    "desc": "Setting type using modular scale and maintaining vertical rhythm is not a new topic, at all. There are so many great tools and articles out there that help designers do these things. However I couldn’t find exactly what I was looking for.",
+    "published": true,
+    "art": null
   },
-  "post-one": {
-    "title": "Post One",
+  "the-too-good-to-be-true-css-text-rendering-property": {
+    "title": "The Too Good to Be True CSS Text Rendering Property",
     "date": "2017-01-01",
     "modified": null,
     "tags": ["harp", "static", "blog"],
-    "desc": "A CSS preprocessor toolkit that helps set type and elements in Ems with modular scale, vertical rhythm, and responsive ratio based headlines.",
-    "published": true
+    "desc": "The CSS text rendering property is a mixed bag. On initial pass it seems to be an obvious choice for improving type on the web.",
+    "published": true,
+    "art": null
+  },
+  "getting-posts-by-category-with-hexo": {
+    "title": "Getting Posts by Category with Hexo",
+    "date": "2015-01-20",
+    "modified": null,
+    "tags": ["harp", "static", "blog"],
+    "desc": "While building with Hexo I came across a need to get all the posts by a specific category and render them through a specific partial.",
+    "published": true,
+    "art": null
   }
 }

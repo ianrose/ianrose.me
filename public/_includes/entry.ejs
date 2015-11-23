@@ -6,9 +6,11 @@
         <% include time%>
       </div>
       <% } %>
+      <% if(current.path[0] !== 'index' && entry.art) { %>
       <a class="entry--media" href="/<%- parentSlug %>/<% if (current.path[0] == 'index'){ %><%= slug[i] %><% } else { %><%= slug %><% } %>">
         <img class="img-responsive media--entry media--entry-default" src="../img/projects/<%= slug %>.png" alt="<%= entry.title %>">
       </a>
+      <% } %>
       <h3 class="entry-heading--category" itemprop="headline"><a href="/<%- parentSlug %>/<% if (current.path[0] == 'index'){ %><%= slug[i] %><% } else { %><%= slug %><% } %>"><%= entry.title %></a></h3>
       <p class="dek" itemprop="description"><%= entry.desc %></p>
     </div>

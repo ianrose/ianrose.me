@@ -6,10 +6,10 @@
 // apart if you want :)
 
 // Font families and default text color.
-$font-sans: 'Neue Haas Grotesk W01', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-headline: 'Neue Haas Grotesk W01 Disp', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-serif: 'Leitura News W01', Georgia, 'Times New Roman', serif;
-$font-display-serif: 'Leitura W01 Display', Georgia, 'Times New Roman', serif;
+$font-sans: 'freight-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-headline: 'freight-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-serif: 'freight-text-pro', TimesNewRoman, 'Times New Roman', Times, serif;
+$font-display-serif: 'freight-display-pro', TimesNewRoman, 'Times New Roman', Times, serif;
 $font-mono: Menlo, Monaco, monospace;
 $text-color: #282832;
 
@@ -55,8 +55,8 @@ $site-header-height: 249px;
 $site-menu-width: 167px;
 
 $container-md-width: 730px;
-$container-lg-width: 900px;
-$container-xl-width: 1100px;
+$container-lg-width: 800px;
+$container-xl-width: 1000px;
 
 // Grid attributes
 $gutter: ($base-vertical-unit * $base-line-multi) / 2;
@@ -71,4 +71,3 @@ $screen-xl-min: $container-xl-width + $site-menu-width + $gutter;
 $screen-xs-max: ($screen-sm-min -1px);
 $screen-sm-max: ($screen-md-min - 1px);
 $screen-md-max: ($screen-lg-min - 1px);
-
