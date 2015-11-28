@@ -7,3 +7,6 @@ node_modules/
 .idea
 .idea/workspace.xml
 .deploy_git
+www
+public/vendor
+.tmp

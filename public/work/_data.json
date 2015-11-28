@@ -1,19 +1,19 @@
 {
   "newsblock": {
     "title": "Newsblock",
-    "date": "2014-05-07",
+    "date": "2015-07-19",
     "modified": null,
     "url": "http://newsblock.io",
     "desc": "A modern news aggregator that combines ‘topic relevance’ and ‘social trends’ to recommend the best stories.",
-    "art": null
+    "art": "newsblock-art.gif"
   },
   "typesettings": {
     "title": "Typesettings",
-    "date": "2014-05-07",
+    "date": "2014-12-30",
     "modified": null,
     "url": "http://typesettings.io",
     "desc": "A CSS preprocessor toolkit that helps set type and elements in Ems with modular scale, vertical rhythm, and responsive ratio based headlines.",
-    "art": null
+    "art": "typesettings-art.gif"
   },
   "joule-solar-energy": {
     "title": "Joule Solar Energy",
@@ -21,7 +21,7 @@
     "modified": null,
     "url": "joule-solar-energy",
     "desc": "Joule Solar Energy needed a consumer facing website that worked across devices to attract new customers and provide resources for current customers.",
-    "art": null
+    "art": "joulesolarenergy-art.jpg"
   },
   "clear-creek-transit-village": {
     "title": "Clear Creek Transit Village",
@@ -29,6 +29,6 @@
     "modified": null,
     "url": "clear-creek-transit-village",
     "desc": "Clear Creek Transit Village needed a brochure site to help attract investors and provide resources for the CCTV development team.",
-    "art": null
+    "art": "cctv-art.jpg"
   }
 }

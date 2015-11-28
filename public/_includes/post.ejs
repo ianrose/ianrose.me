@@ -1,4 +1,4 @@
-<article class="article--post">
+<article class="article--post" itemscope itemtype="http://schema.org/BlogPosting">
   <div class="meta--post--l">
     <div class="row">
       <div class="meta--container meta--container-post">
@@ -14,11 +14,11 @@
     </div>
   </div>
   <header class="article--header">
-    <h1 itemprop="name"><%- typogr.smartypants(title) %></h1>
+    <h1 itemprop="headline"><%- typogr.smartypants(title) %></h1>
     <p class="dek dek--lg"><%- typogr.typogrify(desc) %></p>
     <% include byline %>
   </header>
   <div class="article--body" itemprop="articleBody">
-    <%- typogr.typogrify(yield) %>
+    <%- yield %>
   </div>
 </article>

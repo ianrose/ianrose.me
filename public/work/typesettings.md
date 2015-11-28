@@ -2,7 +2,7 @@ Typesettings provides a designer or developer a toolkit of Sass or Stylus functi
 
 ## What Does It Solve
 
-<aside class="pullquote left">
+<aside class="pullquote right">
   <p>“Default styles to make creating nice type even easier”</p>
 </aside>
 

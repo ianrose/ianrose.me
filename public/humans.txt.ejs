@@ -2,17 +2,8 @@
 # The humans responsible & technology colophon
 
 # TEAM
-  
-<% for(handle in authors) {
-   var author = authors[handle] %>
-  <%= author.name %> --- <%= author.role %> <% if(author.twitter) { %> --- @<%= author.twitter %> <% } %>
-<% } %>
 
-# THANKS
-
-<% for(handle in thanks) { var thank = thanks[handle] %>
-  <%= thank.name %> <%if (thank.url) { %>--- <%= thank.url %><% } %>
-<% } %>
+<%= author.name %> --- <%= author.role %> <% if(author.twitter) { %> --- @<%= author.twitter %> <% } %>
 
 # TECHNOLOGY COLOPHON
 

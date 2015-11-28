@@ -121,7 +121,8 @@ small,
 }
 
 em {
-  font-style: italic;
+  font-style: normal;
+  font-weight: bold;
 }
 
 strong {
@@ -141,39 +142,39 @@ figcaption {
   @include setType(2, $ms-down1, $ms-up1);
 }
 
-blockquote {
-  margin-top: emRhythm(3);
-  margin-bottom: emRhythm(3);
-  margin-left: 0;
-  padding-bottom: 0;
-  margin-right: 0;
-  font-family: $font-display-serif;
-
-  p {
-    font-weight: 600;
-    margin-bottom: emRhythm(1, $ms-up2);
-    text-indent: $base-vertical-unit * -1.5;
-    padding-left: $base-vertical-unit;
-    @include setType(4, $ms-up2);
-  }
-
-  footer {
-    color: $light-grey;
-    font-weight: 400;
-    font-family: $font-sans;
-    @include setType(2, $ms-down1, $ms-up1);
-
-    strong {
-      font-weight: 400;
-    }
-    cite {
-      font-style: normal;
-      &:before {
-        content: " – ";
-      }
-    }
-  }
-}
+//blockquote {
+//  margin-top: emRhythm(3);
+//  margin-bottom: emRhythm(3);
+//  margin-left: 0;
+//  padding-bottom: 0;
+//  margin-right: 0;
+//  font-family: $font-display-serif;
+//
+//  p {
+//    font-weight: 600;
+//    margin-bottom: emRhythm(1, $ms-up2);
+//    text-indent: $base-vertical-unit * -1.5;
+//    padding-left: $base-vertical-unit;
+//    @include setType(4, $ms-up2);
+//  }
+//
+//  footer {
+//    color: $light-grey;
+//    font-weight: 400;
+//    font-family: $font-sans;
+//    @include setType(2, $ms-down1, $ms-up1);
+//
+//    strong {
+//      font-weight: 400;
+//    }
+//    cite {
+//      font-style: normal;
+//      &:before {
+//        content: " – ";
+//      }
+//    }
+//  }
+//}
 
 .pullquote.left,
 .pullquote.right {
@@ -185,6 +186,7 @@ blockquote {
   width: 50%;
 
   p {
+    font-weight: 900;
     margin-bottom: emRhythm(1, $ms-up2);
     text-indent: $base-vertical-unit * -1.5;
     @include setType(4, $ms-up2);
@@ -197,6 +199,12 @@ blockquote {
   margin-left: -$gutter;
 }
 
+.pullquote.right {
+  float: right;
+  margin-left: emRhythm(3);
+  margin-right: -$gutter;
+}
+
 pre,
 code {
   font-family: $font-mono;
@@ -205,7 +213,7 @@ code {
   padding-left: 0.25em;
   padding-right: 0.25em;
   margin: 0;
-  margin-bottom: emRhythm(3);
+  margin-bottom: emRhythm(3, $ms-down1);
 }
 
 ol,
