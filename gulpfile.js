@@ -1,7 +1,6 @@
 var gulp         = require('gulp');
 var browserSync  = require('browser-sync');
 var cp           = require('child_process');
-var harp         = require('harp');
 var jshint       = require('gulp-jshint');
 var uglify       = require('gulp-uglify');
 var gulpSequence = require('gulp-sequence');
