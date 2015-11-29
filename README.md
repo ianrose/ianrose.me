@@ -4,7 +4,7 @@
 
 A. Clone
 
-`git clone https://github.com/ianrose/storysettings.git`
+`git clone https://github.com/ianrose/ianrose.me.git`
 
 B. Install Gulp and Harp.js globally
 
