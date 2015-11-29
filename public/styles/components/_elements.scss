@@ -29,7 +29,7 @@ h6, .h6 {
   padding-top: 0;
   padding-bottom: 0;
   font-family: $font-headline;
-  font-weight: 700;
+  font-weight: 900;
   text-rendering: optimizeLegibility;
 
   a:link {
@@ -142,39 +142,39 @@ figcaption {
   @include setType(2, $ms-down1, $ms-up1);
 }
 
-//blockquote {
-//  margin-top: emRhythm(3);
-//  margin-bottom: emRhythm(3);
-//  margin-left: 0;
-//  padding-bottom: 0;
-//  margin-right: 0;
-//  font-family: $font-display-serif;
-//
-//  p {
-//    font-weight: 600;
-//    margin-bottom: emRhythm(1, $ms-up2);
-//    text-indent: $base-vertical-unit * -1.5;
-//    padding-left: $base-vertical-unit;
-//    @include setType(4, $ms-up2);
-//  }
-//
-//  footer {
-//    color: $light-grey;
-//    font-weight: 400;
-//    font-family: $font-sans;
-//    @include setType(2, $ms-down1, $ms-up1);
-//
-//    strong {
-//      font-weight: 400;
-//    }
-//    cite {
-//      font-style: normal;
-//      &:before {
-//        content: " – ";
-//      }
-//    }
-//  }
-//}
+blockquote {
+  margin-top: emRhythm(3);
+  margin-bottom: emRhythm(3);
+  margin-left: 0;
+  padding-bottom: 0;
+  margin-right: 0;
+  font-family: $font-display-serif;
+
+  p {
+    font-weight: 600;
+    margin-bottom: emRhythm(1, $ms-up2);
+    text-indent: $base-vertical-unit * -1.5;
+    padding-left: $base-vertical-unit;
+    @include setType(4, $ms-up2);
+  }
+
+  footer {
+    color: $light-grey;
+    font-weight: 400;
+    font-family: $font-sans;
+    @include setType(2, $ms-down1, $ms-up1);
+
+    strong {
+      font-weight: 400;
+    }
+    cite {
+      font-style: normal;
+      &:before {
+        content: " – ";
+      }
+    }
+  }
+}
 
 .pullquote.left,
 .pullquote.right {

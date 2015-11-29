@@ -21,7 +21,7 @@ A. Get a copy of Storysettings for your project.
 B. Install Gulp and Harp.js globally
 
 ```
-$ npm install -g harp@0.20.0
+$ npm install -g harp
 $ npm install -g gulp
 ```
 
