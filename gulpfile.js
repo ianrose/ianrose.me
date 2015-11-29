@@ -6,16 +6,16 @@ var jshint       = require('gulp-jshint');
 var uglify       = require('gulp-uglify');
 var gulpSequence = require('gulp-sequence');
 var imagemin     = require('gulp-imagemin');
+var surge        = require('gulp-surge');
 
 gulp.task('serve', function () {
-  harp.server('.', {
-    port: 9000
-  });
+  cp.exec('harp server --port 9000', {stdio: 'inherit'})
 });
 
 gulp.task('browser-sync', function() {
   browserSync({
-    proxy: "localhost:9000"
+    proxy: "localhost:9000",
+    open: false
   });
 });
 
@@ -49,6 +49,13 @@ gulp.task('images', function() {
     }))
     .pipe(gulp.dest('www/images'));
 });
+
+gulp.task('deploy', [], function () {
+  return surge({
+    project: './www',         // Path to your static build directory
+    domain: 'ianrose.me'  // Your domain or Surge subdomain
+  })
+})
 
 gulp.task('default', ['serve', 'browser-sync', 'watch']);
 gulp.task('build', gulpSequence('jshint', 'compile', ['scripts', 'images']));

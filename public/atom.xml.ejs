@@ -10,8 +10,9 @@
     <% if(post.title) { %>
     <item>
       <title><%= post.title %></title>
-      <description><![CDATA[<%- partial(slug) %>]]></description>
-      <pubDate><%= new Date(post.date) %></pubDate>
+      <description><%= post.desc %></description>
+      <% include _includes/moment %>
+      <pubDate><%-moment(post.date).format('ddd, DD MMM YYYY HH:mm:ss ZZ')%></pubDate>
       <link><%= url %>/articles/<%- slug %></link>
       <guid isPermaLink="true"><%= url %>/articles/<%= slug %></guid>
     </item>

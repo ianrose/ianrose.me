@@ -77,8 +77,15 @@
   max-height: 0;
   overflow-y: hidden;
 
+  a {
+    @include setType(5, $ms-up1);
+  }
+
   @media (min-width: $screen-sm-min) {
     max-height: none;
+    a {
+      @include setType(2, $ms-down1);
+    }
   }
 }
 

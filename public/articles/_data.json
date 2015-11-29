@@ -8,7 +8,7 @@
     "published": true,
     "art": null
   },
-  "permanent-rediect-github-project-page": {
+  "permanent-redirect-github-project-page": {
     "title": "Permanent Redirect GitHub Project Page to Custom Domain",
     "date": "2014-04-30",
     "modified": null,
@@ -27,7 +27,7 @@
   },
   "the-too-good-to-be-true-css-text-rendering-property": {
     "title": "The Too Good to Be True CSS Text Rendering Property",
-    "date": "2017-01-01",
+    "date": "2015-01-22",
     "modified": null,
     "tags": ["harp", "static", "blog"],
     "desc": "The CSS text rendering property is a mixed bag. On initial pass it seems to be an obvious choice for improving type on the web.",
