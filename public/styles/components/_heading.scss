@@ -1,0 +1,29 @@
+.heading--page {
+  @extend .h1;
+  font-family: TimesNewRoman, 'Times New Roman', Times, serif;
+  font-weight: 600;
+  padding-left: $gutter;
+  padding-right: $gutter;
+  margin-bottom: $gutter * 3;
+  letter-spacing: -1px;
+
+  @media (min-width: $screen-sm-min) {
+    min-height: $site-header-height;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $screen-lg-min) {
+    max-width: $span-6;
+  }
+}
+
+.wf-freightdisplaypro-n7-active .heading--page {
+  letter-spacing: 0;
+  font-family: $font-display-serif;
+}
+
+.heading--home {
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    @include setType(5, $ms-up3);
+  }
+}

@@ -1,0 +1,3 @@
+<% include moment %>
+<time class="meta meta--primary" datetime="<%= moment(date).toISOString() %>" itemprop="datePublished"><%= moment(date).format('MMM DD, YYYY')%></time>
+<% if(modified) { %><span class="meta meta--alt">updated <time datetime="<%= moment(modified).toISOString() %>" itemprop="dateModified"><%= moment(modified).format('MMM DD, YYYY')%></time></span><% } %>

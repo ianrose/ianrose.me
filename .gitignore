@@ -3,8 +3,10 @@ Thumbs.db
 db.json
 debug.log
 node_modules/
-public/
 .deploy/
 .idea
 .idea/workspace.xml
 .deploy_git
+www
+public/vendor
+.tmp

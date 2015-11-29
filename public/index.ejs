@@ -1,0 +1,41 @@
+<p class="heading heading--page heading--home"><%- description %></p>
+<div class="row">
+  <div class="section--id--l">
+    <div class="section--id" aria-hidden="true">01</div>
+  </div>
+  <div class="section--posts">
+    <div class="meta--container">
+      <h2 class="meta--txt meta--primary meta--heading"><a href="/articles">Articles</a></h2>
+    </div>
+    <div class="row">
+      <% var slug = Object.keys(public.articles._data);
+      for(var i=0; i<Math.min(6,slug.length); i++) { %>
+      <% var parentSlug = 'articles' %>
+      <% var entry = public.articles._data[slug[i]] %>
+      <% var date = entry.date %>
+      <% var modified = entry.modified %>
+      <% include _includes/entry %>
+      <% } %>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="section--id--l">
+    <div class="section--id" aria-hidden="true">02</div>
+  </div>
+  <div class="section--posts">
+    <div class="meta--container">
+      <h2 class="meta--txt meta--primary meta--heading"><a href="/work">Work</a></h2>
+    </div>
+    <div class="row">
+      <% var slug = Object.keys(public.work._data); %>
+      <% for(var i=0; i<Math.min(6,slug.length); i++) { %>
+      <% var parentSlug = 'work' %>
+      <% var entry = public.work._data[slug[i]] %>
+      <% var date = entry.date %>
+      <% var modified = entry.modified %>
+      <% include _includes/entry %>
+      <% } %>
+    </div>
+  </div>
+</div>
