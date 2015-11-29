@@ -1,5 +1,3 @@
-A modern news aggregator that combines ‘topic relevance’ and ‘social trends’ to recommend the best stories.
-
 <figure class="media-full">
   ![Homepage on Desktop](/images/newsblock-desktop-lg-top.jpg)
   <figcaption>Common topics are presented in feeds that are easy and quick to scan.</figcaption>

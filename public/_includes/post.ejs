@@ -19,6 +19,6 @@
     <% include byline %>
   </header>
   <div class="article--body" itemprop="articleBody">
-    <%- yield %>
+    <%- typogr.typogrify(yield) %>
   </div>
 </article>
