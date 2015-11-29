@@ -183,7 +183,10 @@ figcaption {
   font-family: $font-display-serif;
   padding-top: emRhythm(2);
   border-top: $border-width-wide solid $text-color;
-  width: 50%;
+
+  @media (min-width: $screen-xs-min) {
+    width: 50%;
+  }
 
   p {
     font-weight: 900;
@@ -194,15 +197,19 @@ figcaption {
 }
 
 .pullquote.left {
-  float: left;
-  margin-right: emRhythm(3);
-  margin-left: -$gutter;
+  @media (min-width: $screen-xs-min) {
+    float: left;
+    margin-right: emRhythm(3);
+    margin-left: -$gutter;
+  }
 }
 
 .pullquote.right {
-  float: right;
-  margin-left: emRhythm(3);
-  margin-right: -$gutter;
+  @media (min-width: $screen-xs-min) {
+    float: right;
+    margin-left: emRhythm(3);
+    margin-right: -$gutter;
+  }
 }
 
 pre,
