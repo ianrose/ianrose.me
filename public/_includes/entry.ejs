@@ -11,7 +11,15 @@
         <img class="img-responsive media--entry media--entry-default" src="/images/<%= entry.art %>" alt="<%= entry.title %>">
       </a>
       <% } %>
-      <h3 class="entry-heading--category" itemprop="headline"><a href="/<%- parentSlug %>/<% if (current.path[0] == 'index'){ %><%= slug[i] %><% } else { %><%= slug %><% } %>"><%= entry.title %></a></h3>
+      <% if(current.path[0] == 'index') { %>
+      <h3 class="entry-heading--category" itemprop="headline">
+        <a href="/<%- parentSlug %>/<% if (current.path[0] == 'index'){ %><%= slug[i] %><% } else { %><%= slug %><% } %>"><%= entry.title %></a>
+      </h3>
+      <% } else { %>
+      <h2 class="entry-heading--category" itemprop="headline">
+        <a href="/<%- parentSlug %>/<% if (current.path[0] == 'index'){ %><%= slug[i] %><% } else { %><%= slug %><% } %>"><%= entry.title %></a>
+      </h2>
+      <% } %>
       <p class="dek" itemprop="description"><%= entry.desc %></p>
     </div>
   </div>
