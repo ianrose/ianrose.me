@@ -16,7 +16,9 @@
   <header class="article--header">
     <h1 itemprop="headline"><%- typogr.smartypants(title) %></h1>
     <p class="dek dek--lg"><%- typogr.typogrify(desc) %></p>
-    <% include byline %>
+    <% if(current.path[0] == "articles") { %>
+      <% include byline %>
+    <% } %>
   </header>
   <div class="article--body" itemprop="articleBody">
     <%- typogr.typogrify(yield) %>

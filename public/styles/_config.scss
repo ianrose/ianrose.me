@@ -61,6 +61,14 @@ $container-xl-width: 1100px;
 // Grid attributes
 $gutter: ($base-vertical-unit * $base-line-multi) / 2;
 $static-col-width: 300px;
+$span-1: 14.285714285714%;
+$span-2: 28.571428571429%;
+$span-3: 42.857142857143%;
+$span-4: 57.142857142857%;
+$span-5: 71.428571428571%;
+$span-6: 85.714285714286%;
+$span-7: 100%;
+$span-half: 50%;
 
 // Breakpoints
 $screen-xs-min: 480px;

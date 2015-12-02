@@ -216,11 +216,15 @@ pre,
 code {
   font-family: $font-mono;
   font-size: $ms-down1;
-  background-color: lighten($text-color, 75%);
+  background-color: transparent;
   padding-left: 0.25em;
   padding-right: 0.25em;
   margin: 0;
   margin-bottom: emRhythm(3, $ms-down1);
+}
+
+pre > code {
+  font-size: 1em;
 }
 
 ol,
