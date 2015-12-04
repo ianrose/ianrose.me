@@ -10,13 +10,15 @@
 // Vendor
 @import "../vendor/typesettings/typesettings";
 
+// Elements
+@import "base/base";
+
 // Components
 @import "components/article";
 @import "components/back-to-top";
 @import "components/button";
 @import "components/byline";
 @import "components/dek";
-@import "components/elements";
 @import "components/entry";
 @import "components/footer";
 @import "components/footnotes";
