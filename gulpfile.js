@@ -6,9 +6,10 @@ var uglify       = require('gulp-uglify');
 var gulpSequence = require('gulp-sequence');
 var imagemin     = require('gulp-imagemin');
 var surge        = require('gulp-surge');
+var harp         = require('harp');
 
-gulp.task('serve', function () {
-  cp.exec('harp server --port 9000', {stdio: 'inherit'})
+gulp.task('serve', function(done) {
+  harp.server('.', 9000, done);
 });
 
 gulp.task('browser-sync', function() {
@@ -25,8 +26,7 @@ gulp.task('jshint', function() {
 });
 
 gulp.task('compile', function (done) {
-  cp.exec('harp compile . www', {stdio: 'inherit'})
-    .on('close', done)
+  harp.compile('.', 'www', done);
 });
 
 gulp.task('watch', function () {
@@ -35,7 +35,7 @@ gulp.task('watch', function () {
 });
 
 gulp.task('scripts', function() {
-  return gulp.src(['./public/**/*.js', '!./public/vendor/**/src/**/*.js'], {base: './public'})
+  return gulp.src(['./public/**/*.js'], {base: './public'})
     .pipe(uglify())
     .pipe(gulp.dest('www'));
 });

@@ -10,3 +10,4 @@ node_modules/
 www
 public/vendor
 .tmp
+bower_components
