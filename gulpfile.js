@@ -1,6 +1,5 @@
 var gulp         = require('gulp');
 var browserSync  = require('browser-sync');
-var cp           = require('child_process');
 var jshint       = require('gulp-jshint');
 var uglify       = require('gulp-uglify');
 var gulpSequence = require('gulp-sequence');
@@ -8,8 +7,10 @@ var imagemin     = require('gulp-imagemin');
 var surge        = require('gulp-surge');
 var harp         = require('harp');
 
-gulp.task('serve', function(done) {
-  harp.server('.', 9000, done);
+gulp.task('serve', function() {
+  harp.server('.', {
+    port: 9000
+  });
 });
 
 gulp.task('browser-sync', function() {
@@ -54,7 +55,7 @@ gulp.task('deploy', [], function () {
     project: './www',         // Path to your static build directory
     domain: 'ianrose.me'  // Your domain or Surge subdomain
   })
-})
+});
 
 gulp.task('default', ['serve', 'browser-sync', 'watch']);
 gulp.task('build', gulpSequence('jshint', 'compile', ['scripts', 'images']));
