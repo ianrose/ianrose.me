@@ -2,19 +2,18 @@
 
 ## How to Setup
 
-A. Clone
+### 1. Clone
 
 `git clone https://github.com/ianrose/ianrose.me.git`
 
-B. Install Gulp and Harp.js globally
+### 2. Install Gulp and bower-installer globally
 
 ```
-$ npm install -g harp
 $ npm install -g gulp
 $ npm install -g bower-installer
 ```
 
-C. At your project run `npm install` then `bower-installer`
+### 3. At your project run `npm install` then `bower-installer`
 
 ## How to use
 

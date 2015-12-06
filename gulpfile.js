@@ -7,10 +7,16 @@ var imagemin     = require('gulp-imagemin');
 var surge        = require('gulp-surge');
 var harp         = require('harp');
 
+var projectPath = '.';
+var projectDest = 'www';
+
 gulp.task('serve', function() {
-  harp.server('.', {
+  harp.server(projectPath, {
+    ip: '0.0.0.0',
     port: 9000
-  });
+  }, function() {
+    this.projectPath
+  })
 });
 
 gulp.task('browser-sync', function() {
@@ -27,7 +33,7 @@ gulp.task('jshint', function() {
 });
 
 gulp.task('compile', function (done) {
-  harp.compile('.', 'www', done);
+  harp.compile(projectPath, projectDest, done);
 });
 
 gulp.task('watch', function () {
@@ -38,7 +44,7 @@ gulp.task('watch', function () {
 gulp.task('scripts', function() {
   return gulp.src(['./public/**/*.js'], {base: './public'})
     .pipe(uglify())
-    .pipe(gulp.dest('www'));
+    .pipe(gulp.dest(projectDest));
 });
 
 gulp.task('images', function() {
@@ -52,7 +58,7 @@ gulp.task('images', function() {
 
 gulp.task('deploy', [], function () {
   return surge({
-    project: './www',         // Path to your static build directory
+    project: './' + projectDest,         // Path to your static build directory
     domain: 'ianrose.me'  // Your domain or Surge subdomain
   })
 });

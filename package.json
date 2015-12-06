@@ -1,7 +1,7 @@
 {
   "name": "ianrose.me",
   "version": "0.1.0",
-  "description": "Harp.js and Gulp",
+  "description": "Source for Ian Rose's personal website",
   "private": true,
   "main": "public/index.ejs",
   "author": "Ian Rose",
@@ -14,6 +14,6 @@
     "gulp-sequence": "^0.4.1",
     "gulp-surge": "^0.1.0",
     "gulp-uglify": "^1.4.0",
-    "harp": "0.20.0"
+    "harp": "^0.20.1"
   }
 }
