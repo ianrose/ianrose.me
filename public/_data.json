@@ -4,5 +4,8 @@
   },
   "atom": {
     "layout": false
+  },
+  "sitemap": {
+    "layout": false
   }
 }
