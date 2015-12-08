@@ -2,6 +2,76 @@ Raymond Camden has a great [article](http://www.raymondcamden.com/2014/02/26/Cre
 
 In a Harp Boilerplate, Kenneth Ormandy has [article navigation](https://github.com/kennethormandy/hb-remedy/blob/master/public/_shared/article-nav.jade) in a Jade template. We will use that as a base for our article navigation in EJS. [Skip to the final code.](#the-navigation-partial)
 
+## Some Example Data
+
+In our articles folder we would have something like the JSON below in a `_data.json` file.
+
+```js
+{
+  "article-three": {
+    "title": "Article Three",
+    "date": "2015-01-03",
+    "modified": null,
+    "tags": ["harp", "static", "blog"],
+    "desc": "Description three.",
+    "published": true,
+    "art": null
+  },
+  "article-two": {
+    "title": "Article Two",
+    "date": "2015-01-02",
+    "modified": null,
+    "tags": ["harp", "static", "blog"],
+    "desc": "Description two.",
+    "published": true,
+    "art": null
+  },
+  "article-one": {
+    "title": "Article One",
+    "date": "2015-01-01",
+    "modified": null,
+    "tags": ["harp", "static", "blog"],
+    "desc": "Description one.",
+    "published": true,
+    "art": null
+  }
+}
+```
+
+In our work folder we would have something like the JSON below in a `_data.json` file.
+
+```js
+{
+  "work-three": {
+    "title": "Work Three",
+    "date": "2015-01-03",
+    "modified": null,
+    "tags": ["harp", "static", "blog"],
+    "desc": "Description three.",
+    "published": true,
+    "art": null
+  },
+  "work-two": {
+    "title": "Work Two",
+    "date": "2015-01-02",
+    "modified": null,
+    "tags": ["harp", "static", "blog"],
+    "desc": "Description two.",
+    "published": true,
+    "art": null
+  },
+  "work-one": {
+    "title": "Work One",
+    "date": "2015-01-01",
+    "modified": null,
+    "tags": ["harp", "static", "blog"],
+    "desc": "Description one.",
+    "published": true,
+    "art": null
+  }
+}
+```
+
 ## Setting up the Data
 
 Having a reusable piece of navigation is helpful. For example, you have a site that has a blog with articles and another part with a portfolio of work. Both parts of the site could use the same navigation system.
@@ -75,24 +145,16 @@ We are almost done. Now we have the previous post data and next post data stored
     <% var prev = posts[i-1] %>
     <% var next = posts[i+1] %>
 
-    <nav class="nav nav--post row">
+    <nav>
       <% if(prev) { %>
-        <div class="nav--prev">
           <h2 class="nav--post-heading"><%- prev.title %></h2>
           <p class="dek dek--sm"><%- prev.desc %></p>
-        </div>
-        <div class="nav--post-button">
           <a class="button--link" href="/<%= current.path[0] %>/<%= prev.slug %>">Previous</a>
-        </div>
       <% } %>
       <% if(next) { %>
-      <div class="nav--next">
         <h2 class="nav--post-heading"><%- next.title %></h2>
         <p class="dek dek--sm"><%- next.desc %></p>
-      </div>
-      <div class="nav--post-button">
         <a class="button--link" href="/<%= current.path[0] %>/<%= next.slug %>">Next</a>
-      </div>
       <% } %>
     </nav>
 
