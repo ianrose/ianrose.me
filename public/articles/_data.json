@@ -1,4 +1,31 @@
 {
+  "harp-js-previous-and-next-using-ejs": {
+    "title": "Harp.js Previous and Next using EJS",
+    "date": "2015-12-08",
+    "modified": null,
+    "tags": ["harp", "static", "blog"],
+    "desc": "Harp is a static site generator that is not blog-aware. This makes it very flexible and sometimes results in re-inventing the wheel. The wheel in this case is providing navigation at the end of our posts that allow the user to go to the previous or next post.",
+    "published": true,
+    "art": null
+  },
+  "getting-posts-by-category-with-hexo": {
+    "title": "Getting Posts by Category with Hexo",
+    "date": "2015-01-20",
+    "modified": null,
+    "tags": ["harp", "static", "blog"],
+    "desc": "While building with Hexo I came across a need to get all the posts by a specific category and render them through a specific partial.",
+    "published": true,
+    "art": null
+  },
+  "the-too-good-to-be-true-css-text-rendering-property": {
+    "title": "The Too Good to Be True CSS Text Rendering Property",
+    "date": "2015-01-22",
+    "modified": null,
+    "tags": ["harp", "static", "blog"],
+    "desc": "The CSS text rendering property is a mixed bag. On initial pass it seems to be an obvious choice for improving type on the web.",
+    "published": true,
+    "art": null
+  },
   "organizing-styles-when-using-typesettings": {
     "title": "Organizing Styles When Using Typesettings",
     "date": "2014-05-01",
@@ -22,24 +49,6 @@
     "modified": null,
     "tags": ["harp", "static", "blog"],
     "desc": "Setting type using modular scale and maintaining vertical rhythm is not a new topic, at all. There are so many great tools and articles out there that help designers do these things. However I couldn’t find exactly what I was looking for.",
-    "published": true,
-    "art": null
-  },
-  "the-too-good-to-be-true-css-text-rendering-property": {
-    "title": "The Too Good to Be True CSS Text Rendering Property",
-    "date": "2015-01-22",
-    "modified": null,
-    "tags": ["harp", "static", "blog"],
-    "desc": "The CSS text rendering property is a mixed bag. On initial pass it seems to be an obvious choice for improving type on the web.",
-    "published": true,
-    "art": null
-  },
-  "getting-posts-by-category-with-hexo": {
-    "title": "Getting Posts by Category with Hexo",
-    "date": "2015-01-20",
-    "modified": null,
-    "tags": ["harp", "static", "blog"],
-    "desc": "While building with Hexo I came across a need to get all the posts by a specific category and render them through a specific partial.",
     "published": true,
     "art": null
   }
