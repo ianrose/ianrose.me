@@ -147,14 +147,14 @@ We are almost done. Now we have the previous post data and next post data stored
 
     <nav>
       <% if(prev) { %>
-          <h2 class="nav--post-heading"><%- prev.title %></h2>
-          <p class="dek dek--sm"><%- prev.desc %></p>
-          <a class="button--link" href="/<%= current.path[0] %>/<%= prev.slug %>">Previous</a>
+          <h2><%- prev.title %></h2>
+          <p><%- prev.desc %></p>
+          <a href="/<%= current.path[0] %>/<%= prev.slug %>">Previous</a>
       <% } %>
       <% if(next) { %>
-        <h2 class="nav--post-heading"><%- next.title %></h2>
-        <p class="dek dek--sm"><%- next.desc %></p>
-        <a class="button--link" href="/<%= current.path[0] %>/<%= next.slug %>">Next</a>
+        <h2><%- next.title %></h2>
+        <p><%- next.desc %></p>
+        <a href="/<%= current.path[0] %>/<%= next.slug %>">Next</a>
       <% } %>
     </nav>
 
