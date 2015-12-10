@@ -1,6 +1,6 @@
 Raymond Camden has a great [article](http://www.raymondcamden.com/2014/02/26/Creating-NextPrevious-Links-in-HarpJS) that provides a walkthrough on how to accomplish something very similar. The difference is we will be rendering the previous and next post’s title and description.
 
-In a Harp Boilerplate, [Kenneth Ormandy](http://kennethormandy.com/) has [article navigation](https://github.com/kennethormandy/hb-remedy/blob/master/public/_shared/article-nav.jade) in a Jade template. We will use that as a base for our article navigation in EJS. [Skip to the final code.](#the-navigation-partial)
+In a Harp Boilerplate, [Kenneth Ormandy](http://kennethormandy.com/) provides [article navigation](https://github.com/kennethormandy/hb-remedy/blob/master/public/_shared/article-nav.jade) in a Jade template. We will use that as a base for our article navigation in EJS. [Skip to the final code.](#the-navigation-partial)
 
 ## Some Example Data
 
@@ -99,11 +99,11 @@ For our portfolio pieces we write almost the same thing in the Work partial as w
 <% include ../_includes/post-nav %>
 ```
 
-You will notice that we are wrapping `posts.push` in a conditional. This condition says that we only push a `post` into our `posts` array if the it has a date defined and is set to `published`.
+You will notice that we are wrapping `posts.push` in a conditional. This condition says that we only push a `post` into our `posts` array if the it has a `date` defined and is set to `published`.
 
 ## Pass that Data
 
-In the case of EJS, let's first sort the `posts` by their date:
+In the case of EJS, let’s first sort the `posts` by their date using the method from Kenneth’s Jade template:
 
 ```js
 <% posts.sort(function(a,b){ a = new Date(a.date); b = new Date(b.date); return b<a?-1:b>a?1:0; }).slice(0, 10) %>
