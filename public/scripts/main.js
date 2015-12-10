@@ -1,3 +1,4 @@
+/* globals ListFuzzySearch, List */
 $(document).ready(function(){
   'use strict';
   var touchEventName =  ('ontouchstart' in window) ? 'touchstart':'click';
@@ -22,4 +23,12 @@ $(document).ready(function(){
       }
     });
   });
+
+  // var postList = new List('posts', {
+  //   valueNames: ['js-entry-heading-link', 'dek'],
+  //   plugins: [ ListFuzzySearch() ]
+  // });
+  //
+  // postList;
+
 });

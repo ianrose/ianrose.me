@@ -17,7 +17,7 @@
       </h3>
       <% } else { %>
       <h2 class="entry-heading--category" itemprop="headline">
-        <a href="/<%- parentSlug %>/<% if (current.path[0] == 'index'){ %><%= slug[i] %><% } else { %><%= slug %><% } %>"><%= entry.title %></a>
+        <a class="js-entry-heading-link" href="/<%- parentSlug %>/<% if (current.path[0] == 'index'){ %><%= slug[i] %><% } else { %><%= slug %><% } %>"><%= entry.title %></a>
       </h2>
       <% } %>
       <p class="dek" itemprop="description"><%= entry.desc %></p>

@@ -1,6 +1,6 @@
 Raymond Camden has a great [article](http://www.raymondcamden.com/2014/02/26/Creating-NextPrevious-Links-in-HarpJS) that provides a walkthrough on how to accomplish something very similar. The difference is we will be rendering the previous and next post’s title and description.
 
-In a Harp Boilerplate, Kenneth Ormandy has [article navigation](https://github.com/kennethormandy/hb-remedy/blob/master/public/_shared/article-nav.jade) in a Jade template. We will use that as a base for our article navigation in EJS. [Skip to the final code.](#the-navigation-partial)
+In a Harp Boilerplate, [Kenneth Ormandy](http://kennethormandy.com/) has [article navigation](https://github.com/kennethormandy/hb-remedy/blob/master/public/_shared/article-nav.jade) in a Jade template. We will use that as a base for our article navigation in EJS. [Skip to the final code.](#the-navigation-partial)
 
 ## Some Example Data
 
@@ -12,7 +12,6 @@ In our articles folder we would have something like the JSON below in a `_data.j
     "title": "Article Three",
     "date": "2015-01-03",
     "modified": null,
-    "tags": ["harp", "static", "blog"],
     "desc": "Description three.",
     "published": true,
     "art": null
@@ -21,7 +20,6 @@ In our articles folder we would have something like the JSON below in a `_data.j
     "title": "Article Two",
     "date": "2015-01-02",
     "modified": null,
-    "tags": ["harp", "static", "blog"],
     "desc": "Description two.",
     "published": true,
     "art": null
@@ -30,7 +28,6 @@ In our articles folder we would have something like the JSON below in a `_data.j
     "title": "Article One",
     "date": "2015-01-01",
     "modified": null,
-    "tags": ["harp", "static", "blog"],
     "desc": "Description one.",
     "published": true,
     "art": null
@@ -46,7 +43,6 @@ In our work folder we would have something like the JSON below in a `_data.json`
     "title": "Work Three",
     "date": "2015-01-03",
     "modified": null,
-    "tags": ["harp", "static", "blog"],
     "desc": "Description three.",
     "published": true,
     "art": null
@@ -55,7 +51,6 @@ In our work folder we would have something like the JSON below in a `_data.json`
     "title": "Work Two",
     "date": "2015-01-02",
     "modified": null,
-    "tags": ["harp", "static", "blog"],
     "desc": "Description two.",
     "published": true,
     "art": null
@@ -64,7 +59,6 @@ In our work folder we would have something like the JSON below in a `_data.json`
     "title": "Work One",
     "date": "2015-01-01",
     "modified": null,
-    "tags": ["harp", "static", "blog"],
     "desc": "Description one.",
     "published": true,
     "art": null

@@ -4,7 +4,7 @@
     "date": "2015-12-08",
     "modified": null,
     "tags": ["harp", "static", "blog"],
-    "desc": "Harp is a static site generator that is not blog-aware. This makes it very flexible and sometimes results in re-inventing the wheel. The wheel in this case is providing navigation at the end of our posts that allow the user to go to the previous or next post.",
+    "desc": "Provide the user with previous and next page navigation in a Harp.js site using Embeded JavaScript.",
     "published": true,
     "art": null
   },
