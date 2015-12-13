@@ -4,7 +4,7 @@
     "date": "2015-12-08",
     "modified": null,
     "tags": ["harp", "static", "blog"],
-    "desc": "Provide the user with previous and next page navigation in a Harp.js site using Embeded JavaScript.",
+    "description": "Provide the user with previous and next page navigation in a Harp.js site using Embeded JavaScript.",
     "published": true,
     "art": null
   },
@@ -13,7 +13,8 @@
     "date": "2015-01-20",
     "modified": null,
     "tags": ["harp", "static", "blog"],
-    "desc": "While building with Hexo I came across a need to get all the posts by a specific category and render them through a specific partial.",
+    "description": "While building with Hexo I came across a need to get all the posts by a specific category and render them through a specific partial.",
+
     "published": true,
     "art": null
   },
@@ -22,7 +23,7 @@
     "date": "2015-01-22",
     "modified": null,
     "tags": ["harp", "static", "blog"],
-    "desc": "The CSS text rendering property is a mixed bag. On initial pass it seems to be an obvious choice for improving type on the web.",
+    "description": "The CSS text rendering property is a mixed bag. On initial pass it seems to be an obvious choice for improving type on the web.",
     "published": true,
     "art": null
   },
@@ -31,7 +32,7 @@
     "date": "2014-05-01",
     "modified": null,
     "tags": ["lorem" , "harp", "css"],
-    "desc": "At work I’ve been cranking on a prototype. I decided to give a Typesettings a go in more of a production setting that required designing in the browser. Overall the experience has been pretty good.",
+    "description": "At work I’ve been cranking on a prototype. I decided to give a Typesettings a go in more of a production setting that required designing in the browser. Overall the experience has been pretty good.",
     "published": true,
     "art": null
   },
@@ -39,7 +40,7 @@
     "title": "Permanent Redirect GitHub Project Page to Custom Domain",
     "date": "2014-04-30",
     "modified": null,
-    "desc": "How to get a GitHub hosted project site to 301 redirect to a custom domain name using CloudFlare.",
+    "description": "How to get a GitHub hosted project site to 301 redirect to a custom domain name using CloudFlare.",
     "published": true,
     "art": null
   },
@@ -48,7 +49,7 @@
     "date": "2014-04-24",
     "modified": null,
     "tags": ["harp", "static", "blog"],
-    "desc": "Setting type using modular scale and maintaining vertical rhythm is not a new topic, at all. There are so many great tools and articles out there that help designers do these things. However I couldn’t find exactly what I was looking for.",
+    "description": "Setting type using modular scale and maintaining vertical rhythm is not a new topic, at all. There are so many great tools and articles out there that help designers do these things. However I couldn’t find exactly what I was looking for.",
     "published": true,
     "art": null
   }
