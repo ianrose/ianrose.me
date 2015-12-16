@@ -9,7 +9,7 @@
       <% if(prev) { %>
         <div class="nav--prev">
           <h2 class="nav--post-heading"><%- prev.title %></h2>
-          <p class="dek dek--sm"><%- prev.desc %></p>
+          <p class="dek dek--sm"><%- prev.description %></p>
         </div>
         <div class="nav--post-button">
           <a class="button--link" href="/<%= current.path[0] %>/<%= prev.slug %>">Previous</a>
@@ -18,7 +18,7 @@
       <% if(next) { %>
       <div class="nav--next">
         <h2 class="nav--post-heading"><%- next.title %></h2>
-        <p class="dek dek--sm"><%- next.desc %></p>
+        <p class="dek dek--sm"><%- next.description %></p>
       </div>
       <div class="nav--post-button">
         <a class="button--link" href="/<%= current.path[0] %>/<%= next.slug %>">Next</a>
