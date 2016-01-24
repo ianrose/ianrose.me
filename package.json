@@ -25,7 +25,7 @@
     "postcompile": "npm run uglify"
   },
   "engines": {
-   "node": "0.5.x",
+   "node": "5.1.x",
    "npm": "3.3.x"
  }
 }
