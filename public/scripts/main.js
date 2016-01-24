@@ -1,4 +1,3 @@
-/* globals */
 $(document).ready(function(){
   'use strict';
   var touchEventName =  ('ontouchstart' in window) ? 'touchstart':'click';
