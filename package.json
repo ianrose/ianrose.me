@@ -23,5 +23,9 @@
     "uglify": "recursive-uglifyjs ./www/",
     "compile": "harp compile && npm test",
     "postcompile": "npm run uglify"
-  }
+  },
+  "engines": {
+   "node": "0.5.x",
+   "npm": "3.3.x"
+ }
 }
