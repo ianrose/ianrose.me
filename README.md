@@ -6,22 +6,19 @@
 
 `git clone https://github.com/ianrose/ianrose.me.git`
 
-### 2. Install Gulp and bower-installer globally
+### 2. Install Dependencies
 
 ```
-$ npm install -g gulp
-$ npm install -g bower-installer
+$ npm install
 ```
-
-### 3. At your project run `npm install` then `bower-installer`
 
 ## How to use
 
-To develop: `gulp`
+To develop: `npm run dev`
 
-To generate: `gulp build`
+To generate: `npm run compile`
 
-To deploy: `gulp deploy`
+To deploy: `npm run deploy`
 
 ## Requirements
 
