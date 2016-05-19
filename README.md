@@ -1,6 +1,7 @@
 # ianrose.me
 
-https://travis-ci.org/ianrose/ianrose.me.svg?branch=master
+
+![Image of Travis CI Status](https://travis-ci.org/ianrose/ianrose.me.svg?branch=master)
 
 ## How to Setup
 
