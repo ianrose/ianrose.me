@@ -3,7 +3,7 @@
   <channel>
     <title><%- name %></title>
     <link><%- url %></link>
-    <description><%- description %></description>
+    <description><%= description %></description>
     <atom:link href="<%- url %>/atom.xml" rel="self" type="application/rss+xml" />
     <% for(slug in public.articles._data) {
       var post = public.articles._data[slug] %>
