@@ -1,38 +1,5 @@
   <head>
     <meta charset="utf-8">
-    <% if(service.googlefonts) { %>
-    <% var last = service.googlefonts[service.googlefonts.length -1] %>
-    <!-- Fallback for Font family below in noscript [*] -->
-
-    <% } %>
-    <% if(service.fontscom) { %>
-    <script>
-      WebFontConfig = {
-        monotype: {
-          projectId: '<%- service.fontscom %>'
-        }
-      };
-
-      (function(d) {
-        var wf = d.createElement('script'), s = d.scripts[0];
-        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js';
-        s.parentNode.insertBefore(wf, s);
-      })(document);
-    </script>
-    <% } %>
-    <% if(service.typekit) { %>
-    <script>
-      WebFontConfig = {
-        typekit: { id: '<%- service.typekit %>' }
-      };
-
-      (function(d) {
-        var wf = d.createElement('script'), s = d.scripts[0];
-        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js';
-        s.parentNode.insertBefore(wf, s);
-      })(document);
-    </script>
-    <% } %>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="<%= description %>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -83,9 +50,10 @@
     -->
     <link rel="stylesheet" href="/styles/main.css">
     <% if(service.googlefonts) { %>
+    <% var last = service.googlefonts[service.googlefonts.length -1] %>
       <noscript>
         <!-- [*] Web fonts for no-js -->
-        <link href='http://fonts.googleapis.com/css?family=<% for(var i=0; i < service.googlefonts.length; i++) { %><%- service.googlefonts[i] %><% if(service.googlefonts[i] !== last) { %>%7C<% } %><% } %>' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=<% for(var i=0; i < service.googlefonts.length; i++) { %><%- service.googlefonts[i] %><% if(service.googlefonts[i] !== last) { %>|<% } %><% } %>' rel='stylesheet' type='text/css'>
       </noscript>
     <% } %>
     <% if(service.fontscom) { %>
