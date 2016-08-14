@@ -3,19 +3,7 @@
     <% if(service.googlefonts) { %>
     <% var last = service.googlefonts[service.googlefonts.length -1] %>
     <!-- Fallback for Font family below in noscript [*] -->
-    <script type="text/javascript">
-      WebFontConfig = {
-        google: { families: [ <% for(var i=0; i < service.googlefonts.length; i++) { %>'<%- service.googlefonts[i] %>'<% if(service.googlefonts[i] !== last) { %>, <% } %> <% } %>] }
-      };
-      (function() {
-        var wf = document.createElement('script');
-        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-        '://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js';
-        wf.type = 'text/javascript';
-        wf.async = 'true';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(wf, s);
-      })(); </script>
+
     <% } %>
     <% if(service.fontscom) { %>
     <script>
@@ -95,7 +83,10 @@
     -->
     <link rel="stylesheet" href="/styles/main.css">
     <% if(service.googlefonts) { %>
-
+      <noscript>
+        <!-- [*] Web fonts for no-js -->
+        <link href='http://fonts.googleapis.com/css?family=<% for(var i=0; i < service.googlefonts.length; i++) { %><%- service.googlefonts[i] %><% if(service.googlefonts[i] !== last) { %>%7C<% } %><% } %>' rel='stylesheet' type='text/css'>
+      </noscript>
     <% } %>
     <% if(service.fontscom) { %>
     <noscript>
