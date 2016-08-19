@@ -1,0 +1,12 @@
+/blog/:slug                                                        /articles/:slug
+/typesettings                                                      http://typesettings.io
+/2014/05/01/organizing-styles-when-using-typesettings/             /articles/organizing-styles-when-using-typesettings
+/2014/03/30/permanent-rediect-github-project-page/                 /articles/permanent-redirect-github-project-page
+/2014/03/24/sass-type-toolkit-typesettings/                        /articles/sass-type-toolkit-typesettings
+/2015/01/22/the-too-good-to-be-true-css-text-rendering-property/   /articles/the-too-good-to-be-true-css-text-rendering-property
+/2015/01/20/getting-posts-by-category-with-hexo/                   /articles/getting-posts-by-category-with-hexo
+/2015/07/19/newsblock/                                             /work/newsblock
+/2014/12/30/typesettings/                                          /work/typesettings
+/2013/02/06/joule-solar-energy/                                    /work/joule-solar-energy
+/2013/01/16/clear-creek-transit-village/                           /work/clear-creek-transit-village
+ianrose.github.io                                                  ianrose.me

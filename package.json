@@ -20,8 +20,9 @@
     "test": "jshint ./public/**/*.js",
     "dev": "harp server & browser-sync start --no-open --no-notify --proxy 'localhost:9000' --files './public/**/*.ejs, public/**/*.jade, ./public/**/*.ejs, public/**/*.md, ./public/**/*.scss, public/**/*.sass, ./public/**/*.less, ./public/**/*.css, ./public/**/_data.json'",
     "uglify": "recursive-uglifyjs ./www/",
+    "copy:redirects": "cp ./public/_redirects www/",
     "compile": "harp compile && npm test",
-    "postcompile": "npm run uglify && npm run imagemin",
+    "postcompile": "npm run uglify && npm run imagemin && npm run copy:redirects",
     "imagemin": "imagemin ./public/images/ ./www/images/ --optimizationLevel 3 --progressive",
     "deploy": "surge --project ./www --domain ianrose.me"
   },
