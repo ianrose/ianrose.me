@@ -6,7 +6,6 @@
   padding-right: $gutter;
   margin-bottom: $gutter * 3;
   letter-spacing: -1px;
-  opacity: 0;
   transition: opacity 0.5s ease-in;
 
   @media (min-width: $screen-sm-min) {
@@ -17,10 +16,6 @@
   @media (min-width: $screen-lg-min) {
     max-width: $span-6;
   }
-}
-
-.wf-sourceserifpro-n7-active .heading--page {
-  opacity: 1;
 }
 
 .heading--home {

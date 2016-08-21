@@ -32,6 +32,10 @@
   @media (min-width: $screen-md-min) {
     display: flex;
     flex-wrap: wrap;
+
+    & > div {
+      flex-shrink: 1; // ie10 fix
+    }
   }
 }
 

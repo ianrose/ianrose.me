@@ -1,5 +1,16 @@
   <head>
     <meta charset="utf-8">
+    <script>
+      // remove no-js class
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+      // ie9 patch for window.console
+      if(!(window.console && console.log)) {
+        console = {
+          log: function(){},
+          error: function(){}
+        };
+      }
+    </script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="<%= description %>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

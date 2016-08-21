@@ -28,6 +28,7 @@
 }
 
 .entry--category {
+  flex-shrink: 1; // ie10 fix
   border-bottom: $border-width-narrow solid $text-color;
 
   &.is-home {
