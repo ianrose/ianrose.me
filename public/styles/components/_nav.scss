@@ -59,14 +59,14 @@
 }
 
 .nav--menu {
+  background-color: #fff;
   padding-right: $gutter;
   padding-left: $gutter;
 
   @media (min-width: $screen-sm-min) {
     position: fixed;
-    background-color: $background-color;
     width: $site-menu-width;
-    padding-left: $gutter * 2;
+    padding-left: $gutter;
     padding-right: $gutter;
     bottom: 0;
     top: 0;
