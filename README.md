@@ -1,8 +1,5 @@
 # ianrose.me
 
-
-![Image of Travis CI Status](https://travis-ci.org/ianrose/ianrose.me.svg?branch=master)
-
 ## How to Setup
 
 ### 1. Clone
