@@ -7,7 +7,7 @@ node_modules/
 .idea
 .idea/workspace.xml
 .deploy_git
+build
 www
-public/vendor
 .tmp
 bower_components

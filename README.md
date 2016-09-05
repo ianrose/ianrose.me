@@ -18,8 +18,6 @@ To develop: `npm run dev`
 
 To generate: `npm run compile`
 
-To deploy: `npm run deploy`
-
 ## Requirements
 
 Node.js
