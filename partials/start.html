@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <script>
+    document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'has-js ';
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{description}}">
+  <meta name="news_keywords" content="{{keywords}}" />
+  <meta name="standout" content="{{url}}{{paths.href}}" />
+  <meta property="og:site_name" content="{{name}}" />
+  <meta property="og:description" content="{{description}}" />
+  <meta property="og:title" content="{{capitalize title}} - {{name}}" />
+  <meta property="og:url" content="{{url}}{{paths.href}}" />
+  <meta property="og:type" content="article" />
+  {{#if service.socialimage}}<meta property="og:image" content="{{service.socialimage}}" />{{/if}}
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="{{name}}" />
+  <meta name="twitter:title" content="{{title}} - {{name}}" />
+  <meta name="twitter:description" content="{{description}}" />
+  <meta name="twitter:creator" content="{{name}}" />
+  <meta name="twitter:domain" content="{{url}}>" />
+  {{#if service.socialimage}}<meta name="twitter:image:src" content="{{service.socialimage}}" />{{/if}}
+  <title>{{capitalize title}} | {{name}}</title>
+  <link rel="author" href="humans.txt" />
+  <link rel="icon" href="/assets/images/favicon.ico">
+  <link rel="stylesheet" href="/styles/main.css">
+  <!-- {{#if devBuild}}dev{{else}}production{{/if}} v{{version}} -->
+</head>
+<body id="top" class="{{path.name}}-page{{#if path.dir}} {{path.dir}}-route{{/if}}" itemscope itemtype="http://schema.org/WebPage">
+  <div class="nav--menu">
+    {{> header}}
+    {{> nav}}
+  </div>
+  <div class="layout--main">
+    <div class="container">
+<main>

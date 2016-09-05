@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{_globals.name}}</title>
+    <link>{{_globals.url}}</link>
+    <description>{{_globals.description}}</description>
+    <atom:link href="{{_globals.url}}/atom.xml" rel="self" type="application/rss+xml" />
+    {{#each collections.articles}}
+      <item>
+        <title>{{title}}</title>
+        <description>{{description}}</description>
+        <pubDate>{{moment date format='ddd, DD MMM YYYY HH:mm:ss ZZ'}}</pubDate>
+        <link>{{../_globals.url}}/{{path}}</link>
+        <guid isPermaLink="true">{{../_globals.url}}/{{path}}</guid>
+      </item>
+    {{/each}}
+  </channel>
+</rss>

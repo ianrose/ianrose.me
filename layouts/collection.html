@@ -1,0 +1,12 @@
+{{> start}}
+<h1 class="heading heading--page">{{capitalize title}}</h1>
+<section class="section row">
+{{#each collections}}
+  {{#eq ../paths.dir @key}}
+    {{#each this}}
+      {{> entry}}
+    {{/each}}
+  {{/eq}}
+{{/each}}
+</section>
+{{> end}}
