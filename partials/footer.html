@@ -1,7 +1,7 @@
 <footer class="row">
   <div class="newsletter--l">
     <div class="footer--col--l">
-      <form class="form form--box" action="https://tinyletter.com/{{_globals.author.tinyletter}}" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/ian-rose', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+      <form class="form form--box" action="https://tinyletter.com/{{settings.author.tinyletter}}" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/ian-rose', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
         <p>
           <label for="tlemail">Sign up to have updates sent directly to your inbox.</label>
         </p>
@@ -14,14 +14,14 @@
   <div class="footer--nav--l">
     <nav class="nav row">
       <div class="footer--col--l">
-        <div><a href="https://twitter.com/{{_globals.author.twitter}}" target="_blank">Twitter</a></div>
-        <div><a href="https://github.com/{{_globals.author.github}}" target="_blank">GitHub</a></div>
-        <div><a href="http://linkedin.com/in/{{_globals.author.linkedin}}/" target="_blank">LinkedIn</a></div>
+        <div><a href="https://twitter.com/{{settings.author.twitter}}" target="_blank">Twitter</a></div>
+        <div><a href="https://github.com/{{settings.author.github}}" target="_blank">GitHub</a></div>
+        <div><a href="http://linkedin.com/in/{{settings.author.linkedin}}/" target="_blank">LinkedIn</a></div>
       </div>
       <div class="footer--col--l">
-        <div><a href="https://tinyletter.com/{{_globals.author.tinyletter}}" target="_blank">Newsletter</a></div>
-        <div><a href="http://feeds.feedburner.com/{{_globals.author.feedburner}}" target="_blank">Feed</a></div>
-        <div><a href="{{_globals.sourceurl}}" target="_blank">Site Source</a></div>
+        <div><a href="https://tinyletter.com/{{settings.author.tinyletter}}" target="_blank">Newsletter</a></div>
+        <div><a href="http://feeds.feedburner.com/{{settings.author.feedburner}}" target="_blank">Feed</a></div>
+        <div><a href="{{settings.sourceurl}}" target="_blank">Site Source</a></div>
       </div>
     </nav>
   </div>

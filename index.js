@@ -28,7 +28,7 @@ dataFiles.forEach(function (filename) {
   data[filename.split('.')[0]] = 'data/' + filename;
 });
 
-var siteMeta = {
+var config = {
   name: "Ian Rose",
   version: pkg.version,
   devBuild: devBuild,
@@ -39,8 +39,8 @@ var siteMeta = {
 
 var ms = Metalsmith(__dirname)
   .source('src/')
-  .destination(siteMeta.dest)
-  .metadata(siteMeta)
+  .destination(config.dest)
+  .metadata(config)
   .use(globaldata(data))
   .use(collections({
     work: {
@@ -115,7 +115,7 @@ var ms = Metalsmith(__dirname)
   }));
 
   if(devBuild) ms.use(browserSync({
-    server: siteMeta.dest,
+    server: config.dest,
     files: ['src/**/*.*', 'layouts/*.*', 'partials/**/*.*'],
     open: false,
     notify: false
@@ -126,7 +126,7 @@ var ms = Metalsmith(__dirname)
     match: "**/*.md"
   }))
  .use(sitemap({ // generate sitemap.xml
-    hostname: siteMeta.url,
+    hostname: config.url,
     omitIndex: true
   }))
   .build(function (error) {
