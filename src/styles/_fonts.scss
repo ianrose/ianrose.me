@@ -1,35 +1,44 @@
 @font-face {
   font-family: 'Source Sans Pro';
-  src: url('/assets/fonts/sourcesanspro-black.woff2') format('woff2'),
-       url('/assets/fonts/sourcesanspro-black.woff') format('woff');
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro'), local('SourceSansPro-Regular'),
+       url('/assets/fonts/source-sans-pro-v9-latin-regular.woff2') format('woff2'),
+       url('/assets/fonts/source-sans-pro-v9-latin-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'),
+       url('/assets/fonts/source-sans-pro-v9-latin-700.woff2') format('woff2'),
+       url('/assets/fonts/source-sans-pro-v9-latin-700.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
   font-weight: 900;
-  font-style: normal;
+  src: local('Source Sans Pro Black'), local('SourceSansPro-Black'),
+       url('/assets/fonts/source-sans-pro-v9-latin-900.woff2') format('woff2'),
+       url('/assets/fonts/source-sans-pro-v9-latin-900.woff') format('woff');
 }
-@font-face {
-  font-family: 'Source Sans Pro';
-  src: url('/assets/fonts/sourcesanspro-bold.woff2') format('woff2'),
-       url('/assets/fonts/sourcesanspro-bold.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Source Sans Pro';
-  src: url('/assets/fonts/sourcesanspro-regular.woff2') format('woff2'),
-       url('/assets/fonts/sourcesanspro-regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
+
 @font-face {
   font-family: 'Source Serif Pro';
-  src: url('/assets/fonts/sourceserifpro-bold.woff2') format('woff2'),
-       url('/assets/fonts/sourceserifpro-bold.woff') format('woff');
-  font-weight: 700;
   font-style: normal;
+  font-weight: 400;
+  src: local('Source Serif Pro'), local('SourceSerifPro-Regular'),
+       url('/assets/fonts/source-serif-pro-v4-latin-regular.woff2') format('woff2'),
+       url('/assets/fonts/source-serif-pro-v4-latin-regular.woff') format('woff');
 }
+
 @font-face {
   font-family: 'Source Serif Pro';
-  src: url('/assets/fonts/sourceserifpro-regular.woff2') format('woff2'),
-       url('/assets/fonts/sourceserifpro-regular.woff') format('woff');
-  font-weight: 400;
   font-style: normal;
+  font-weight: 700;
+  src: local('Source Serif Pro Bold'), local('SourceSerifPro-Bold'),
+       url('/assets/fonts/source-serif-pro-v4-latin-700.woff2') format('woff2'),
+       url('/assets/fonts/source-serif-pro-v4-latin-700.woff') format('woff');
 }
