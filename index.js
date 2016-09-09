@@ -18,6 +18,7 @@ var helpers = require('metalsmith-register-helpers');
 var sitemap = require('metalsmith-mapsite');
 var postcss = require('metalsmith-with-postcss');
 var paths = require('metalsmith-paths');
+var drafts = require('metalsmith-drafts');
 var uglify = require('metalsmith-uglify');
 var pkg = require('./package.json');
 
@@ -59,6 +60,7 @@ var ms = Metalsmith(__dirname)
     gfm: true,
     tables: true
   }))
+  .use(drafts())
   .use(permalinks({
     relative: false,
     pattern: ':title',
