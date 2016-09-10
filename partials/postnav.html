@@ -1,4 +1,4 @@
-<nav class="nav nav--post row">
+<nav class="nav nav--post row{{#unless previous}} is-first{{/unless}}">
   {{#if previous}}
     <div class="nav--prev">
       <h2 class="nav--post-heading">{{previous.title}}</h2>

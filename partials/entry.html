@@ -1,26 +1,26 @@
-<div class="entry--category-container">
+<div class="entry--category-container entry--category-container--half">
   <div class="entry entry--category{{#if isHome}} is-home{{/if}}" itemscope="" itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+    {{#if art}}
+    <a class="entry--media" href="{{#if url}}{{url}}{{else}}/{{path}}{{/if}}">
+      <img class="img-responsive media--entry media--entry-default" src="/assets/images/{{art}}" alt="{{title}}">
+    </a>
+    {{/if}}
     <div class="entry--txt">
+      {{#if isHome}}
+        <h3 class="entry-heading--category" itemprop="headline">
+          <a href="{{#if url}}{{url}}{{else}}/{{path}}{{/if}}">{{title}}</a>
+        </h3>
+        {{else}}
+        <h2 class="entry-heading--category" itemprop="headline">
+          <a class="js-entry-heading-link" href="{{#if url}}{{url}}{{else}}/{{path}}{{/if}}">{{title}}</a>
+        </h2>
+      {{/if}}
+      <p class="dek" itemprop="description">{{description}}</p>
       {{#if date}}
       <div class="meta--txt">
         {{> time}}
       </div>
       {{/if}}
-      {{#if art}}
-      <a class="entry--media" href="/{{path}}">
-        <img class="img-responsive media--entry media--entry-default" src="/assets/images/{{art}}" alt="{{title}}">
-      </a>
-      {{/if}}
-      {{#if isHome}}
-        <h3 class="entry-heading--category" itemprop="headline">
-          <a href="/{{path}}">{{title}}</a>
-        </h3>
-        {{else}}
-        <h2 class="entry-heading--category" itemprop="headline">
-          <a class="js-entry-heading-link" href="/{{path}}">{{title}}</a>
-        </h2>
-      {{/if}}
-      <p class="dek" itemprop="description">{{description}}</p>
     </div>
   </div>
 </div>

@@ -2,10 +2,11 @@
 title: Typesettings
 date: 2014-12-30
 modified: null
-url: http://typesettings.io
 description: A CSS preprocessor toolkit that helps set type and elements in Ems with modular scale, vertical rhythm, and responsive ratio based headlines.
 art: typesettings-art.png
 layout: post.html
+project:
+  url: http://typesettings.io
 ---
 
 [Typesettings](http://typesettings.io) provides a designer or developer a toolkit of Sass or Stylus functions and mixins that make setting nice type on the web easier.

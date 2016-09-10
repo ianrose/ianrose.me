@@ -2,7 +2,8 @@
 title: Newsblock
 date: 2015-07-19
 modified: null
-url: http://newsblock.io
+project:
+  url: http://newsblock.io
 description: A modern news aggregator that combines ‘topic relevance’ and ‘social trends’ to recommend the best stories.
 art: newsblock-art.gif
 layout: post.html

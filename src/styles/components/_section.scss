@@ -1,9 +1,10 @@
 .section--id {
   @extend .h1;
+  font-weight: lighter;
   color: $lighter-grey;
 
   @media (min-width: $screen-md-min) {
-    border-top: $border-width-narrow solid $text-color;
+    border-top: $border-width-normal solid $lighter-grey;
   }
 }
 
@@ -20,6 +21,10 @@
   @media (min-width: $screen-lg-min) {
     max-width: $span-6;
   }
+}
+
+.section--posts-1 {
+  margin-bottom: emRhythm(9);
 }
 
 .section--heading {

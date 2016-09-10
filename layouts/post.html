@@ -22,6 +22,11 @@
       {{/is}}
     </header>
     <div class="article--body" itemprop="articleBody">
+      {{#each body}}
+        {{#is type 'p'}}
+          <{{type}}>{{{value}}}</{{type}}>
+        {{/is}}
+      {{/each}}
       {{{typogrFormat contents}}}
     </div>
   </article>

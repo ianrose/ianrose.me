@@ -10,6 +10,10 @@
   @include setType(2, $ms-down1);
 }
 
+.nav--post.is-first {
+  justify-content: flex-end;
+}
+
 .nav--post-heading {
   padding-top: emRhythm(1, $ms-down1);
   margin-bottom: emRhythm(0.5, $ms-down1, $silent: true);
@@ -17,7 +21,7 @@
 }
 
 .nav--post-heading {
-  border-top: $border-width-narrow solid $grey;
+  border-top: $border-width-narrow solid $lighter-grey;
 }
 
 .nav--post-button {
@@ -33,7 +37,7 @@
   border-top: none;
 
   @media (min-width: $screen-md-min) {
-    border-top: $border-width-narrow solid $grey;
+    border-top: $border-width-narrow solid $lighter-grey;
   }
 }
 
@@ -47,9 +51,9 @@
     max-width: $span-2;
   }
 }
-.nav--next {
+.nav--prev {
   @media (min-width: $screen-md-min) {
-    margin-left: $span-1;
+    margin-right: $span-1;
   }
 }
 

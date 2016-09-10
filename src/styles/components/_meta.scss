@@ -25,7 +25,7 @@ $meta-size: $ms-down1;
 }
 
 .meta--heading {
-  border-top: $border-width-narrow solid $text-color;
+  border-top: $border-width-normal solid $lighter-grey;
   padding-top: emRhythm(1, $ms-down1);
 
   @media (min-width: $screen-lg-min) {
