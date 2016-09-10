@@ -1,10 +1,13 @@
 ---
 title: Getting Posts by Category with Hexo
-date: "2015-01-20"
+date: 2015-01-20T00:00:00.000Z
 modified: null
-tags:
-description: While building with Hexo I came across a need to get all the posts by a specific category and render them through a specific partial.
+tags: null
+description: >-
+  While building with Hexo I came across a need to get all the posts by a
+  specific category and render them through a specific partial.
 layout: post.html
+published: true
 ---
 While building with Hexo I came across a need to get all the posts by a specific category and render them through a specific partial.
 
