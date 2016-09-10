@@ -1,6 +1,6 @@
 ---
 title: "A Sass Type Toolkit: Typesettings"
-date: "2014-04-24"
+date: 2014-04-24
 modified: null
 tags:
 description: How to get a GitHub hosted project site to 301 redirect to a custom domain name using CloudFlare.

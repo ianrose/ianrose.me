@@ -1,6 +1,6 @@
 ---
 title: Typesettings
-date: "2014-12-30"
+date: 2014-12-30
 modified: null
 url: http://typesettings.io
 description: A CSS preprocessor toolkit that helps set type and elements in Ems with modular scale, vertical rhythm, and responsive ratio based headlines.

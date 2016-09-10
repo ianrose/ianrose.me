@@ -1,6 +1,6 @@
 ---
 title: Clear Creek Transit Village
-date: "2013-01-16"
+date: 2013-01-16
 modified: null
 url: clear-creek-transit-village
 description: Clear Creek Transit Village needed a brochure site to help attract investors and provide resources for the CCTV development team.

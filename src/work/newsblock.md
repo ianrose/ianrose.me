@@ -1,6 +1,6 @@
 ---
 title: Newsblock
-date: "2015-07-19"
+date: 2015-07-19
 modified: null
 url: http://newsblock.io
 description: A modern news aggregator that combines ‘topic relevance’ and ‘social trends’ to recommend the best stories.

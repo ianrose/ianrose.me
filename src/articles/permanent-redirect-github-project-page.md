@@ -1,6 +1,6 @@
 ---
 title: Permanent Redirect GitHub Project Page to Custom Domain
-date: "2014-04-30"
+date: 2014-04-30
 modified: null
 tags:
 description: How to get a GitHub hosted project site to 301 redirect to a custom domain name using CloudFlare.
