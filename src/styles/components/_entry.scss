@@ -18,7 +18,11 @@
 }
 
 .entry--media {
+  background-color: #010742;
+  background-color: #013e42;
   display: block;
+  position: relative;
+  filter: contrast(1.1);
 }
 
 .entry--category-container {

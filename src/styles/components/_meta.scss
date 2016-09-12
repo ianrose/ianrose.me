@@ -20,7 +20,7 @@ $meta-size: $ms-down1;
 
 .meta--txt {
   font-family: $font-sans;
-  margin-bottom: emRhythm(0.5, $meta-size, $silent: true);
+  margin-bottom: emRhythm(1, $meta-size, $silent: true);
   @include setType(2, $meta-size);
 }
 
@@ -39,16 +39,7 @@ $meta-size: $ms-down1;
 
 .meta--container-post {
   flex-basis: $span-3;
-
-
-  @media (min-width: $screen-md-min) {
-    max-width: $span-3;
-  }
-
-  @media (min-width: $screen-lg-min) {
-    flex-basis: $span-2;
-    max-width: $span-2;
-  }
+  max-width: 130.141px;
 }
 
 .meta--container {
@@ -63,8 +54,8 @@ $meta-size: $ms-down1;
 }
 
 .meta--container-post:last-child {
-  @media (min-width: $screen-lg-min) {
-    margin-left: $span-2;
+  @media (min-width: $screen-md-min) {
+    margin-left: $span-3;
   }
 }
 

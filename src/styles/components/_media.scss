@@ -1,6 +1,8 @@
 .media--entry {
   margin-bottom: emRhythm(1);
   width: 100%; //FF image overflow fix
+  filter: grayscale(100%);
+  mix-blend-mode: exclusion;
 }
 
 .media-full {
