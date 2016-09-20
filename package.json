@@ -34,6 +34,7 @@
     "handlebars-helpers": "^0.7.5",
     "metalsmith": "^2.2.0",
     "metalsmith-assets": "^0.1.0",
+    "metalsmith-autotoc": "^0.1.2",
     "metalsmith-collections": "petasittek/metalsmith-collections",
     "metalsmith-drafts": "0.0.1",
     "metalsmith-in-place": "^1.4.4",

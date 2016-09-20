@@ -20,6 +20,14 @@
       {{#is path.dir 'articles'}}
         {{> byline}}
       {{/is}}
+      {{#if autotoc}}
+        Table of Contents
+        <ol class="toc">
+          {{#each toc}}
+          <li><a href="#{{id}}">{{text}}</a></li>
+          {{/each}}
+        </ol>
+      {{/if}}
     </header>
     <div class="article--body" itemprop="articleBody">
       {{{typogrFormat contents}}}

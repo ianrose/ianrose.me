@@ -19,6 +19,7 @@ var sitemap = require('metalsmith-mapsite');
 var postcss = require('metalsmith-with-postcss');
 var paths = require('metalsmith-paths');
 var drafts = require('metalsmith-drafts');
+var autotoc = require('metalsmith-autotoc');
 var uglify = require('metalsmith-uglify');
 var pkg = require('./package.json');
 
@@ -78,6 +79,9 @@ var ms = Metalsmith(__dirname)
   }))
   .use(helpers({
     directory: 'lib'
+  }))
+  .use(autotoc({
+    selector: 'h2, h3, h4'
   }))
   .use(inplace({
     engine: 'handlebars',
