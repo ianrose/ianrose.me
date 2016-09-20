@@ -1,7 +1,3 @@
----
-autotoc: true
----
-
 # Resources
 
 Curated list of resources for design, development and process in the newsroom.
