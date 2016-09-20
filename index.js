@@ -21,6 +21,7 @@ var paths = require('metalsmith-paths');
 var drafts = require('metalsmith-drafts');
 var uglify = require('metalsmith-uglify');
 var pkg = require('./package.json');
+var download = require('metalsmith-download');
 
 var dataFiles = fs.readdirSync(path.join(__dirname, 'src', 'data'));
 var data = {};
@@ -43,6 +44,10 @@ var ms = Metalsmith(__dirname)
   .destination(config.dest)
   .metadata(config)
   .use(globaldata(data))
+  .use(download({
+    url: 'https://raw.githubusercontent.com/ianrose/resources/master/README.md',
+    file: './src/resources.md'
+  }))
   .use(collections({
     work: {
       pattern: 'work/**/!(index.md)',
@@ -88,7 +93,7 @@ var ms = Metalsmith(__dirname)
     engine: 'handlebars',
     directory: 'layouts',
     partials: 'partials',
-    default: 'default.html',
+    default: 'post.html',
     pattern: '**/*.html'
   }))
   .use(sass({

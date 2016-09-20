@@ -1,5 +1,6 @@
 ---
 title: About
+layout: bare.html
 ---
 <article>
   <h1 class="heading heading--page">About</h1>

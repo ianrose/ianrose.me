@@ -4,7 +4,7 @@
     <div class="row">
       <div class="meta--container meta--container-post">
         <div class="meta--txt meta--heading">
-          <span class="meta meta--primary"><a class="meta--link" href="/{{collection}}">{{collection}}</a></span>
+          <span class="meta meta--primary">{{#if collection}}<a class="meta--link" href="/{{collection}}">{{collection}}</a>{{else}}{{capitalize paths.dir}}{{/if}}</span>
         </div>
       </div>
       <div class="meta--container meta--container-post">
@@ -22,11 +22,6 @@
       {{/is}}
     </header>
     <div class="article--body" itemprop="articleBody">
-      {{#each body}}
-        {{#is type 'p'}}
-          <{{type}}>{{{value}}}</{{type}}>
-        {{/is}}
-      {{/each}}
       {{{typogrFormat contents}}}
     </div>
   </article>
