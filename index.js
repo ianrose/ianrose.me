@@ -64,7 +64,7 @@ var ms = Metalsmith(__dirname)
   .use(drafts())
   .use(permalinks({
     relative: false,
-    pattern: ':title',
+    pattern: ':file',
     linksets: [{
       match: {collection: 'articles'},
       pattern: ':collection/:title'
@@ -92,7 +92,7 @@ var ms = Metalsmith(__dirname)
     engine: 'handlebars',
     directory: 'layouts',
     partials: 'partials',
-    default: 'post.html',
+    default: 'default.html',
     pattern: '**/*.html'
   }))
   .use(sass({

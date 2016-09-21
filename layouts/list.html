@@ -1,0 +1,40 @@
+{{> start}}
+  <article class="article--post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="meta--post--l">
+    <div class="row">
+      <div class="meta--container meta--container-post">
+        <div class="meta--txt meta--heading">
+          <span class="meta meta--primary">{{#if collection}}<a class="meta--link" href="/{{collection}}">{{collection}}</a>{{else}}{{capitalize paths.dir}}{{/if}}</span>
+        </div>
+      </div>
+      <div class="meta--container meta--container-post">
+        <div class="meta--txt meta--heading">
+          {{> time}}
+        </div>
+      </div>
+    </div>
+  </div>
+    <header class="article--header">
+      <h1 itemprop="headline">{{title}}</h1>
+      <p class="dek dek--lg">{{description}}</p>
+      {{#is path.dir 'articles'}}
+        {{> byline}}
+      {{/is}}
+      {{#if autotoc}}
+        Table of Contents
+        <ol class="toc">
+          {{#each toc}}
+          <li><a href="#{{id}}">{{text}}</a></li>
+          {{/each}}
+        </ol>
+      {{/if}}
+    </header>
+    <div id="search-list" class="article--body" itemprop="articleBody">
+      <p><input type="text" class="fuzzy-search search" placeholder="Search"></p>
+        <div class="list">
+          {{{typogrFormat contents}}}
+        </div>
+    </div>
+  </article>
+  {{> postnav}}
+{{> end}}
