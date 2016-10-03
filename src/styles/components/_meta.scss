@@ -25,7 +25,7 @@ $meta-size: $ms-down1;
 }
 
 .meta--heading {
-  border-top: $border-width-normal solid $lighter-grey;
+  border-top: $border-width-narrow solid $lighter-grey;
   padding-top: emRhythm(1, $ms-down1);
 
   @media (min-width: $screen-lg-min) {
@@ -54,9 +54,7 @@ $meta-size: $ms-down1;
 }
 
 .meta--container-post:last-child {
-  @media (min-width: $screen-md-min) {
-    margin-left: $span-3;
-  }
+  margin-left: $span-3;
 }
 
 .meta--primary {
@@ -69,6 +67,10 @@ $meta-size: $ms-down1;
 }
 
 .meta--post--l {
+
+  .row {
+    display: flex;
+  }
 
   @media (min-width: $screen-sm-min) {
     min-height: $site-header-height;
