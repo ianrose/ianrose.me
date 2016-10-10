@@ -23,6 +23,8 @@
   <meta name="twitter:domain" content="{{url}}>" />
   {{#if service.socialimage}}<meta name="twitter:image:src" content="{{service.socialimage}}" />{{/if}}
   <title>{{#if title}}{{capitalize title}}{{else}}{{capitalize paths.dir}}{{/if}} | {{name}}</title>
+  <link rel="preload" href="/assets/fonts/source-serif-pro-v4-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/source-sans-pro-v9-latin-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="author" href="humans.txt" />
   <link rel="icon" href="/assets/images/favicon.ico">
   <link rel="stylesheet" href="/styles/main.css">
