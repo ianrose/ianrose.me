@@ -31,12 +31,12 @@ dataFiles.forEach(function (filename) {
 });
 
 var config = {
-  name: "Ian Rose",
+  name: 'Ian Rose',
   version: pkg.version,
   devBuild: devBuild,
-  domain: "ianrose.me",
-  url: "http://www.ianrose.me",
-  dest: "./www/"
+  domain: 'ianrose.me',
+  url: 'http://www.ianrose.me',
+  dest: './www/'
 };
 
 var ms = Metalsmith(__dirname)
@@ -68,7 +68,7 @@ var ms = Metalsmith(__dirname)
     linksets: [{
       match: {collection: 'articles'},
       pattern: ':collection/:title'
-    },{
+    }, {
       match: {collection: 'work'},
       pattern: ':collection/:title'}
     ]
@@ -115,29 +115,33 @@ var ms = Metalsmith(__dirname)
     destination: './assets' // relative to the build directory
   }));
 
-  if(!devBuild) ms.use(uglify({
-      removeOriginal: true,
-      nameTemplate: '[name].js'
+if (!devBuild) {
+  ms.use(uglify({
+    removeOriginal: true,
+    nameTemplate: '[name].js'
   }));
+}
 
-  if(devBuild) ms.use(browserSync({
+if (devBuild) {
+  ms.use(browserSync({
     server: config.dest,
     files: ['src/**/*.*', 'layouts/*.*', 'partials/**/*.*'],
     open: false,
     notify: false
   }));
+}
 
-  ms.use(debug({
-    files: false,
-    match: "**/*.md"
-  }))
- .use(sitemap({ // generate sitemap.xml
-    hostname: config.url,
-    omitIndex: true
-  }))
-  .build(function (error) {
-    console.log((devBuild ? 'Development' : 'Production'), 'build success, version', pkg.version);
-    if (error) {
-      console.log(error);
-    }
-  });
+ms.use(debug({
+  files: false,
+  match: '**/*.md'
+}))
+.use(sitemap({ // generate sitemap.xml
+  hostname: config.url,
+  omitIndex: true
+}))
+.build(function (error) {
+  console.log((devBuild ? 'Development' : 'Production'), 'build success, version', pkg.version);
+  if (error) {
+    console.log(error);
+  }
+});
