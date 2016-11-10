@@ -7,7 +7,7 @@
   "scripts": {
     "prestart": "node download.js",
     "start": "node index.js",
-    "debug": "DEBUG=metalsmith:*, npm run dev",
+    "debug": "DEBUG=metalsmith:*, NODE_ENV=debug npm run dev",
     "dev": "npm start --development",
     "compile": "npm start --production"
   },
@@ -54,6 +54,7 @@
   },
   "devDependencies": {
     "metalsmith-browser-sync": "^1.1.1",
-    "metalsmith-debug": "^1.1.0"
+    "metalsmith-debug": "^1.1.0",
+    "metalsmith-writemetadata": "^0.4.5"
   }
 }

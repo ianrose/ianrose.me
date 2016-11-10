@@ -1,5 +1,6 @@
 // Set a ture or false for production/development. Use to run certain plugins
 var devBuild = ((process.env.NODE_ENV || '').trim().toLowerCase() !== 'production');
+var debugMode = ((process.env.NODE_ENV || '').trim().toLowerCase() === 'debug');
 
 var fs = require('fs');
 var path = require('path');
@@ -21,6 +22,7 @@ var paths = require('metalsmith-paths');
 var drafts = require('metalsmith-drafts');
 var autotoc = require('metalsmith-autotoc');
 var uglify = require('metalsmith-uglify');
+var writemetadata = require('metalsmith-writemetadata');
 var pkg = require('./package.json');
 
 var dataFiles = fs.readdirSync(path.join(__dirname, 'src', 'data'));
@@ -34,6 +36,7 @@ var config = {
   name: 'Ian Rose',
   version: pkg.version,
   devBuild: devBuild,
+  debugMode: debugMode,
   domain: 'ianrose.me',
   url: 'http://www.ianrose.me',
   dest: './www/'
@@ -114,6 +117,13 @@ var ms = Metalsmith(__dirname)
     source: './src/assets', // relative to the working directory
     destination: './assets' // relative to the build directory
   }));
+
+if(debugMode) {
+  ms.use(writemetadata({
+    pattern: ['**/*.html'],
+    bufferencoding: 'utf8'
+  }));
+}
 
 if (!devBuild) {
   ms.use(uglify({
