@@ -17,8 +17,9 @@
   }
 }
 
-.site-title--name a {
-  font-weight: 800;
+.site-title--name a,
+h1.site-title--name a:link {
+  font-weight: 600;
   text-transform: uppercase;
   text-decoration: none;
 

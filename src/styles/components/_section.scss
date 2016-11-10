@@ -4,7 +4,7 @@
   color: $lighter-grey;
 
   @media (min-width: $screen-md-min) {
-    border-top: $border-width-normal solid $lighter-grey;
+    border-top: $border-width-narrow solid $lighter-grey;
   }
 }
 
