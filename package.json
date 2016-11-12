@@ -1,6 +1,6 @@
 {
   "name": "ianrose.me",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Source for Ian Rose's personal website",
   "private": true,
   "main": "index.js",
@@ -34,7 +34,9 @@
     ]
   },
   "stylelint": {
-    "ignoreFiles": ["src/styles/vendor/*.scss"],
+    "ignoreFiles": [
+      "src/styles/vendor/*.scss"
+    ],
     "extends": "stylelint-config-standard",
     "rules": {
       "function-name-case": null
