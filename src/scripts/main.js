@@ -1,6 +1,6 @@
 /* globals $, location */
+require('./vendor/prism')
 $(document).ready(function () {
-  require('./vendor/prism')
   require('./vendor/livefilter')
 
   var touchEventName = ('ontouchstart' in window) ? 'touchstart' : 'click'
