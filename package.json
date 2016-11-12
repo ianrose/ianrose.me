@@ -9,7 +9,8 @@
     "start": "node index.js",
     "debug": "DEBUG=metalsmith:*, NODE_ENV=debug npm run dev",
     "dev": "npm start --development",
-    "compile": "npm start --production"
+    "compile": "npm start --production",
+    "lint": "standard --verbose && stylelint '**/*.scss' && htmlhint **/*.{hbs,html} --config .htmlhintrc --ignore **/www/**"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,18 @@
     "url": "https://github.com/ianrose/machinist/issues"
   },
   "homepage": "https://github.com/ianrose/machinist#readme",
+  "standard": {
+    "ignore": [
+      "**/vendor/**"
+    ]
+  },
+  "stylelint": {
+    "ignoreFiles": ["src/styles/vendor/*.scss"],
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "function-name-case": null
+    }
+  },
   "dependencies": {
     "autoprefixer": "^6.4.0",
     "download-file": "^0.1.5",
@@ -54,8 +67,13 @@
     "typogr": "^0.6.6"
   },
   "devDependencies": {
+    "htmlhint": "^0.9.13",
     "metalsmith-browser-sync": "^1.1.1",
     "metalsmith-debug": "^1.1.0",
-    "metalsmith-writemetadata": "^0.4.5"
+    "metalsmith-writemetadata": "^0.4.5",
+    "standard": "^8.5.0",
+    "stylefmt": "^4.3.1",
+    "stylelint": "^7.5.0",
+    "stylelint-config-standard": "^14.0.0"
   }
 }

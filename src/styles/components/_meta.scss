@@ -19,9 +19,10 @@ $meta-size: $ms-down1;
 }
 
 .meta--txt {
+  @include setType(2, $meta-size);
+
   font-family: $font-sans;
   margin-bottom: emRhythm(1, $meta-size, $silent: true);
-  @include setType(2, $meta-size);
 }
 
 .meta--heading {
@@ -67,7 +68,6 @@ $meta-size: $ms-down1;
 }
 
 .meta--post--l {
-
   .row {
     display: flex;
   }

@@ -1,4 +1,4 @@
-/*globals $, location */
+/* globals $, location */
 $(document).ready(function () {
   require('./vendor/prism')
   require('./vendor/livefilter')

@@ -4,10 +4,11 @@
 }
 
 .nav a {
+  @include setType(2, $ms-down1);
+
   font-family: $font-sans;
   text-decoration: none;
   vertical-align: text-top;
-  @include setType(2, $ms-down1);
 }
 
 .nav--post.is-first {
@@ -15,9 +16,10 @@
 }
 
 .nav--post-heading {
+  @include setType(2, $ms-down1);
+
   padding-top: emRhythm(1, $ms-down1);
   margin-bottom: emRhythm(0.5, $ms-down1, $silent: true);
-  @include setType(2, $ms-down1);
 }
 
 .nav--post-heading {
@@ -51,6 +53,7 @@
     max-width: $span-2;
   }
 }
+
 .nav--prev {
   @media (min-width: $screen-md-min) {
     margin-right: $span-1;
@@ -88,6 +91,7 @@
 
   @media (min-width: $screen-sm-min) {
     max-height: none;
+
     a {
       @include setType(2, $ms-down1);
     }

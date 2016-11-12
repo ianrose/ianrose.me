@@ -1,10 +1,11 @@
 @mixin clearfix() {
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     content: " ";
     display: table;
   }
-  &:after {
+
+  &::after {
     clear: both;
   }
 }
@@ -74,6 +75,7 @@
 
 .col-5 {
   flex-basis: $span-5;
+
   @media (min-width: $screen-md-min) {
     max-width: $span-5;
   }
@@ -81,6 +83,7 @@
 
 .col-6 {
   flex-basis: $span-6;
+
   @media (min-width: $screen-md-min) {
     max-width: $span-6;
   }
@@ -88,6 +91,7 @@
 
 .col-7 {
   flex-basis: $span-7;
+
   @media (min-width: $screen-md-min) {
     max-width: $span-7;
   }
@@ -95,6 +99,7 @@
 
 .col-half {
   flex-basis: $span-half;
+
   @media (min-width: $screen-md-min) {
     max-width: $span-half;
   }

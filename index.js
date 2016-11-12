@@ -1,37 +1,37 @@
 // Set a ture or false for production/development. Use to run certain plugins
-var devBuild = ((process.env.NODE_ENV || '').trim().toLowerCase() !== 'production');
-var debugMode = ((process.env.NODE_ENV || '').trim().toLowerCase() === 'debug');
+var devBuild = ((process.env.NODE_ENV || '').trim().toLowerCase() !== 'production')
+var debugMode = ((process.env.NODE_ENV || '').trim().toLowerCase() === 'debug')
 
-var fs = require('fs');
-var path = require('path');
-var Metalsmith = require('metalsmith');
-var markdown = require('metalsmith-markdown');
-var layouts = require('metalsmith-layouts');
-var assets = require('metalsmith-assets');
-var collections = require('metalsmith-collections');
-var permalinks = require('metalsmith-permalinks');
-var browserSync = devBuild ? require('metalsmith-browser-sync') : null;
-var globaldata = require('metalsmith-metadata');
-var sass = require('metalsmith-sass');
-var inplace = require('metalsmith-in-place');
-var debug = require('metalsmith-debug');
-var helpers = require('metalsmith-register-helpers');
-var sitemap = require('metalsmith-mapsite');
-var postcss = require('metalsmith-with-postcss');
-var paths = require('metalsmith-paths');
-var drafts = require('metalsmith-drafts');
-var autotoc = require('metalsmith-autotoc');
-var uglify = require('metalsmith-uglify');
-var webpack = require('metalsmith-webpack');
-var writemetadata = require('metalsmith-writemetadata');
-var pkg = require('./package.json');
+var fs = require('fs')
+var path = require('path')
+var Metalsmith = require('metalsmith')
+var markdown = require('metalsmith-markdown')
+var layouts = require('metalsmith-layouts')
+var assets = require('metalsmith-assets')
+var collections = require('metalsmith-collections')
+var permalinks = require('metalsmith-permalinks')
+var browserSync = devBuild ? require('metalsmith-browser-sync') : null
+var globaldata = require('metalsmith-metadata')
+var sass = require('metalsmith-sass')
+var inplace = require('metalsmith-in-place')
+var debug = require('metalsmith-debug')
+var helpers = require('metalsmith-register-helpers')
+var sitemap = require('metalsmith-mapsite')
+var postcss = require('metalsmith-with-postcss')
+var paths = require('metalsmith-paths')
+var drafts = require('metalsmith-drafts')
+var autotoc = require('metalsmith-autotoc')
+var uglify = require('metalsmith-uglify')
+var webpack = require('metalsmith-webpack')
+var writemetadata = require('metalsmith-writemetadata')
+var pkg = require('./package.json')
 
-var dataFiles = fs.readdirSync(path.join(__dirname, 'src', 'data'));
-var data = {};
+var dataFiles = fs.readdirSync(path.join(__dirname, 'src', 'data'))
+var data = {}
 
 dataFiles.forEach(function (filename) {
-  data[filename.split('.')[0]] = 'data/' + filename;
-});
+  data[filename.split('.')[0]] = 'data/' + filename
+})
 
 var config = {
   name: 'Ian Rose',
@@ -41,7 +41,7 @@ var config = {
   domain: 'ianrose.me',
   url: 'http://www.ianrose.me',
   dest: './www/'
-};
+}
 
 var ms = Metalsmith(__dirname)
   .source('src/')
@@ -102,8 +102,8 @@ var ms = Metalsmith(__dirname)
   .use(sass({
     outputStyle: devBuild ? 'expanded' : 'compressed',
     outputDir: 'styles',
-    sourceMap: devBuild ? true : false,
-    sourceMapContents: devBuild ? true : false
+    sourceMap: devBuild || false,
+    sourceMapContents: devBuild || false
   }))
   .use(postcss({
     pattern: ['**/*.css', '!**/_*/*', '!**/_*'],
@@ -126,20 +126,20 @@ var ms = Metalsmith(__dirname)
   .use(assets({
     source: './src/assets', // relative to the working directory
     destination: './assets' // relative to the build directory
-  }));
+  }))
 
-if(debugMode) {
+if (debugMode) {
   ms.use(writemetadata({
     pattern: ['**/*.html'],
     bufferencoding: 'utf8'
-  }));
+  }))
 }
 
 if (!devBuild) {
   ms.use(uglify({
     removeOriginal: true,
     nameTemplate: '[name].js'
-  }));
+  }))
 }
 
 if (devBuild) {
@@ -148,7 +148,7 @@ if (devBuild) {
     files: ['src/**/*.*', 'layouts/*.*', 'partials/**/*.*'],
     open: false,
     notify: false
-  }));
+  }))
 }
 
 ms.use(debug({
@@ -160,8 +160,8 @@ ms.use(debug({
   omitIndex: true
 }))
 .build(function (error) {
-  console.log((devBuild ? 'Development' : 'Production'), 'build success, version', pkg.version);
+  console.log((devBuild ? 'Development' : 'Production'), 'build success, version', pkg.version)
   if (error) {
-    console.log(error);
+    console.log(error)
   }
-});
+})

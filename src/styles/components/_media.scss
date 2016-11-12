@@ -6,7 +6,6 @@
 }
 
 .media-full {
-
   @media (min-width: $screen-md-min) {
     width: $container-md-width;
     margin-left: $gutter * -1;
@@ -26,7 +25,7 @@
 .media-full figcaption {
   margin-top: $base-vertical-unit;
 
-  @media (min-width: $screen-xl-min){
+  @media (min-width: $screen-xl-min) {
     position: absolute;
     right: 0;
     padding-left: $gutter * 2;

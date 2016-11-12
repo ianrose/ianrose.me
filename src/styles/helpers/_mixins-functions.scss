@@ -1,10 +1,11 @@
 @mixin clearfix() {
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     content: " ";
     display: table;
   }
-  &:after {
+
+  &::after {
     clear: both;
   }
 }
@@ -14,7 +15,7 @@
   $class-name: $prefix + $width + "x" + $height;
 
   .#{$class-name} {
-    padding-bottom: percentage( $height / $width);
+    padding-bottom: percentage($height / $width);
   }
   // Output example: .ratio-16x9 {}
 }

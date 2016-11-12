@@ -26,7 +26,7 @@ button.button--primary,
 input[type="submit"].button--primary,
 input[type="reset"].button--primary,
 input[type="button"].button--primary,
-input[type="file"].button--primary  {
+input[type="file"].button--primary {
   color: #fff;
   background-color: $text-color;
   border: 1px solid $text-color;
@@ -37,7 +37,7 @@ button.button--primary:hover,
 input[type="submit"].button--primary:hover,
 input[type="reset"].button--primary:hover,
 input[type="button"].button--primary:hover,
-input[type="file"].button--primary:hover  {
+input[type="file"].button--primary:hover {
   color: darken(#fff, 10%);
   background-color: darken($text-color, 10%);
   border: 1px solid darken($text-color, 10%);
@@ -48,7 +48,7 @@ button.button--primary:active,
 input[type="submit"].button--primary:active,
 input[type="reset"].button--primary:active,
 input[type="button"].button--primary:active,
-input[type="file"].button--primary:active  {
+input[type="file"].button--primary:active {
   color: darken(#fff, 20%);
 }
 
@@ -68,8 +68,9 @@ input[type="button"]:focus {
 }
 
 .button--link {
-  font-family: $font-sans;
   @include setType(2, $ms-down1);
+
+  font-family: $font-sans;
 
   &:link,
   &:visited {

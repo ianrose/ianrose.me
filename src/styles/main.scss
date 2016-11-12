@@ -5,7 +5,7 @@
 @import "fonts";
 
 // Reset
-@import "resets/normalize";
+@import "vendor/normalize";
 
 // Helper Mixins and Functions
 @import "helpers/mixins-functions";
@@ -33,7 +33,7 @@
 @import "components/meta";
 @import "components/nav";
 @import "components/newsletter";
-@import "components/prism";
+@import "vendor/prism";
 @import "components/search";
 @import "components/section";
 @import "components/site-header";

@@ -19,12 +19,18 @@ body {
   background-color: $background-color;
 }
 
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
   margin-top: 0;
   padding-top: 0;
   padding-bottom: 0;
@@ -48,40 +54,52 @@ h6, .h6 {
 // first rule.
 // [5] Sets the type to one of the modular scale values and the second argument
 // sets a unitless line-height as a multiple of the vertical grid.
-h1, .h1 {
+h1,
+.h1 {
   margin-bottom: emRhythm(0.5, $ms-up2, $silent: true); // [1]
   @include setType(4, $ms-up2); // [2]
 
   @media (min-width: $screen-sm-min) {
-    margin-bottom: emRhythm(1, $ms-up4, $silent: true);
     @include setType(7, $ms-up4);
+
+    margin-bottom: emRhythm(1, $ms-up4, $silent: true);
   }
 }
 
-h2, .h2 {
-  margin-bottom: emRhythm(0.5, $ms-up1, $silent: true);
+h2,
+.h2 {
   @include setType(3, $ms-up1);
+
+  margin-bottom: emRhythm(0.5, $ms-up1, $silent: true);
 }
 
-h3, .h3 {
-  margin-bottom: emRhythm(1, $ms-up1);
+h3,
+.h3 {
   @include setType(3, $ms-up1);
+
+  margin-bottom: emRhythm(1, $ms-up1);
 
   @media (min-width: $screen-md-min) {
-    margin-bottom: emRhythm(1, $ms-up2);
     @include setType(4, $ms-up2);
+
+    margin-bottom: emRhythm(1, $ms-up2);
   }
 }
 
-h4, .h4 {
-  margin-bottom: emRhythm(0.5, $silent: true);
+h4,
+.h4 {
   @include setType(3);
+
+  margin-bottom: emRhythm(0.5, $silent: true);
 }
 
-h5, .h5,
-h6, .h6 {
-  margin-bottom: 0;
+h5,
+.h5,
+h6,
+.h6 {
   @include setType(3);
+
+  margin-bottom: 0;
 }
 
 a,
@@ -135,41 +153,45 @@ figure {
 }
 
 figcaption {
+  @include setType(2, $ms-down1, $ms-up1);
+
   margin-top: $base-vertical-unit;
   color: $light-grey;
   font-weight: 400;
   font-family: $font-sans;
-  @include setType(2, $ms-down1, $ms-up1);
 }
 
 blockquote {
   margin-top: emRhythm(3);
-  margin-bottom: emRhythm(3);
   margin-left: 0;
   padding-bottom: 0;
   margin-right: 0;
   font-family: $font-display-serif;
 
   p {
+    @include setType(4, $ms-up2);
+
     font-weight: 600;
     margin-bottom: emRhythm(1, $ms-up2);
     text-indent: $base-vertical-unit * -1.5;
     padding-left: $base-vertical-unit;
-    @include setType(4, $ms-up2);
   }
 
   footer {
+    @include setType(2, $ms-down1, $ms-up1);
+
     color: $light-grey;
     font-weight: 400;
     font-family: $font-sans;
-    @include setType(2, $ms-down1, $ms-up1);
 
     strong {
       font-weight: 400;
     }
+
     cite {
       font-style: normal;
-      &:before {
+
+      &::before {
         content: " – ";
       }
     }
@@ -189,10 +211,11 @@ blockquote {
   }
 
   p {
+    @include setType(4, $ms-up2);
+
     font-weight: 900;
     margin-bottom: emRhythm(1, $ms-up2);
     text-indent: $base-vertical-unit * -1.5;
-    @include setType(4, $ms-up2);
   }
 }
 
@@ -225,7 +248,7 @@ code {
 
 pre > code {
   font-size: 1em;
-  padding: 0
+  padding: 0;
 }
 
 ol,
@@ -272,12 +295,13 @@ mark {
 // Creates horizontal rules that obey the baseline.
 // [1] Zero outs the user agent border
 hr {
+  @include rhythmBorderTop(1px, 3);
+
   margin-top: emRhythm(4);
   margin-bottom: 0;
   border: none; // [1]
   border-top-color: $lighter-grey;
   border-top-style: solid;
-  @include rhythmBorderTop(1px, 3);
 }
 
 table {
@@ -379,18 +403,19 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 textarea:focus,
 select:focus {
-  border: 1px solid #33C3F0;
+  border: 1px solid #33c3f0;
   outline: 0;
 }
 
 label,
 legend {
+  @include setType($base-line-multi, $ms-down1);
+
   color: $light-grey;
   display: block;
   font-weight: 400;
   font-family: $font-serif;
   margin-bottom: emRhythm(1, $ms-down1);
-  @include setType($base-line-multi, $ms-down1);
 }
 
 fieldset {

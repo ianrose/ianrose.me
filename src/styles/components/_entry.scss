@@ -55,6 +55,7 @@
 }
 
 .entry-heading--category {
-  margin-bottom: emRhythm(1,$ms-up1);
   @include setType(3, $ms-up1);
+
+  margin-bottom: emRhythm(1, $ms-up1);
 }
