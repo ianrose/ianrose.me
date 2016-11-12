@@ -16,7 +16,7 @@ $ npm install
 
 To develop: `npm run dev`
 
-To generate: `npm run compile`
+To generate: `npm run build`
 
 ## Requirements
 

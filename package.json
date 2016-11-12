@@ -9,7 +9,7 @@
     "start": "node index.js",
     "debug": "DEBUG=metalsmith:*, NODE_ENV=debug npm run dev",
     "dev": "npm start --development",
-    "compile": "npm start --production",
+    "build": "npm start --production",
     "lint": "standard --verbose && stylelint '**/*.scss' && htmlhint **/*.{hbs,html} --config .htmlhintrc --ignore **/www/**"
   },
   "repository": {
