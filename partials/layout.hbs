@@ -31,8 +31,6 @@
   <!-- {{#if devBuild}}dev{{else}}production{{/if}} v{{version}} -->
 </head>
 <body id="top" class="{{#if paths.dir}}{{stem paths.href}}-page{{else}}{{paths.name}}-page{{/if}}{{#if paths.dir}} {{segments paths.dir '0' '1'}}-route{{/if}}" itemscope itemtype="http://schema.org/WebPage">
-<pre>{{stringify paths}}</pre>
-
 <div class="nav--menu">
     {{> header}}
     {{> nav}}
