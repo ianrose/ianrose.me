@@ -6,7 +6,7 @@ tags: null
 description: >-
   While building with Hexo I came across a need to get all the posts by a
   specific category and render them through a specific partial.
-layout: post.html
+layout: post.hbs
 ---
 While building with Hexo I came across a need to get all the posts by a specific category and render them through a specific partial.
 

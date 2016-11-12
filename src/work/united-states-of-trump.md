@@ -5,7 +5,7 @@ modified: null
 url: http://www.nbcnews.com/specials/donald-trump-republican-party
 description: A NBC News special that takes an inside look at the voters who took over the Republican party.
 art: united-states-trump-art.jpg
-layout: post.html
+layout: post.hbs
 ---
 
 [Visit United States of Trump]({{url}})

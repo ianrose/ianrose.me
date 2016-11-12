@@ -95,7 +95,7 @@ var ms = Metalsmith(__dirname)
     engine: 'handlebars',
     directory: 'layouts',
     partials: 'partials',
-    default: 'default.html',
+    default: 'default.hbs',
     pattern: '**/*.html'
   }))
   .use(sass({

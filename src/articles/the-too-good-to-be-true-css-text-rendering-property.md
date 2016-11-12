@@ -4,7 +4,7 @@ date: 2015-01-22
 modified: null
 tags:
 description: The CSS text rendering property is a mixed bag. On initial pass it seems to be an obvious choice for improving type on the web.
-layout: post.html
+layout: post.hbs
 art: null
 ---
 

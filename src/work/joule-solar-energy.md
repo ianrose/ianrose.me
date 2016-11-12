@@ -4,7 +4,7 @@ date: 2013-02-06
 modified: null
 description: Joule Solar Energy needed a consumer facing website that worked across devices to attract new customers and provide resources for current customers.
 art: joulesolarenergy-art.jpg
-layout: post.html
+layout: post.hbs
 ---
 
 <figure class="media-full">

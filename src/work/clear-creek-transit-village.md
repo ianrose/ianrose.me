@@ -6,7 +6,7 @@ project:
   url: http://clearcreektransitvillage.com/
 description: Clear Creek Transit Village needed a brochure site to help attract investors and provide resources for the CCTV development team.
 art: cctv-art.jpg
-layout: post.html
+layout: post.hbs
 ---
 
 <figure class="media-full">

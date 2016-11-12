@@ -4,7 +4,7 @@ date: 2015-12-08
 modified: null
 tags:
 description: Provide the user with previous and next page navigation in a Harp.js site using Embeded JavaScript.
-layout: post.html
+layout: post.hbs
 art: null
 ---
 

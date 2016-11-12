@@ -4,7 +4,7 @@ date: 2014-05-01
 modified: null
 tags:
 description: At work I’ve been cranking on a prototype. I decided to give a Typesettings a go in more of a production setting that required designing in the browser. Overall the experience has been pretty good.
-layout: post.html
+layout: post.hbs
 art: null
 ---
 

@@ -1,5 +1,5 @@
 ---
 title: Work
-layout: collection.html
+layout: collection.hbs
 permalink: false
 ---
