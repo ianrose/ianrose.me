@@ -5,6 +5,7 @@
   "private": true,
   "main": "index.js",
   "scripts": {
+    "prestart": "node download.js",
     "start": "node index.js",
     "debug": "DEBUG=metalsmith:*, NODE_ENV=debug npm run dev",
     "dev": "npm start --development",
