@@ -22,6 +22,7 @@ var paths = require('metalsmith-paths');
 var drafts = require('metalsmith-drafts');
 var autotoc = require('metalsmith-autotoc');
 var uglify = require('metalsmith-uglify');
+var webpack = require('metalsmith-webpack');
 var writemetadata = require('metalsmith-writemetadata');
 var pkg = require('./package.json');
 
@@ -111,6 +112,15 @@ var ms = Metalsmith(__dirname)
     map: devBuild ? {inline: false} : false,
     plugins: {
       'autoprefixer': {browsers: ['> 0.5%', 'Explorer >= 10']}
+    }
+  }))
+  .use(webpack({
+    context: path.resolve(__dirname, './src/scripts/'),
+    entry: './main.js',
+    devtool: devBuild ? 'source-map' : null,
+    output: {
+      path: path.resolve(__dirname, './www/scripts/'),
+      filename: 'bundle.js'
     }
   }))
   .use(assets({
