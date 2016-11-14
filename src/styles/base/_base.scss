@@ -78,12 +78,6 @@ h3,
   @include setType(3, $ms-up1);
 
   margin-bottom: emRhythm(1, $ms-up1);
-
-  @media (min-width: $screen-md-min) {
-    @include setType(4, $ms-up2);
-
-    margin-bottom: emRhythm(1, $ms-up2);
-  }
 }
 
 h4,
@@ -289,7 +283,7 @@ abbr[title]:hover {
 }
 
 mark {
-  background: $yellow;
+  background: $highlight-color;
 }
 
 // Creates horizontal rules that obey the baseline.

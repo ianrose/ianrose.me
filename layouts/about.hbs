@@ -1,0 +1,26 @@
+{{#> layout}}
+<article>
+  <h1 class="heading heading--page">{{title}}</h1>
+  <p class="dek--intro">{{description}}</p>
+  <div class="row">
+    <h2 class="section--heading">Contact</h2>
+    <p class="section--body">
+      Email <a href="mailto:{{settings.author.email}}">{{settings.author.email}}</a><br>
+      Twitter <a href="http://twitter.com/{{settings.author.twitter}}">@{{settings.author.twitter}}</a><br>
+      GitHub <a href="http://github.com/{{settings.author.github}}">{{settings.author.github}}</a>
+    </p>
+  </div>
+  <div class="row">
+    <h2 class="section--heading">Overview</h2>
+    <p class="section--body">{{{overview}}}</p>
+  </div>
+  <div class="row">
+    <h2 class="section--heading">Clients</h2>
+    <p class="section--body">{{{clients}}}</p>
+  </div>
+  <div class="row">
+    <h2 class="section--heading">Colophon</h2>
+    <p class="section--body">{{{colophon}}}</p>
+  </div>
+</article>
+{{/layout}}
