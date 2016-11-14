@@ -40,7 +40,8 @@ $(document).ready(function () {
         tick: {
           show: false,
           outer: false,
-          multiline: false
+          multiline: false,
+          centered: true
         }
       }
     },
