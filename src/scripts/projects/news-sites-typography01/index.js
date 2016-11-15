@@ -2,18 +2,17 @@ require('d3')
 var c3 = require('c3')
 
 var palette = [
-  '#e96d80',
-  '#fd7c6b',
-  '#c7688f',
-  '#9d6796',
-  '#6f6592',
-  '#10596c',
-  '#767676',
+  '#e87079',
+  '#c46483',
+  '#995d84',
+  '#6b567b',
+  '#404c6a',
+  '#1b4052'
 ]
 
 $(document).ready(function () {
   c3.generate({
-    bindto: '#histogram',
+    bindto: '#averages',
     size: {
       height: 640
     },
@@ -57,7 +56,7 @@ $(document).ready(function () {
   })
 
   c3.generate({
-    bindto: '#standard',
+    bindto: '#frequency',
     size: {
       height: 480
     },
@@ -71,8 +70,8 @@ $(document).ready(function () {
       position: 'inset',
       inset: {
         anchor: 'top-right',
-        x: 100,
-        y: 100
+        x: 65,
+        y: 75
       }
     },
     point: {
@@ -86,19 +85,36 @@ $(document).ready(function () {
       },
       x: {
         label: {
-          text: 'Measure',
+          text: 'Line Length',
           position: 'outer-center',
         },
         tick: {
           outer: false,
-          multiline: false
+          culling: false
         }
       }
     },
     data: {
       columns: [
-        ['Frequency', 7, 46, 30, 15, 1, 1],
-        ['Measure', 70, 80 ,90 ,100 ,110, 120]
+        ['Frequency',
+        1,
+        15,
+        37,
+        21,
+        18,
+        6,
+        1,
+        1],
+        ['Measure',
+        66,
+        73,
+        80,
+        87,
+        94,
+        101,
+        108,
+        115
+        ]
       ],
       labels: false,
       type: 'bar',
@@ -110,15 +126,15 @@ $(document).ready(function () {
       }
     },
     padding: {
-      bottom: 1
+      bottom: 4
     },
-grid: {
-        x: {
-            show: false
-        },
-        y: {
-            show: true
-        }
+    grid: {
+      x: {
+          show: false
+      },
+      y: {
+          show: true
+      }
     }
   })
 })
