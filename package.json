@@ -44,6 +44,8 @@
   },
   "dependencies": {
     "autoprefixer": "^6.4.0",
+    "c3": "^0.4.11",
+    "d3": "^3.5.17",
     "download-file": "^0.1.5",
     "handlebars": "^4.0.5",
     "handlebars-helpers": "^0.7.5",

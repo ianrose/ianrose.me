@@ -65,8 +65,10 @@ var ms = Metalsmith(__dirname)
     gfm: true,
     tables: true
   }))
-  .use(drafts())
-  .use(permalinks({
+  if (!devBuild) {
+  ms.use(drafts())
+  }
+  ms.use(permalinks({
     relative: false,
     pattern: ':file',
     linksets: [{
@@ -116,11 +118,14 @@ var ms = Metalsmith(__dirname)
   }))
   .use(webpack({
     context: path.resolve(__dirname, './src/scripts/'),
-    entry: './main.js',
+    entry: {
+      main: './index-main.js',
+      post: './index-post.js'
+    },
     devtool: devBuild ? 'source-map' : null,
     output: {
       path: path.resolve(__dirname, './www/scripts/'),
-      filename: 'bundle.js'
+      filename: '[name]-bundle.js'
     }
   }))
   .use(assets({

@@ -34,6 +34,20 @@
   }
 }
 
+.media-title {
+  @include setType(3);
+
+  margin-bottom: emRhythm(0, $silent: true);
+}
+
+.media-subtitle {
+  @include setType(2, $ms-down1);
+
+  color: $lighter-grey;
+  font-family: $font-sans;
+  margin-bottom: 6px;
+}
+
 .media-small {
   .article--post & {
     float: right;

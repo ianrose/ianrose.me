@@ -94,6 +94,7 @@ input[type="button"]:focus {
   margin-right: $base-vertical-unit;
   border: none;
   width: 38px;
+  margin-top: -2px;
 
   @media (min-width: $screen-sm-min) {
     display: none;
