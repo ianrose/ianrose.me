@@ -141,7 +141,7 @@ The `prev` variable is `-1` of index from our current page index and the `next` 
 
 We are almost done. Now we have the previous post data and next post data stored in their respective variables. It's time to pass that data into some markup:
 
-```markup
+```js
 <% posts.sort(function(a,b){ a = new Date(a.date); b = new Date(b.date); return b<a?-1:b>a?1:0; }).slice(0, 10) %>
 
 <% for(var i = 0; i < posts.length; i++) { %>

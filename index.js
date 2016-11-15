@@ -23,6 +23,7 @@ var drafts = require('metalsmith-drafts')
 var autotoc = require('metalsmith-autotoc')
 var uglify = require('metalsmith-uglify')
 var webpack = require('metalsmith-webpack')
+var prism = require('metalsmith-prism')
 var writemetadata = require('metalsmith-writemetadata')
 var pkg = require('./package.json')
 
@@ -63,8 +64,10 @@ var ms = Metalsmith(__dirname)
   .use(markdown({
     smartypants: true,
     gfm: true,
-    tables: true
+    tables: true,
+    langPrefix: 'language-'
   }))
+  .use(prism())
   if (!devBuild) {
   ms.use(drafts())
   }
