@@ -1,1 +1,4 @@
-require('./projects/news-sites-typography01')
+$(document).ready(function () {
+  require('./vendor/livefilter')
+  require('./modules/list-search')
+})

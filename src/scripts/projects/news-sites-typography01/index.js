@@ -1,6 +1,3 @@
-require('d3')
-var c3 = require('c3')
-
 var palette = [
   '#e87079',
   '#c46483',
