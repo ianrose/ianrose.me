@@ -8,7 +8,7 @@ description: >-
   An analysis of the measure of body text across some top news websites.
 layout: post.hbs
 ---
-In typography there are a number metrics and characteristics that are helpful indicators that a block of type is more or less readable. The characters per line in body text is one of those metrics, it is also referred to as a type's measure.
+In typography there are a number of metrics and characteristics that are helpful indicators that a block of type is more or less readable. The characters per line in body text is one of those metrics, it is also referred to as a type's measure.
 
 As web typography continues to advance I was curious to see how some of the top news websites follow the [rule-of-thumb of 45 to 75](http://webtypography.net/2.1.2) characters per line or the seemingly more screen centric [45 to 90](http://practicaltypography.com/line-length.html) characters. Including [NBC News](http://www.nbcnews.com/), where I work and am on the team that is responsible for the article typesetting.
 
