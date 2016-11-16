@@ -1,3 +1,4 @@
+/* globals $, c3 */
 var palette = [
   '#e87079',
   '#c46483',
@@ -29,7 +30,7 @@ $(document).ready(function () {
         show: false,
         tick: {
           outer: false
-        },
+        }
       },
       x: {
         type: 'category',
@@ -83,7 +84,7 @@ $(document).ready(function () {
       x: {
         label: {
           text: 'Line Length',
-          position: 'outer-center',
+          position: 'outer-center'
         },
         tick: {
           outer: false,
@@ -116,21 +117,21 @@ $(document).ready(function () {
       labels: false,
       type: 'bar',
       x: 'Measure'
-      },
-      bar: {
-       width: {
+    },
+    bar: {
+      width: {
         ratio: 1.1
       }
     },
     padding: {
-      bottom: 4
+      bottom: 6
     },
     grid: {
       x: {
-          show: false
+        show: false
       },
       y: {
-          show: true
+        show: true
       }
     }
   })
