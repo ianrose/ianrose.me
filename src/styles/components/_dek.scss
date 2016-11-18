@@ -1,3 +1,7 @@
+.dek {
+  font-family: $font-sans;
+}
+
 .dek--lg {
   @include setType(3.5, $ms-up1, $silent: true);
 

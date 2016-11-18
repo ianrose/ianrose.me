@@ -7,10 +7,10 @@
 
 // Font families and default text color.
 $font-sans: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-headline: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-serif: 'Source Serif Pro', TimesNewRoman, 'Times New Roman', Times, serif;
 $font-display-serif: 'Source Serif Pro', TimesNewRoman, 'Times New Roman', Times, serif;
 $font-mono: Menlo, Monaco, monospace;
+$font-headline: $font-serif;
 $text-color: #282832;
 
 // The vertical grid unit. Margin, padding, and line-height are set to multiples
