@@ -1,4 +1,4 @@
-var palette = [
+module.exports = [
   '#fd7c6b',
   '#e96d80',
   '#c7688f',

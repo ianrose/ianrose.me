@@ -1,4 +1,4 @@
-/* globals $, jQuery */
+/* globals location */
 var scrollToOffset = 0
 
 $(function () {

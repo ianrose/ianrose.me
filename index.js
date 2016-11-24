@@ -68,20 +68,20 @@ var ms = Metalsmith(__dirname)
     langPrefix: 'language-'
   }))
   .use(prism())
-  if (!devBuild) {
+if (!devBuild) {
   ms.use(drafts())
-  }
-  ms.use(permalinks({
-    relative: false,
-    pattern: ':file',
-    linksets: [{
-      match: {collection: 'articles'},
-      pattern: ':collection/:title'
-    }, {
-      match: {collection: 'work'},
-      pattern: ':collection/:title'}
-    ]
-  }))
+}
+ms.use(permalinks({
+  relative: false,
+  pattern: ':file',
+  linksets: [{
+    match: {collection: 'articles'},
+    pattern: ':collection/:title'
+  }, {
+    match: {collection: 'work'},
+    pattern: ':collection/:title'}
+  ]
+}))
   .use(paths({
     property: 'paths',
     directoryIndex: 'index.html'

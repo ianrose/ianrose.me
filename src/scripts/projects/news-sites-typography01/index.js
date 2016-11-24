@@ -1,4 +1,3 @@
-/* globals $, c3 */
 var palette = [
   '#e87079',
   '#c46483',

@@ -18,7 +18,6 @@
   },
   "keywords": [
     "metalsmith",
-    "boilerplate",
     "static",
     "site"
   ],
@@ -31,6 +30,12 @@
   "standard": {
     "ignore": [
       "**/vendor/**"
+    ],
+    "globals": [
+      "$",
+      "jQuery",
+      "d3",
+      "c3"
     ]
   },
   "stylelint": {
