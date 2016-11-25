@@ -40,7 +40,6 @@ h6,
 
   a:link {
     text-decoration: none;
-    font-weight: 700;
   }
 }
 
@@ -99,7 +98,6 @@ h6,
 a,
 a:link {
   color: #000;
-  font-weight: 600;
 }
 
 a:visited {
@@ -133,8 +131,7 @@ small,
 }
 
 em {
-  font-style: normal;
-  font-weight: bold;
+  font-style: italic;
 }
 
 strong {
@@ -199,8 +196,10 @@ blockquote {
   font-family: $font-display-serif;
   padding-top: emRhythm(2);
   border-top: $border-width-wide solid $text-color;
+  padding-left: $gutter;
+  padding-right: $gutter;
 
-  @media (min-width: $screen-xs-min) {
+  @media (min-width: $screen-sm-min) {
     width: 50%;
   }
 
@@ -214,7 +213,7 @@ blockquote {
 }
 
 .pullquote.left {
-  @media (min-width: $screen-xs-min) {
+  @media (min-width: $screen-sm-min) {
     float: left;
     margin-right: emRhythm(3);
     margin-left: -$gutter;
@@ -222,7 +221,7 @@ blockquote {
 }
 
 .pullquote.right {
-  @media (min-width: $screen-xs-min) {
+  @media (min-width: $screen-sm-min) {
     float: right;
     margin-left: emRhythm(3);
     margin-right: -$gutter;
@@ -275,6 +274,7 @@ abbr {
   font-variant: small-caps; // [1]
   font-weight: 600;
   text-transform: lowercase;
+  text-decoration: none;
 }
 
 // Cursor changed to a question mark when it has a title

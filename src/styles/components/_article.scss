@@ -23,10 +23,6 @@
   position: relative;
   margin-bottom: emRhythm(9);
 
-  header {
-    margin-bottom: emRhythm($base-line-multi);
-  }
-
   img {
     @extend .img-responsive;
 
@@ -41,9 +37,13 @@
 }
 
 .article--header {
-  margin-bottom: emRhythm(9);
+  margin-bottom: emRhythm($base-line-multi);
   padding-left: $gutter;
   padding-right: $gutter;
+
+  @media (min-width: $screen-sm-min) {
+    margin-bottom: emRhythm($base-line-multi * 2);
+  }
 
   @media (min-width: $screen-md-min) {
     max-width: $span-7;
@@ -55,8 +55,7 @@
   }
 
   @media (min-width: $screen-xl-min) {
-    margin-left: $span-1;
-    max-width: $span-5;
+    max-width: $span-7;
   }
 }
 

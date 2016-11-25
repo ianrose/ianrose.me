@@ -33,7 +33,7 @@ Using the [45to75](https://chrome.google.com/webstore/detail/45to75/efmppndinjbl
 
 ## Reading News on Screens
 
-Rounding the averages, <mark>20%</mark> of the sites fell within the range of 45 to 75 and <mark>80%</mark> within the 45 to 90. Those that did not, averaged a <mark>94.6</mark> character count which is very close and could disappear with a larger sample size. It could also be attributed to decisions made by the design teams that accounted for more typography elements.
+Rounding the averages, *20%* of the sites fell within the range of 45 to 75 and *80%* within the 45 to 90. Those that did not, averaged a *94.6* character count which is very close and could disappear with a larger sample size. It could also be attributed to decisions made by the design teams that accounted for more typography elements.
 
 <figure class="media-full">
   <h3 class="media-title">Frequency of Line Lengths</h3>
@@ -46,4 +46,4 @@ Going in I made the guess that sites with a print origin were going to lean towa
 
 I intentionally limited this analysis to desktop viewports. In the future I think looking at this collection of sites and their line length at different viewports could be very interesting.
 
-Currently, I'm still a fan of finding a nice type size near <mark>`1em`</mark>, which last time I checked most browsers set to `16px`, then sizing slightly up or down depending on the typeface. Then measure the line length at mobile viewports and find my <mark>`max-width`</mark> towards the desktop spectrum.
+Currently, I'm still a fan of finding a nice type size near `1em`, which last time I checked most browsers set to `16px`, then sizing slightly up or down depending on the typeface. Then measure the line length at mobile viewports and find my `max-width` towards the desktop spectrum.

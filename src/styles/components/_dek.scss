@@ -3,9 +3,13 @@
 }
 
 .dek--lg {
-  @include setType(3.5, $ms-up1, $silent: true);
+  margin-bottom: emRhythm(1);
 
-  margin-bottom: emRhythm(1, $ms-up1);
+  @media (min-width: $screen-sm-min) {
+    @include setType(3.5, $ms-up1, $silent: true);
+
+    margin-bottom: emRhythm(1, $ms-up1);
+  }
 }
 
 .dek--sm {

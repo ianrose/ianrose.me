@@ -1,6 +1,7 @@
 .section--id {
   @extend .h1;
 
+  font-family: $font-sans;
   font-weight: lighter;
   color: $lighter-grey;
 
