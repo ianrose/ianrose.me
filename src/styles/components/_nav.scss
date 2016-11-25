@@ -7,6 +7,7 @@
   @include setType(2, $ms-down1);
 
   font-family: $font-sans;
+  font-weight: bold;
   text-decoration: none;
   vertical-align: text-top;
 }
@@ -99,5 +100,5 @@
 }
 
 nav.is-open {
-  max-height: 188px;
+  max-height: 220px;
 }

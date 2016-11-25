@@ -39,8 +39,8 @@ $meta-size: $ms-down1;
 }
 
 .meta--container-post {
-  flex-basis: $span-3;
-  max-width: 130.141px;
+  width: 100%;
+  max-width: 144.281px + $gutter * 2;
 }
 
 .meta--container {
@@ -55,7 +55,7 @@ $meta-size: $ms-down1;
 }
 
 .meta--container-post:last-child {
-  margin-left: $span-3;
+  margin-left: $span-2;
 }
 
 .meta--primary {

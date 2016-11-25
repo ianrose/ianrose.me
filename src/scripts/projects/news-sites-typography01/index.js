@@ -123,7 +123,7 @@ $(document).ready(function () {
       }
     },
     padding: {
-      bottom: 6
+      bottom: 9
     },
     grid: {
       x: {

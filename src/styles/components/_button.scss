@@ -94,11 +94,14 @@ input[type="button"]:focus {
   margin-right: $base-vertical-unit;
   border: none;
   width: 38px;
-  margin-top: -2px;
 
   @media (min-width: $screen-sm-min) {
     display: none;
   }
+}
+
+.button--menu-open {
+  display: block;
 }
 
 .button--menu-close {
@@ -106,7 +109,7 @@ input[type="button"]:focus {
 }
 
 .is-active .button--menu-close {
-  display: inline;
+  display: block;
 }
 
 .is-active .button--menu-open {

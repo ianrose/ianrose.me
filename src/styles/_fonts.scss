@@ -1,54 +1,53 @@
 @font-face {
-  font-family: 'Source Sans Pro';
+  font-family: 'oksans';
   font-style: normal;
   font-weight: 400;
   src:
-    local('Source Sans Pro'),
-    local('SourceSansPro-Regular'),
-    url('/assets/fonts/source-sans-pro-v9-latin-regular.woff2') format('woff2'),
-    url('/assets/fonts/source-sans-pro-v9-latin-regular.woff') format('woff');
+    url('/assets/fonts/H5c1IXWmGNYIe0-400.woff2') format('woff2'),
+    url('/assets/fonts/H5c1IXWmGNYIe0-400.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'Source Sans Pro';
+  font-family: 'oksans';
   font-style: normal;
   font-weight: 700;
   src:
-    local('Source Sans Pro Bold'),
-    local('SourceSansPro-Bold'),
-    url('/assets/fonts/source-sans-pro-v9-latin-700.woff2') format('woff2'),
-    url('/assets/fonts/source-sans-pro-v9-latin-700.woff') format('woff');
+    url('/assets/fonts/H5c1IXWmGNYIe0-700.woff2') format('woff2'),
+    url('/assets/fonts/H5c1IXWmGNYIe0-700.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'Source Sans Pro';
+  font-family: 'oksans';
   font-style: normal;
   font-weight: 900;
   src:
-    local('Source Sans Pro Black'),
-    local('SourceSansPro-Black'),
-    url('/assets/fonts/source-sans-pro-v9-latin-900.woff2') format('woff2'),
-    url('/assets/fonts/source-sans-pro-v9-latin-900.woff') format('woff');
+    url('/assets/fonts/H5c1IXWmGNYIe0-900.woff2') format('woff2'),
+    url('/assets/fonts/H5c1IXWmGNYIe0-900.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'Source Serif Pro';
+  font-family: 'hserif';
   font-style: normal;
   font-weight: 400;
   src:
-    local('Source Serif Pro'),
-    local('SourceSerifPro-Regular'),
-    url('/assets/fonts/source-serif-pro-v4-latin-regular.woff2') format('woff2'),
-    url('/assets/fonts/source-serif-pro-v4-latin-regular.woff') format('woff');
+    url('/assets/fonts/5iIOE5lzbMEQrK-400.woff2') format('woff2'),
+    url('/assets/fonts/5iIOE5lzbMEQrK-400.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'Source Serif Pro';
+  font-family: 'hserif';
+  font-style: italic;
+  font-weight: 400;
+  src:
+    url('/assets/fonts/5iIOE5lzbMEQrK-400i.woff2') format('woff2'),
+    url('/assets/fonts/5iIOE5lzbMEQrK-400i.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'hserif';
   font-style: normal;
   font-weight: 700;
   src:
-    local('Source Serif Pro Bold'),
-    local('SourceSerifPro-Bold'),
-    url('/assets/fonts/source-serif-pro-v4-latin-700.woff2') format('woff2'),
-    url('/assets/fonts/source-serif-pro-v4-latin-700.woff') format('woff');
+    url('/assets/fonts/5iIOE5lzbMEQrK-700.woff2') format('woff2'),
+    url('/assets/fonts/5iIOE5lzbMEQrK-700.woff') format('woff');
 }
