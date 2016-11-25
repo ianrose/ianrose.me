@@ -70,6 +70,7 @@ $meta-size: $ms-down1;
 .meta--post--l {
   .row {
     display: flex;
+    flex-wrap: nowrap;
   }
 
   @media (min-width: $screen-sm-min) {
