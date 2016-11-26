@@ -7,18 +7,17 @@
 
 .media-full {
   @media (min-width: $screen-md-min) {
-    width: $container-md-width;
-    margin-left: $gutter * -1;
+    width: $container-md-width - ($gutter * 2);
   }
 
   @media (min-width: $screen-lg-min) {
-    width: $container-lg-width;
-    margin-left: -142px;
+    width: $container-lg-width - ($gutter * 2);
+    margin-left: $container-lg-width / -7;
   }
 
   @media (min-width: $screen-xl-min) {
-    width: $container-xl-width;
-    margin-left: -170px;
+    width: $container-xl-width - ($gutter * 2);
+    margin-left: $container-xl-width / -7;
   }
 }
 
