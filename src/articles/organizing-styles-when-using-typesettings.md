@@ -6,6 +6,8 @@ tags:
 description: At work I’ve been cranking on a prototype. I decided to give a Typesettings a go in more of a production setting that required designing in the browser. Overall the experience has been pretty good.
 layout: post.hbs
 art: null
+author:
+  name: Ian Rose
 ---
 
 As the prototype started to get more complicated the need to break things into “modules” became apparent. Since [Typesettings](http://typesettings.io) uses Ems I needed settings to quickly adjust specific modules. The solution uses Sass variables in a very simple way. At the top of the partial for the module I set “font size context” variables for the different sizes. This makes it easy to maintain the mixins and functions for that specific module:

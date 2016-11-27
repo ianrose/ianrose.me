@@ -11,6 +11,8 @@ scripts:
   - https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.js
   - /scripts/projects/news-sites-typography01/index.js
+author:
+  name: Ian Rose
 ---
 In typography there are a number of metrics and characteristics that are helpful indicators that a block of type is more or less readable. The characters per line in body text is one of those metrics, it is also referred to as a type's measure.
 

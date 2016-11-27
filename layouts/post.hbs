@@ -17,9 +17,9 @@
     <header class="article--header">
       <h1 itemprop="headline">{{title}}</h1>
       <p class="dek dek--lg">{{description}}</p>
-      {{#is path.dir 'articles'}}
+      {{#has collection 'articles'}}
         {{> byline}}
-      {{/is}}
+      {{/has}}
       {{#if autotoc}}
         Table of Contents
         <ol class="toc">

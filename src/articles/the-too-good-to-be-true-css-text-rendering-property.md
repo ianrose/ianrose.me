@@ -6,6 +6,8 @@ tags:
 description: The CSS text rendering property is a mixed bag. On initial pass it seems to be an obvious choice for improving type on the web.
 layout: post.hbs
 art: null
+author:
+  name: Ian Rose
 ---
 
 The CSS text rendering property is a mixed bag. On initial pass it seems to be an obvious choice for improving type on the web.
