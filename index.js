@@ -40,7 +40,7 @@ var config = {
   devBuild: devBuild,
   debugMode: debugMode,
   domain: 'ianrose.me',
-  url: 'http://www.ianrose.me',
+  url: 'https://www.ianrose.me',
   dest: './www/'
 }
 
