@@ -4,13 +4,17 @@
   "description": "Source for Ian Rose's personal website",
   "private": true,
   "main": "index.js",
+  "pre-commit": "lint-staged",
   "scripts": {
     "prestart": "node ./lib/download.js",
     "start": "node index.js",
     "debug": "DEBUG=metalsmith:*, NODE_ENV=debug npm run dev",
     "dev": "npm start --development",
     "build": "npm start --production",
-    "lint": "standard --verbose && stylelint '**/*.scss' && htmlhint **/*.{hbs,html} --config .htmlhintrc --ignore **/www/**"
+    "script-lint": "standard --verbose",
+    "style-lint": "stylelint '**/*.scss'",
+    "lint": "standard --verbose && stylelint '**/*.scss' && htmlhint **/*.{hbs,html} --config .htmlhintrc --ignore **/www/**",
+    "lint-staged": "lint-staged"
   },
   "repository": {
     "type": "git",
@@ -27,6 +31,10 @@
     "url": "https://github.com/ianrose/machinist/issues"
   },
   "homepage": "https://github.com/ianrose/machinist#readme",
+  "lint-staged": {
+    "*.scss": "style-lint",
+    "*.js": "script-lint"
+  },
   "standard": {
     "ignore": [
       "**/vendor/**"
@@ -78,9 +86,11 @@
   },
   "devDependencies": {
     "htmlhint": "^0.9.13",
+    "lint-staged": "^3.2.1",
     "metalsmith-browser-sync": "^1.1.1",
     "metalsmith-debug": "^1.1.0",
     "metalsmith-writemetadata": "^0.4.5",
+    "pre-commit": "^1.1.3",
     "standard": "^8.5.0",
     "stylefmt": "^4.3.1",
     "stylelint": "^7.5.0",
