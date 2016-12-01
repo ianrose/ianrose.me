@@ -1,6 +1,6 @@
 {
   "tagname-lowercase": true,
-  "attr-lowercase": ["viewBox"],
+  "attr-lowercase": ["viewBox", "preserveAspectRatio"],
   "attr-value-double-quotes": true,
   "tag-pair": true,
   "id-unique": true,
