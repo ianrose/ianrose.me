@@ -27,13 +27,7 @@ var prism = require('metalsmith-prism')
 var writemetadata = require('metalsmith-writemetadata')
 var pkg = require('./package.json')
 
-var dataFiles = fs.readdirSync(path.join(__dirname, 'src', 'data'))
-var data = {}
-
-dataFiles.forEach(function (filename) {
-  data[filename.split('.')[0]] = 'data/' + filename
-})
-
+// Configuration
 var config = {
   name: 'Ian Rose',
   version: pkg.version,
@@ -41,11 +35,21 @@ var config = {
   debugMode: debugMode,
   domain: 'ianrose.me',
   url: 'https://www.ianrose.me',
-  dest: './www/'
+  dest: './www/',
+  src: './src/'
 }
 
+// Adds metadata to Metlasmith from files
+var dataFiles = fs.readdirSync(path.join(__dirname, config.src + 'data', 'globals'))
+var data = {}
+
+dataFiles.forEach(function (filename) {
+  data[filename.split('.')[0]] = 'data/globals/' + filename
+})
+
+// Metalsmith Build
 var ms = Metalsmith(__dirname)
-  .source('src/')
+  .source(config.src)
   .destination(config.dest)
   .metadata(config)
   .use(globaldata(data))
@@ -95,7 +99,7 @@ ms.use(permalinks({
   .use(inplace({
     engine: 'handlebars',
     pattern: '**/*.{html,xml}',
-    directory: 'src/'
+    directory: config.src
   }))
   .use(layouts({
     engine: 'handlebars',
@@ -120,14 +124,14 @@ ms.use(permalinks({
     }
   }))
   .use(webpack({
-    context: path.resolve(__dirname, './src/scripts/'),
+    context: config.src + 'scripts/',
     entry: {
       main: './index-main.js',
       post: './index-post.js'
     },
     devtool: devBuild ? 'source-map' : null,
     output: {
-      path: path.resolve(__dirname, './www/scripts/'),
+      path: path.resolve(__dirname, config.dest + 'scripts/'),
       filename: '[name]-bundle.js'
     }
   }))
