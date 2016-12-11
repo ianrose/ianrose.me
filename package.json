@@ -1,6 +1,6 @@
 {
   "name": "ianrose.me",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Source for Ian Rose's personal website",
   "private": true,
   "main": "index.js",
