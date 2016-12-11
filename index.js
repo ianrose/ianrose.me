@@ -27,7 +27,7 @@ var prism = require('metalsmith-prism')
 var writemetadata = require('metalsmith-writemetadata')
 var pkg = require('./package.json')
 
-// Configuration
+// Global Configuration
 var config = {
   name: 'Ian Rose',
   version: pkg.version,
@@ -98,7 +98,7 @@ ms.use(permalinks({
   }))
   .use(inplace({
     engine: 'handlebars',
-    pattern: '**/*.{html,xml}',
+    pattern: '**/*.{html,xml,txt}',
     directory: config.src
   }))
   .use(layouts({
@@ -157,7 +157,7 @@ if (!devBuild) {
 if (devBuild) {
   ms.use(browserSync({
     server: config.dest,
-    files: ['src/**/*.*', 'layouts/*.*', 'partials/**/*.*'],
+    files: [config.src + '**/*.*', 'layouts/*.*', 'partials/**/*.*'],
     open: false,
     notify: false
   }))

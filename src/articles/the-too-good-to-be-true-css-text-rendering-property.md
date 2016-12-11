@@ -10,7 +10,7 @@ author:
   name: Ian Rose
 ---
 
-The CSS text rendering property is a mixed bag. On initial pass it seems to be an obvious choice for improving type on the web.
+**The CSS text rendering** property is a mixed bag. On initial pass it seems to be an obvious choice for improving type on the web.
 
 However after a bit of reading there are known [bugs](https://github.com/h5bp/html5-boilerplate/issues/78 "HTML5 Boilerplate GitHub") in some [browsers](https://code.google.com/p/chromium/issues/detail?id=114719 "Chromium Issues"), [operating systems](https://code.google.com/p/android/issues/detail?id=15067 "Android Issues") and [performance issues](http://www.marco.org/2012/11/15/text-rendering-optimize-legibility "Marco.org") on Android and older versions of iOS.<sup>[1](#fn1)</sup>
 
