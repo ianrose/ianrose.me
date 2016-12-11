@@ -9,7 +9,7 @@ project:
   url: http://typesettings.io
 ---
 
-[Typesettings](http://typesettings.io) provides a designer or developer a toolkit of Sass or Stylus functions and mixins that make setting nice type on the web easier.
+**[Typesettings](http://typesettings.io)** provides a designer or developer a toolkit of Sass or Stylus functions and mixins that make setting nice type on the web easier.
 
 ## What Does It Solve
 
