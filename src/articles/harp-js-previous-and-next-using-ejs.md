@@ -13,7 +13,7 @@ author:
 published: true
 ---
 
-**Raymond Camden has** a great [article](http://www.raymondcamden.com/2014/02/26/Creating-NextPrevious-Links-in-HarpJS) that provides a walkthrough on how to accomplish something very similar. The difference is we will be rendering the previous and next post’s title and description.
+**Raymond Camden** has a great [article](http://www.raymondcamden.com/2014/02/26/Creating-NextPrevious-Links-in-HarpJS) that provides a walkthrough on how to accomplish something very similar. The difference is we will be rendering the previous and next post’s title and description.
 
 In a Harp Boilerplate, [Kenneth Ormandy](http://kennethormandy.com/) provides [article navigation](https://github.com/kennethormandy/hb-remedy/blob/master/public/_shared/article-nav.jade) in a Jade template. We will use that as a base for our article navigation in EJS. [Skip to the final code.](#the-navigation-partial)
 
