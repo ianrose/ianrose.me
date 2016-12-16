@@ -7,6 +7,8 @@
   "keywords": "Ian Rose, Web Designer, Front-end, Designer",
   "domain": "ianrose.me",
   "sourceurl": "https://github.com/ianrose/ianrose.me",
+  "dest": "./www/",
+  "src": "./src/",
   "author": {
     "name": "Ian Rose",
     "email": "ian@ianrose.me",

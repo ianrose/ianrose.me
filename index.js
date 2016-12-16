@@ -26,18 +26,12 @@ var webpack = require('metalsmith-webpack')
 var prism = require('metalsmith-prism')
 var writemetadata = require('metalsmith-writemetadata')
 var pkg = require('./package.json')
+var config = require('./config')
 
 // Global Configuration
-var config = {
-  name: 'Ian Rose',
-  version: pkg.version,
-  devBuild: devBuild,
-  debugMode: debugMode,
-  domain: 'ianrose.me',
-  url: 'https://www.ianrose.me',
-  dest: './www/',
-  src: './src/'
-}
+config.version = pkg.version
+config.devBuild = devBuild
+config.debugMode = debugMode
 
 // Adds metadata to Metlasmith from files
 var dataFiles = fs.readdirSync(path.join(__dirname, config.src + 'data', 'globals'))
