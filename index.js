@@ -87,7 +87,7 @@ ms.use(permalinks({
     directoryIndex: 'index.html'
   }))
   .use(helpers({
-    directory: 'lib'
+    directory: 'lib/helpers'
   }))
   .use(autotoc({
     selector: 'h2, h3, h4'
