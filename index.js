@@ -28,6 +28,8 @@ var writemetadata = require('metalsmith-writemetadata')
 var pkg = require('./package.json')
 var config = require('./config')
 
+process.env.TZ = 'UTC'
+
 // Global Configuration
 config.version = pkg.version
 config.devBuild = devBuild
