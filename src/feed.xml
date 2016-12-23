@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>{{name}}</title>
     <link>{{url}}</link>
     <description>{{description}}</description>
     <language>en</language>
+    <atom:link href="{{url}}/feed.xml" rel="self" type="application/rss+xml"/>
     {{#each collections.articles}}
       <item>
         <title>{{title}}</title>
-        <author>{{author.name}}</author>
+        <author>{{author.email}}</author>
         <description>{{description}}</description>
         <pubDate>{{moment date format='ddd, DD MMM YYYY HH:mm:ss ZZ'}}</pubDate>
         <link>{{../url}}/{{path}}</link>
