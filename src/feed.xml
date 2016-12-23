@@ -9,7 +9,6 @@
     {{#each collections.articles}}
       <item>
         <title>{{title}}</title>
-        <author>{{author.email}}</author>
         <description>{{description}}</description>
         <pubDate>{{moment date format='ddd, DD MMM YYYY HH:mm:ss ZZ'}}</pubDate>
         <link>{{../url}}/{{path}}</link>
