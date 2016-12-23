@@ -13,25 +13,22 @@
     "name": "Ian Rose",
     "email": "ian@ianrose.me",
     "bio": "Designer at News Org",
-    "role": "Designer",
+    "role": "Designer"
+  },
+  "service": {
     "twitter": "thatianrose",
     "github": "ianrose",
     "linkedin": "roseian",
     "tinyletter": "ian-rose",
-    "feedburner": "ianrose"
-  },
-  "service": {
+    "feedburner": "ianrose",
     "analytics": "UA-20417568-2",
-    "service": "example",
     "googlefonts": null,
     "googleverification": null,
     "fontscom": null,
     "typekit": null,
     "facebookid": null,
     "socialimage": "images/social-image.jpg",
-    "appleid": null,
-    "twitter": "thatianrose",
-    "disqus": "storysettings"
+    "appleid": null
   },
   "domains": []
 }
