@@ -4,14 +4,14 @@
     <title>{{name}}</title>
     <link>{{url}}</link>
     <description>{{description}}</description>
-    <atom:link href="{{settings.url}}/atom.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="{{url}}/atom.xml" rel="self" type="application/rss+xml" />
     {{#each collections.articles}}
       <item>
         <title>{{title}}</title>
         <description>{{description}}</description>
         <pubDate>{{moment date format='ddd, DD MMM YYYY HH:mm:ss ZZ'}}</pubDate>
-        <link>{{../settings.url}}/{{path}}</link>
-        <guid isPermaLink="true">{{../settings.url}}/{{path}}</guid>
+        <link>{{../url}}/{{path}}</link>
+        <guid isPermaLink="true">{{../url}}/{{path}}</guid>
       </item>
     {{/each}}
   </channel>
