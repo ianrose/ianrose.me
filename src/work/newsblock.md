@@ -1,6 +1,6 @@
 ---
 title: Newsblock
-date: 2015-07-19
+date: 2015-07-19T13:00:00Z
 modified: null
 project:
   url: http://newsblock.io

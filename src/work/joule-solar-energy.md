@@ -1,6 +1,6 @@
 ---
 title: Joule Solar Energy
-date: 2013-02-06
+date: 2013-02-06T13:00:00Z
 modified: null
 description: Joule Solar Energy needed a consumer facing website that worked across devices to attract new customers and provide resources for current customers.
 art: joulesolarenergy-art.jpg

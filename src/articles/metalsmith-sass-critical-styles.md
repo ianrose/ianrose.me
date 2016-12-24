@@ -1,6 +1,6 @@
 ---
 title: Critical Styles in a Sass Metalsmith Project
-date: 2016-12-23
+date: 2016-12-23T13:00:00Z
 description: Using the Metalsmith FileData plugin to create critical styles from compiled Sass.
 layout: post.hbs
 author:

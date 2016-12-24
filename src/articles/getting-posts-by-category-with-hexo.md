@@ -1,6 +1,6 @@
 ---
 title: Getting Posts by Category with Hexo
-date: 2015-01-20T00:00:00.000Z
+date: 2015-01-20T13:00:00Z
 modified: null
 tags: null
 description: >-

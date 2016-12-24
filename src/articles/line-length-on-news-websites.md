@@ -1,6 +1,6 @@
 ---
 title: Line Length on News Websites
-date: 2016-11-14
+date: 2016-11-14T13:00:00Z
 modified: null
 draft: false
 tags: null

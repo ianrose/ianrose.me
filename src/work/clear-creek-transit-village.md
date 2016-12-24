@@ -1,6 +1,6 @@
 ---
 title: Clear Creek Transit Village
-date: 2013-01-16
+date: 2013-01-16T13:00:00Z
 modified: null
 project:
   url: http://clearcreektransitvillage.com/

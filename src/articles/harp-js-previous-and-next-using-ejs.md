@@ -1,6 +1,6 @@
 ---
 title: Harp.js Previous and Next using EJS
-date: 2015-12-08
+date: 2015-12-08T13:00:00Z
 modified: null
 tags: null
 description: >-

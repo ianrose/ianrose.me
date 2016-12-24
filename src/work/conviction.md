@@ -1,6 +1,6 @@
 ---
 title: Conviction
-date: 2016-03-24
+date: 2016-03-24T13:00:00Z
 modified: null
 url: http://www.nbcnews.com/pages/conviction
 description: An experience for the twelve-episode documentary series from the producers of Dateline NBC.
