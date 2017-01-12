@@ -3,6 +3,8 @@
 }
 
 .dek--lg {
+  @include setType(2.5, $base-em-font-size, $silent: true);
+
   margin-bottom: emRhythm(0.5, $base-em-font-size, $silent: true);
 
   @media (min-width: $screen-sm-min) {
