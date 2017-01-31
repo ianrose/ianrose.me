@@ -42,7 +42,7 @@
   padding-right: $gutter;
 
   @media (min-width: $screen-sm-min) {
-    margin-bottom: emRhythm($base-line-multi * 2);
+    margin-bottom: emRhythm($base-line-multi * 4);
   }
 
   @media (min-width: $screen-md-min) {
@@ -50,12 +50,11 @@
   }
 
   @media (min-width: $screen-lg-min) {
-    margin-left: $span-1;
-    max-width: $span-6;
+    max-width: $span-7;
   }
 
   @media (min-width: $screen-xl-min) {
-    max-width: $span-7;
+    max-width: $span-6;
   }
 }
 
