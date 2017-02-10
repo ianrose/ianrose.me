@@ -10,7 +10,7 @@ layout: post.hbs
 author:
   name: Ian Rose
 ---
-**Hexo is great** open source project in many ways. However due to language barriers the English documentation needs help from the project’s community. Myself included. Skip right to the [solution](#The_Solution).
+**Hexo is a great** open source project in many ways. However due to language barriers the English documentation needs help from the project’s community. Myself included. Skip right to the [solution](#The_Solution).
 
 ## The Scenario
 
