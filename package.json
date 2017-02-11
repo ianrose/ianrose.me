@@ -81,7 +81,7 @@
     "metalsmith-uglify": "^1.5.1",
     "metalsmith-webpack": "^1.0.3",
     "metalsmith-with-postcss": "^1.0.0",
-    "typesettings": "^3.0.1",
+    "typesettings": "git://github.com/ianrose/typesettings.git#as-imports",
     "typogr": "^0.6.6"
   },
   "devDependencies": {
