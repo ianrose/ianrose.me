@@ -6,7 +6,7 @@ media_folder: assets/images
 collections:
  - name: "articles"
    label: "Articles"
-   folder: "articles"
+   folder: "src/articles"
    create: true,
    slug: {{slug}}
    fields:
@@ -14,5 +14,5 @@ collections:
     - {label: "Title", name: "title", widget: "string"}
     - {label: "Publish Date", name: "date", widget: "datetime"}
     - {label: "Description", name: "description", widget: "string"}
-    - {label: "Author", name: "author:name:", widget: "string"}
+    - {label: "Author", name: "author:  name:", widget: "string"}
     - {label: "Body", name: "body", widget: "markdown"}
