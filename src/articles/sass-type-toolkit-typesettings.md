@@ -3,7 +3,7 @@ art: null
 layout: post.hbs
 date: 2014-04-24T13:00:00.000Z
 author:
-  name: Ian Rose
+  name: Ian Rosey
 modified: null
 tags: null
 title: 'A Sass Type Toolkit: Typesettings'
