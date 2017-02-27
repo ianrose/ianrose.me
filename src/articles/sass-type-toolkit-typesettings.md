@@ -9,7 +9,7 @@ tags: null
 title: 'A Sass Type Toolkit: Typesettings'
 description: >-
   Setting type using modular scale and maintaining vertical rhythm is not a new
-  topic, at all. There are so many great tools and articles out there that help
+  topic. There are so many great tools and articles out there that help
   designers do these things. However I couldn’t find exactly what I was looking
   for.
 ---
