@@ -4,7 +4,6 @@ author:
   name: Ian Rose
 layout: post.hbs
 date: 2014-05-01T13:00:00.000Z
-'author:  name:': Ian Rose
 modified: null
 tags: null
 title: Organizing Styles When Using Typesettings
