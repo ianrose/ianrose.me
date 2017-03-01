@@ -10,13 +10,43 @@ collections:
    create: true,
    slug: {{slug}}
    fields:
-    - {label: "Layout", name: "layout", widget: "hidden", default: "post.hbs"}
+    - name: layout
+      label: Layout
+      widget: select
+      options:
+        - "post.hbs"
+        - "collection.hbs"
     - {label: "Title", name: "title", widget: "string"}
     - {label: "Publish Date", name: "date", widget: "datetime"}
+    - {label: "Modified Date", name: "modified", widget: "datetime", optional: true, default: "null"}
     - {label: "Description", name: "description", widget: "string"}
+    - {label: "Art", name: "art", widget: "image", optional: true}
     - name: author
       label: Author
       widget: object
       fields:
         - {label: "Name", name: "name", widget: "string"}
+    - {label: "Body", name: "body", widget: "markdown"}
+ - name: "work"
+   label: "Work"
+   folder: "src/work"
+   create: true,
+   slug: {{slug}}
+   fields:
+    - name: layout
+      label: Layout
+      widget: select
+      options:
+        - "post.hbs"
+        - "collection.hbs"
+    - {label: "Title", name: "title", widget: "string"}
+    - {label: "Publish Date", name: "date", widget: "datetime"}
+    - {label: "Modified Date", name: "modified", widget: "datetime", optional: true, default: "null"}
+    - {label: "Description", name: "description", widget: "string"}
+    - {label: "Art", name: "art", widget: "image", optional: true}
+    - name: project
+      label: Project
+      widget: object
+      fields:
+        - {label: "URL", name: "url", widget: "string", optional: true}
     - {label: "Body", name: "body", widget: "markdown"}

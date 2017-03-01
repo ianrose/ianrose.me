@@ -13,5 +13,23 @@ layout: false
 </head>
 <body>
   <script src="https://unpkg.com/netlify-cms@^0.3/dist/cms.js"></script>
+<script>
+CMS.registerPreviewStyle("/styles/main.css");
+
+var PostPreview = createClass({
+  render: function() {
+    var entry = this.props.entry;
+    return h('div', {"className": "article--post container"},
+      h('h1', {}, entry.getIn(['data', 'title'])),
+      h('p', {"className": "dek dek--lg"}, entry.getIn(['data', 'description'])),
+      h('div', {"className": "byline"}, entry.getIn(['data', 'author'])),
+      h('div', {"className": "article--body"}, this.props.widgetFor('body'))
+    );
+  }
+});
+
+CMS.registerPreviewTemplate("articles", PostPreview);
+CMS.registerPreviewTemplate("work", PostPreview);
+</script>
 </body>
 </html>
