@@ -20,16 +20,35 @@ var PostPreview = createClass({
   render: function() {
     var entry = this.props.entry;
     return h('div', {"className": "article--post container"},
-      h('h1', {}, entry.getIn(['data', 'title'])),
-      h('p', {"className": "dek dek--lg"}, entry.getIn(['data', 'description'])),
-      h('div', {"className": "byline"}, entry.getIn(['data', 'author'])),
+      h('header', {"className": "article--header"},
+        h('h1', {}, entry.getIn(['data', 'title'])),
+        h('p', {"className": "dek dek--lg"}, entry.getIn(['data', 'description'])),
+        h('div', {"className": "byline"},
+          "by ",
+          h('span', {}, entry.getIn(['data', 'author'])),
+          h('time', {"className": "meta meta--primary"}, " | " + entry.getIn(['data', 'date']))
+        )
+      ),
+      h('div', {"className": "article--body"}, this.props.widgetFor('body'))
+    );
+  }
+});
+
+var WorkPreview = createClass({
+  render: function() {
+    var entry = this.props.entry;
+    return h('div', {"className": "article--post container"},
+      h('header', {"className": "article--header"},
+        h('h1', {}, entry.getIn(['data', 'title'])),
+        h('p', {"className": "dek dek--lg"}, entry.getIn(['data', 'description']))
+      ),
       h('div', {"className": "article--body"}, this.props.widgetFor('body'))
     );
   }
 });
 
 CMS.registerPreviewTemplate("articles", PostPreview);
-CMS.registerPreviewTemplate("work", PostPreview);
+CMS.registerPreviewTemplate("work", WorkPreview);
 </script>
 </body>
 </html>
