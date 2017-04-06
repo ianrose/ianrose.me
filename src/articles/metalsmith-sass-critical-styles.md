@@ -11,7 +11,7 @@ author:
 
 The pain point for this particular situation is the the timing of the creation for that compiled CSS and when the file is available versus when the build process completes.
 
-Thanks to [Steven Schobert](https://stevenschobert.com/) for pointing in me in the right direction. I created a [Metalsmith plugin](https://www.npmjs.com/package/metalsmith-filedata). The plugin takes the files you want and it grabs the contents of those file or files and throws the results into Metalsmith's metadata. That data, for example, can then be accessed in your projects' templates.
+Thanks to [Steven Schobert](https://stevenschobert.com/) for pointing in me in the right direction. I created a [Metalsmith plugin](https://www.npmjs.com/package/metalsmith-filedata). The plugin takes the files you want and it grabs the contents of those file or files and throws the results into Metalsmith's metadata. That data, for example, can then be accessed in your project's templates.
 
 So to continue solving the critical styles the following solution is going to use the Metalsmith JavaScript API and [Handlebars](https://github.com/superwolff/metalsmith-layouts). To begin, we install the plugin as a dependency for the project:
 
@@ -45,7 +45,7 @@ Metalsmith(__dirname)
 
 The plugin defaults to the key `filedata` but in this example we have overwritten the default key with `cssData` and we have told the plugin to grab the contents for CSS files that are in the `styles` folder. In the case of critical styles in our project we can setup `./src/styles/main.scss` and `./src/styles/critical.scss` files. We now have the compiled contents available in the metadata.
 
-```json
+```js
 cssData: { 'styles/critical.css': '...', 'styles/main.css': '...'}
 ```
 
