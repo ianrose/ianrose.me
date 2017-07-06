@@ -1,0 +1,9 @@
+ {
+  "ignoreFiles": [
+    "src/styles/vendor/*.scss"
+  ],
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "function-name-case": null
+  }
+}
