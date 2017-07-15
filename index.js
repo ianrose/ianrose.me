@@ -22,7 +22,7 @@ var paths = require('metalsmith-paths')
 var drafts = require('metalsmith-drafts')
 var autotoc = require('metalsmith-autotoc')
 var uglify = require('metalsmith-uglify')
-var webpack = require('metalsmith-webpack')
+var webpack = require('metalsmith-webpack2')
 var prism = require('metalsmith-prism')
 var writemetadata = require('metalsmith-writemetadata')
 var pkg = require('./package.json')
@@ -120,7 +120,7 @@ ms.use(permalinks({
     }
   }))
   .use(webpack({
-    context: config.src + 'scripts/',
+    context: path.resolve(__dirname, config.src + 'scripts/'),
     entry: {
       main: './index-main.js',
       post: './index-post.js'
@@ -163,13 +163,13 @@ ms.use(debug({
   files: false,
   match: '**/*.md'
 }))
-.use(sitemap({ // generate sitemap.xml
-  hostname: config.url,
-  omitIndex: true
-}))
-.build(function (error) {
-  console.log((devBuild ? 'Development' : 'Production'), 'build success, version', pkg.version)
-  if (error) {
-    console.log(error)
-  }
-})
+  .use(sitemap({ // generate sitemap.xml
+    hostname: config.url,
+    omitIndex: true
+  }))
+  .build(function (error) {
+    console.log((devBuild ? 'Development' : 'Production'), 'build success, version', pkg.version)
+    if (error) {
+      console.log(error)
+    }
+  })
