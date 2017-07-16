@@ -125,7 +125,7 @@ ms.use(permalinks({
       main: './index-main.js',
       post: './index-post.js'
     },
-    devtool: devBuild ? 'source-map' : null,
+    devtool: devBuild ? 'source-map' : false,
     output: {
       path: path.resolve(__dirname, config.dest + 'scripts/'),
       filename: '[name]-bundle.js'
