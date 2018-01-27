@@ -1,5 +1,5 @@
 const path = require('path')
-const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin.js')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = function (config) {
   return {
@@ -30,10 +30,7 @@ module.exports = function (config) {
     },
     plugins: [
       new UglifyJsPlugin({
-        sourceMap: true,
-        compress: {
-          warnings: false
-        }
+        sourceMap: true
       })
     ]
   }
