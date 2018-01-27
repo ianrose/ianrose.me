@@ -1,32 +1,32 @@
 // Set a ture or false for production/development. Use to run certain plugins
-var devBuild = ((process.env.NODE_ENV || '').trim().toLowerCase() !== 'production')
-var debugMode = ((process.env.NODE_ENV || '').trim().toLowerCase() === 'debug')
+const devBuild = ((process.env.NODE_ENV || '').trim().toLowerCase() !== 'production')
+const debugMode = ((process.env.NODE_ENV || '').trim().toLowerCase() === 'debug')
 
-var fs = require('fs')
-var path = require('path')
-var Metalsmith = require('metalsmith')
-var markdown = require('metalsmith-markdown')
-var layouts = require('metalsmith-layouts')
-var assets = require('metalsmith-assets')
-var collections = require('metalsmith-collections')
-var permalinks = require('metalsmith-permalinks')
-var browserSync = devBuild ? require('metalsmith-browser-sync') : null
-var globaldata = require('metalsmith-metadata')
-var sass = require('metalsmith-sass')
-var inplace = require('metalsmith-in-place')
-var debug = require('metalsmith-debug')
-var helpers = require('metalsmith-register-helpers')
-var sitemap = require('metalsmith-mapsite')
-var postcss = require('metalsmith-with-postcss')
-var paths = require('metalsmith-paths')
-var drafts = require('metalsmith-drafts')
-var autotoc = require('metalsmith-autotoc')
-var uglify = require('metalsmith-uglify')
-var webpack = require('metalsmith-webpack2')
-var prism = require('metalsmith-prism')
-var writemetadata = require('metalsmith-writemetadata')
-var pkg = require('./package.json')
-var config = require('./config')
+const fs = require('fs')
+const path = require('path')
+const Metalsmith = require('metalsmith')
+const markdown = require('metalsmith-markdown')
+const layouts = require('metalsmith-layouts')
+const assets = require('metalsmith-assets')
+const collections = require('metalsmith-collections')
+const permalinks = require('metalsmith-permalinks')
+const browserSync = devBuild ? require('metalsmith-browser-sync') : null
+const globaldata = require('metalsmith-metadata')
+const sass = require('metalsmith-sass')
+const inplace = require('metalsmith-in-place')
+const debug = require('metalsmith-debug')
+const helpers = require('metalsmith-register-helpers')
+const sitemap = require('metalsmith-mapsite')
+const postcss = require('metalsmith-with-postcss')
+const paths = require('metalsmith-paths')
+const drafts = require('metalsmith-drafts')
+const autotoc = require('metalsmith-autotoc')
+const webpack = require('metalsmith-webpack2')
+const prism = require('metalsmith-prism')
+const writemetadata = require('metalsmith-writemetadata')
+const webpackConfig = require('./webpack.config.js')
+const pkg = require('./package.json')
+const config = require('./config')
 
 // Global Configuration
 config.version = pkg.version
@@ -34,7 +34,7 @@ config.devBuild = devBuild
 config.debugMode = debugMode
 
 // Adds metadata to Metlasmith from files
-var data = {}
+const data = {}
 if (fs.existsSync(config.src + 'data/globals/')) {
   var dataFiles = fs.readdirSync(path.join(__dirname, config.src + 'data', 'globals'))
 
@@ -44,7 +44,7 @@ if (fs.existsSync(config.src + 'data/globals/')) {
 }
 
 // Metalsmith Build
-var ms = Metalsmith(__dirname)
+let ms = Metalsmith(__dirname)
   .source(config.src)
   .destination(config.dest)
   .metadata(config)
@@ -119,18 +119,7 @@ ms.use(permalinks({
       'autoprefixer': {browsers: ['> 0.5%', 'Explorer >= 10']}
     }
   }))
-  .use(webpack({
-    context: path.resolve(__dirname, config.src + 'scripts/'),
-    entry: {
-      main: './index-main.js',
-      post: './index-post.js'
-    },
-    devtool: devBuild ? 'source-map' : false,
-    output: {
-      path: path.resolve(__dirname, config.dest + 'scripts/'),
-      filename: '[name]-bundle.js'
-    }
-  }))
+  .use(webpack(webpackConfig(config)))
   .use(assets({
     source: './src/assets', // relative to the working directory
     destination: './assets' // relative to the build directory
@@ -140,13 +129,6 @@ if (debugMode) {
   ms.use(writemetadata({
     pattern: ['**/*.html'],
     bufferencoding: 'utf8'
-  }))
-}
-
-if (!devBuild) {
-  ms.use(uglify({
-    removeOriginal: true,
-    nameTemplate: '[name].js'
   }))
 }
 

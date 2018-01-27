@@ -1,4 +1,9 @@
+import menu from './modules/menu'
+import anchorScroll from './modules/anchor-scroll'
+import 'autotrack/lib/plugins/event-tracker'
+import 'autotrack/lib/plugins/outbound-link-tracker'
+
 $(document).ready(function () {
-  require('./modules/menu')
-  require('./modules/anchor-scroll')
+  menu()
+  anchorScroll()
 })

@@ -1,4 +1,4 @@
-var palette = [
+const palette = [
   '#e87079',
   '#c46483',
   '#995d84',
