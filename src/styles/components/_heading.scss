@@ -16,6 +16,8 @@
 
   @media (min-width: $screen-lg-min) {
     max-width: $span-6;
+    margin-left: $span-1;
+    margin-top: $gutter * 2;
   }
 }
 
