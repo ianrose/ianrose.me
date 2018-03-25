@@ -65,7 +65,7 @@
     "metalsmith-with-postcss": "^1.0.0",
     "typesettings": "^4.0.0",
     "typogr": "^0.6.6",
-    "uglifyjs-webpack-plugin": "^1.1.6"
+    "uglifyjs-webpack-plugin": "^1.2.4"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
