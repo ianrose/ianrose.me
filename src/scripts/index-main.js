@@ -1,3 +1,4 @@
+import 'lazysizes'
 import menu from './modules/menu'
 import anchorScroll from './modules/anchor-scroll'
 import 'autotrack/lib/plugins/event-tracker'

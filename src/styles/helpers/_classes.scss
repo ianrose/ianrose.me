@@ -31,6 +31,7 @@
 }
 
 @include generateRatios(16,9);
+@include generateRatios(3,2);
 
 .img-responsive {
   max-width: 100%;

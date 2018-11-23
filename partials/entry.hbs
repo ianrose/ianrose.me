@@ -1,8 +1,8 @@
 <div class="entry--category-container entry--category-container--half">
   <div class="entry entry--category{{#if isHome}} is-home{{/if}}" itemscope="" itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
     {{#if art}}
-    <a class="entry--media" href="{{#if url}}{{url}}{{else}}/{{path}}{{/if}}">
-      <img class="img-responsive media--entry media--entry-default" src="/assets/images/{{art}}" alt="{{title}}">
+    <a class="entry--media intrinsic-wrapper ratio-3x2" href="{{#if url}}{{url}}{{else}}/{{path}}{{/if}}">
+      <img class="img-responsive intrinsic-wrapper-element media--entry media--entry-default lazyload" data-srcset="/assets/images/{{art}}" src="/assets/images/{{art}}" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="{{title}}">
     </a>
     {{/if}}
     <div class="entry--txt">

@@ -44,6 +44,7 @@
     "download-file": "^0.1.5",
     "handlebars": "^4.0.5",
     "handlebars-helpers": "^0.7.5",
+    "lazysizes": "^4.1.4",
     "lodash": "^4.17.4",
     "metalsmith": "^2.2.0",
     "metalsmith-assets": "^0.1.0",
