@@ -1,5 +1,6 @@
 const path = require('path')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const webpack = require('webpack')
 
 module.exports = function (config) {
   return {
@@ -31,6 +32,10 @@ module.exports = function (config) {
     plugins: [
       new UglifyJsPlugin({
         sourceMap: true
+      }),
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery'
       })
     ]
   }
