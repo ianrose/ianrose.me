@@ -1,55 +1,55 @@
 @font-face {
-  font-family: 'oksans';
+  font-family: 'Inter UI';
   font-style: normal;
   font-weight: 400;
   src:
-    url('/assets/fonts/H5c1IXWmGNYIe0-400.woff2') format('woff2'),
-    url('/assets/fonts/H5c1IXWmGNYIe0-400.woff') format('woff');
+    url('/assets/fonts/Inter-UI-Regular.woff2') format('woff2'),
+    url('/assets/fonts/Inter-UI-Regular.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'oksans';
+  font-family: 'Inter UI';
   font-style: normal;
   font-weight: 700;
   src:
-    url('/assets/fonts/H5c1IXWmGNYIe0-700.woff2') format('woff2'),
-    url('/assets/fonts/H5c1IXWmGNYIe0-700.woff') format('woff');
+    url('/assets/fonts/Inter-UI-Bold.woff2') format('woff2'),
+    url('/assets/fonts/Inter-UI-Bold.woff') format('woff');
   font-display: block;
 }
 
 @font-face {
-  font-family: 'oksans';
+  font-family: 'Inter UI';
   font-style: normal;
   font-weight: 900;
   src:
-    url('/assets/fonts/H5c1IXWmGNYIe0-900.woff2') format('woff2'),
-    url('/assets/fonts/H5c1IXWmGNYIe0-900.woff') format('woff');
+    url('/assets/fonts/Inter-UI-Black.woff2') format('woff2'),
+    url('/assets/fonts/Inter-UI-Black.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'hserif';
+  font-family: 'Source Serif Pro';
   font-style: normal;
   font-weight: 400;
   src:
-    url('/assets/fonts/5iIOE5lzbMEQrK-400.woff2') format('woff2'),
-    url('/assets/fonts/5iIOE5lzbMEQrK-400.woff') format('woff');
+    url('/assets/fonts/SourceSerifPro-Regular.otf.woff2') format('woff2'),
+    url('/assets/fonts/SourceSerifPro-Regular.otf.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'hserif';
+  font-family: 'Source Serif Pro';
   font-style: italic;
   font-weight: 400;
   src:
-    url('/assets/fonts/5iIOE5lzbMEQrK-400i.woff2') format('woff2'),
-    url('/assets/fonts/5iIOE5lzbMEQrK-400i.woff') format('woff');
+    url('/assets/fonts/SourceSerifPro-It.otf.woff2') format('woff2'),
+    url('/assets/fonts/SourceSerifPro-It.otf.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'hserif';
+  font-family: 'Source Serif Pro';
   font-style: normal;
   font-weight: 700;
   src:
-    url('/assets/fonts/5iIOE5lzbMEQrK-700.woff2') format('woff2'),
-    url('/assets/fonts/5iIOE5lzbMEQrK-700.woff') format('woff');
+    url('/assets/fonts/SourceSerifPro-Bold.otf.woff2') format('woff2'),
+    url('/assets/fonts/SourceSerifPro-Bold.otf.woff') format('woff');
   font-display: block;
 }

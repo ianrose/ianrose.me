@@ -4,12 +4,12 @@ this.addEventListener('install', function (event) {
   event.waitUntil(
     caches.open('v1').then(function (cache) {
       return cache.addAll([
-        '/assets/fonts/H5c1IXWmGNYIe0-400.woff2',
-        '/assets/fonts/H5c1IXWmGNYIe0-700.woff2',
-        '/assets/fonts/H5c1IXWmGNYIe0-900.woff2',
-        '/assets/fonts/5iIOE5lzbMEQrK-400.woff2',
-        '/assets/fonts/5iIOE5lzbMEQrK-400i.woff2',
-        '/assets/fonts/5iIOE5lzbMEQrK-700.woff2'
+        '/assets/fonts/Inter-UI-Regular.woff2',
+        '/assets/fonts/Inter-UI-Bold.woff2',
+        '/assets/fonts/Inter-UI-Black.woff2',
+        '/assets/fonts/SourceSerifPro-Regular.otf.woff2',
+        '/assets/fonts/SourceSerifPro-It.otf.woff2',
+        '/assets/fonts/SourceSerifPro-Bold.otf.woff2'
       ])
     })
   )
