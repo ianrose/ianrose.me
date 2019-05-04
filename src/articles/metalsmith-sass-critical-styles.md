@@ -61,7 +61,7 @@ cssData: { 'styles/critical.css': '...', 'styles/main.css': '...'}
       <link rel="stylesheet" href="/styles/main.css">
 	</noscript>
 	<style media="screen">
-      {{cssData.[styles/critical.css]}}}
+      {{{cssData.[styles/critical.css]}}}
 	</style>
 </head>
 ```
