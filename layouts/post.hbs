@@ -15,8 +15,8 @@
     </div>
   </div>
     <header class="article--header">
-      <h1 itemprop="headline">{{title}}</h1>
-      <p class="dek dek--lg">{{description}}</p>
+      <h1 itemprop="headline">{{{typogrFormat title}}}</h1>
+      <p class="dek dek--lg">{{{typogrFormat description}}}</p>
       {{#has collection 'articles'}}
         {{> byline}}
       {{/has}}

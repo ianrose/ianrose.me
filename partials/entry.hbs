@@ -8,14 +8,14 @@
     <div class="entry--txt">
       {{#if isHome}}
         <h3 class="entry-heading--category" itemprop="headline">
-          <a href="{{#if url}}{{url}}{{else}}/{{path}}{{/if}}">{{title}}</a>
+          <a href="{{#if url}}{{url}}{{else}}/{{path}}{{/if}}">{{{typogrFormat title}}}</a>
         </h3>
         {{else}}
         <h2 class="entry-heading--category" itemprop="headline">
-          <a class="js-entry-heading-link" href="{{#if url}}{{url}}{{else}}/{{path}}{{/if}}">{{title}}</a>
+          <a class="js-entry-heading-link" href="{{#if url}}{{url}}{{else}}/{{path}}{{/if}}">{{{typogrFormat title}}}</a>
         </h2>
       {{/if}}
-      <p class="dek" itemprop="description">{{description}}</p>
+      <p class="dek" itemprop="description">{{{typogrFormat description}}}</p>
       {{#if date}}
       <div class="meta--txt">
         {{> time}}
