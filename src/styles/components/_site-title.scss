@@ -30,6 +30,12 @@ h1.site-title--name a:link {
 .site-title--sub {
   color: $light-grey;
   flex-grow: 1;
+  margin-right: 0;
+  display: none;
+
+  @media (min-width: 320px) {
+    display: block;
+  }
 
   @media (min-width: $screen-sm-min) {
     border-bottom: $border-width-narrow solid $text-color;
