@@ -73,6 +73,7 @@
     "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
     "eslint": "^3.19.0",
     "htmlhint": "^0.9.13",
     "lint-staged": "^3.2.1",
