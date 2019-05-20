@@ -2,9 +2,9 @@
 title: The Too Good to Be True CSS Text Rendering Property
 date: 2015-01-22T13:00:00Z
 modified: null
-tags:
+tags: articles
 description: The CSS text rendering property is a mixed bag. On initial pass it seems to be an obvious choice for improving type on the web.
-layout: post.hbs
+layout: layouts/post.njk
 art: null
 author:
   name: Ian Rose

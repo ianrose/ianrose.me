@@ -1,91 +1,47 @@
 {
-  "name": "ianrose.me",
-  "version": "1.2.1",
-  "description": "Source for Ian Rose's personal website",
-  "private": true,
+  "name": "deventy",
+  "version": "1.0.0",
+  "description": "A minimal 11ty starter with modern tools",
   "main": "index.js",
-  "pre-commit": "lint-staged",
   "scripts": {
-    "prestart": "node ./lib/download.js",
-    "start": "node index.js",
-    "debug": "DEBUG=metalsmith:*, NODE_ENV=debug npm run dev",
-    "dev": "npm start --development",
-    "build": "npm start --production",
-    "format": "eslint \"src/scripts/**\" \"lib/**\" --fix && stylelint \"src/styles/**/*.scss\" --fix",
-    "script-lint": "eslint \"src/scripts/**\" \"lib/**\"",
-    "style-lint": "stylelint \"**/*.scss\"",
-    "lint": "npm run script-lint && npm run style-lint && htmlhint **/*.{hbs,html} --config .htmlhintrc --ignore **/www/**",
-    "lint-staged": "lint-staged"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist",
+    "eleventy:default": "npx eleventy",
+    "eleventy:watch": "npx eleventy --watch",
+    "styles:prod": "node-sass src/styles/ --output dist/styles/ && postcss ./dist/styles/*.css --replace",
+    "styles:dev": "node-sass src/styles/ --output dist/styles/ --source-map true --source-map-contents true && postcss ./dist/styles/*.css --replace",
+    "scripts:prod": "webpack --mode=production",
+    "scripts:dev": "webpack --mode=development",
+    "serve": "light-server -c .lightserverrc",
+    "dev": "npm-run-all clean styles:dev scripts:dev eleventy:default --parallel eleventy:watch serve --print-label",
+    "build": "run-s clean styles:prod scripts:prod eleventy:default --print-label"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://ianrose@github.com/ianrose/machinist.git"
+    "url": "git+https://ianrose@github.com/ianrose/deventy.git"
   },
-  "keywords": [
-    "metalsmith",
-    "static",
-    "site"
-  ],
-  "author": "Ian Rose",
-  "license": "Copyright © Ian Rose",
+  "author": "",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ianrose/machinist/issues"
+    "url": "https://github.com/ianrose/deventy/issues"
   },
-  "homepage": "https://github.com/ianrose/machinist#readme",
-  "lint-staged": {
-    "*.scss": "style-lint",
-    "*.js": "script-lint"
+  "homepage": "https://github.com/ianrose/deventy#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.8.3",
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "autoprefixer": "^9.5.1",
+    "babel-loader": "^8.0.6",
+    "cssnano": "^4.1.10",
+    "cssnano-preset-advanced": "^4.0.7",
+    "light-server": "^2.6.2",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^6.1.2",
+    "webpack": "^4.31.0",
+    "webpack-cli": "^3.3.2"
   },
   "dependencies": {
-    "autoprefixer": "^6.4.0",
-    "autotrack": "^2.4.1",
-    "c3": "^0.4.11",
-    "d3": "^3.5.17",
-    "download-file": "^0.1.5",
-    "handlebars": "^4.0.5",
-    "handlebars-helpers": "^0.7.5",
-    "jquery": "^3.3.1",
-    "lazysizes": "^4.1.4",
-    "lodash": "^4.17.4",
-    "metalsmith": "^2.2.0",
-    "metalsmith-assets": "^0.1.0",
-    "metalsmith-autotoc": "^0.1.2",
-    "metalsmith-collections": "git+https://github.com/petasittek/metalsmith-collections.git#dc2c5cc7cc6566bdc73f00153e2634a1fed231ce",
-    "metalsmith-drafts": "0.0.1",
-    "metalsmith-in-place": "^1.4.4",
-    "metalsmith-layouts": "^1.6.5",
-    "metalsmith-mapsite": "^1.0.4",
-    "metalsmith-markdown": "^0.2.1",
-    "metalsmith-metadata": "0.0.4",
-    "metalsmith-paths": "^3.0.1",
-    "metalsmith-permalinks": "^0.5.0",
-    "metalsmith-postcss": "^4.0.0",
-    "metalsmith-prism": "^3.0.1",
-    "metalsmith-register-helpers": "^0.2.0",
-    "metalsmith-sass": "^1.3.0",
-    "metalsmith-webpack2": "git+https://github.com/ianrose/metalsmith-webpack2.git#bcfc2862c04bf12dbaa7d46711627b62fb34a470",
-    "metalsmith-with-postcss": "^1.0.0",
-    "typesettings": "^4.0.0",
-    "typogr": "^0.6.6",
-    "uglifyjs-webpack-plugin": "^1.2.4"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-es2015": "^6.24.1",
-    "eslint": "^3.19.0",
-    "htmlhint": "^0.9.13",
-    "lint-staged": "^3.2.1",
-    "metalsmith-browser-sync": "^1.1.1",
-    "metalsmith-debug": "^1.1.0",
-    "metalsmith-writemetadata": "^0.4.5",
-    "pre-commit": "^1.1.3",
-    "standard": "^8.6.0",
-    "stylelint": "^7.12.0",
-    "stylelint-config-standard": "^16.0.0"
-  },
-  "engines": {
-    "node": "8.x.x"
+    "acorn": "^6.1.1",
+    "node-sass": "^4.12.0"
   }
 }

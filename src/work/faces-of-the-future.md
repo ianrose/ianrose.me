@@ -5,7 +5,8 @@ modified: null
 url: https://www.nbcnews.com/specials/generation-z
 description: TODAY special that tells the stories from Generation Z, the first wave to enter adulthood following President Trump's election.
 art: faces-of-the-future-art.jpg
-layout: post.hbs
+layout: layouts/post.njk
+tags: work
 ---
 
 [Visit Faces of the Future]({{url}})

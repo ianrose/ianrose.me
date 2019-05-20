@@ -4,9 +4,10 @@ date: 2014-12-30T13:00:00Z
 modified: null
 description: A CSS preprocessor toolkit that helps set type and elements in Ems with modular scale, vertical rhythm, and responsive ratio based headlines.
 art: typesettings-art.png
-layout: post.hbs
+layout: layouts/post.njk
 project:
   url: http://typesettings.io
+tags: work
 ---
 
 **[Typesettings](http://typesettings.io)** provides a designer or developer a toolkit of Sass or Stylus functions and mixins that make setting nice type on the web easier.

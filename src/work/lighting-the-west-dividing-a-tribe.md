@@ -5,7 +5,8 @@ modified: null
 url: https://www.nbcnews.com/specials/navajo-coal
 description: 'NBC News special: The people of Black Mesa, Arizona, fear the loss of jobs if a power plant and coal mine close, but also expect their health and environment to improve.'
 art: lighting-the-west-dividing-a-tribe-art.jpg
-layout: post.hbs
+layout: layouts/post.njk
+tags: work
 ---
 
 [Visit Lighting the West, dividing a tribe]({{url}})

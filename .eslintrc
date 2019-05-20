@@ -1,9 +1,0 @@
-{
-  "extends": "standard",
-  "globals": {
-    "$": true,
-    "jQuery": true,
-    "d3": true,
-    "c3": true
-  }
-}

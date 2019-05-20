@@ -1,5 +1,5 @@
 ---
-layout: post.hbs
+layout: layouts/post.njk
 title: Newsblock
 date: 2015-07-19T13:00:00.000Z
 modified: 2018-02-01T15:24:21.598Z
@@ -9,6 +9,7 @@ description: >-
 art: newsblock-art.gif
 project:
   url: 'https://github.com/Newsblock/frontend'
+tags: work
 ---
 <figure class="media-full">
 ![Homepage on Desktop](/assets/images/newsblock-desktop-lg-top.jpg)

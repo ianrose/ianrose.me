@@ -1,42 +1,24 @@
-const path = require('path')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
-const webpack = require('webpack')
+var path = require('path');
 
-module.exports = function (config) {
-  return {
-    context: path.resolve(__dirname, `${config.src}/scripts`),
-    entry: {
-      main: './index-main.js',
-      post: './index-post.js'
-    },
-    devtool: config.devBuild ? 'eval-source-map' : false,
-    output: {
-      path: path.resolve(__dirname, `${config.dest}/scripts`),
-      filename: '[name]-bundle.js'
-    },
-    module: {
-      rules: [
-        {
-          test: /\.js$/,
-          exclude: /node_modules\/(?!(autotrack|dom-utils))/,
-          use: [{
-            loader: 'babel-loader',
-            options: {
-              presets: ['env']
-            }
+module.exports = {
+  mode: 'development',
+  entry: './src/scripts/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist/scripts'),
+    filename: 'index.js'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
           }
-          ]
         }
-      ]
-    },
-    plugins: [
-      new UglifyJsPlugin({
-        sourceMap: true
-      }),
-      new webpack.ProvidePlugin({
-        $: 'jquery',
-        jQuery: 'jquery'
-      })
+      }
     ]
   }
 }
