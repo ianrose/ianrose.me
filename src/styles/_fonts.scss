@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'Inter UI';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url('/fonts/Inter-UI-Regular.woff2') format('woff2'),
+    url('/fonts/Inter-UI-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Inter UI';
+  font-style: normal;
+  font-weight: 700;
+  src:
+    url('/fonts/Inter-UI-Bold.woff2') format('woff2'),
+    url('/fonts/Inter-UI-Bold.woff') format('woff');
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Inter UI';
+  font-style: normal;
+  font-weight: 900;
+  src:
+    url('/fonts/Inter-UI-Black.woff2') format('woff2'),
+    url('/fonts/Inter-UI-Black.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Source Serif Pro';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url('/fonts/SourceSerifPro-Regular.otf.woff2') format('woff2'),
+    url('/fonts/SourceSerifPro-Regular.otf.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Source Serif Pro';
+  font-style: italic;
+  font-weight: 400;
+  src:
+    url('/fonts/SourceSerifPro-It.otf.woff2') format('woff2'),
+    url('/fonts/SourceSerifPro-It.otf.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Source Serif Pro';
+  font-style: normal;
+  font-weight: 700;
+  src:
+    url('/fonts/SourceSerifPro-Bold.otf.woff2') format('woff2'),
+    url('/fonts/SourceSerifPro-Bold.otf.woff') format('woff');
+  font-display: block;
+}

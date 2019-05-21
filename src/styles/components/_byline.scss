@@ -1,0 +1,10 @@
+.byline {
+  font-size: $ms-down1;
+  color: $light-grey;
+  font-family: $font-sans;
+
+  span {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}

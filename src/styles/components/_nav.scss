@@ -1,0 +1,104 @@
+.nav ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.nav a {
+  @include setType(2, $ms-down1);
+
+  font-family: $font-sans;
+  font-weight: bold;
+  text-decoration: none;
+  vertical-align: text-top;
+}
+
+.nav--post.is-first {
+  justify-content: flex-end;
+}
+
+.nav--post-heading {
+  @include setType(2, $ms-down1);
+
+  padding-top: emRhythm(1, $ms-down1);
+  margin-bottom: emRhythm(0.5, $ms-down1, $silent: true);
+}
+
+.nav--post-heading {
+  border-top: $border-width-narrow solid $lighter-grey;
+}
+
+.nav--post-button {
+  flex-basis: $span-1;
+  max-width: $span-1;
+  padding-left: $gutter;
+  padding-right: $gutter;
+}
+
+.nav--post-button a {
+  display: block;
+  padding-top: emRhythm(1);
+  border-top: none;
+
+  @media (min-width: $screen-md-min) {
+    border-top: $border-width-narrow solid $lighter-grey;
+  }
+}
+
+.nav--prev,
+.nav--next {
+  flex-basis: $span-2;
+  padding-left: $gutter;
+  padding-right: $gutter;
+
+  @media (min-width: $screen-md-min) {
+    max-width: $span-2;
+  }
+}
+
+.nav--prev {
+  @media (min-width: $screen-md-min) {
+    margin-right: $span-1;
+  }
+}
+
+.nav--prev + .nav--post-button {
+  order: -1;
+  margin-bottom: $gutter;
+}
+
+.nav--menu {
+  background-color: #fff;
+  padding-right: $gutter;
+  padding-left: $gutter;
+
+  @media (min-width: $screen-sm-min) {
+    position: fixed;
+    width: $site-menu-width;
+    padding-left: $gutter;
+    padding-right: $gutter;
+    bottom: 0;
+    top: 0;
+  }
+}
+
+.nav--menu nav {
+  max-height: 0;
+  overflow-y: hidden;
+  transition: all 0.2s ease-in-out 0s;
+
+  a {
+    @include setType(5, $ms-up1);
+  }
+
+  @media (min-width: $screen-sm-min) {
+    max-height: none;
+
+    a {
+      @include setType(2, $ms-down1);
+    }
+  }
+}
+
+nav.is-open {
+  max-height: 270px;
+}

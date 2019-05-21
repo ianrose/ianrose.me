@@ -1,3 +1,14 @@
-import list from './modules/list'
+import $ from 'jquery'
+import 'lazysizes'
+import menu from './modules/menu'
+import anchorScroll from './modules/anchor-scroll'
+import 'autotrack/lib/plugins/event-tracker'
+import 'autotrack/lib/plugins/outbound-link-tracker'
 
-console.log(`Hello ${list[0]}`)
+window.jQuery = $
+window.$ = $
+
+$(document).ready(function () {
+  menu()
+  anchorScroll()
+})

@@ -1,0 +1,84 @@
+//==============================================================================
+// Config Variables
+//==============================================================================
+// The config variables have default values that are just looking to be adjusted.
+// Use this variables to customize your Typesettings. Or take the whole thing
+// apart if you want :)
+
+// Font families and default text color.
+$font-sans: 'Inter UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-serif: 'Source Serif Pro', TimesNewRoman, 'Times New Roman', Times, serif;
+$font-display-serif: 'Source Serif Pro', TimesNewRoman, 'Times New Roman', Times, serif;
+$font-mono: Menlo, Monaco, monospace;
+$font-headline: $font-serif;
+$text-color: #282832;
+
+// The vertical grid unit. Margin, padding, and line-height are set to multiples
+// of this value. This is the value that determines the baseline for our vertical
+// rhythm. The default value of 6px allows more fine tuned designs that still
+// obey vertical rhythm.
+$base-vertical-unit: 10px;
+
+// The value that multiplies the $base-vertical-unit to get the $base-line-height.
+// This gives type an ideal line-height.
+$base-line-multi: 3;
+
+// Base font size in pixels.
+$base-font-size: 20px;
+
+// Modular scale ratio that is used to figure out all the different font sizes
+$ms-ratio: 1.333;
+
+// [1] Paragraph setting that you can turn on or off the indent of the first line
+// of a new paragraph.
+// [2] Paragraph setting that you can turn on or off to have your paragraphs ragged
+// right or justified.
+$paragraph-indent: false; // [1]
+$paragraph-justify: false; // [2]
+
+$global-init: true;
+
+// You can optionally load type styles that use Typesettings.
+$load-typesetted: false;
+
+$grey: #333;
+$light-grey: #6e6e6e;
+$lighter-grey: #8f8f8f;
+$yellow: #fefac1;
+$red: #ffc5c2;
+$highlight-color: $yellow;
+$link-color: #1893d8;
+$background-color: #f7f7f7;
+
+$border-width-narrow: 1px;
+$border-width-normal: $base-vertical-unit / 2;
+$border-width-wide: $border-width-normal * 2;
+
+$site-header-height: 249px;
+$site-menu-width: 190px;
+
+$container-md-width: 769px;
+$container-lg-width: 980px;
+$container-xl-width: 1220px;
+
+// Grid attributes
+$gutter: ($base-vertical-unit * $base-line-multi) / 2;
+$static-col-width: 300px;
+$span-1: 14.285714285714%;
+$span-2: 28.571428571429%;
+$span-3: 42.857142857143%;
+$span-4: 57.142857142857%;
+$span-5: 71.428571428571%;
+$span-6: 85.714285714286%;
+$span-7: 100%;
+$span-half: 50%;
+
+// Breakpoints
+$screen-xs-min: 480px;
+$screen-sm-min: 700px;
+$screen-md-min: $container-md-width + $site-menu-width + $gutter;
+$screen-lg-min: $container-lg-width + $site-menu-width + $gutter;
+$screen-xl-min: $container-xl-width + $site-menu-width + $gutter;
+$screen-xs-max: ($screen-sm-min -1px);
+$screen-sm-max: ($screen-md-min - 1px);
+$screen-md-max: ($screen-lg-min - 1px);

@@ -1,0 +1,49 @@
+.section--id {
+  @extend .h1;
+
+  font-family: $font-sans;
+  font-weight: lighter;
+  color: $lighter-grey;
+
+  @media (min-width: $screen-md-min) {
+    border-top: $border-width-narrow solid $lighter-grey;
+  }
+}
+
+.section--id--l {
+  flex-basis: $span-1;
+  max-width: $span-1;
+  padding-left: $gutter;
+  padding-right: $gutter;
+}
+
+.section--posts {
+  flex-basis: $span-6;
+
+  @media (min-width: $screen-lg-min) {
+    max-width: $span-6;
+  }
+}
+
+.section--posts-1 {
+  margin-bottom: emRhythm(9);
+}
+
+.section--heading {
+  @extend .h5;
+
+  font-family: $font-sans;
+  flex-basis: $span-1;
+  padding-left: $gutter;
+  padding-right: $gutter;
+
+  @media (min-width: $screen-lg-min) {
+    margin-left: $span-1;
+  }
+}
+
+.section--body {
+  flex-basis: $span-4;
+  padding-left: $gutter;
+  padding-right: $gutter;
+}
