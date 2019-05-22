@@ -46,6 +46,8 @@
   },
   "dependencies": {
     "acorn": "^6.1.1",
-    "node-sass": "^4.12.0"
+    "dayjs": "^1.8.14",
+    "node-sass": "^4.12.0",
+    "typogr": "^0.6.8"
   }
 }

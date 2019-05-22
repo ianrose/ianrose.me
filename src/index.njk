@@ -6,18 +6,9 @@ description: Ian Rose is a designer living & working in New York City.
 {% import 'section.njk' as section %}
 
 <p class="heading heading--page heading--home">{{description}}</p>
-{{section.set(
-  data=collections.work,
-  idNum=1,
-  heading='Work',
-  path='/work/',
-  isHome=true
-)}}
 
-{{section.set(
-  data=collections.articles,
-  idNum=2,
-  heading='Articles',
-  path='/Articles/',
-  isHome=true
-)}}
+{% for name, collection in collections.curated %}
+  {{section.set(collection, loop.index, name, name, true)}}
+{% endfor %}
+
+<pre>{{ collections.curated | dumpCircular}}</pre>

@@ -1,11 +1,40 @@
 const util = require('util')
+const dayjs = require('dayjs')
+const typogr = require('typogr')
 
 module.exports = function(eleventyConfig) {
+
+  // Pass Through Copt
   eleventyConfig.addPassthroughCopy('src/images')
   eleventyConfig.addPassthroughCopy('src/fonts')
 
-  eleventyConfig.addFilter('dumpCircular', function(obj) {
-    return util.inspect(obj, {showHidden: true, depth: 2, colors: true})
+  // Filters
+  eleventyConfig.addFilter('dumpCircular', function(val) {
+    return util.inspect(val, {showHidden: true, depth: 2, colors: false})
+  })
+
+  eleventyConfig.addFilter('dateReadable', function(val) {
+    return dayjs(val).format('MMM DD, YYYY')
+  })
+
+  eleventyConfig.addFilter('dateIso', function(val) {
+    return dayjs(val).toISOString()
+  })
+
+  eleventyConfig.addFilter('typogr', function(val) {
+    return typogr.typogrify(val)
+  })
+
+  // Collections
+  eleventyConfig.addCollection("postsReverse", function(collection) {
+    return collection.getAllSorted().reverse();
+  })
+
+  eleventyConfig.addCollection("curated", function(collection) {
+    const curated = {}
+    curated.work = collection.getFilteredByGlob(['src/work/*.md'])
+    curated.articles = collection.getFilteredByGlob(['src/articles/*.md'])
+    return curated
   })
 
   return {
