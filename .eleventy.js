@@ -1,6 +1,9 @@
 const util = require('util')
 const dayjs = require('dayjs')
 const typogr = require('typogr')
+const pluginTOC = require('eleventy-plugin-toc')
+const markdownIt = require("markdown-it");
+const markdownItAnchor = require("markdown-it-anchor")
 
 module.exports = function(eleventyConfig) {
 
@@ -36,6 +39,22 @@ module.exports = function(eleventyConfig) {
     curated.articles = collection.getFilteredByGlob(['src/articles/*.md'])
     return curated
   })
+
+  // Plugins
+  eleventyConfig.addPlugin(pluginTOC)
+
+  // Libaries
+  eleventyConfig.setLibrary('md', markdownIt({
+    html: true,
+    breaks: true,
+    linkify: true
+  })
+  .use(markdownItAnchor, {
+    permalink: true,
+    permalinkClass: 'direct-link',
+    permalinkSymbol: '#'
+  })
+  )
 
   return {
     dir: { input: 'src', output: 'dist', data: '_data' },

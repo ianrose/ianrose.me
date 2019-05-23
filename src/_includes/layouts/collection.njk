@@ -1,4 +1,18 @@
 ---
 layout: layouts/base.njk
 ---
+{% import 'entry.njk' as entry %}
+
 <h1 class="heading heading--page">{{title | capitalize}}</h1>
+
+{% for name, collection in collections.curated %}
+  <div class="section row">
+    {% if name == page.fileSlug %}
+    {% for post in collection | reverse %}
+      {{entry.set(post.data, isHome=true)}}
+    {% endfor %}
+    {% endif %}
+  </div>
+{% endfor %}
+
+
