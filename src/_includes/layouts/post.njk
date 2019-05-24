@@ -1,3 +1,24 @@
 ---
 layout: layouts/base.njk
 ---
+{% import 'byline.njk' as byline %}
+<article class="article--post" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="meta--post--l">
+  <div class="row">
+    <div class="meta--container meta--container-post">
+      <div class="meta--txt meta--heading">
+        <span class="meta meta--primary"><a class="meta--link" href="/{{tags[0]}}">{{tags[0]}}</a></span>
+      </div>
+    </div>
+  </div>
+</div>
+  <header class="article--header">
+    <h1 itemprop="headline">{{title | typogr | safe}}</h1>
+    <p class="dek dek--lg">{{description | typogr | safe}}</p>
+    {{byline.set(author.name, date)}}
+  </header>
+  <div class="article--body" itemprop="articleBody">
+    {{content | safe}}
+  </div>
+</article>
+{# {{> postnav}} #}

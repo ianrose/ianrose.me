@@ -1,0 +1,6 @@
+{% import 'time.njk' as time %}
+{% macro set(name, date) %}
+<div class="byline">
+  by <span itemprop="author creator">{{name}}</span> | {{time.set(date)}}
+</div>
+{% endmacro %}

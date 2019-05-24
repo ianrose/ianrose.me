@@ -19,7 +19,7 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addFilter('dateReadable', function(val) {
     // return dayjs(val).format('MMM DD, YYYY')
-    return DateTime.fromJSDate(val, {zone: 'utc'}).toFormat('MMM DD, YYYY')
+    return DateTime.fromJSDate(val, {zone: 'utc'}).toFormat('MMM dd, yyyy')
   })
 
   eleventyConfig.addFilter('dateIso', function(val) {
@@ -55,7 +55,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setLibrary('md', markdownIt({
     html: true,
     breaks: true,
-    linkify: true
+    linkify: true,
+    typographer: true
   })
   .use(markdownItAnchor, {
     permalink: true,
