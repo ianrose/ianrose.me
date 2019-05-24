@@ -1,9 +1,10 @@
 const util = require('util')
-const dayjs = require('dayjs')
+const { DateTime } = require('luxon')
 const typogr = require('typogr')
 const pluginTOC = require('eleventy-plugin-toc')
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor")
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function(eleventyConfig) {
 
@@ -17,11 +18,17 @@ module.exports = function(eleventyConfig) {
   })
 
   eleventyConfig.addFilter('dateReadable', function(val) {
-    return dayjs(val).format('MMM DD, YYYY')
+    // return dayjs(val).format('MMM DD, YYYY')
+    return DateTime.fromJSDate(val, {zone: 'utc'}).toFormat('MMM DD, YYYY')
   })
 
   eleventyConfig.addFilter('dateIso', function(val) {
-    return dayjs(val).toISOString()
+    // return dayjs(val).toISOString()
+    return DateTime.fromJSDate(val, {zone: 'utc'}).toISO()
+  })
+
+  eleventyConfig.addFilter('dateHtmlString', function(val) {
+    return DateTime.fromJSDate(val, {zone: 'utc'}).toFormat('yyyy-LL-dd')
   })
 
   eleventyConfig.addFilter('typogr', function(val) {
@@ -42,6 +49,7 @@ module.exports = function(eleventyConfig) {
 
   // Plugins
   eleventyConfig.addPlugin(pluginTOC)
+  eleventyConfig.addPlugin(pluginRss)
 
   // Libaries
   eleventyConfig.setLibrary('md', markdownIt({
