@@ -13,9 +13,9 @@ eleventyExcludeFromCollections: true
       {% for post in collections.articles %}
       {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(siteData.url) }}{% endset %}
         <item>
-          <title>{{post.title}}</title>
-          <description>{{post.description}}</description>
-          <pubDate>{{post.date | dateIso}}</pubDate>
+          <title>{{post.data.title}}</title>
+          <description>{{post.data.description}}</description>
+          <pubDate>{{post.data.date | dateIso}}</pubDate>
           <link>{{absolutePostUrl}}</link>
           <guid isPermaLink="true">{{absolutePostUrl}}</guid>
        </item>
