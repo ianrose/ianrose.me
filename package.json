@@ -1,7 +1,8 @@
 {
-  "name": "deventy",
+  "name": "ianrose.me",
   "version": "1.0.0",
-  "description": "A minimal 11ty starter with modern tools",
+  "description": "Source for Ian Rose's personal website",
+  "private": true,
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -18,14 +19,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://ianrose@github.com/ianrose/deventy.git"
+    "url": "git+https://ianrose@github.com/ianrose/ianrose.me.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ianrose/deventy/issues"
+    "url": "https://github.com/ianrose/ianrose.me/issues"
   },
-  "homepage": "https://github.com/ianrose/deventy#readme",
+  "homepage": "https://github.com/ianrose/ianrose.me#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.8.3",
     "@babel/core": "^7.4.4",
