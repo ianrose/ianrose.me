@@ -1,7 +1,7 @@
 <footer class="row">
   <div class="newsletter--l">
     <div class="footer--col--l">
-      <form class="form form--box" action="https://tinyletter.com/{{service.tinyletter}}" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/ian-rose', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+      <form class="form form--box" action="https://tinyletter.com/{{siteData.service.tinyletter}}" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/ian-rose', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
         <p>
           <label for="tlemail">Sign up to have updates sent directly to your inbox.</label>
         </p>
@@ -15,14 +15,14 @@
     <nav class="nav row">
       <div class="footer--col--l">
         <div><a href="/resources">Resources</a></div>
-        <div><a rel="noopener" href="https://twitter.com/{{service.twitter}}" target="_blank">Twitter</a></div>
-        <div><a rel="noopener" href="https://github.com/{{service.github}}" target="_blank">GitHub</a></div>
-        <div><a rel="noopener" href="https://linkedin.com/in/{{service.linkedin}}/" target="_blank">LinkedIn</a></div>
+        <div><a rel="noopener" href="https://twitter.com/{{siteData.service.twitter}}" target="_blank">Twitter</a></div>
+        <div><a rel="noopener" href="https://github.com/{{siteData.service.github}}" target="_blank">GitHub</a></div>
+        <div><a rel="noopener" href="https://linkedin.com/in/{{siteData.service.linkedin}}/" target="_blank">LinkedIn</a></div>
       </div>
       <div class="footer--col--l">
-        <div><a rel="noopener" href="https://tinyletter.com/{{service.tinyletter}}" target="_blank">Newsletter</a></div>
-        <div><a rel="noopener" href="https://feeds.feedburner.com/{{service.feedburner}}" target="_blank">Feed</a></div>
-        <div><a rel="noopener" href="{{sourceurl}}" target="_blank">Site Source</a></div>
+        <div><a rel="noopener" href="https://tinyletter.com/{{siteData.service.tinyletter}}" target="_blank">Newsletter</a></div>
+        <div><a rel="noopener" href="https://feeds.feedburner.com/{{siteData.service.feedburner}}" target="_blank">Feed</a></div>
+        <div><a rel="noopener" href="{{siteData.sourceurl}}" target="_blank">Site Source</a></div>
       </div>
     </nav>
   </div>
