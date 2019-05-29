@@ -14,7 +14,7 @@
   {% if prevItem %}
     <div class="nav--prev">
       <h2 class="nav--post-heading">{{prevItem.data.title}}</h2>
-      <p class="dek dek--sm">{{prevItem.data.description}}</p>
+      <p class="dek dek--sm">{{prevItem.data.description | typogr | safe}}</p>
     </div>
     <div class="nav--post-button">
       <a class="button--link" href="{{prevItem.url | url}}">Previous</a>
@@ -23,7 +23,7 @@
   {% if nextItem %}
     <div class="nav--next">
       <h2 class="nav--post-heading">{{nextItem.data.title}}</h2>
-      <p class="dek dek--sm">{{nextItem.data.description}}</p>
+      <p class="dek dek--sm">{{nextItem.data.description | typogr | safe}}</p>
     </div>
     <div class="nav--post-button">
       <a class="button--link" href="{{nextItem.url | url}}">Next</a>
