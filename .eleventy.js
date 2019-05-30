@@ -12,6 +12,8 @@ module.exports = function(eleventyConfig) {
   // Pass Through Copt
   eleventyConfig.addPassthroughCopy('src/images')
   eleventyConfig.addPassthroughCopy('src/fonts')
+  eleventyConfig.addPassthroughCopy('src/data')
+  eleventyConfig.addPassthroughCopy('src/scripts/service-worker.js')
 
   // Filters
   eleventyConfig.addFilter('dumpCircular', function(val) {

@@ -1,11 +1,26 @@
 const path = require('path');
 const webpack = require('webpack')
+const glob = require("glob")
+const entry = require('webpack-entry-plus')
+
+const entryFiles = [
+  {
+    entryFiles: ['./src/scripts/index.js'],
+    outputName: 'index.js'
+  },
+  {
+    entryFiles: glob.sync('./src/scripts/projects/**/index.js'),
+    outputName(item) {
+      return item.replace('./src/', '../')
+    }
+  }
+]
 
 module.exports = {
-  entry: './src/scripts/index.js',
+  entry: entry(entryFiles),
   output: {
     path: path.resolve(__dirname, 'dist/scripts'),
-    filename: 'index.js'
+    filename: '[name]'
   },
   module: {
     rules: [
