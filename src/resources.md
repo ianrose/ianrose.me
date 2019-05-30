@@ -2,7 +2,7 @@
 title: List of Resources
 autotoc: true
 published: true
-layout: layouts/list.njk
+layout: list.hbs
 description: 'Curated list of resources for design, development and process in the newsroom.'
 ---
 

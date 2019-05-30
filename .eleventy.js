@@ -67,6 +67,9 @@ module.exports = function(eleventyConfig) {
   })
   )
 
+  // Layout Alias
+  eleventyConfig.addLayoutAlias('list.hbs', 'layouts/list.njk')
+
   return {
     dir: { input: 'src', output: 'dist', data: '_data' },
     passthroughFileCopy: true,
