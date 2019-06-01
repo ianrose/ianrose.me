@@ -10,12 +10,12 @@ eleventyExcludeFromCollections: true
     <description>{{siteData.description}}</description>
     <language>en</language>
     <atom:link href="{{siteData.url}}/feed.xml" rel="self" type="application/rss+xml"/>
-      {% for post in collections.articles %}
+      {% for post in collections.articles | reverse %}
       {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(siteData.url) }}{% endset %}
         <item>
           <title>{{post.data.title}}</title>
           <description>{{post.data.description}}</description>
-          <pubDate>{{post.data.date | dateIso}}</pubDate>
+          <pubDate>{{post.data.date | dateRSS}}</pubDate>
           <link>{{absolutePostUrl}}</link>
           <guid isPermaLink="true">{{absolutePostUrl}}</guid>
        </item>

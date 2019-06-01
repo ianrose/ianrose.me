@@ -28,6 +28,10 @@ module.exports = function(eleventyConfig) {
     return DateTime.fromJSDate(val, {zone: 'utc'}).toISO()
   })
 
+  eleventyConfig.addFilter('dateRSS', function(val) {
+    return DateTime.fromJSDate(val, {zone: 'utc'}).toHTTP()
+  })
+
   eleventyConfig.addFilter('dateHtmlString', function(val) {
     return DateTime.fromJSDate(val, {zone: 'utc'}).toFormat('yyyy-LL-dd')
   })
