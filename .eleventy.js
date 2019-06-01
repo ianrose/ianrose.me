@@ -67,12 +67,20 @@ module.exports = function(eleventyConfig) {
   .use(markdownItAnchor, {
     permalink: true,
     permalinkClass: 'direct-link',
-    permalinkSymbol: '#'
+    permalinkSymbol: ''
   })
   )
 
   // Layout Alias
   eleventyConfig.addLayoutAlias('list.hbs', 'layouts/list.njk')
+
+  // Shortcodes
+  eleventyConfig.addShortcode('figure', function(url, alt, caption, classes) {
+    return `<figure class="${classes}">
+    <img src="${url}" alt="${alt}"/>
+    <figcaption>${caption}</figcaption>
+    </figure>`
+  })
 
   return {
     dir: { input: 'src', output: 'dist', data: '_data' },
