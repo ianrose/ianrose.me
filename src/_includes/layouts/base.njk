@@ -32,7 +32,7 @@
   <link rel="alternate" type="application/rss+xml" href="https://feeds.feedburner.com/{{siteData.service.feedburner}}" title="{{title}}">
 </head>
 <body id="top" itemscope itemtype="http://schema.org/WebPage">
-  <!-- v{{pkg.version}} Built {{page.date}} -->
+  <!-- {{siteStats.environment | capitalize}} @ v{{pkg.version}} Built {{siteStats.buildDate}} -->
   <div class="nav--menu">
     {% include 'header.njk' %}
     {% include 'nav.njk' %}
