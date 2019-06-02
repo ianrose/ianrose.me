@@ -5,7 +5,8 @@ modified: null
 url: http://www.nbcnews.com/pages/conviction
 description: An experience for the twelve-episode documentary series from the producers of Dateline NBC.
 art: conviction-art.jpg
-layout: post.hbs
+layout: post.njk
+tags: work
 ---
 
 [Visit Conviction]({{url}})

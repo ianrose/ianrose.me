@@ -1,27 +1,39 @@
-<a href="https://www.netlify.com">
-  <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg"/>
-</a>
+# Deventy
 
-# ianrose.me
+A minimal 11ty starting point for building static websites with modern tools. Defers to the use of the standard CLI of each tool. Allowing a much easier upgrade path for each individual development tool.
 
-## How to Setup
+Features:
+- [11ty](https://www.11ty.io/)
+- [Sass/SCSS](https://github.com/sass/node-sass)
+- [Webpack](https://webpack.js.org/)
+- [Babel](https://babeljs.io/)
+- [light-server](https://github.com/txchen/light-server)
+- [PostCSS](https://postcss.org/)
+- [CSSnano](https://cssnano.co/)
+- [Autoprefixer](https://github.com/postcss/autoprefixer)
 
-### 1. Clone
+## Getting Started
 
-`git clone https://github.com/ianrose/ianrose.me.git`
-
-### 2. Install Dependencies
+Install all dependencies using npm:
 
 ```
+$ nvm use
 $ npm install
 ```
 
-## How to use
+To Develop
 
-To develop: `npm run dev`
+```
+$ npm run dev
+```
 
-To generate: `npm run build`
+You can view the website at the given access URL:
+```
+$ light-server is listening at http://localhost:8000
+```
 
-## Requirements
+To Build
 
-Node.js
+```
+npm run build
+```

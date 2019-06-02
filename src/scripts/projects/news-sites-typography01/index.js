@@ -1,4 +1,4 @@
-const palette = [
+var palette = [
   '#e87079',
   '#c46483',
   '#995d84',
@@ -43,7 +43,7 @@ $(document).ready(function () {
     },
     data: {
       x: 'Site',
-      url: '/assets/data/news-sites-avg-measure-11-13-2016.csv',
+      url: '/data/news-sites-avg-measure-11-13-2016.csv',
       type: 'bar',
       labels: true
     },

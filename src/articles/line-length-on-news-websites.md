@@ -3,10 +3,10 @@ title: Line Length on News Websites
 date: 2016-11-14T13:00:00Z
 modified: null
 draft: false
-tags: null
+tags: articles
 description: >-
   An analysis of the measure of body text across some top news websites.
-layout: post.hbs
+layout: post.njk
 scripts:
   - https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.js

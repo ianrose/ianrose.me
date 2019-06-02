@@ -1,4 +1,5 @@
-  /*
+
+ /*
    * jQuery.liveFilter
    *
    * Copyright (c) 2009 Mike Merritt

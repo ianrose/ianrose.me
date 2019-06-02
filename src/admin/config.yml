@@ -2,20 +2,19 @@ backend:
   name: github
   repo: ianrose/ianrose.me # Path to your Github repository
   branch: master # Branch to update
-media_folder: assets/images
+media_folder: images
 collections:
  - name: "articles"
    label: "Articles"
    folder: "src/articles"
-   create: true,
-   slug: {{slug}}
+   create: true
+   slug: "{{slug}}"
    fields:
     - name: layout
       label: Layout
       widget: select
       options:
-        - "post.hbs"
-        - "collection.hbs"
+        - "post.njk"
     - {label: "Title", name: "title", widget: "string"}
     - {label: "Publish Date", name: "date", widget: "datetime"}
     - {label: "Modified Date", name: "modified", widget: "datetime", optional: true, default: "null"}
@@ -26,19 +25,22 @@ collections:
       widget: object
       fields:
         - {label: "Name", name: "name", widget: "string"}
+    - label: "Tags"
+      name: "tags"
+      widget: "list"
+      default: ["articles"]
     - {label: "Body", name: "body", widget: "markdown"}
  - name: "work"
    label: "Work"
    folder: "src/work"
-   create: true,
-   slug: {{slug}}
+   create: true
+   slug: "{{slug}}"
    fields:
     - name: layout
       label: Layout
       widget: select
       options:
-        - "post.hbs"
-        - "collection.hbs"
+        - "post.njk"
     - {label: "Title", name: "title", widget: "string"}
     - {label: "Publish Date", name: "date", widget: "datetime"}
     - {label: "Modified Date", name: "modified", widget: "datetime", optional: true, default: "null"}
@@ -49,4 +51,8 @@ collections:
       widget: object
       fields:
         - {label: "URL", name: "url", widget: "string", optional: true}
+    - label: "Tags"
+      name: "tags"
+      widget: "list"
+      default: ["work"]
     - {label: "Body", name: "body", widget: "markdown"}

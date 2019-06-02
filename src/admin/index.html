@@ -1,54 +1,12 @@
----
-layout: false
----
 <!doctype html>
 <html>
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Content Manager</title>
-
-  <link rel="stylesheet" href="https://unpkg.com/netlify-cms@^1.4.0/dist/cms.css" />
-
 </head>
 <body>
-  <script src="https://unpkg.com/netlify-cms@^1.4.0/dist/cms.js"></script>
-<script>
-CMS.registerPreviewStyle("/styles/main.css");
-
-var PostPreview = createClass({
-  render: function() {
-    var entry = this.props.entry;
-    return h('div', {"className": "article--post container"},
-      h('header', {"className": "article--header"},
-        h('h1', {}, entry.getIn(['data', 'title'])),
-        h('p', {"className": "dek dek--lg"}, entry.getIn(['data', 'description'])),
-        h('div', {"className": "byline"},
-          "by ",
-          h('span', {}, entry.getIn(['data', 'author'])),
-          h('time', {"className": "meta meta--primary"}, " | " + entry.getIn(['data', 'date']))
-        )
-      ),
-      h('div', {"className": "article--body"}, this.props.widgetFor('body'))
-    );
-  }
-});
-
-var WorkPreview = createClass({
-  render: function() {
-    var entry = this.props.entry;
-    return h('div', {"className": "article--post container"},
-      h('header', {"className": "article--header"},
-        h('h1', {}, entry.getIn(['data', 'title'])),
-        h('p', {"className": "dek dek--lg"}, entry.getIn(['data', 'description']))
-      ),
-      h('div', {"className": "article--body"}, this.props.widgetFor('body'))
-    );
-  }
-});
-
-CMS.registerPreviewTemplate("articles", PostPreview);
-CMS.registerPreviewTemplate("work", WorkPreview);
-</script>
+  <!-- Include the script that builds the page and powers Netlify CMS -->
+  <script src="/admin/netlify-cms.min.js"></script>
 </body>
 </html>

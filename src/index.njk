@@ -1,0 +1,28 @@
+---
+layout: layouts/base.njk
+title: Product Designer
+description: Ian Rose is a designer living & working in New York City.
+---
+{% import 'entry.njk' as entry %}
+
+<p class="heading heading--page heading--home">{{description}}</p>
+
+{% for name, collection in collections.curated %}
+<div class="row">
+  <div class="section--id--l">
+    <div class="section--id" aria-hidden="true">0{{loop.index}}</div>
+  </div>
+  <div class="section--posts section-posts-{{loop.index}}">
+    <div class="meta--container">
+      <h2 class="meta--txt meta--primary meta--heading">
+        <a href="{{name}}/">{{name | capitalize}}</a>
+      </h2>
+    </div>
+    <div class="row">
+      {% for post in collection | reverse %}
+        {{entry.set(post.data, isHome=true)}}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endfor %}

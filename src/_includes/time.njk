@@ -1,0 +1,4 @@
+{% macro set(date, modified)%}
+<time class="meta meta--primary" datetime="{{date | dateIso}}" itemprop="datePublished">{{date | dateReadable}}</time>
+{% if modified %}<span class="meta meta--alt">updated <time datetime="{{modified | dateIso}}" itemprop="dateModified">{{modified | dateReadable}}</time></span>{% endif %}
+{% endmacro %}

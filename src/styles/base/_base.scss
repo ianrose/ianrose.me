@@ -56,6 +56,7 @@ h6,
 h1,
 .h1 {
   margin-bottom: emRhythm(0.5, $ms-up2, $silent: true); // [1]
+
   @include setType(4, $ms-up2); // [2]
 
   @media (min-width: $screen-sm-min) {

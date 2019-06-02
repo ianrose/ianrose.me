@@ -1,0 +1,29 @@
+{% import "time.njk" as time %}
+{% macro set(data, isHome=false) %}
+<div class="entry--category-container entry--category-container--half">
+  <div class="entry entry--category{% if isHome %} is-home{% endif %}" itemscope="" itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+    {% if data.art %}
+    <a class="entry--media intrinsic-wrapper ratio-3x2" href="{% if data.url %}{{data.url}}{% else %}{{data.page.url}}{% endif %}">
+      <img class="img-responsive intrinsic-wrapper-element media--entry media--entry-default lazyload" data-srcset="/images/{{data.art}}" src="/images/{{data.art}}" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="{{title}}">
+    </a>
+    {% endif %}
+    <div class="entry--txt">
+      {%if isHome %}
+        <h3 class="entry-heading--category" itemprop="headline">
+          <a href="{% if data.url %}{{data.url}}{% else %}{{data.page.url}}{% endif %}">{{data.title}}</a>
+        </h3>
+        {% else %}
+        <h2 class="entry-heading--category" itemprop="headline">
+          <a class="js-entry-heading-link" href="{% if data.url %}{{data.url}}{% else %}{{data.page.url}}{% endif %}">{{data.title | typogr | safe}}</a>
+        </h2>
+      {% endif %}
+      <p class="dek" itemprop="description">{{data.description | typogr | safe}}</p>
+      {% if data.date %}
+      <div class="meta--txt">
+        {{time.set(data.date, data.modified)}}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endmacro %}

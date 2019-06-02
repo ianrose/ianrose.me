@@ -1,0 +1,32 @@
+{% set currentItemIndex = 0 %}
+{% set collection = tags[0] %}
+{% set countOfItems = collections[collection].length %}
+{% for item in collections[collection] %}
+  {% if item.url == page.url %}
+  	{% set currentItemIndex = loop.index0 %}
+	{% endif %}
+{% endfor %}
+{% set nextItemIndex = currentItemIndex - 1  %}
+{% set nextItem = collections[collection][nextItemIndex] %}
+{% set prevItemIndex = currentItemIndex + 1  %}
+{% set prevItem = collections[collection][prevItemIndex] %}
+<nav class="nav nav--post row{% if not prevItem %} is-first{% endif %}">
+  {% if prevItem %}
+    <div class="nav--prev">
+      <h2 class="nav--post-heading">{{prevItem.data.title}}</h2>
+      <p class="dek dek--sm">{{prevItem.data.description | typogr | safe}}</p>
+    </div>
+    <div class="nav--post-button">
+      <a class="button--link" href="{{prevItem.url | url}}">Previous</a>
+    </div>
+  {% endif %}
+  {% if nextItem %}
+    <div class="nav--next">
+      <h2 class="nav--post-heading">{{nextItem.data.title}}</h2>
+      <p class="dek dek--sm">{{nextItem.data.description | typogr | safe}}</p>
+    </div>
+    <div class="nav--post-button">
+      <a class="button--link" href="{{nextItem.url | url}}">Next</a>
+    </div>
+  {% endif %}
+</nav>

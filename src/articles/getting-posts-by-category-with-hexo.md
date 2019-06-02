@@ -2,11 +2,11 @@
 title: Getting Posts by Category with Hexo
 date: 2015-01-20T13:00:00Z
 modified: null
-tags: null
+tags: articles
 description: >-
   While building with Hexo I came across a need to get all the posts by a
   specific category and render them through a specific partial.
-layout: post.hbs
+layout: post.njk
 author:
   name: Ian Rose
 ---

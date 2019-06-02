@@ -1,5 +1,5 @@
 /* globals $, jQuery */
-import '../vendor/livefilter'
+require('../vendor/livefilter')
 
 module.exports = function () {
   const $listHeader = $('.list > h2')
