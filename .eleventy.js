@@ -75,6 +75,7 @@ module.exports = function(eleventyConfig) {
 
   // Layout Alias
   eleventyConfig.addLayoutAlias('list.hbs', 'layouts/list.njk')
+  eleventyConfig.addLayoutAlias('list', 'layouts/list.njk')
   eleventyConfig.addLayoutAlias('post.njk', 'layouts/post.njk')
 
   // Shortcodes
