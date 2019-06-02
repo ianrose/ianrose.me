@@ -15,6 +15,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/data')
   eleventyConfig.addPassthroughCopy('src/scripts/service-worker.js')
   eleventyConfig.addPassthroughCopy('src/admin')
+  eleventyConfig.addPassthroughCopy('src/_redirects')
 
   // Filters
   eleventyConfig.addFilter('dumpCircular', function(val) {
