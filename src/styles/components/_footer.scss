@@ -22,9 +22,7 @@
 
 .footer--nav--l .footer--col--l:last-child {
   padding-right: $gutter;
-}
 
-.footer--nav--l .footer--col--l:last-child {
   @media (min-width: $screen-lg-min) {
     padding-left: $gutter;
   }

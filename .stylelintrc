@@ -1,0 +1,19 @@
+ {
+  "ignoreFiles": [
+    "src/styles/vendor/*.scss"
+  ],
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "function-name-case": null,
+    "no-descending-specificity": null,
+    "at-rule-no-unknown": [ true, {
+      "ignoreAtRules": [
+        "extend",
+        "ignores",
+        "include",
+        "if",
+        "mixin"
+      ]
+    }]
+  }
+}
