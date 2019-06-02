@@ -1,6 +1,6 @@
-# Deventy
+# ianrose.me
 
-A minimal 11ty starting point for building static websites with modern tools. Defers to the use of the standard CLI of each tool. Allowing a much easier upgrade path for each individual development tool.
+Source for personal site.
 
 Features:
 - [11ty](https://www.11ty.io/)
@@ -29,7 +29,7 @@ $ npm run dev
 
 You can view the website at the given access URL:
 ```
-$ light-server is listening at http://localhost:8000
+$ light-server is listening at http://localhost:4000
 ```
 
 To Build
