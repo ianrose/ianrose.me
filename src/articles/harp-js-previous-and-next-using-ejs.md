@@ -6,7 +6,7 @@ tags: articles
 description: >-
   Provide the user with previous and next page navigation in a Harp.js site
   using Embeded JavaScript.
-layout: layouts/post.njk
+layout: post.njk
 art: null
 author:
   name: Ian Rose

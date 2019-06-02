@@ -8,19 +8,10 @@ layout: post.njk
 tags: work
 ---
 
-<figure class="media-full">
-  ![Homepage on Desktop](/assets/images/joule-desktop-home.jpg)
-<figcaption>Homepage that quickly surfaced the information current customers and potential customers were looking for.</figcaption>
-</figure>
+{% figure '/images/joule-desktop-home.jpg' 'Homepage on Desktop' 'Homepage that quickly surfaced the information current customers and potential customers were looking for.' 'media-full' %}
 
-<figure>
-  ![Homepage on Desktop](/assets/images/joule-mobile-tablet-home.png)
-  <figcaption>The site was built to be responsive to allow users to access information on any device.</figcaption>
-</figure>
+{% figure '/images/joule-mobile-tablet-home.png' 'Homepage on Mobile & Tablet' 'The site was built to be responsive to allow users to access information on any device' null %}
 
-<figure class="media-full">
-  ![Homepage on Desktop](/assets/images/joule-desktop-residential.jpg)
-  <figcaption>Internal pages provided detailed information for specific segments of solar energy.</figcaption>
-</figure>
+{% figure '/images/joule-desktop-residential.jpg' 'Interal page on Desktop' 'Internal pages provided detailed information for specific segments of solar energy.' 'media-full' %}
 
 I was responsible for the design, content strategy, front-end development and client relations while at [Thinka](http://thinkabig.com/).

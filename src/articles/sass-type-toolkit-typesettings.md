@@ -1,6 +1,6 @@
 ---
 art: null
-layout: layouts/post.njk
+layout: post.njk
 date: 2014-04-24T13:00:00.000Z
 author:
   name: Ian Rose

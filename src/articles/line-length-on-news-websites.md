@@ -6,7 +6,7 @@ draft: false
 tags: articles
 description: >-
   An analysis of the measure of body text across some top news websites.
-layout: layouts/post.njk
+layout: post.njk
 scripts:
   - https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.js

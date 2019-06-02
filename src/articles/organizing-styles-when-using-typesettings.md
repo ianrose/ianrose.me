@@ -2,7 +2,7 @@
 art: null
 author:
   name: Ian Rose
-layout: layouts/post.njk
+layout: post.njk
 date: 2014-05-01T13:00:00.000Z
 modified: null
 tags: articles

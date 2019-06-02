@@ -6,7 +6,7 @@ tags: articles
 description: >-
   While building with Hexo I came across a need to get all the posts by a
   specific category and render them through a specific partial.
-layout: layouts/post.njk
+layout: post.njk
 author:
   name: Ian Rose
 ---
