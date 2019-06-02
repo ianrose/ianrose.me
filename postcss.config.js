@@ -1,5 +1,4 @@
-module.exports = ctx = ({
-  // map: ctx.options.map,
+module.exports = ({
   plugins: {
     autoprefixer: true,
     cssnano: {
