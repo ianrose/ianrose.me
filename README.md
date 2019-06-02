@@ -3,7 +3,7 @@
 Source for personal site.
 
 Features:
-- [11ty](https://www.11ty.io/)
+- [11ty](https://www.11ty.io/) via [Deventy](https://github.com/ianrose/deventy)
 - [Sass/SCSS](https://github.com/sass/node-sass)
 - [Webpack](https://webpack.js.org/)
 - [Babel](https://babeljs.io/)
