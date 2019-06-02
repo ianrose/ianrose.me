@@ -7,7 +7,8 @@ art: typesettings-art.png
 layout: post.njk
 project:
   url: http://typesettings.io
-tags: work
+tags: 
+  - work
 ---
 
 **[Typesettings](http://typesettings.io)** provides a designer or developer a toolkit of Sass or Stylus functions and mixins that make setting nice type on the web easier.

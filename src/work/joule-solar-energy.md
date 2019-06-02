@@ -5,7 +5,8 @@ modified: null
 description: Joule Solar Energy needed a consumer facing website that worked across devices to attract new customers and provide resources for current customers.
 art: joulesolarenergy-art.jpg
 layout: post.njk
-tags: work
+tags: 
+  - work
 ---
 
 {% figure '/images/joule-desktop-home.jpg' 'Homepage on Desktop' 'Homepage that quickly surfaced the information current customers and potential customers were looking for.' 'media-full' %}

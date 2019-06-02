@@ -6,7 +6,8 @@ url: https://www.nbcnews.com/specials/year-pictures-2017
 description: 'NBC News special: Devastating natural disasters, the first year of the Trump administration, a total solar eclipse, and the worst mass shooting in modern U.S. history.'
 art: year-in-pictures-2017-art.jpg
 layout: post.njk
-tags: work
+tags: 
+  - work
 ---
 
 [Visit Year in Pictures: 2017]({{url}})

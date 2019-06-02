@@ -6,7 +6,8 @@ url: https://www.nbcnews.com/specials/journey-of-a-bullet
 description: NBC News special that tells the stories of six men and women coping after traumas suffered from Iraq to the streets of Chicago.
 art: joab-art.jpg
 layout: post.njk
-tags: work
+tags: 
+  - work
 ---
 
 [Visit Journey of a Bullet]({{url}})

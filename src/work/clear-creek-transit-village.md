@@ -7,7 +7,8 @@ project:
 description: Clear Creek Transit Village needed a brochure site to help attract investors and provide resources for the CCTV development team.
 art: cctv-art.jpg
 layout: post.njk
-tags: work
+tags: 
+  - work
 ---
 
 {% figure '/images/cctv-home.jpg' 'CCTV Homepage' 'Home page that provided an overview of the development opportunity.' 'media-full' %}

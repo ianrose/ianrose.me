@@ -6,7 +6,8 @@ url: http://www.nbcnews.com/specials/texas-pipeline
 description: NBC News special that covers a planned pipeline in the Big Bend region of Texas and its affect on the communities.
 art: texas-pipeline-art.gif
 layout: post.njk
-tags: work
+tags: 
+  - work
 ---
 
 [Visit a Texas Pipeline's Controversial Path]({{url}})

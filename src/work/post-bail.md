@@ -6,7 +6,8 @@ url: https://www.nbcnews.com/specials/bail-reform
 description: 'NBC News special: America’s justice system runs on the exchange of money for freedom. Some say that’s unfair. But can data fix it?'
 art: post-bail-art.jpg
 layout: post.njk
-tags: work
+tags: 
+  - work
 ---
 
 [Visit Post Bail]({{url}})

@@ -5,7 +5,8 @@ description: Using the Metalsmith FileData plugin to create critical styles from
 layout: layouts/post.njk
 author:
     name: Ian Rose
-tags: articles
+tags: 
+  - articles
 ---
 
 **The situation**, you have a static site build using [Metalsmith](http://www.metalsmith.io/) which at some point in the build process compiles Sass into CSS. The desire is to have inline styles in the `<head>`.

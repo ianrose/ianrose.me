@@ -9,7 +9,8 @@ description: >-
 art: newsblock-art.gif
 project:
   url: 'https://github.com/Newsblock/frontend'
-tags: work
+tags: 
+  - work
 ---
 {% figure '/images/newsblock-desktop-lg-top.jpg' 'Homepage on Desktop' 'Common topics are presented in feeds that are easy and quick to scan.' 'media-full' %}
 

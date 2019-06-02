@@ -2,7 +2,8 @@
 title: Harp.js Previous and Next using EJS
 date: 2015-12-08T13:00:00Z
 modified: null
-tags: articles
+tags: 
+  - articles
 description: >-
   Provide the user with previous and next page navigation in a Harp.js site
   using Embeded JavaScript.

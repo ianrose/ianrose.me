@@ -5,7 +5,8 @@ date: 2014-04-24T13:00:00.000Z
 author:
   name: Ian Rose
 modified: null
-tags: articles
+tags: 
+  - articles
 title: 'A Sass Type Toolkit: Typesettings'
 description: >-
   Setting type using modular scale and maintaining vertical rhythm is not a new
