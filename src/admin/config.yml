@@ -1,6 +1,6 @@
 backend:
-  # name: github
-  name: test-repo
+  name: github
+  # name: test-repo
   repo: ianrose/ianrose.me # Path to your Github repository
   branch: master # Branch to update
 media_folder: images
