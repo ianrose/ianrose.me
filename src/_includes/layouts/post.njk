@@ -15,7 +15,7 @@ layout: layouts/base.njk
   <header class="article--header">
     <h1 itemprop="headline">{{title | typogr | safe}}</h1>
     <p class="dek dek--lg">{{description | typogr | safe}}</p>
-    {{byline.set(author.name, date)}}
+    {%if author.name %}{{byline.set(author.name, date)}}{% endif %}
   </header>
   <div class="article--body" itemprop="articleBody">
     {{content | safe}}

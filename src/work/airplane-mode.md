@@ -5,7 +5,7 @@ modified: null
 url: https://www.nbcnews.com/specials/airplane-mode
 description: 'NBC News special: Narrower seats, emotional support animals, cabin class divides and overhead departments galore. An odd new era in air travel has some Americans tweeting mad.'
 art: airplane-mode-art.jpg
-layout: layouts/post.njk
+layout: post.njk
 tags: work
 ---
 

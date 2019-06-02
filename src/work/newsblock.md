@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Newsblock
 date: 2015-07-19T13:00:00.000Z
 modified: 2018-02-01T15:24:21.598Z

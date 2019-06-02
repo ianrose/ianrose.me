@@ -5,7 +5,7 @@ modified: null
 url: https://www.nbcnews.com/specials/brexit-ireland-border
 description: NBC News special that tells the story about the status of the Irish border, which was a flashpoint during the 30-year conflict known as "The Troubles," threatens to derail Brexit talks.
 art: old-borders-new-worries-art.jpg
-layout: layouts/post.njk
+layout: post.njk
 tags: work
 ---
 
