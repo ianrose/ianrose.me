@@ -1,6 +1,6 @@
-const path = require('path');
+const path = require('path')
 const webpack = require('webpack')
-const glob = require("glob")
+const glob = require('glob')
 const entry = require('webpack-entry-plus')
 
 const entryFiles = [
@@ -10,7 +10,7 @@ const entryFiles = [
   },
   {
     entryFiles: glob.sync('./src/scripts/projects/**/index.js'),
-    outputName(item) {
+    outputName (item) {
       return item.replace('./src/', '../')
     }
   }
@@ -38,8 +38,8 @@ module.exports = {
   },
   plugins: [
     new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery'
+      $: 'cash-dom',
+      jQuery: 'cash-dom'
     })
   ]
 }

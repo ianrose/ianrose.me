@@ -23,7 +23,7 @@
       if (options.filterChildSelector) el = el.find(options.filterChildSelector);
 
       var filter = options.filter;
-      $(inputEl).keyup(function () {
+      $(inputEl).on('keyup', function () {
         var val = $(this).val();
         var contains = el.filter(function () {
           return filter(this, val);
