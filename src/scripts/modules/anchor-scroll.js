@@ -1,5 +1,5 @@
 /* globals location */
-module.exports = function (scrollToOffset = 0) {
+export default function (scrollToOffset = 0) {
   $(function () {
     $('a[href*=\\#]:not([href=\\#])').on('click', function (event) {
       if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {

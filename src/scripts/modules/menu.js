@@ -1,5 +1,5 @@
 /* globals $ */
-module.exports = function () {
+export default function () {
   const touchEventName = ('ontouchstart' in window) ? 'touchstart' : 'click'
   $('#js-toggle-menu').on(touchEventName, function () {
     $('#js-menu').toggleClass('is-open')

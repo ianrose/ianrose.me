@@ -1,7 +1,7 @@
 /* globals $, jQuery */
 require('../vendor/livefilter')
 
-module.exports = function () {
+export default function () {
   const $listHeader = $('.list > h2')
   const $filteredList = $listHeader.next('ul')
 
