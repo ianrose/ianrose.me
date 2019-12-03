@@ -30,4 +30,8 @@
   @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
     @include setType(5, $ms-up3);
   }
+
+  @media (min-width: $screen-lg-min) {
+    max-width: $span-6;
+  }
 }
