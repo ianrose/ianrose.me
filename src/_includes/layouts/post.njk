@@ -13,7 +13,7 @@ layout: layouts/base.njk
   </div>
 </div>
   <header class="article--header">
-    <h1 itemprop="headline">{{title | typogr | safe}}</h1>
+    <h1 itemprop="headline">{{title | smartypants | safe}}</h1>
     <p class="dek dek--lg">{{description | typogr | safe}}</p>
     {%if author.name %}{{byline.set(author.name, date)}}{% endif %}
   </header>

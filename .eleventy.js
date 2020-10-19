@@ -42,6 +42,10 @@ module.exports = function(eleventyConfig) {
     return typogr.typogrify(val)
   })
 
+  eleventyConfig.addFilter('smartypants', function(val) {
+    return typogr(val).chain().smartypants().value()
+  })
+
   // Collections
   eleventyConfig.addCollection("postsReverse", function(collection) {
     return collection.getAllSorted().reverse();
