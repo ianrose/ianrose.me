@@ -20,7 +20,7 @@ description: Ian Rose is a designer living & working in San Francisco.
     </div>
     <div class="row">
       {% for post in collection | reverse %}
-        {{entry.set(post.data, isHome=true)}}
+        {{entry.set(post.data, isHome=true, loop.index)}}
       {% endfor %}
     </div>
   </div>

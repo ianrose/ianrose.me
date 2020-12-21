@@ -1,7 +1,7 @@
 {% import "time.njk" as time %}
-{% macro set(data, isHome=false) %}
+{% macro set(data, isHome=false, index) %}
 <div class="entry--category-container entry--category-container--half">
-  <div class="entry entry--category{% if isHome %} is-home{% endif %}" itemscope="" itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+  <div class="entry {% if index %}entry--{{index}} {% endif %}entry--category{% if isHome %} is-home{% endif %}" itemscope="" itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
     {% if data.art %}
     <a class="entry--media intrinsic-wrapper ratio-3x2" href="{% if data.url %}{{data.url}}{% else %}{{data.page.url}}{% endif %}">
       <img class="img-responsive intrinsic-wrapper-element media--entry media--entry-default lazyload" data-srcset="/images/{{data.art}}" src="/images/{{data.art}}" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="{{title}}">

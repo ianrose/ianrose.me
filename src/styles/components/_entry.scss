@@ -57,6 +57,16 @@
   padding-top: $gutter;
 }
 
+.entry--1 {
+  border-top: none;
+}
+
+.entry--2 {
+  @media (min-width: $screen-lg-min) {
+    border-top: none;
+  }
+}
+
 .entry-heading--category {
   @include setType(3.5, $ms-up1, $silent: true);
 
